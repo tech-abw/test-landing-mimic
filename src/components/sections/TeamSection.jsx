@@ -4,52 +4,57 @@ const teamMembers = [
     {
         name: "Ignacio Zanotto",
         image: "/images/about/image1.png",
-        description: "Lorem ipsum dolor sit amet",
+        description: "CTO",
+    },
+    {
+        name: "Carlos Contreras",
+        image: "/images/about/image1.png",
+        description: "COO",
     },
     {
         name: "Manuel Latorre",
         image: "/images/about/image2.png",
-        description: "Lorem ipsum dolor sit amet",
+        description: "Front-End Developer",
     },
     {
         name: "Mariana Vega",
         image: "/images/about/image1.png",
-        description: "Lorem ipsum dolor sit amet",
+        description: "UX UI Designer",
     },
     {
         name: "Martin Altunria",
         image: "/images/about/image2.png",
-        description: "Lorem ipsum dolor sit amet",
+        description: "Back-End Developer",
     },
     {
         name: "Sasha Solano",
         image: "/images/about/image1.png",
-        description: "Lorem ipsum dolor sit amet",
+        description: "Front-End Developer",
     },
     {
         name: "John Rodriguez",
         image: "/images/about/image2.png",
-        description: "Lorem ipsum dolor sit amet",
-    },
-    {
-        name: "Jennifer Ruiz",
-        image: "/images/about/image1.png",
-        description: "Lorem ipsum dolor sit amet",
-    },
-    {
-        name: "Amanda Aguirre",
-        image: "/images/about/image2.png",
-        description: "Lorem ipsum dolor sit amet",
-    },
-    {
-        name: "Ivan de la Garza",
-        image: "/images/about/image1.png",
-        description: "Lorem ipsum dolor sit amet",
+        description: "Fullstack IA Engineer",
     },
     {
         name: "Montserrat Alvarez",
         image: "/images/about/image2.png",
-        description: "Lorem ipsum dolor sit amet",
+        description: "Graphic Designer",
+    },
+    {
+        name: "Jennifer Ruiz",
+        image: "/images/about/image1.png",
+        description: "Marketing specialist",
+    },
+    {
+        name: "Amanda Aguirre",
+        image: "/images/about/image2.png",
+        description: "Marketing specialist",
+    },
+    {
+        name: "Ivan de la Garza",
+        image: "/images/about/image1.png",
+        description: "CRO",
     },
 ];
 
@@ -141,10 +146,10 @@ const TeamSection = () => {
                                 className="w-full rounded-lg mb-2 md:mb-4 object-cover"
                                 style={{ aspectRatio: "1/1" }}
                             />
-                            <h3 className="font-bold text-sm md:text-base">
+                            <h3 className="font-bold text-lg md:text-3xl">
                                 {member.name}
                             </h3>
-                            <p className="text-xs md:text-sm text-gray-600">
+                            <p className="text-xs md:text-xl font-bold text-gray-600">
                                 {member.description}
                             </p>
                         </div>
