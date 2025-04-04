@@ -120,8 +120,9 @@ const AboutHeroSection = () => {
                         style={{
                             fontSize: "76px",
                             fontWeight: 200,
+                            lineHeight: "76px",
                         }}
-                        className="hidden md:block mb-14"
+                        className="hidden md:block mb-14 text-center"
                     >
                         Discover the complete suite of services we offer,
                         empowering you to build your dream product.
@@ -131,7 +132,7 @@ const AboutHeroSection = () => {
                             fontSize: "36px",
                             fontWeight: 200,
                         }}
-                        className="md:hidden mb-14"
+                        className="md:hidden mb-14 text-center"
                     >
                         Discover the complete suite of services we offer,
                         empowering you to build your dream product.

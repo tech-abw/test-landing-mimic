@@ -29,8 +29,8 @@ const TestimonialsSection = () => {
     };
 
     return (
-        <section className="w-full bg-white py-24 md:py-44 relative">
-            <div className="container mx-auto px-4">
+        <section className="w-full bg-white py-24 md:mb-24 md:py-0 relative">
+            <div className="container h-full mx-auto px-4">
                 {/* Layout para móvil */}
                 <div className="block md:hidden text-center">
                     <h2
@@ -73,8 +73,8 @@ const TestimonialsSection = () => {
                                 className="mb-4"
                                 style={{
                                     fontSize: "16px",
-                                    lineHeight: 1.5,
-                                    textAlign: "right",
+                                    lineHeight: "16px",
+                                    textAlign: "left",
                                 }}
                             >
                                 {testimonials[currentTestimonial].text}
@@ -140,9 +140,9 @@ const TestimonialsSection = () => {
 
                 {/* Layout para escritorio */}
                 <div
-                    className="hidden md:grid grid-cols-2 gap-16 items-start"
+                    className="hidden md:grid grid-cols-2 gap-16"
                     style={{
-                        minHeight: "800px",
+                        minHeight: "900px",
                     }}
                 >
                     {/* Columna izquierda - Título y descripción */}
@@ -151,7 +151,7 @@ const TestimonialsSection = () => {
                             className="text-black mb-4"
                             style={{
                                 fontSize: "73px",
-                                fontWeight: 200,
+                                fontWeight: 400,
                                 lineHeight: '73px',
                             }}
                         >
@@ -160,7 +160,7 @@ const TestimonialsSection = () => {
                             Clients
                         </h2>
                         <p
-                            className="text-black"
+                            className="text-black mt-10"
                             style={{
                                 fontSize: "25px",
                                 fontWeight: 300,
@@ -174,10 +174,10 @@ const TestimonialsSection = () => {
                     {/* Columna derecha - Testimonios y navegación */}
                     <div className="self-end flex flex-col items-center">
                         <div
-                            className="bg-white p-8 text-center w-full"
+                            className="bg-white p-8 text-center w-full flex flex-col justify-center"
                             style={{
                                 borderRadius: "62px",
-                                minHeight: "200px",
+                                minHeight: "500px",
                                 border: "1px solid #000",
                                 marginBottom: "24px",
                             }}
@@ -188,7 +188,7 @@ const TestimonialsSection = () => {
                                     fontSize: "29px",
                                     fontWeight: 200,
                                     lineHeight: 1.5,
-                                    textAlign: "right",
+                                    textAlign: "left",
                                 }}
                             >
                                 {testimonials[currentTestimonial].text}
@@ -203,7 +203,7 @@ const TestimonialsSection = () => {
                             </p>
                         </div>
 
-                        <div className="flex space-x-4">
+                        <div className="flex space-x-4 self-end mr-16">
                             <button
                                 onClick={handlePrev}
                                 className="bg-neon-green text-black flex items-center justify-center"
