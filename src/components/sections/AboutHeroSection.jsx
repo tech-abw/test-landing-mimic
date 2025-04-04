@@ -7,12 +7,12 @@ const AboutHeroSection = () => {
                 {/* Versión de escritorio */}
                 <div
                     className="hidden md:block bg-purple rounded-2xl p-8 items-center justify-center"
-                    style={{ height: "500px" }}
+                    style={{ height: "700px" }}
                 >
                     <div className="flex items-center justify-center w-full">
                         <div className="w-1/2 pr-8">
                             <h2
-                                className="text-white mb-4"
+                                className="text-white mb-4 md:mt-16"
                                 style={{
                                     fontSize: "70px",
                                     fontWeight: 400,
@@ -26,7 +26,7 @@ const AboutHeroSection = () => {
                                 your biz?
                             </h2>
                             <p
-                                className="text-white mb-4"
+                                className="text-white mb-4 md:mb-44"
                                 style={{
                                     fontSize: "18px",
                                     fontWeight: 300,
@@ -57,7 +57,7 @@ const AboutHeroSection = () => {
                             <img
                                 src="/images/about/cohete.png"
                                 alt="Rocket"
-                                className="w-full p-5"
+                                className="w-full p-1 md:mt-16"
                             />
                         </div>
                     </div>
@@ -115,37 +115,48 @@ const AboutHeroSection = () => {
                     </button>
                 </div>
 
-                <div className="text-white text-center mt-4 mx-auto">
-                    <p 
-                        style={{ 
-                            fontSize: "70px",
+                <div className="text-white flex flex-col items-center mt-4 mx-auto md:mt-16">
+                    <p
+                        style={{
+                            fontSize: "76px",
                             fontWeight: 200,
-                            display: "none",
                         }}
-                        className="hidden md:block"
+                        className="hidden md:block mb-14"
                     >
                         Discover the complete suite of services we offer,
                         empowering you to build your dream product.
                     </p>
-                    <p 
-                        style={{ 
+                    <p
+                        style={{
                             fontSize: "36px",
                             fontWeight: 200,
-                            display: "block",
                         }}
-                        className="md:hidden"
+                        className="md:hidden mb-14"
                     >
                         Discover the complete suite of services we offer,
                         empowering you to build your dream product.
                     </p>
-                    
+
                     <button
                         onClick={() => (window.location.href = "/services")}
-                        className="bg-purple text-white"
+                        className="hidden md:block  bg-purple text-white"
                         style={{
-                            fontSize: "16px",
+                            fontSize: "36px",
                             fontWeight: 500,
-                            padding: "10px 20px",
+                            padding: "20px 30px",
+                            borderRadius: "10px",
+                            marginTop: "10px",
+                        }}
+                    >
+                        Our services
+                    </button>
+                    <button
+                        onClick={() => (window.location.href = "/services")}
+                        className="bg-purple text-white md:hidden"
+                        style={{
+                            fontSize: "20px",
+                            fontWeight: 500,
+                            padding: "5px 5px",
                             borderRadius: "5px",
                             marginTop: "10px",
                         }}

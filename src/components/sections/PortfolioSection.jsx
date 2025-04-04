@@ -84,7 +84,7 @@ const PortfolioSection = () => {
                     <h2 className="text-white mb-8">
                         <span
                             className="hidden md:inline"
-                            style={{ fontSize: "96px", fontWeight: 400 }}
+                            style={{ fontSize: "96px", fontWeight: 400, lineHeight: "96px" }}
                         >
                             Portfolio - Explore Unique Ideas
                             <br />

@@ -8,7 +8,7 @@ const Services = () => {
     return (
         <div>
             <Hero
-                title="We are characterized\nas Thinkers and Doers"
+                title="We are characterized as Thinkers and Doers"
                 description="We transform ideas into unique digital experiences through innovative design and strategic thinking."
                 backgroundImage="/images/services-hero.png"
                 buttonText="Our Work"
