@@ -63,7 +63,7 @@ const TestimonialsSection = () => {
 
                     <div className="max-w-2xl mx-auto relative mt-10 md:mt-0">
                         <div
-                            className="bg-white rounded-2xl p-8 text-center"
+                            className="bg-white rounded-2xl p-8"
                             style={{
                                 minHeight: "200px",
                                 border: "1px solid #000",
@@ -74,6 +74,7 @@ const TestimonialsSection = () => {
                                 style={{
                                     fontSize: "16px",
                                     lineHeight: 1.5,
+                                    textAlign: "right",
                                 }}
                             >
                                 {testimonials[currentTestimonial].text}
@@ -151,7 +152,7 @@ const TestimonialsSection = () => {
                             style={{
                                 fontSize: "73px",
                                 fontWeight: 200,
-                                lineHeight: 1.2,
+                                lineHeight: '73px',
                             }}
                         >
                             Hear From tens of
@@ -187,6 +188,7 @@ const TestimonialsSection = () => {
                                     fontSize: "29px",
                                     fontWeight: 200,
                                     lineHeight: 1.5,
+                                    textAlign: "right",
                                 }}
                             >
                                 {testimonials[currentTestimonial].text}

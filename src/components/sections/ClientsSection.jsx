@@ -111,7 +111,7 @@ const ClientsSection = () => {
                 <h2 className="text-center mb-12 md:mb-20">
                     <span
                         className="hidden md:inline"
-                        style={{ fontSize: "96px", fontWeight: 400 }}
+                        style={{ fontSize: "96px", fontWeight: 400, lineHeight: "96px" }}
                     >
                         Our Clients - Let's build
                         <br />
@@ -119,7 +119,7 @@ const ClientsSection = () => {
                     </span>
                     <span
                         className="md:hidden"
-                        style={{ fontSize: "36px", fontWeight: 400 }}
+                        style={{ fontSize: "36px", fontWeight: 400, lineHeight: "36px" }}
                     >
                         Our Clients - Let's build
                         <br />

@@ -26,7 +26,14 @@ const Hero = ({
           
           {/* Contenido superpuesto - desktop */}
           <div className="absolute inset-0 flex flex-col justify-center" style={{ paddingLeft: '128.4px' }}>
-            <h1 className="text-white mb-6 leading-tight w-8/12" style={{ fontSize: '96px', fontWeight: 400 }}>
+            <h1 
+              className="text-white mb-6 leading-tight w-3/5" 
+              style={{ 
+                fontSize: '96px', 
+                fontWeight: 400,
+                lineHeight: '96px'
+              }}
+            >
               {title.split('\n').map((line, index) => (
                 <div key={index}>{line}</div>
               ))}
