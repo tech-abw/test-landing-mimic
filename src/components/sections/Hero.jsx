@@ -7,8 +7,6 @@ const Hero = ({
     buttonText = "Start here",
     buttonLink = "/contact",
     desktopTitleFontSize = "64px",
-    leftArrowSrc = "/images/flecha-izquierda.svg",
-    rightArrowSrc = "/images/flecha-derecha.svg",
 }) => {
     return (
         <section className="relative w-full overflow-hidden bg-gray pt-20">
@@ -69,25 +67,9 @@ const Hero = ({
                                 fontWeight: 400,
                                 borderRadius: "12px",
                                 lineHeight: "18px",
-                                display: "flex",
-                                gap: "8px",
                             }}
                         >
-                            {leftArrowSrc && (
-                                <img 
-                                    src={leftArrowSrc} 
-                                    alt="Left Arrow" 
-                                    className="w-4 h-4" 
-                                />
-                            )}
                             {buttonText}
-                            {rightArrowSrc && (
-                                <img 
-                                    src={rightArrowSrc} 
-                                    alt="Right Arrow" 
-                                    className="w-4 h-4" 
-                                />
-                            )}
                         </Link>
                     </div>
                 </div>
