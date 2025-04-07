@@ -46,15 +46,16 @@ const services = [
 const ServicesSection = () => {
     return (
         <section className="w-full bg-gray py-16 px-4">
-            <div className="container mx-auto">
+            <div className="w-[88%] mx-auto">
                 {/* Título principal - Versión de escritorio */}
-                <div className="hidden md:block text-center mb-12">
+                <div className="hidden lg:block  lg:text-start mb-12">
                     <p
                         className="text-black mb-4"
                         style={{
-                            fontSize: "96px",
+                            fontSize: "65px",
                             fontWeight: 200,
-                            lineHeight: "96px",
+                            lineHeight: "65px",
+                            maxWidth: "850px",
                         }}
                     >
                         Discover the complete suite of services we offer,
@@ -63,13 +64,13 @@ const ServicesSection = () => {
                 </div>
 
                 {/* Título principal - Versión móvil */}
-                <div className="block md:hidden text-center mb-8">
+                <div className="block lg:hidden text-center mb-8">
                     <p
-                        className="text-black"
+                        className="text-black mb-14"
                         style={{
-                            fontSize: "36px",
+                            fontSize: "30px",
                             fontWeight: 200,
-                            lineHeight: "36px",
+                            lineHeight: "30px",
                         }}
                     >
                         Discover the complete suite of services we offer,
@@ -78,30 +79,31 @@ const ServicesSection = () => {
                 </div>
 
                 {/* Grid de servicios - Versión de escritorio (2 arriba, 3 abajo) */}
-                <div className="hidden md:block">
+                <div className="hidden lg:block">
                     {/* Primera fila: 2 tarjetas */}
                     <div className="grid grid-cols-2 gap-8">
                         {/* Card 1 */}
                         <div
-                            className={`${services[0].bgColor} ${services[0].textColor} p-8 rounded-2xl flex flex-col`}
+                            className={`${services[0].bgColor} ${services[0].textColor} p-12 rounded-2xl flex flex-col`}
                             style={{ height: "600px" }}
                         >
                             <div className="pr-8">
                                 <h3
                                     className="mb-8"
                                     style={{
-                                        fontSize: "60px",
+                                        fontSize: "50px",
                                         fontWeight: 200,
-                                        lineHeight: "60px",
+                                        lineHeight: "50px",
                                     }}
                                 >
                                     {services[0].title}
                                 </h3>
                                 <p
-                                    className="text-lg mb-10"
+                                    className="mb-10"
                                     style={{
                                         fontSize: "30px",
                                         fontWeight: 300,
+                                        lineHeight: "30px",
                                     }}
                                 >
                                     {services[0].description}
@@ -118,17 +120,22 @@ const ServicesSection = () => {
 
                         {/* Card 2 */}
                         <div
-                            className={`${services[1].bgColor} ${services[1].textColor} p-8 rounded-2xl flex flex-col`}
+                            className={`${services[1].bgColor} ${services[1].textColor} p-12 rounded-2xl flex flex-col`}
                             style={{ height: "600px" }}
                         >
                             <h3
                                 className="mb-12"
-                                style={{ fontSize: "60px", fontWeight: 200, lineHeight: "60px" }}
+                                style={{
+                                    fontSize: "50px",
+                                    fontWeight: 200,
+                                    lineHeight: "50px",
+                                    maxWidth: "300px",
+                                }}
                             >
                                 {services[1].title}
                             </h3>
                             <p
-                                className="text-lg mb-10"
+                                className="mb-10"
                                 style={{ fontSize: "30px", fontWeight: 300 }}
                             >
                                 {services[1].description}
@@ -141,24 +148,25 @@ const ServicesSection = () => {
                         {services.slice(2).map((service, index) => (
                             <div
                                 key={index}
-                                className={`${service.bgColor} ${service.textColor} p-8 rounded-2xl flex flex-col `}
+                                className={`${service.bgColor} ${service.textColor} p-12 rounded-2xl flex flex-col `}
                                 style={{ height: "500px" }}
                             >
                                 <h3
                                     className="mb-12"
                                     style={{
-                                        fontSize: "60px",
+                                        fontSize: "50px",
                                         fontWeight: 200,
-                                        lineHeight: "60px",
+                                        lineHeight: "50px",
                                     }}
                                 >
                                     {service.title}
                                 </h3>
                                 <p
-                                    className="text-lg mb-10"
+                                    className="mb-10"
                                     style={{
                                         fontSize: "30px",
                                         fontWeight: 300,
+                                        lineHeight: "30px",
                                     }}
                                 >
                                     {service.description}
@@ -169,7 +177,7 @@ const ServicesSection = () => {
                 </div>
 
                 {/* Grid de servicios - Versión móvil (stack) */}
-                <div className="block md:hidden space-y-6">
+                <div className="block lg:hidden space-y-6">
                     {services.map((service, index) => (
                         <div
                             key={index}
@@ -180,10 +188,7 @@ const ServicesSection = () => {
                             }`}
                             style={{ height: "300px" }}
                         >
-                            <h3
-                                className="mb-4"
-                                style={{ fontSize: "35px" }}
-                            >
+                            <h3 className="mb-4" style={{ fontSize: "35px" }}>
                                 {service.title}
                             </h3>
                             <p

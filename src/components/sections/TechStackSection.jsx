@@ -1,25 +1,25 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const TechStackSection = ({ 
-    bgColor = 'bg-black', 
-    textColor = 'text-white', 
-    image = '/images/tech/techstack.png' 
+const TechStackSection = ({
+    bgColor = "bg-black",
+    textColor = "text-white",
+    image = "/images/tech/techstack.png",
 }) => {
     return (
-        <section className={`w-full ${bgColor} py-24 md:py-32 relative`}>
+        <section className={`w-full ${bgColor} py-16 lg:py-32 relative`}>
             <div className="container mx-auto px-4">
-                <div className="flex flex-col md:flex-row items-center md:items-center justify-center md:justify-between">
+                <div className="flex flex-col lg:flex-row items-center lg:items-center justify-center lg:justify-between">
                     {/* Columna izquierda con texto - Versión de escritorio */}
-                    <div className="hidden md:flex flex-col justify-center w-[700px] text-left h-[650px]">
+                    <div className="hidden lg:flex flex-col justify-center w-[700px] text-left h-[650px]">
                         <div className="flex flex-col justify-between h-full">
                             <div>
                                 <h2
                                     className={`${textColor} mb-6`}
                                     style={{
-                                        fontSize: "73px",
+                                        fontSize: "65px",
                                         fontWeight: 400,
-                                        lineHeight: "1.1",
+                                        lineHeight: "65px",
                                     }}
                                 >
                                     Our Cutting-Edge
@@ -29,8 +29,10 @@ const TechStackSection = ({
                                 <p
                                     className={`${textColor} mb-16`}
                                     style={{
-                                        fontSize: "25px",
+                                        fontSize: "20px",
                                         fontWeight: 200,
+                                        lineHeight: "20px",
+                                        maxWidth: "400px",
                                     }}
                                 >
                                     We leverage industry-leading tools to
@@ -38,31 +40,31 @@ const TechStackSection = ({
                                     product for you.
                                 </p>
                             </div>
-                            <div className="space-x-4">
+                            <div className="w-full flex gap-10">
                                 <Link
                                     to="/contact"
-                                    className="bg-neon-green text-center text-black rounded-full font-medium inline-block"
+                                    className="flex items-center justify-center bg-neon-green text-black hover:bg-opacity-90 transition-all"
                                     style={{
                                         width: "256px",
                                         height: "58px",
-                                        fontSize: "20px",
-                                        borderRadius: "12px",
-                                        lineHeight: "58px",
+                                        fontSize: "18px",
                                         fontWeight: 500,
+                                        borderRadius: "12px",
+                                        lineHeight: "18px",
                                     }}
                                 >
                                     Start here
                                 </Link>
                                 <Link
                                     to="/services"
-                                    className="bg-purple text-center text-white rounded-full font-medium inline-block"
+                                    className="flex items-center justify-center bg-purple text-white hover:bg-opacity-90 transition-all"
                                     style={{
                                         width: "256px",
                                         height: "58px",
-                                        fontSize: "20px",
-                                        borderRadius: "12px",
-                                        lineHeight: "58px",
+                                        fontSize: "18px",
                                         fontWeight: 500,
+                                        borderRadius: "12px",
+                                        lineHeight: "18px",
                                     }}
                                 >
                                     Our Services
@@ -72,54 +74,51 @@ const TechStackSection = ({
                     </div>
 
                     {/* Columna izquierda con texto - Versión móvil */}
-                    <div className="block md:hidden text-center mb-8">
+                    <div className="block lg:hidden text-center mb-12">
                         <h2
-                            className={`${textColor} mb-4`}
-                            style={{
-                                fontSize: "36px",
-                                fontWeight: 400,
-                                lineHeight: "1.2",
-                            }}
+                            className={`${textColor} mb-8 md:text-4xl text-2xl`}
                         >
                             Our Cutting-Edge
                             <br />
                             Tech Stack
                         </h2>
                         <p
-                            className={`${textColor} mb-6`}
+                            className={`${textColor} mb-10`}
                             style={{
                                 fontSize: "16px",
                                 fontWeight: 200,
+                                lineHeight: "16px",
+                                maxWidth: "300px",
                             }}
                         >
                             We leverage industry-leading tools to streamline
                             workflows and ensure the perfect product for you.
                         </p>
-                        <div className="space-x-4">
+                        <div className="w-full flex gap-5 md:gap-10">
                             <Link
                                 to="/contact"
-                                className="bg-neon-green text-black rounded-full font-medium inline-block"
+                                className="flex items-center justify-center bg-neon-green text-black hover:bg-opacity-90 transition-all"
                                 style={{
-                                    width: "99px",
-                                    height: "23px",
-                                    fontSize: "12px",
-                                    borderRadius: "5px",
-                                    lineHeight: "23px",
+                                    width: "116px",
+                                    height: "27px",
+                                    fontSize: "15px",
                                     fontWeight: 500,
+                                    borderRadius: "5px",
+                                    lineHeight: "27px",
                                 }}
                             >
                                 Start here
                             </Link>
                             <Link
                                 to="/services"
-                                className="bg-purple text-white rounded-full font-medium inline-block"
+                                className="flex items-center justify-center bg-purple text-white hover:bg-opacity-90 transition-all"
                                 style={{
-                                    width: "99px",
-                                    height: "23px",
-                                    fontSize: "12px",
-                                    borderRadius: "5px",
-                                    lineHeight: "23px",
+                                    width: "116px",
+                                    height: "27px",
+                                    fontSize: "15px",
                                     fontWeight: 500,
+                                    borderRadius: "5px",
+                                    lineHeight: "27px",
                                 }}
                             >
                                 Our Services
@@ -128,7 +127,7 @@ const TechStackSection = ({
                     </div>
 
                     {/* Columna derecha con imagen */}
-                    <div className="w-full md:w-1/2 flex justify-center items-center">
+                    <div className="w-full lg:w-1/2 flex justify-center items-center">
                         <img
                             src={image}
                             alt="Tech Stack"

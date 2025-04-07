@@ -29,17 +29,13 @@ const TestimonialsSection = () => {
     };
 
     return (
-        <section className="w-full bg-white py-24 md:mb-24 md:py-0 relative">
+        <section className="w-full bg-white py-16 lg:mb-24 lg:py-10 relative">
             <div className="container h-full mx-auto px-4">
                 {/* Layout para móvil */}
-                <div className="block md:hidden text-center">
+                <div className="block lg:hidden text-center">
                     <h2
-                        className="text-black mb-4"
-                        style={{
-                            fontSize: "36px",
-                            fontWeight: 400,
-                            lineHeight: 1.2,
-                        }}
+                        className="text-black mb-8 md:text-4xl text-2xl"
+                      
                     >
                         Hear From tens of
                         <br />
@@ -52,6 +48,7 @@ const TestimonialsSection = () => {
                             fontWeight: 400,
                             maxWidth: "800px",
                             margin: "0 auto",
+                            lineHeight: "16px",
                         }}
                     >
                         Lorem Ipsum is simply dummy text of the printing and
@@ -61,7 +58,7 @@ const TestimonialsSection = () => {
                         scrambled it to make a type specimen book.
                     </p>
 
-                    <div className="max-w-2xl mx-auto relative mt-10 md:mt-0">
+                    <div className="max-w-2xl mx-auto relative mt-16 lg:mt-0">
                         <div
                             className="bg-white rounded-2xl p-8"
                             style={{
@@ -80,16 +77,17 @@ const TestimonialsSection = () => {
                                 {testimonials[currentTestimonial].text}
                             </p>
                             <p
-                                className="font-bold"
+                                className="font-bold text-start"
                                 style={{
                                     fontSize: "18px",
+                                    lineHeight: "18px",
                                 }}
                             >
                                 {testimonials[currentTestimonial].name}
                             </p>
                         </div>
 
-                        <div className="flex justify-center mt-6 space-x-4">
+                        <div className="flex justify-end mt-6 space-x-4">
                             <button
                                 onClick={handlePrev}
                                 className="bg-neon-green text-black p-2"
@@ -140,7 +138,7 @@ const TestimonialsSection = () => {
 
                 {/* Layout para escritorio */}
                 <div
-                    className="hidden md:grid grid-cols-2 gap-16"
+                    className="hidden lg:grid grid-cols-2 gap-16"
                     style={{
                         minHeight: "900px",
                     }}

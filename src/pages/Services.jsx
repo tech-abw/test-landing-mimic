@@ -1,5 +1,5 @@
 import Hero from "../components/sections/Hero";
-import PortfolioSection from "../components/sections/PortfolioSection";
+import PortfolioServicesSection from "../components/sections/PortfolioServicesSection";
 import ServicesSection from "../components/sections/ServicesSection";
 import TechStackSection from "../components/sections/TechStackSection";
 import CalendarSection from "../components/sections/CalendarSection";
@@ -15,7 +15,7 @@ const Services = () => {
                 buttonLink="/portfolio"
             />
             <ServicesSection />
-            <PortfolioSection />
+            <PortfolioServicesSection />
             <TechStackSection bgColor="bg-gray" textColor="text-black" image="/images/tech/techstack-black.png" />
             <CalendarSection />
         </div>
