@@ -9,8 +9,8 @@ const WorkflowSection = () => {
                 "During a video call we map the specifics of each project to understand every detail.",
             bgColor: "bg-black",
             textColor: "text-white",
-            image: "/images/workflow/image1.png",
-            imageSize: { width: "110px", height: "110px" },
+            image: "/images/workflow/image1.svg",
+            imageSize: { width: "150px", height: "150px" },
         },
         {
             id: "2",
@@ -19,8 +19,8 @@ const WorkflowSection = () => {
                 "To get started. We develop a Project brief, Gantt chart and a project Roadmap.",
             bgColor: "bg-neon-green",
             textColor: "text-black",
-            image: "/images/workflow/setup.png",
-            imageSize: { width: "80px", height: "80px" },
+            image: "/images/workflow/setup.svg",
+            imageSize: { width: "120px", height: "120px" },
         },
         {
             id: "3",
@@ -29,8 +29,8 @@ const WorkflowSection = () => {
                 "During the project we have specific meetings depending on the phase of the project, and we share the progress of the project with you and your team.",
             bgColor: "bg-neon-green",
             textColor: "text-black",
-            image: "/images/workflow/meetings.png",
-            imageSize: { width: "80px", height: "80px" },
+            image: "/images/workflow/meetings.svg",
+            imageSize: { width: "120px", height: "120px" },
         },
         {
             id: "4",
@@ -39,8 +39,8 @@ const WorkflowSection = () => {
                 "We are commited with your final satisfaction, we go through your reviews, test the products and deliver in time and shape.",
             bgColor: "bg-neon-green",
             textColor: "text-black",
-            image: "/images/workflow/delivery.png",
-            imageSize: { width: "80px", height: "80px" },
+            image: "/images/workflow/delivery.svg",
+            imageSize: { width: "120px", height: "120px" },
         },
     ];
 
@@ -112,12 +112,12 @@ const WorkflowSection = () => {
                             className={`${step.bgColor} ${step.textColor} p-8 flex flex-col items-center text-center`}
                             style={{
                                 width: "403px",
-                                height: "519px",
+                                height: "430px",
                                 borderRadius: "36px",
                             }}
                         >
                             <div
-                                className="flex justify-center items-center mb-6 mt-8"
+                                className="flex justify-center items-center mb-6 mt-2"
                                 style={{ height: "100px" }}
                             >
                                 <img
@@ -132,17 +132,17 @@ const WorkflowSection = () => {
                             </div>
 
                             <h3
-                                className="font-bold mb-6"
+                                className="font-bold mb-3"
                                 style={{ fontSize: "30px", lineHeight: "30px" }}
                             >
                                 {step.title}
                             </h3>
                             <p
                                 style={{
-                                    fontSize: "20px",
+                                    fontSize: "16px",
                                     fontWeight: 500,
-                                    lineHeight: "20px",
-                                    marginTop: "25px",
+                                    lineHeight: 1.5,
+                                    marginTop: "20px",
                                 }}
                             >
                                 {step.description}
@@ -185,7 +185,13 @@ const WorkflowSection = () => {
                             >
                                 {step.title}
                             </h3>
-                            <p style={{ fontSize: "14px", fontWeight: 500 }}>
+                            <p
+                                style={{
+                                    fontSize: "13px",
+                                    fontWeight: 500,
+                                    lineHeight: 1.5,
+                                }}
+                            >
                                 {step.description}
                             </p>
                         </div>

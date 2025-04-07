@@ -45,10 +45,10 @@ const TechStackSection = ({
                                     to="/contact"
                                     className="flex items-center justify-center bg-neon-green text-black hover:bg-opacity-90 transition-all"
                                     style={{
-                                        width: "256px",
-                                        height: "58px",
-                                        fontSize: "18px",
-                                        fontWeight: 500,
+                                        width: "170px",
+                                        height: "38.66px",
+                                        fontSize: "16.66px",
+                                        fontWeight: 400,
                                         borderRadius: "12px",
                                         lineHeight: "18px",
                                     }}
@@ -59,10 +59,10 @@ const TechStackSection = ({
                                     to="/services"
                                     className="flex items-center justify-center bg-purple text-white hover:bg-opacity-90 transition-all"
                                     style={{
-                                        width: "256px",
-                                        height: "58px",
-                                        fontSize: "18px",
-                                        fontWeight: 500,
+                                        width: "170px",
+                                        height: "38.66px",
+                                        fontSize: "16.66px",
+                                        fontWeight: 400,
                                         borderRadius: "12px",
                                         lineHeight: "18px",
                                     }}
@@ -99,12 +99,11 @@ const TechStackSection = ({
                                 to="/contact"
                                 className="flex items-center justify-center bg-neon-green text-black hover:bg-opacity-90 transition-all"
                                 style={{
-                                    width: "116px",
-                                    height: "27px",
-                                    fontSize: "15px",
-                                    fontWeight: 500,
+                                    width: "77.33px",
+                                    height: "18px",
+                                    fontSize: "10px",
+                                    fontWeight: 400,
                                     borderRadius: "5px",
-                                    lineHeight: "27px",
                                 }}
                             >
                                 Start here
@@ -113,12 +112,11 @@ const TechStackSection = ({
                                 to="/services"
                                 className="flex items-center justify-center bg-purple text-white hover:bg-opacity-90 transition-all"
                                 style={{
-                                    width: "116px",
-                                    height: "27px",
-                                    fontSize: "15px",
-                                    fontWeight: 500,
+                                    width: "77.33px",
+                                    height: "18px",
+                                    fontSize: "10px",
+                                    fontWeight: 400,
                                     borderRadius: "5px",
-                                    lineHeight: "27px",
                                 }}
                             >
                                 Our Services
