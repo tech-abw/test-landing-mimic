@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const AboutHeroSection = () => {
     return (
@@ -6,13 +7,13 @@ const AboutHeroSection = () => {
             <div className="container mx-auto px-4">
                 {/* Versión de escritorio */}
                 <div
-                    className="hidden md:block bg-purple rounded-2xl p-8 items-center justify-center"
+                    className="hidden lg:block bg-purple rounded-2xl p-8 items-center justify-center"
                     style={{ height: "700px" }}
                 >
                     <div className="flex items-center justify-center w-full">
                         <div className="w-1/2 pr-8">
                             <h2
-                                className="text-white mb-4 md:mt-16"
+                                className="text-white mb-10 lg:mt-16"
                                 style={{
                                     fontSize: "70px",
                                     fontWeight: 400,
@@ -26,53 +27,45 @@ const AboutHeroSection = () => {
                                 your biz?
                             </h2>
                             <p
-                                className="text-white mb-4 md:mb-44"
+                                className="text-white mb-4 lg:mb-44"
                                 style={{
                                     fontSize: "18px",
                                     fontWeight: 300,
+                                    lineHeight: "18px",
+                                    maxWidth: "400px",
                                 }}
                             >
                                 In a fast paced world, take action. Lets build
                                 together!
                             </p>
-                            <button
-                                onClick={() =>
-                                    (window.location.href = "/contact")
-                                }
-                                className="bg-neon-green text-black"
+                            <Link
+                                to="/contact"
+                                className="flex items-center justify-center bg-neon-green text-black hover:bg-opacity-90 transition-all"
                                 style={{
-                                    width: "150px",
-                                    height: "37px",
-                                    fontSize: "22px",
-                                    fontWeight: 200,
-                                    borderRadius: "5px",
-                                    lineHeight: "27px",
-                                    textAlign: "center",
+                                    width: "256px",
+                                    height: "58px",
+                                    fontSize: "18px",
+                                    fontWeight: 500,
+                                    borderRadius: "12px",
+                                    lineHeight: "18px",
                                 }}
                             >
                                 Start here
-                            </button>
+                            </Link>
                         </div>
                         <div className="w-1/3 flex justify-center">
                             <img
                                 src="/images/about/cohete.png"
                                 alt="Rocket"
-                                className="w-full p-1 md:mt-16"
+                                className="w-full p-1 lg:mt-16"
                             />
                         </div>
                     </div>
                 </div>
 
                 {/* Versión móvil */}
-                <div className="block md:hidden bg-purple rounded-2xl p-4 text-center">
-                    <h2
-                        className="text-white mb-4"
-                        style={{
-                            fontSize: "36px",
-                            fontWeight: 400,
-                            lineHeight: 1.2,
-                        }}
-                    >
+                <div className="block lg:hidden bg-purple rounded-2xl p-4 text-center">
+                    <h2 className="text-white mb-10 md:text-4xl text-2xl">
                         Ready to unlock
                         <br />
                         the power of
@@ -80,6 +73,32 @@ const AboutHeroSection = () => {
                         your biz?
                     </h2>
 
+                    <p
+                        className="text-white mb-10"
+                        style={{
+                            fontSize: "16px",
+                            fontWeight: 300,
+                            lineHeight: "16px",
+                        }}
+                    >
+                        In a fast paced world, take action. Lets build together!
+                    </p>
+
+                    <div className="flex justify-center">
+                        <Link
+                            to="/contact"
+                            className="flex items-center justify-center bg-neon-green text-black hover:bg-opacity-90 transition-all mb-16"
+                            style={{
+                                width: "116px",
+                                height: "27px",
+                                fontSize: "15px",
+                                fontWeight: 500,
+                                borderRadius: "5px",
+                            }}
+                        >
+                            Start here
+                        </Link>
+                    </div>
                     <div className="flex justify-center mb-4">
                         <img
                             src="/images/about/cohete.png"
@@ -87,42 +106,18 @@ const AboutHeroSection = () => {
                             className="w-1/2 p-2"
                         />
                     </div>
-
-                    <p
-                        className="text-white mb-4"
-                        style={{
-                            fontSize: "16px",
-                            fontWeight: 300,
-                        }}
-                    >
-                        In a fast paced world, take action. Lets build together!
-                    </p>
-
-                    <button
-                        onClick={() => (window.location.href = "/contact")}
-                        className="bg-neon-green text-black"
-                        style={{
-                            width: "120px",
-                            height: "30px",
-                            fontSize: "15px",
-                            fontWeight: 200,
-                            borderRadius: "5px",
-                            lineHeight: "30px",
-                            textAlign: "center",
-                        }}
-                    >
-                        Start here
-                    </button>
                 </div>
 
-                <div className="text-white flex flex-col items-center mt-4 mx-auto md:mt-16">
+                <div className="text-white flex flex-col items-center mt-4 mx-auto lg:mt-16">
                     <p
                         style={{
                             fontSize: "76px",
                             fontWeight: 200,
                             lineHeight: "76px",
+                            textAlign: "center",
+                            maxWidth: "1200px",
                         }}
-                        className="hidden md:block mb-14 text-center"
+                        className="hidden lg:block mb-14 text-center"
                     >
                         Discover the complete suite of services we offer,
                         empowering you to build your dream product.
@@ -132,38 +127,39 @@ const AboutHeroSection = () => {
                             fontSize: "36px",
                             fontWeight: 200,
                         }}
-                        className="md:hidden mb-14 text-center"
+                        className="lg:hidden mb-14 text-center"
                     >
                         Discover the complete suite of services we offer,
                         empowering you to build your dream product.
                     </p>
 
-                    <button
-                        onClick={() => (window.location.href = "/services")}
-                        className="hidden md:block  bg-purple text-white"
+                    <Link
+                        to="/services"
+                        className="hidden md:flex items-center justify-center bg-purple text-white hover:bg-opacity-90 transition-all mt-16 mb-16"
                         style={{
-                            fontSize: "36px",
+                            width: "256px",
+                            height: "58px",
+                            fontSize: "18px",
                             fontWeight: 500,
-                            padding: "20px 30px",
-                            borderRadius: "10px",
-                            marginTop: "10px",
+                            borderRadius: "12px",
+                            lineHeight: "18px",
                         }}
                     >
                         Our services
-                    </button>
-                    <button
-                        onClick={() => (window.location.href = "/services")}
-                        className="bg-purple text-white md:hidden"
+                    </Link>
+                    <Link
+                        to="/services"
+                        className=" md:hidden flex items-center justify-center bg-purple text-white hover:bg-opacity-90 transition-all mb-16"
                         style={{
-                            fontSize: "20px",
+                            width: "116px",
+                            height: "27px",
+                            fontSize: "15px",
                             fontWeight: 500,
-                            padding: "5px 5px",
                             borderRadius: "5px",
-                            marginTop: "10px",
                         }}
                     >
                         Our services
-                    </button>
+                    </Link>
                 </div>
             </div>
         </section>
