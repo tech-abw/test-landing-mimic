@@ -45,34 +45,37 @@ const WorkflowSection = () => {
     ];
 
     return (
-        <section className="w-full bg-gray py-24 md:py-32 relative">
+        <section className="w-full bg-gray py-24 relative">
             {/* Línea vertical superior */}
-            <div 
-                className="relative hidden md:block" 
+            <div
+                className="relative hidden lg:block"
                 style={{
                     left: "50%",
                     width: "1px",
-                    height: "120px",
+                    marginTop: "0px",
+                    marginBottom: "40px",
+                    height: "100px",
                     backgroundColor: "#000",
-                    transform: "translateX(-50%)"
+                    transform: "translateX(-50%)",
                 }}
             ></div>
-            
+
             <div className="container mx-auto px-4">
                 <div className="text-center mb-12">
-                    <h2 className="mb-4">
+                    <h2 className="lg:mb-10 mb-5">
                         <span
-                            className="hidden md:inline"
-                            style={{ fontSize: "96px", fontWeight: 400 }}
+                            className="hidden lg:inline"
+                            style={{
+                                fontSize: "65px",
+                                fontWeight: 400,
+                                lineHeight: "65px",
+                            }}
                         >
                             How it works - Our
                             <br />
                             Streamlined Workflow
                         </span>
-                        <span
-                            className="md:hidden"
-                            style={{ fontSize: "36px", fontWeight: 400 }}
-                        >
+                        <span className="lg:hidden md:text-4xl text-3xl">
                             How it works - Our
                             <br />
                             Streamlined Workflow
@@ -80,18 +83,19 @@ const WorkflowSection = () => {
                     </h2>
                     <p className="text-center mx-auto">
                         <span
-                            className="hidden md:inline"
+                            className="hidden lg:inline"
                             style={{
                                 fontSize: "25px",
                                 fontWeight: 500,
                                 maxWidth: "800px",
+                                lineHeight: "25px",
                             }}
                         >
                             Our workflow makes it simple and easy to work the
                             best possible together.
                         </span>
                         <span
-                            className="md:hidden"
+                            className="lg:hidden"
                             style={{ fontSize: "16px", fontWeight: 500 }}
                         >
                             Our workflow makes it simple and easy to work the
@@ -101,7 +105,7 @@ const WorkflowSection = () => {
                 </div>
 
                 {/* Versión desktop */}
-                <div className="hidden md:flex justify-center gap-8">
+                <div className="hidden lg:flex justify-center gap-8">
                     {workflowSteps.map((step) => (
                         <div
                             key={step.id}
@@ -112,28 +116,43 @@ const WorkflowSection = () => {
                                 borderRadius: "36px",
                             }}
                         >
-                            <div className="flex justify-center items-center mb-6 mt-8" style={{ height: "100px" }}>
+                            <div
+                                className="flex justify-center items-center mb-6 mt-8"
+                                style={{ height: "100px" }}
+                            >
                                 <img
                                     src={step.image}
                                     alt={step.title}
                                     style={{
                                         width: step.imageSize.width,
                                         height: step.imageSize.height,
-                                        objectFit: "contain"
+                                        objectFit: "contain",
                                     }}
                                 />
                             </div>
 
-                            <h3 className="font-bold mb-6" style={{ fontSize: "30px" }}>
+                            <h3
+                                className="font-bold mb-6"
+                                style={{ fontSize: "30px", lineHeight: "30px" }}
+                            >
                                 {step.title}
                             </h3>
-                            <p style={{ fontSize: "20px", fontWeight: 500 }}>{step.description}</p>
+                            <p
+                                style={{
+                                    fontSize: "20px",
+                                    fontWeight: 500,
+                                    lineHeight: "20px",
+                                    marginTop: "25px",
+                                }}
+                            >
+                                {step.description}
+                            </p>
                         </div>
                     ))}
                 </div>
 
                 {/* Versión móvil */}
-                <div className="md:hidden space-y-8">
+                <div className="lg:hidden space-y-8">
                     {workflowSteps.map((step) => (
                         <div
                             key={step.id}
@@ -145,37 +164,47 @@ const WorkflowSection = () => {
                                 borderRadius: "32px",
                             }}
                         >
-                            <div className="flex justify-center items-center mb-4 mt-4" style={{ height: "70px" }}>
+                            <div
+                                className="flex justify-center items-center mb-4 mt-4"
+                                style={{ height: "70px" }}
+                            >
                                 <img
                                     src={step.image}
                                     alt={step.title}
                                     style={{
                                         width: `calc(${step.imageSize.width} * 0.7)`,
                                         height: `calc(${step.imageSize.height} * 0.7)`,
-                                        objectFit: "contain"
+                                        objectFit: "contain",
                                     }}
                                 />
                             </div>
 
-                            <h3 className="font-bold mb-3" style={{ fontSize: "23px" }}>
+                            <h3
+                                className="font-bold mb-3"
+                                style={{ fontSize: "23px" }}
+                            >
                                 {step.title}
                             </h3>
-                            <p style={{ fontSize: "14px", fontWeight: 500 }}>{step.description}</p>
+                            <p style={{ fontSize: "14px", fontWeight: 500 }}>
+                                {step.description}
+                            </p>
                         </div>
                     ))}
                 </div>
             </div>
-            
+
             {/* Línea vertical inferior */}
-            <div 
-                className="relative hidden md:block" 
+            <div
+                className="relative hidden lg:block"
                 style={{
                     top: "50px",
                     left: "50%",
                     width: "1px",
-                    height: "120px",
+                    height: "100px",
+                    marginTop: "40px",
+                    marginBottom: "0px",
                     backgroundColor: "#000",
-                    transform: "translateX(-50%)"
+                    transform: "translateX(-50%)",
                 }}
             ></div>
         </section>

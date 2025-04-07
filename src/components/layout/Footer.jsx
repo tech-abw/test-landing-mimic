@@ -12,7 +12,7 @@ const Footer = () => {
                         <img
                             src="/images/footer.png"
                             alt="Mimic Logo"
-                            className="w-[200px] h-[200px] md:w-[422.68px] md:h-[421px]"
+                            className="w-[150px] h-[150px] lg:w-[310px] lg:h-[330px]"
                         />
                     </div>
 

@@ -10,7 +10,7 @@ const Hero = ({
   return (
     <section className="relative w-full overflow-hidden bg-gray pt-24 pb-12">
       {/* Imagen de fondo - versión desktop y móvil */}
-      <div className="relative w-full px-4">
+      <div className="relative w-full px-4 lg:px-20 md:px-16">
         {/* Versión desktop */}
         <div className="hidden md:block relative overflow-hidden" style={{ 
           maxWidth: '1790px', 
@@ -29,9 +29,9 @@ const Hero = ({
             <h1 
               className="text-white mb-6 leading-tight w-3/5" 
               style={{ 
-                fontSize: '96px', 
+                fontSize: '65px', 
                 fontWeight: 400,
-                lineHeight: '96px'
+                lineHeight: '65px'
               }}
             >
               {title.split('\n').map((line, index) => (
@@ -39,7 +39,7 @@ const Hero = ({
               ))}
             </h1>
             
-            <p className="text-white mb-8 max-w-md" style={{ fontSize: '25px', fontWeight: 500, lineHeight: '1.5' }}>
+            <p className="text-white mb-8 max-w-md" style={{ fontSize: '18px', fontWeight: 500, lineHeight: '1.5' }}>
               {description}
             </p>
             
@@ -49,9 +49,10 @@ const Hero = ({
               style={{ 
                 width: '256px', 
                 height: '58px', 
-                fontSize: '25px', 
+                fontSize: '18px', 
                 fontWeight: 500,
-                borderRadius: '12px'
+                borderRadius: '12px',
+                lineHeight: '18px'
               }}
             >
               {buttonText}
