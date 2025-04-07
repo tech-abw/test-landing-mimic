@@ -6,7 +6,7 @@ const PortfolioSection = () => {
             id: 1,
             image: "/images/portfolio/portfolio-1.png",
             alt: "Portfolio item 1 - Laptop display",
-            desktopSize: { width: 666, height: 475 },
+            desktopSize: { width: 999, height: 713 },
             mobileSize: { width: 358.69, height: 256 },
             borderRadius: { desktop: 38, mobile: 32 },
             showOnMobile: true,
@@ -15,7 +15,7 @@ const PortfolioSection = () => {
             id: 2,
             image: "/images/portfolio/portfolio-2.png",
             alt: "Portfolio item 2 - Website on laptop",
-            desktopSize: { width: 408, height: 475 },
+            desktopSize: { width: 612, height: 713 },
             mobileSize: { width: 358.55, height: 418 },
             borderRadius: { desktop: 38, mobile: 32 },
             showOnMobile: true,
@@ -24,7 +24,7 @@ const PortfolioSection = () => {
             id: 3,
             image: "/images/portfolio/portfolio-3.png",
             alt: "Portfolio item 3 - Mobile app",
-            desktopSize: { width: 452, height: 545 },
+            desktopSize: { width: 677, height: 817 },
             mobileSize: { width: 359, height: 433 },
             borderRadius: { desktop: 38, mobile: 32 },
             showOnMobile: true,
@@ -33,7 +33,7 @@ const PortfolioSection = () => {
             id: 4,
             image: "/images/portfolio/portfolio-4.png",
             alt: "Portfolio item 4 - Tablet website",
-            desktopSize: { width: 622, height: 545 },
+            desktopSize: { width: 930, height: 817 },
             borderRadius: { desktop: 38 },
             showOnMobile: false,
         },
@@ -41,7 +41,7 @@ const PortfolioSection = () => {
             id: 5,
             image: "/images/portfolio/portfolio-5.png",
             alt: "Portfolio item 5 - Tablet app",
-            desktopSize: { width: 452, height: 390 },
+            desktopSize: { width: 804, height: 707 },
             borderRadius: { desktop: 38 },
             showOnMobile: false,
         },
@@ -49,7 +49,7 @@ const PortfolioSection = () => {
             id: 6,
             image: "/images/portfolio/portfolio-6.png",
             alt: "Portfolio item 6 - Laptop display",
-            desktopSize: { width: 630, height: 471 },
+            desktopSize: { width: 804, height: 707 },
             borderRadius: { desktop: 38 },
             showOnMobile: false,
         },
@@ -59,7 +59,7 @@ const PortfolioSection = () => {
 
     return (
         <section className="w-full bg-black py-16 md:py-24">
-            <div className="container mx-auto px-4">
+            <div className="container w-[85%] mx-auto px-4">
                 {/* Texto introductorio */}
                 <div className="text-center mb-6 md:mb-10">
                     {/* Párrafo con tamaños específicos */}
@@ -67,36 +67,29 @@ const PortfolioSection = () => {
                         className="text-white"
                         style={{
                             maxWidth: "650px",
-                            margin: "0 auto0",
-                            marginBottom: "35px",
+                            margin: "0 auto",
+                            marginBottom: "55px",
                         }}
                     >
                         <span
-                            className="hidden md:inline"
+                            className="hidden lg:inline"
                             style={{
                                 fontSize: "20px",
                                 fontWeight: 500,
-                                lineHeight: "20px",
+                                lineHeight: 1.5,
                             }}
                         >
                             Discover a collection of real-world examples of how
                             we transform ideas into impactful solutions
                         </span>
-                        <span
-                            className="md:hidden"
-                            style={{
-                                fontSize: "16px",
-                                fontWeight: 500,
-                                lineHeight: "16px",
-                            }}
-                        >
+                        <span className="lg:hidden text-xs md:text-base">
                             Discover a collection of real-world examples of how
                             we transform ideas into impactful solutions
                         </span>
                     </p>
 
                     {/* Título con tamaños específicos */}
-                    <h2 className="text-white mb-8">
+                    <h2 className="text-white mb-8 lg:mb-16">
                         <span
                             className="hidden lg:inline"
                             style={{
@@ -109,7 +102,7 @@ const PortfolioSection = () => {
                             <br />
                             Brought to Life
                         </span>
-                        <span className="lg:hidden md:text-3xl text-xl">
+                        <span className="lg:hidden lg:text-3xl md:text-2xl text-xl">
                             Portfolio - Explore Unique Ideas
                             <br />
                             Brought to Life
@@ -117,40 +110,37 @@ const PortfolioSection = () => {
                     </h2>
 
                     {/* Botón para escritorio */}
-                    <div className="hidden md:block">
-                        <Link to="/portfolio">
-                            <button
-                                className="bg-neon-green text-black hover:bg-opacity-90 transition-all md:mt-3 lg:mt-6"
-                                style={{
-                                    width: "256px",
-                                    height: "58px",
-                                    fontSize: "20px",
-                                    fontWeight: 500,
-                                    borderRadius: "12px",
-                                    lineHeight: "20px",
-                                }}
-                            >
-                                See all projects
-                            </button>
+                    <div className="hidden lg:block">
+                        <Link
+                            to="/portfolio"
+                            className="flex mx-auto items-center justify-center bg-neon-green text-black hover:bg-opacity-90 transition-all"
+                            style={{
+                                width: "170px",
+                                height: "38.66px",
+                                fontSize: "16.66px",
+                                fontWeight: 400,
+                                borderRadius: "12px",
+                                lineHeight: "18px",
+                            }}
+                        >
+                            See all projects
                         </Link>
                     </div>
 
                     {/* Botón para móvil */}
-                    <div className="md:hidden">
-                        <Link to="/portfolio">
-                            <button
-                                className="bg-neon-green text-black hover:bg-opacity-90 transition-all"
-                                style={{
-                                    width: "162px",
-                                    height: "40px",
-                                    fontSize: "15px",
-                                    fontWeight: 500,
-                                    borderRadius: "5px",
-                                    lineHeight: "15px",
-                                }}
-                            >
-                                See all projects
-                            </button>
+                    <div className="lg:hidden">
+                        <Link
+                            to="/portfolio"
+                            className="flex mx-auto items-center justify-center bg-neon-green text-black hover:bg-opacity-90 transition-all"
+                            style={{
+                                width: "77.33px",
+                                height: "18px",
+                                fontSize: "10px",
+                                fontWeight: 400,
+                                borderRadius: "5px",
+                            }}
+                        >
+                            See all projects
                         </Link>
                     </div>
                 </div>
@@ -158,7 +148,7 @@ const PortfolioSection = () => {
                 {/* Versión Desktop - Layout personalizado */}
                 <div className="hidden lg:block mt-12">
                     {/* Primera fila - 2 elementos */}
-                    <div className="flex justify-center gap-6 mb-6">
+                    <div className="flex gap-6 mb-6">
                         {/* Primer elemento - más grande */}
                         <div
                             className="overflow-hidden"
@@ -193,7 +183,7 @@ const PortfolioSection = () => {
                     </div>
 
                     {/* Segunda fila - 2 elementos */}
-                    <div className="flex justify-center gap-6 mb-6">
+                    <div className="flex gap-6 mb-6">
                         {/* Tercer elemento */}
                         <div
                             className="overflow-hidden"
@@ -228,7 +218,7 @@ const PortfolioSection = () => {
                     </div>
 
                     {/* Tercera fila - 2 elementos */}
-                    <div className="flex justify-center gap-6">
+                    <div className="flex gap-6">
                         {/* Quinto elemento */}
                         <div
                             className="overflow-hidden"

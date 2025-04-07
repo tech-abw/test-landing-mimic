@@ -32,11 +32,8 @@ const TestimonialsSection = () => {
         <section className="w-full bg-white py-16 lg:mb-24 lg:py-10 relative">
             <div className="container h-full mx-auto px-4">
                 {/* Layout para móvil */}
-                <div className="block lg:hidden text-center">
-                    <h2
-                        className="text-black mb-8 md:text-4xl text-2xl"
-                      
-                    >
+                <div className="block lg:hidden ">
+                    <h2 className="text-black mb-8 md:text-4xl text-2xl leading-none">
                         Hear From tens of
                         <br />
                         Clients
@@ -46,16 +43,12 @@ const TestimonialsSection = () => {
                         style={{
                             fontSize: "16px",
                             fontWeight: 400,
-                            maxWidth: "800px",
-                            margin: "0 auto",
+                            maxWidth: "300px",
                             lineHeight: "16px",
                         }}
                     >
-                        Lorem Ipsum is simply dummy text of the printing and
-                        typesetting industry. Lorem Ipsum has been the
-                        industry's standard dummy text ever since the 1500s,
-                        when an unknown printer took a galley of type and
-                        scrambled it to make a type specimen book.
+                        Discover what satisfied clients have to say about their
+                        experience with our service solutions.
                     </p>
 
                     <div className="max-w-2xl mx-auto relative mt-16 lg:mt-0">
@@ -96,19 +89,11 @@ const TestimonialsSection = () => {
                                     height: "40px",
                                 }}
                             >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="25"
-                                    height="25"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    strokeWidth="2"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                >
-                                    <path d="M15 18l-6-6 6-6" />
-                                </svg>
+                                <img
+                                    src="/images/izquierda.svg"
+                                    alt="Flecha izquierda"
+                                    className="w-full h-full"
+                                />
                             </button>
                             <button
                                 onClick={handleNext}
@@ -118,19 +103,11 @@ const TestimonialsSection = () => {
                                     height: "40px",
                                 }}
                             >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="25"
-                                    height="25"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    strokeWidth="2"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                >
-                                    <path d="M9 18l6-6-6-6" />
-                                </svg>
+                                <img
+                                    src="/images/derecha.svg"
+                                    alt="Flecha derecha"
+                                    className="w-full h-full"
+                                />
                             </button>
                         </div>
                     </div>
@@ -150,7 +127,7 @@ const TestimonialsSection = () => {
                             style={{
                                 fontSize: "73px",
                                 fontWeight: 400,
-                                lineHeight: '73px',
+                                lineHeight: "73px",
                             }}
                         >
                             Hear From tens of
@@ -206,47 +183,31 @@ const TestimonialsSection = () => {
                                 onClick={handlePrev}
                                 className="bg-neon-green text-black flex items-center justify-center"
                                 style={{
-                                    width: "89px",
-                                    height: "89px",
+                                    width: "59.33px",
+                                    height: "59.33px",
                                     borderRadius: "12px",
                                 }}
                             >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="50"
-                                    height="50"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    strokeWidth="2"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                >
-                                    <path d="M15 18l-6-6 6-6" />
-                                </svg>
+                                <img
+                                    src="/images/izquierda.svg"
+                                    alt="Flecha izquierda"
+                                    className="w-[35px] h-[35px]"
+                                />
                             </button>
                             <button
                                 onClick={handleNext}
                                 className="bg-neon-green text-black flex items-center justify-center"
                                 style={{
-                                    width: "89px",
-                                    height: "89px",
+                                    width: "59.33px",
+                                    height: "59.33px",
                                     borderRadius: "12px",
                                 }}
                             >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="50"
-                                    height="50"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    strokeWidth="2"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                >
-                                    <path d="M9 18l6-6-6-6" />
-                                </svg>
+                                <img
+                                    src="/images/derecha.svg"
+                                    alt="Flecha derecha"
+                                    className="w-[35px] h-[35px]"
+                                />
                             </button>
                         </div>
                     </div>

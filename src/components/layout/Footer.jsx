@@ -5,14 +5,14 @@ const Footer = () => {
 
     return (
         <footer className="bg-gray py-12">
-            <div className="container mx-auto px-4">
+            <div className="container w-[85%] mx-auto px-4">
                 <div className="flex flex-col md:flex-row justify-between items-start mb-12">
                     {/* Logo del footer */}
                     <div className="mb-8 md:mb-0 md:order-first order-last mt-10">
                         <img
-                            src="/images/footer.png"
+                            src="/images/footer.svg"
                             alt="Mimic Logo"
-                            className="w-[150px] h-[150px] lg:w-[310px] lg:h-[330px]"
+                            className="w-[150px] h-[150px] lg:w-[281.78px] lg:h-[280.66px]"
                         />
                     </div>
 
@@ -91,14 +91,14 @@ const Footer = () => {
                         <div className="flex space-x-4 mt-10">
                             <a href="#" className="text-black">
                                 <img
-                                    src="/images/footer-wha.png"
+                                    src="/images/footer-wha.svg"
                                     alt="WhatsApp"
                                     className="h-6 w-6 md:h-8 md:w-8"
                                 />
                             </a>
                             <a href="#" className="text-black">
                                 <img
-                                    src="/images/footer-insta.png"
+                                    src="/images/footer-insta.svg"
                                     alt="Instagram"
                                     className="h-6 w-6 md:h-8 md:w-8"
                                 />
@@ -199,7 +199,7 @@ const Footer = () => {
                 </div>
 
                 {/* Copyright */}
-                <div className="text-sm text-gray-600">
+                <div className="text-sm text-gray-600 lg:mt-32">
                     <p>©{currentYear}. Mimic. All rights reserved.</p>
                 </div>
             </div>
