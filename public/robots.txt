@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mimic.agency/sitemap.xml 
