@@ -5,7 +5,7 @@ const Footer = () => {
 
     return (
         <footer className="bg-gray py-12">
-            <div className="container w-[85%] mx-auto px-4">
+            <div className="w-[95%] mx-auto px-4">
                 <div className="flex flex-col md:flex-row justify-between items-start mb-12">
                     {/* Logo del footer */}
                     <div className="mb-8 md:mb-0 md:order-first order-last mt-10">

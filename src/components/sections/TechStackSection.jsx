@@ -8,7 +8,7 @@ const TechStackSection = ({
 }) => {
     return (
         <section className={`w-full ${bgColor} py-16 lg:py-32 relative`}>
-            <div className="container mx-auto px-4">
+            <div className="w-[95%] mx-auto px-4">
                 <div className="flex flex-col lg:flex-row items-center lg:items-center justify-center lg:justify-between">
                     {/* Columna izquierda con texto - Versión de escritorio */}
                     <div className="hidden lg:flex flex-col justify-center w-[700px] text-left h-[650px]">
@@ -40,9 +40,9 @@ const TechStackSection = ({
                                     product for you.
                                 </p>
                             </div>
-                            <div className="w-full flex gap-10">
+                            <div className="w-full flex gap-3">
                                 <Link
-                                    to="/contact"
+                                    to="https://tally.so/r/wb6l9Z"
                                     className="flex items-center justify-center bg-neon-green text-black hover:bg-opacity-90 transition-all"
                                     style={{
                                         width: "170px",
@@ -96,7 +96,7 @@ const TechStackSection = ({
                         </p>
                         <div className="w-full flex gap-5 md:gap-10">
                             <Link
-                                to="/contact"
+                                to="https://tally.so/r/wb6l9Z"
                                 className="flex items-center justify-center bg-neon-green text-black hover:bg-opacity-90 transition-all"
                                 style={{
                                     width: "77.33px",

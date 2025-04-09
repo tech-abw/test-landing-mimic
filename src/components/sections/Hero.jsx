@@ -11,13 +11,13 @@ const Hero = ({
     return (
         <section className="relative w-full overflow-hidden bg-gray pt-20">
             {/* Imagen de fondo - versión desktop y móvil */}
-            <div className="relative w-[85%] mx-auto">
+            <div className="relative w-[95%] mx-auto">
                 {/* Versión desktop */}
                 <div
                     className="hidden lg:block relative overflow-hidden"
                     style={{
                         maxWidth: "1790px",
-                        height: "700px",
+                        height: "90vh",
                         margin: "0 auto",
                         borderRadius: "40px",
                     }}
@@ -34,7 +34,7 @@ const Hero = ({
                         style={{ paddingLeft: "70px" }}
                     >
                         <h1
-                            className="text-white mb-6 leading-tight w-[60%]"
+                            className="text-white mb-6 leading-tight w-[50%]"
                             style={{
                                 fontSize: desktopTitleFontSize,
                                 fontWeight: 400,
@@ -79,7 +79,7 @@ const Hero = ({
                     className="block lg:hidden w-full relative overflow-hidden"
                     style={{
                         maxWidth: "800px",
-                        height: "550px",
+                        height: "90vh",
                         margin: "0 auto",
                         borderRadius: "16px",
                     }}

@@ -46,9 +46,9 @@ const services = [
 const ServicesSection = () => {
     return (
         <section className="w-full bg-gray py-16 px-4">
-            <div className="w-[88%] mx-auto">
+            <div className="w-[95%] mx-auto">
                 {/* Título principal - Versión de escritorio */}
-                <div className="hidden lg:block  lg:text-start mb-12">
+                <div className="hidden lg:block  lg:text-start mb-36">
                     <p
                         className="text-black mb-4"
                         style={{

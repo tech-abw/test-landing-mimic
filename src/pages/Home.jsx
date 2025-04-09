@@ -8,7 +8,7 @@ import TestimonialsSection from "../components/sections/TestimonialsSection";
 const Home = () => {
     return (
         <main>
-            <Hero />
+            <Hero buttonLink="https://tally.so/r/wb6l9Z"/>
             <ClientsSection />
             <PortfolioSection />
             <WorkflowSection />

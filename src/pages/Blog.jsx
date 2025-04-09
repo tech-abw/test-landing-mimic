@@ -76,7 +76,7 @@ const BlogPage = () => {
 
     return (
         <div className="w-full bg-gray flex justify-center py-24">
-            <div className="lg:w-11/12 w-full mx-4 lg:mx-0 bg-white rounded-2xl shadow-lg px-8 py-12">
+            <div className="lg:w-[95%] w-full mx-4 lg:mx-0 bg-white rounded-2xl shadow-lg px-8 py-12">
                 <h2 className="lg:text-6xl md:text-5xl font-normal text-4xl lg:w-[60%] mb-12 text-left border-black/30">
                     Discover articles about innovation and ultimate trends
                 </h2>

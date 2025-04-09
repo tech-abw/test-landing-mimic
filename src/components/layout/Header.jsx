@@ -14,7 +14,7 @@ const Header = () => {
 
     return (
         <header className="fixed w-full flex justify-center items-center bg-gray py-3 z-50">
-            <div className="container flex w-[85%]  items-center justify-between">
+            <div className="flex w-[92%] items-center justify-between">
                 {/* Logo */}
                 <div className="flex items-center">
                     <Logo />
@@ -45,7 +45,7 @@ const Header = () => {
                 <div className="flex items-center">
                     {/* Botón para móvil */}
                     <Link
-                        to="/contact"
+                        to="https://tally.so/r/wb6l9Z"
                         className="lg:hidden flex items-center justify-center bg-black text-white hover:bg-opacity-90 transition-all"
                         style={{
                             width: "66px",
@@ -61,7 +61,7 @@ const Header = () => {
 
                     {/* Botón para desktop */}
                     <Link
-                        to="/contact"
+                        to="https://tally.so/r/wb6l9Z"
                         className="hidden lg:flex items-center justify-center bg-black text-white hover:bg-opacity-90 transition-all"
                         style={{
                             width: "170px",
