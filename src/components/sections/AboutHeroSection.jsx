@@ -84,13 +84,13 @@ const AboutHeroSection = () => {
                         In a fast paced world, take action. Lets build together!
                     </p>
 
-                    <div className="flex justify-center">
+                    <div className="flex justify-center mb-12">
                         <Link
                             to="https://tally.so/r/wb6l9Z"
                             className="flex items-center justify-center bg-neon-green text-black hover:bg-opacity-90 transition-all"
                             style={{
-                                width: "77.33px",
-                                height: "18px",
+                                width: "87px",
+                                height: "22px",
                                 fontSize: "10px",
                                 fontWeight: 400,
                                 borderRadius: "5px",
@@ -124,7 +124,7 @@ const AboutHeroSection = () => {
                     </p>
                     <p
                         style={{
-                            fontSize: "36px",
+                            fontSize: "20px",
                             fontWeight: 200,
                         }}
                         className="lg:hidden mb-14 text-center"
@@ -135,7 +135,7 @@ const AboutHeroSection = () => {
 
                     <Link
                         to="/services"
-                        className="flex items-center justify-center bg-purple text-white hover:bg-opacity-90 transition-all"
+                        className="hidden lg:flex items-center justify-center bg-purple text-white hover:bg-opacity-90 transition-all"
                         style={{
                             width: "170px",
                             height: "38.66px",
@@ -152,8 +152,8 @@ const AboutHeroSection = () => {
                         to="/services"
                         className="lg:hidden flex items-center justify-center bg-purple text-white hover:bg-opacity-90 transition-all"
                         style={{
-                            width: "77.33px",
-                            height: "18px",
+                            width: "87px",
+                            height: "22px",
                             fontSize: "10px",
                             fontWeight: 400,
                             borderRadius: "5px",

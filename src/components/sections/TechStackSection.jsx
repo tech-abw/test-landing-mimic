@@ -94,13 +94,13 @@ const TechStackSection = ({
                             We leverage industry-leading tools to streamline
                             workflows and ensure the perfect product for you.
                         </p>
-                        <div className="w-full flex gap-5 md:gap-10">
+                        <div className="w-full justify-center flex gap-5 md:gap-10">
                             <Link
                                 to="https://tally.so/r/wb6l9Z"
                                 className="flex items-center justify-center bg-neon-green text-black hover:bg-opacity-90 transition-all"
                                 style={{
-                                    width: "77.33px",
-                                    height: "18px",
+                                    width: "87px",
+                                    height: "22px",
                                     fontSize: "10px",
                                     fontWeight: 400,
                                     borderRadius: "5px",
@@ -112,8 +112,8 @@ const TechStackSection = ({
                                 to="/services"
                                 className="flex items-center justify-center bg-purple text-white hover:bg-opacity-90 transition-all"
                                 style={{
-                                    width: "77.33px",
-                                    height: "18px",
+                                    width: "87px",
+                                    height: "22px",
                                     fontSize: "10px",
                                     fontWeight: 400,
                                     borderRadius: "5px",

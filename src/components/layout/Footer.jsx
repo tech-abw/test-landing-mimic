@@ -107,7 +107,7 @@ const Footer = () => {
                                 <img
                                     src="/images/footer-linke.svg"
                                     alt="LinkedIn"
-                                    className="h-7 w-7 md:h-8 md:w-8"
+                                    className="h-6 w-6 md:h-8 md:w-8"
                                 />
                             </a>
                         </div>

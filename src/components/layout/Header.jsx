@@ -48,8 +48,8 @@ const Header = () => {
                         to="https://tally.so/r/wb6l9Z"
                         className="lg:hidden flex items-center justify-center bg-black text-white hover:bg-opacity-90 transition-all"
                         style={{
-                            width: "66px",
-                            height: "18px",
+                            width: "87px",
+                            height: "22px",
                             fontSize: "10px",
                             fontWeight: 400,
                             color: "#CCFF00",
@@ -84,7 +84,7 @@ const Header = () => {
                         {isMenuOpen ? (
                             <svg
                                 width="20"
-                                height="15.33"
+                                height="20"
                                 viewBox="0 0 30 23"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
