@@ -11,7 +11,7 @@ const Navigation = ({ isMobile = false }) => {
     return (
         <nav
             className={`${
-                isMobile ? "flex flex-col space-y-6" : "flex justify-between items-start w-[85%]"
+                isMobile ? "flex flex-col space-y-6" : "flex justify-between items-start w-[95%]"
             }`}
         >
             {navItems.map((item, index) => (

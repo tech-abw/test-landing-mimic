@@ -25,7 +25,7 @@ const BlogArticle = () => {
 
     return (
         <div className="w-full bg-gray flex justify-center py-24">
-            <div className="lg:w-11/12 w-full mx-8 lg:mx-0 bg-white rounded-2xl shadow-lg px-8 py-12">
+            <div className="lg:w-[95%] w-full mx-8 lg:mx-0 bg-white rounded-2xl shadow-lg px-8 py-12">
                 <h1 className="lg:text-3xl md:text-2xl text-xl font-bold mb-4 text-left w-full pb-1 border-b border-black/30">
                     Lorem Ipsum is simply dummy text of the printing
                 </h1>

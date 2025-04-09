@@ -13,6 +13,7 @@ const Services = () => {
                 backgroundImage="/images/services-hero.png"
                 buttonText="Our Work"
                 buttonLink="/portfolio"
+                desktopTitleFontSize="78px"
             />
             <ServicesSection />
             <PortfolioServicesSection />

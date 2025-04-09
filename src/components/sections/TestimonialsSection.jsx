@@ -30,7 +30,7 @@ const TestimonialsSection = () => {
 
     return (
         <section className="w-full bg-white py-16 lg:mb-24 lg:py-10 relative">
-            <div className="container h-full mx-auto px-4">
+            <div className="w-[95%] h-full mx-auto px-4">
                 {/* Layout para móvil */}
                 <div className="block lg:hidden ">
                     <h2 className="text-black mb-8 md:text-4xl text-2xl leading-none">
@@ -178,7 +178,7 @@ const TestimonialsSection = () => {
                             </p>
                         </div>
 
-                        <div className="flex space-x-4 self-end mr-16">
+                        <div className="flex space-x-4 self-end mr-1">
                             <button
                                 onClick={handlePrev}
                                 className="bg-neon-green text-black flex items-center justify-center"

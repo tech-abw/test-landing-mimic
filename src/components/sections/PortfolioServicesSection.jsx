@@ -6,82 +6,91 @@ const PortfolioServicesSection = () => {
             id: 1,
             image: "/images/portfolio/portfolio-1.png",
             alt: "Portfolio item 1 - Laptop display",
-            desktopSize: { width: 452, height: 545 },
+            desktopSize: { width: 650, height: 545 },
             mobileSize: { width: 358.69, height: 256 },
             borderRadius: { desktop: 38, mobile: 32 },
             showOnMobile: true,
+            link: "https://stiva.com"
         },
         {
             id: 2,
             image: "/images/portfolio/portfolio-8.png",
             alt: "Portfolio item 2 - Website on laptop",
-            desktopSize: { width: 452, height: 545 },
+            desktopSize: { width: 580, height: 545 },
             mobileSize: { width: 358.55, height: 418 },
             borderRadius: { desktop: 38, mobile: 32 },
             showOnMobile: true,
+            link: "https://cordeliaruiz.com"
         },
         {
             id: 3,
             image: "/images/portfolio/portfolio-2.png",
             alt: "Portfolio item 3 - Mobile app",
-            desktopSize: { width: 452, height: 545 },
+            desktopSize: { width: 620, height: 545 },
             mobileSize: { width: 359, height: 433 },
             borderRadius: { desktop: 38, mobile: 32 },
             showOnMobile: true,
+            link: "https://gildre.com"
         },
         {
             id: 4,
             image: "/images/portfolio/portfolio-3.png",
             alt: "Portfolio item 4 - Tablet website",
-            desktopSize: { width: 452, height: 545 },
+            desktopSize: { width: 410, height: 545 },
             mobileSize: { width: 359, height: 433 },
             borderRadius: { desktop: 38, mobile: 32 },
             showOnMobile: true,
+            link: "https://bymomento.com"
         },
         {
             id: 5,
             image: "/images/portfolio/portfolio-4.png",
             alt: "Portfolio item 5 - Tablet app",
-            desktopSize: { width: 452, height: 545 },
+            desktopSize: { width: 720, height: 545 },
             mobileSize: { width: 359, height: 433 },
             borderRadius: { desktop: 38, mobile: 32 },
             showOnMobile: true,
+            link: "https://agromod.com.mx"
         },
         {
             id: 6,
             image: "/images/portfolio/portfolio-10.png",
             alt: "Portfolio item 6 - Laptop display",
-            desktopSize: { width: 452, height: 545 },
+            desktopSize: { width: 650, height: 545 },
             mobileSize: { width: 359, height: 433 },
             borderRadius: { desktop: 38, mobile: 32 },
             showOnMobile: true,
+            link: "https://innovalaw.com.mx"
         },
         {
             id: 7,
             image: "/images/portfolio/portfolio-7.png",
             alt: "Portfolio item 7 - Mobile design",
-            desktopSize: { width: 452, height: 545 },
+            desktopSize: { width: 750, height: 545 },
             mobileSize: { width: 359, height: 433 },
             borderRadius: { desktop: 38, mobile: 32 },
             showOnMobile: true,
+            link: "https://epesos.com"
         },
         {
             id: 8,
             image: "/images/portfolio/portfolio-5.png",
             alt: "Portfolio item 8 - Web interface",
-            desktopSize: { width: 452, height: 545 },
+            desktopSize: { width: 860, height: 545 },
             mobileSize: { width: 359, height: 433 },
             borderRadius: { desktop: 38, mobile: 32 },
             showOnMobile: true,
+            link: "https://garzaduran.com"
         },
         {
             id: 9,
             image: "/images/portfolio/portfolio-6.png",
             alt: "Portfolio item 9 - Dashboard design",
-            desktopSize: { width: 452, height: 545 },
+            desktopSize: { width: 690, height: 545 },
             mobileSize: { width: 359, height: 433 },
             borderRadius: { desktop: 38, mobile: 32 },
             showOnMobile: true,
+            link: "https://thinkws.mx"
         },
     ];
 
@@ -89,7 +98,7 @@ const PortfolioServicesSection = () => {
 
     return (
         <section className="w-full bg-black py-16 md:py-24">
-            <div className="container mx-auto px-4">
+            <div className="w-[95%] mx-auto">
                 {/* Texto introductorio */}
                 <div className="text-center mb-6 md:mb-10">
                     {/* Título con tamaños específicos */}
@@ -119,8 +128,11 @@ const PortfolioServicesSection = () => {
                     {/* Primera fila - 3 elementos */}
                     <div className="flex justify-center gap-6 mb-6">
                         {portfolioItems.slice(0, 3).map((item) => (
-                            <div
+                            <a
                                 key={item.id}
+                                href={item.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="overflow-hidden"
                                 style={{
                                     borderRadius: `${item.borderRadius.desktop}px`,
@@ -133,15 +145,18 @@ const PortfolioServicesSection = () => {
                                     alt={item.alt}
                                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                                 />
-                            </div>
+                            </a>
                         ))}
                     </div>
 
                     {/* Segunda fila - 3 elementos */}
                     <div className="flex justify-center gap-6 mb-6">
                         {portfolioItems.slice(3, 6).map((item) => (
-                            <div
+                            <a
                                 key={item.id}
+                                href={item.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="overflow-hidden"
                                 style={{
                                     borderRadius: `${item.borderRadius.desktop}px`,
@@ -154,15 +169,18 @@ const PortfolioServicesSection = () => {
                                     alt={item.alt}
                                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                                 />
-                            </div>
+                            </a>
                         ))}
                     </div>
 
                     {/* Tercera fila - 3 elementos */}
                     <div className="flex justify-center gap-6">
                         {portfolioItems.slice(6, 9).map((item) => (
-                            <div
+                            <a
                                 key={item.id}
+                                href={item.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="overflow-hidden"
                                 style={{
                                     borderRadius: `${item.borderRadius.desktop}px`,
@@ -175,7 +193,7 @@ const PortfolioServicesSection = () => {
                                     alt={item.alt}
                                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                                 />
-                            </div>
+                            </a>
                         ))}
                     </div>
                 </div>
@@ -183,8 +201,11 @@ const PortfolioServicesSection = () => {
                 {/* Versión móvil - una columna */}
                 <div className="lg:hidden flex flex-col space-y-6 mt-12 gap-6">
                     {mobileItems.map((item) => (
-                        <div
+                        <a
                             key={item.id}
+                            href={item.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="overflow-hidden"
                             style={{
                                 borderRadius: `${item.borderRadius.mobile}px`,
@@ -199,45 +220,42 @@ const PortfolioServicesSection = () => {
                                 alt={item.alt}
                                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                             />
-                        </div>
+                        </a>
                     ))}
                 </div>
 
                 {/* Botón para escritorio */}
-                <div className="hidden lg:block text-center">
-                    <Link to="/portfolio">
-                        <button
-                            className="bg-neon-green text-black hover:bg-opacity-90 transition-all md:mt-3 lg:mt-6"
-                            style={{
-                                width: "256px",
-                                height: "58px",
-                                fontSize: "20px",
-                                fontWeight: 500,
-                                borderRadius: "12px",
-                                lineHeight: "20px",
-                            }}
-                        >
-                            See all projects
-                        </button>
+                <div className="hidden lg:flex justify-center mt-24">
+                    <Link
+                        to="/portfolio"
+                        className="flex items-center justify-center bg-neon-green text-black hover:bg-opacity-90 transition-all"
+                        style={{
+                            width: "170px",
+                            height: "38.66px",
+                            fontSize: "16.66px",
+                            fontWeight: 400,
+                            borderRadius: "12px",
+                            lineHeight: "18px",
+                        }}
+                    >
+                        See all projects
                     </Link>
                 </div>
 
                 {/* Botón para móvil */}
                 <div className="lg:hidden text-center">
-                    <Link to="/portfolio">
-                        <button
-                            className="bg-neon-green text-black hover:bg-opacity-90 transition-all"
-                            style={{
-                                width: "162px",
-                                height: "40px",
-                                fontSize: "15px",
-                                fontWeight: 500,
-                                borderRadius: "5px",
-                                lineHeight: "15px",
-                            }}
-                        >
-                            See all projects
-                        </button>
+                    <Link
+                        to="/portfolio"
+                        className="flex items-center justify-center bg-neon-green text-black hover:bg-opacity-90 transition-all"
+                        style={{
+                            width: "77.33px",
+                            height: "18px",
+                            fontSize: "10px",
+                            fontWeight: 400,
+                            borderRadius: "5px",
+                        }}
+                    >
+                        See all projects
                     </Link>
                 </div>
             </div>

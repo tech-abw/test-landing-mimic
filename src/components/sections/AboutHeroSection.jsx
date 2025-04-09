@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const AboutHeroSection = () => {
     return (
         <section className="w-full bg-black py-16">
-            <div className="container mx-auto px-4">
+            <div className="w-[95%] mx-auto px-4">
                 {/* Versión de escritorio */}
                 <div
                     className="hidden lg:block bg-purple rounded-2xl p-8 items-center justify-center"
@@ -15,7 +15,7 @@ const AboutHeroSection = () => {
                             <h2
                                 className="text-white mb-10 lg:mt-16"
                                 style={{
-                                    fontSize: "70px",
+                                    fontSize: "65px",
                                     fontWeight: 400,
                                     lineHeight: 1.2,
                                 }}
@@ -39,13 +39,13 @@ const AboutHeroSection = () => {
                                 together!
                             </p>
                             <Link
-                                to="/contact"
+                                to="https://tally.so/r/wb6l9Z"
                                 className="flex items-center justify-center bg-neon-green text-black hover:bg-opacity-90 transition-all"
                                 style={{
-                                    width: "256px",
-                                    height: "58px",
-                                    fontSize: "18px",
-                                    fontWeight: 500,
+                                    width: "170px",
+                                    height: "38.66px",
+                                    fontSize: "16.66px",
+                                    fontWeight: 400,
                                     borderRadius: "12px",
                                     lineHeight: "18px",
                                 }}
@@ -86,13 +86,13 @@ const AboutHeroSection = () => {
 
                     <div className="flex justify-center">
                         <Link
-                            to="/contact"
-                            className="flex items-center justify-center bg-neon-green text-black hover:bg-opacity-90 transition-all mb-16"
+                            to="https://tally.so/r/wb6l9Z"
+                            className="flex items-center justify-center bg-neon-green text-black hover:bg-opacity-90 transition-all"
                             style={{
-                                width: "116px",
-                                height: "27px",
-                                fontSize: "15px",
-                                fontWeight: 500,
+                                width: "77.33px",
+                                height: "18px",
+                                fontSize: "10px",
+                                fontWeight: 400,
                                 borderRadius: "5px",
                             }}
                         >
@@ -111,7 +111,7 @@ const AboutHeroSection = () => {
                 <div className="text-white flex flex-col items-center mt-4 mx-auto lg:mt-16">
                     <p
                         style={{
-                            fontSize: "76px",
+                            fontSize: "65px",
                             fontWeight: 200,
                             lineHeight: "76px",
                             textAlign: "center",
@@ -135,26 +135,27 @@ const AboutHeroSection = () => {
 
                     <Link
                         to="/services"
-                        className="hidden md:flex items-center justify-center bg-purple text-white hover:bg-opacity-90 transition-all mt-16 mb-16"
+                        className="flex items-center justify-center bg-purple text-white hover:bg-opacity-90 transition-all"
                         style={{
-                            width: "256px",
-                            height: "58px",
-                            fontSize: "18px",
-                            fontWeight: 500,
+                            width: "170px",
+                            height: "38.66px",
+                            fontSize: "16.66px",
+                            fontWeight: 400,
                             borderRadius: "12px",
                             lineHeight: "18px",
                         }}
                     >
                         Our services
                     </Link>
+
                     <Link
                         to="/services"
-                        className=" md:hidden flex items-center justify-center bg-purple text-white hover:bg-opacity-90 transition-all mb-16"
+                        className="lg:hidden flex items-center justify-center bg-purple text-white hover:bg-opacity-90 transition-all"
                         style={{
-                            width: "116px",
-                            height: "27px",
-                            fontSize: "15px",
-                            fontWeight: 500,
+                            width: "77.33px",
+                            height: "18px",
+                            fontSize: "10px",
+                            fontWeight: 400,
                             borderRadius: "5px",
                         }}
                     >

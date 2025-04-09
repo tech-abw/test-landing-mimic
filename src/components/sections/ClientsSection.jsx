@@ -113,7 +113,7 @@ const ClientsSection = () => {
 
     return (
         <section className="w-full bg-gray py-16 md:py-24">
-            <div className="container w-[85%] mx-auto px-4">
+            <div className="w-[95%] mx-auto px-4">
                 <h2 className="text-center mb-12 md:mb-20">
                     <span
                         className="hidden lg:inline"
