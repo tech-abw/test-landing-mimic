@@ -183,7 +183,7 @@ const TeamSection = () => {
                             </span>
                         </div>
                         <span
-                            className="text-gray-600 ml-[30%]"
+                            className="text-gray-600 lg:ml-[30%]"
                             style={{
                                 fontSize: "20px",
                                 fontWeight: 300,
@@ -214,7 +214,7 @@ const TeamSection = () => {
                             </span>
                         </div>
                         <span
-                            className="text-gray-600 self-center mr-[8%]"
+                            className="text-gray-600 self-center lg:mr-[8%]"
                             style={{
                                 fontSize: "20px",
                                 fontWeight: 300,

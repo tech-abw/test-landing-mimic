@@ -85,8 +85,8 @@ const TestimonialsSection = () => {
                                 onClick={handlePrev}
                                 className="bg-neon-green text-black p-2"
                                 style={{
-                                    width: "40px",
-                                    height: "40px",
+                                    width: "30px",
+                                    height: "30px",
                                 }}
                             >
                                 <img
@@ -99,8 +99,8 @@ const TestimonialsSection = () => {
                                 onClick={handleNext}
                                 className="bg-neon-green text-black p-2"
                                 style={{
-                                    width: "40px",
-                                    height: "40px",
+                                    width: "30px",
+                                    height: "30px",
                                 }}
                             >
                                 <img

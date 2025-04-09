@@ -25,7 +25,7 @@ const BlogArticle = () => {
 
     return (
         <div className="w-full bg-gray flex justify-center py-24">
-            <div className="lg:w-[95%] w-full mx-8 lg:mx-0 bg-white rounded-2xl shadow-lg px-8 py-12">
+            <div className="lg:w-[95%] w-full mx-4 lg:mx-0 bg-white rounded-2xl shadow-lg px-8 py-12">
                 <h1 className="lg:text-3xl md:text-2xl text-xl font-bold mb-4 text-left w-full pb-1 border-b border-black/30">
                     Lorem Ipsum is simply dummy text of the printing
                 </h1>
@@ -33,7 +33,7 @@ const BlogArticle = () => {
                 <img
                     src="/images/blog-detail.png"
                     alt="Article Image"
-                    className="w-full my-8 lg:h-1/3 md:h-80 h-60"
+                    className="w-full h-45 my-8 lg:h-1/3 md:h-80 "
                     style={{ borderRadius: "20px" }}
                 />
 
@@ -95,12 +95,12 @@ const BlogArticle = () => {
                     </p>
                     <div className="flex space-x-4 mt-4">
                         <img
-                            src="/images/footer-wha.png"
+                            src="/images/footer-wha.svg"
                             alt="WhatsApp"
                             className="lg:h-7 lg:w-7 h-5 w-5 cursor-pointer"
                         />
                         <img
-                            src="/images/footer-insta.png"
+                            src="/images/footer-insta.svg"
                             alt="Instagram"
                             className="lg:h-7 lg:w-7 h-5 w-5 cursor-pointer"
                         />
