@@ -15,7 +15,6 @@ const Services = () => {
                 buttonText="Our Work"
                 buttonLink="/portfolio"
                 desktopTitleFontSize="78px"
-                mobileImagePosition="right"
             />
             <ServicesSection />
             <PortfolioServicesSection />
