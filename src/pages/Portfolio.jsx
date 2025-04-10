@@ -6,94 +6,93 @@ const Portfolio = () => {
             id: 1,
             image: "/images/portfolio/portfolio-1.png",
             width: { desktop: 70, mobile: 100 },
-            link: "https://stiva.com"
+            link: "https://stiva.com",
         },
         {
             id: 2,
             image: "/images/portfolio/portfolio-2.png",
             width: { desktop: 30, mobile: 100 },
-            link: "https://gildre.com"
+            link: "https://gildre.com",
         },
         {
             id: 3,
             image: "/images/portfolio/portfolio-3.png",
             width: { desktop: 35, mobile: 100 },
-            link: "https://bymomento.com"
+            link: "https://bymomento.com",
         },
         {
             id: 4,
             image: "/images/portfolio/portfolio-4.png",
             width: { desktop: 65, mobile: 100 },
-            link: "https://agromod.com.mx"
+            link: "https://agromod.com.mx",
         },
         {
             id: 5,
             image: "/images/portfolio/portfolio-5.png",
             width: { desktop: 40, mobile: 100 },
-            link: "https://garzaduran.com"
+            link: "https://garzaduran.com",
         },
         {
             id: 6,
             image: "/images/portfolio/portfolio-6.png",
             width: { desktop: 60, mobile: 100 },
-            link: "https://thinkws.mx"
+            link: "https://thinkws.mx",
         },
         {
             id: 7,
             image: "/images/portfolio/portfolio-7.png",
             width: { desktop: 50, mobile: 100 },
-            link: "https://epesos.com"
+            link: "https://epesos.com",
         },
         {
             id: 8,
             image: "/images/portfolio/portfolio-8.png",
             width: { desktop: 50, mobile: 100 },
-            link: "https://cordeliaruiz.com"
+            link: "https://cordeliaruiz.com",
         },
         {
             id: 9,
             image: "/images/portfolio/portfolio-9.png",
             width: { desktop: 45, mobile: 100 },
-            link: "https://plastidrum.com"
+            link: "https://plastidrum.com",
         },
         {
             id: 10,
             image: "/images/portfolio/portfolio-10.png",
             width: { desktop: 55, mobile: 100 },
-            link: "https://innovalaw.com.mx"
+            link: "https://innovalaw.com.mx",
         },
         {
             id: 11,
             image: "/images/portfolio/portfolio-11.png",
             width: { desktop: 60, mobile: 100 },
-            link: "https://uruchurtuartstudio.com"
+            link: "https://uruchurtuartstudio.com",
         },
         {
             id: 12,
             image: "/images/portfolio/portfolio-12.png",
             width: { desktop: 40, mobile: 100 },
-            link: "https://strategyprofessional.biz"
+            link: "https://strategyprofessional.biz",
         },
         {
             id: 13,
             image: "/images/portfolio/portfolio-13.png",
             width: { desktop: 55, mobile: 100 },
-            link: "#"
+            link: "#",
         },
         {
             id: 14,
             image: "/images/portfolio/portfolio-14.png",
             width: { desktop: 45, mobile: 100 },
-            link: "#"
+            link: "#",
         },
     ];
 
     return (
         <div className="bg-white text-black lg:mt-16 lg:mb-24">
             <div className="w-[95%] mx-auto px-4 py-16">
-                <h1 className="text-2xl lg:text-5xl mt-10 lg:w-3/4 lg:flex-1">
-                    Transform ideas into unique digital experiences through
-                    innovative design and cutting-edge technology.
+                <h1 className="text-2xl lg:text-5xl lg:leading-none lg:w-[35%] mt-10  lg:flex-1">
+                    Transform ideas into unique digital experiences.
                 </h1>
 
                 <h1 className="text-xl lg:text-4xl pb-1 border-b border-black/30 lg:flex-1 mt-16 mb-16 lg:mt-28 lg:mb-24">
@@ -104,9 +103,9 @@ const Portfolio = () => {
                 <div className="hidden lg:block space-y-8 lg:mb-24">
                     {[0, 2, 4, 6, 8, 10, 12].map((startIndex) => (
                         <div key={startIndex} className="flex gap-8 w-full">
-                            <a 
-                                href={portfolioItems[startIndex].link} 
-                                target="_blank" 
+                            <a
+                                href={portfolioItems[startIndex].link}
+                                target="_blank"
                                 rel="noopener noreferrer"
                                 className="overflow-hidden transition-all duration-300 hover:scale-105"
                                 style={{
@@ -120,9 +119,9 @@ const Portfolio = () => {
                                     className="w-full h-full object-cover"
                                 />
                             </a>
-                            <a 
-                                href={portfolioItems[startIndex + 1].link} 
-                                target="_blank" 
+                            <a
+                                href={portfolioItems[startIndex + 1].link}
+                                target="_blank"
                                 rel="noopener noreferrer"
                                 className="overflow-hidden transition-all duration-300 hover:scale-105"
                                 style={{
