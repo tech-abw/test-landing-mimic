@@ -8,6 +8,8 @@ const Hero = ({
     buttonText = "Start here",
     buttonLink = "/contact",
     desktopTitleFontSize = "64px",
+    mobileTitleFontSize = "50px",
+    mobileDescriptionFontSize = "20px",
 }) => {
     return (
         <section className="relative w-full overflow-hidden bg-gray pt-20">
@@ -28,6 +30,7 @@ const Hero = ({
                         alt={title}
                         className="w-full h-full bg-cover"
                     />
+                    {/* Capa de opacidad */}
 
                     {/* Contenido superpuesto - desktop */}
                     <div
@@ -90,15 +93,17 @@ const Hero = ({
                         alt={title}
                         className="w-full h-full object-cover"
                     />
+                    {/* Capa de opacidad */}
+                    <div className="absolute inset-0 bg-black bg-opacity-30"></div>
 
                     {/* Contenido superpuesto - móvil */}
                     <div className="absolute inset-0 flex flex-col justify-center p-8">
                         <h1
                             className="text-white mb-8 leading-tight"
                             style={{
-                                fontSize: "30px",
+                                fontSize: mobileTitleFontSize,
                                 fontWeight: 400,
-                                lineHeight: "30px",
+                                lineHeight: mobileTitleFontSize,
                             }}
                         >
                             {title.split("\n").map((line, index) => (
@@ -109,7 +114,7 @@ const Hero = ({
                         <p
                             className="text-white mb-10 max-w-xs"
                             style={{
-                                fontSize: "15px",
+                                fontSize: mobileDescriptionFontSize,
                                 fontWeight: 500,
                                 lineHeight: "1.5",
                             }}
