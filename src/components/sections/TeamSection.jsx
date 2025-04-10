@@ -38,12 +38,12 @@ const teamMembers = [
     },
     {
         name: "Jennifer Ruiz",
-        image: "/images/about/image1.png",
+        image: "/images/about/Jennifer.png",
         description: "Marketing specialist",
     },
     {
         name: "Amanda Aguirre",
-        image: "/images/about/image1.png",
+        image: "/images/about/Amanda.png",
         description: "Marketing specialist",
     },
     {

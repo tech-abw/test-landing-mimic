@@ -278,7 +278,7 @@ const PortfolioSection = () => {
                 </div>
 
                 {/* Versión móvil - una columna */}
-                <div className="lg:hidden flex flex-col space-y-6 mt-12">
+                <div className="lg:hidden flex flex-col gap-5 space-y-6 mt-12">
                     {mobileItems.map((item) => (
                         <a
                             key={item.id}

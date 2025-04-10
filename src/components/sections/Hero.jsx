@@ -4,6 +4,7 @@ const Hero = ({
     title = "Innovation begins\nwith imitation",
     description = "At Mimic, we specialize in crafting bespoke digital solutions tailored to elevate your brand's online presence and engage your audience effectively. Let's connect.",
     backgroundImage = "/images/Hero.png",
+    mobileBackgroundImage,
     buttonText = "Start here",
     buttonLink = "/contact",
     desktopTitleFontSize = "64px",
@@ -85,7 +86,7 @@ const Hero = ({
                     }}
                 >
                     <img
-                        src={backgroundImage}
+                        src={mobileBackgroundImage || backgroundImage}
                         alt={title}
                         className="w-full h-full object-cover"
                     />

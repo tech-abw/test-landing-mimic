@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../ui/Logo";
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const menuRef = useRef(null);
+    const buttonRef = useRef(null);
 
     const navItems = [
         { name: "Home", path: "/" },
@@ -11,6 +13,31 @@ const Header = () => {
         { name: "Services", path: "/services" },
         { name: "Blog", path: "/blog" },
     ];
+
+    // Cerrar menú cuando se hace clic fuera de él
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (
+                isMenuOpen &&
+                menuRef.current &&
+                !menuRef.current.contains(event.target) &&
+                buttonRef.current &&
+                !buttonRef.current.contains(event.target)
+            ) {
+                setIsMenuOpen(false);
+            }
+        };
+
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [isMenuOpen]);
+
+    // Función para cerrar el menú
+    const closeMenu = () => {
+        setIsMenuOpen(false);
+    };
 
     return (
         <header className="fixed w-full flex justify-center items-center bg-gray py-3 z-50">
@@ -77,6 +104,7 @@ const Header = () => {
 
                     {/* Menú hamburguesa para móvil */}
                     <button
+                        ref={buttonRef}
                         className="lg:hidden ml-4 flex items-center justify-center"
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                         style={{ width: "30.19px", height: "23px" }}
@@ -85,20 +113,20 @@ const Header = () => {
                             <svg
                                 width="20"
                                 height="20"
-                                viewBox="0 0 30 23"
+                                viewBox="0 0 20 20"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
                             >
                                 <path
-                                    d="M5 5L25 18"
+                                    d="M3 3L17 17"
                                     stroke="black"
-                                    strokeWidth="3"
+                                    strokeWidth="2.5"
                                     strokeLinecap="round"
                                 />
                                 <path
-                                    d="M5 18L25 5"
+                                    d="M3 17L17 3"
                                     stroke="black"
-                                    strokeWidth="3"
+                                    strokeWidth="2.5"
                                     strokeLinecap="round"
                                 />
                             </svg>
@@ -136,14 +164,18 @@ const Header = () => {
 
             {/* Menú móvil */}
             {isMenuOpen && (
-                <div className="lg:hidden bg-gray w-full py-6 px-6 absolute top-full left-0 shadow-md">
+                <div
+                    ref={menuRef}
+                    className="lg:hidden bg-gray w-full py-6 px-6 absolute top-full left-0 shadow-md"
+                >
                     <div className="flex flex-col space-y-4">
                         {navItems.map((item) => (
                             <Link
                                 key={item.name}
                                 to={item.path}
-                                className="text-black hover:text-neon-green transition-colors duration-300"
+                                className="text-black transition-colors duration-300"
                                 style={{ fontSize: "12px", fontWeight: 400 }}
+                                onClick={closeMenu}
                             >
                                 {item.name}
                             </Link>
