@@ -91,11 +91,11 @@ const Portfolio = () => {
     return (
         <div className="bg-white text-black lg:mt-16 lg:mb-24">
             <div className="w-[95%] mx-auto px-4 py-16">
-                <h1 className="text-2xl lg:text-5xl lg:leading-none lg:w-[35%] mt-10  lg:flex-1">
+                <h1 className="text-3xl lg:text-5xl leading-none lg:w-[35%] mt-10  lg:flex-1">
                     Transform ideas into unique digital experiences.
                 </h1>
 
-                <h1 className="text-xl lg:text-4xl pb-1 border-b border-black/30 lg:flex-1 mt-16 mb-16 lg:mt-28 lg:mb-24">
+                <h1 className="text-2xl lg:text-4xl pb-1 border-b border-black/30 lg:flex-1 mt-16 mb-16 lg:mt-28 lg:mb-24">
                     Our work
                 </h1>
 

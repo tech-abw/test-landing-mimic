@@ -24,8 +24,8 @@ const BlogArticle = () => {
     ];
 
     return (
-        <div className="w-full bg-gray flex justify-center py-24">
-            <div className="lg:w-[95%] w-full mx-4 lg:mx-0 bg-white rounded-2xl shadow-lg px-8 py-12">
+        <div className="w-full bg-gray flex justify-center py-2 lg:py-6">
+            <div className="lg:w-[95%] w-full mx-4 lg:mx-0 bg-white rounded-2xl py-12 shadow-lg px-8">
                 <h1 className="lg:text-3xl md:text-2xl text-xl font-bold mb-4 text-left w-full pb-1 border-b border-black/30">
                     Lorem Ipsum is simply dummy text of the printing
                 </h1>
@@ -106,7 +106,7 @@ const BlogArticle = () => {
                     </div>
                 </div>
 
-                <h2 className="text-2xl font-semibold mb-6 text-left w-full pb-1 border-b border-black/30">
+                <h2 className="text-2xl font-semibold lg:mb-12 mb-6 text-left w-full pb-1 border-b border-black/30">
                     Related Articles
                 </h2>
 
