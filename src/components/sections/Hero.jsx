@@ -8,6 +8,7 @@ const Hero = ({
     buttonText = "Start here",
     buttonLink = "/contact",
     desktopTitleFontSize = "64px",
+    desktopDescriptionFontSize = "20px",
     mobileTitleFontSize = "50px",
     mobileDescriptionFontSize = "20px",
 }) => {
@@ -52,7 +53,7 @@ const Hero = ({
                         <p
                             className="text-white mb-14 max-w-md"
                             style={{
-                                fontSize: "18px",
+                                fontSize: desktopDescriptionFontSize,
                                 fontWeight: 500,
                                 lineHeight: "1.5",
                             }}

@@ -12,6 +12,8 @@ const Home = () => {
                 buttonLink="https://tally.so/r/wb6l9Z"
                 mobileTitleFontSize="46px"
                 mobileDescriptionFontSize="17px"
+                desktopTitleFontSize="80px"
+                desktopDescriptionFontSize="20px"
             />
             <ClientsSection />
             <PortfolioSection />

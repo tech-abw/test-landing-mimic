@@ -12,7 +12,8 @@ const About = () => {
         backgroundImage="/images/about-hero.png"
         buttonText="Learn More"
         buttonLink="/services"
-        mobileTitleFontSize='40px'
+        mobileTitleFontSize='39px'
+        mobileDescriptionFontSize='17px'
       />
       <TeamSection />
       <AboutHeroSection />
