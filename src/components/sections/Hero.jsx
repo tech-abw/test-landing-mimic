@@ -30,7 +30,6 @@ const Hero = ({
                         alt={title}
                         className="w-full h-full bg-cover"
                     />
-                    {/* Capa de opacidad */}
 
                     {/* Contenido superpuesto - desktop */}
                     <div
@@ -126,9 +125,9 @@ const Hero = ({
                             to={buttonLink}
                             className="flex items-center justify-center bg-neon-green text-black hover:bg-opacity-90 transition-all"
                             style={{
-                                width: "87px",
-                                height: "22px",
-                                fontSize: "10px",
+                                width: "120px",
+                                height: "28px",
+                                fontSize: "14px",
                                 fontWeight: 400,
                                 borderRadius: "5px",
                             }}

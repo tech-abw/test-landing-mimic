@@ -64,7 +64,7 @@ const PortfolioSection = () => {
     const mobileItems = portfolioItems.filter((item) => item.showOnMobile);
 
     return (
-        <section className="w-full bg-black py-16 md:py-24">
+        <section className="w-full bg-black py-10 md:py-24">
             <div className="w-[95%] mx-auto">
                 {/* Texto introductorio */}
                 <div className="text-center mb-6 md:mb-10">
@@ -88,7 +88,7 @@ const PortfolioSection = () => {
                             Discover a collection of real-world examples of how
                             we transform ideas into impactful solutions
                         </span>
-                        <span className="lg:hidden text-xs md:text-base">
+                        <span className="lg:hidden text-xs md:text-base font-medium leading-none">
                             Discover a collection of real-world examples of how
                             we transform ideas into impactful solutions
                         </span>
@@ -108,7 +108,7 @@ const PortfolioSection = () => {
                             <br />
                             Brought to Life
                         </span>
-                        <span className="lg:hidden lg:text-3xl md:text-2xl text-xl">
+                        <span className="lg:hidden lg:text-3xl md:text-2xl text-3xl font-medium leading-none">
                             Portfolio - Explore Unique Ideas
                             <br />
                             Brought to Life
@@ -139,9 +139,9 @@ const PortfolioSection = () => {
                             to="/portfolio"
                             className="flex mx-auto items-center justify-center bg-neon-green text-black hover:bg-opacity-90 transition-all"
                             style={{
-                                width: "87px",
-                                height: "22px",
-                                fontSize: "10px",
+                                width: "120px",
+                                height: "28px",
+                                fontSize: "14px",
                                 fontWeight: 400,
                                 borderRadius: "5px",
                             }}

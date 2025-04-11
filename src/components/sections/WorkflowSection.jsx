@@ -45,7 +45,7 @@ const WorkflowSection = () => {
     ];
 
     return (
-        <section className="w-full bg-gray py-24 relative">
+        <section className="w-full bg-gray py-10 lg:py-24 relative">
             {/* Línea vertical superior */}
             <div
                 className="relative hidden lg:block"
@@ -75,7 +75,7 @@ const WorkflowSection = () => {
                             <br />
                             Streamlined Workflow
                         </span>
-                        <span className="lg:hidden md:text-4xl text-3xl">
+                        <span className="lg:hidden md:text-4xl text-3xl font-medium leading-none">
                             How it works - Our
                             <br />
                             Streamlined Workflow
@@ -96,7 +96,11 @@ const WorkflowSection = () => {
                         </span>
                         <span
                             className="lg:hidden"
-                            style={{ fontSize: "16px", fontWeight: 500 }}
+                            style={{
+                                fontSize: "18px",
+                                fontWeight: 300,
+                                lineHeight: "18px",
+                            }}
                         >
                             Our workflow makes it simple and easy to work the
                             best possible together.

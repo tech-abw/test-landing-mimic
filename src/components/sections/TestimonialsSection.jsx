@@ -29,11 +29,11 @@ const TestimonialsSection = () => {
     };
 
     return (
-        <section className="w-full bg-white py-16 lg:mb-24 lg:py-10 relative">
+        <section className="w-full bg-white py-10 lg:mb-24 lg:py-10 relative">
             <div className="w-[95%] h-full mx-auto px-4">
                 {/* Layout para móvil */}
                 <div className="block lg:hidden ">
-                    <h2 className="text-black mb-8 md:text-4xl text-2xl leading-none">
+                    <h2 className="text-black mb-8 md:text-4xl text-3xl leading-none">
                         Hear From tens of
                         <br />
                         Clients
@@ -41,10 +41,10 @@ const TestimonialsSection = () => {
                     <p
                         className="text-black mb-8"
                         style={{
-                            fontSize: "16px",
+                            fontSize: "18px",
                             fontWeight: 400,
                             maxWidth: "300px",
-                            lineHeight: "16px",
+                            lineHeight: "18px",
                         }}
                     >
                         Discover what satisfied clients have to say about their

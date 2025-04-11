@@ -4,7 +4,7 @@ const ClientsSection = () => {
             name: "Insights to Behavior",
             logo: "/images/clients/insights-to-behavior.png",
             desktopSize: { width: 143.5, height: 37.63 },
-            mobileSize: { width: 69.2, height: 18.15 },
+            mobileSize: { width: 83, height: 25.95 },
             showOnMobile: true,
             mobileOrder: 1,
         },
@@ -12,7 +12,7 @@ const ClientsSection = () => {
             name: "Ecompack",
             logo: "/images/clients/ecompack.png",
             desktopSize: { width: 176.73, height: 35.3 },
-            mobileSize: { width: 85.23, height: 17.02 },
+            mobileSize: { width: 90.23, height: 20.02 },
             showOnMobile: true,
             mobileOrder: 2,
         },
@@ -20,7 +20,7 @@ const ClientsSection = () => {
             name: "Astelaris",
             logo: "/images/clients/astelaris.png",
             desktopSize: { width: 137.11, height: 36.79 },
-            mobileSize: { width: 66.12, height: 17.74 },
+            mobileSize: { width: 71.12, height: 17.74 },
             showOnMobile: true,
             mobileOrder: 3,
         },
@@ -55,7 +55,7 @@ const ClientsSection = () => {
             name: "Think",
             logo: "/images/clients/think.png",
             desktopSize: { width: 91.12, height: 51.15 },
-            mobileSize: { width: 48.83, height: 24.67 },
+            mobileSize: { width: 70.83, height: 27.67 },
             showOnMobile: true,
             mobileOrder: 4,
         },
@@ -63,7 +63,7 @@ const ClientsSection = () => {
             name: "Gravity",
             logo: "/images/clients/gravity.png",
             desktopSize: { width: 121.08, height: 40.33 },
-            mobileSize: { width: 58.39, height: 19.45 },
+            mobileSize: { width: 80.39, height: 27.45 },
             showOnMobile: true,
             mobileOrder: 5,
         },
@@ -71,7 +71,7 @@ const ClientsSection = () => {
             name: "Santa Eugenia",
             logo: "/images/clients/santa-eugenia.png",
             desktopSize: { width: 118.84, height: 62.43 },
-            mobileSize: { width: 57.31, height: 30.59 },
+            mobileSize: { width: 80.31, height: 30.59 },
             showOnMobile: true,
             mobileOrder: 6,
         },
@@ -112,7 +112,7 @@ const ClientsSection = () => {
     const mobileColumn3 = [mobileClients[2], mobileClients[5]];
 
     return (
-        <section className="w-full bg-gray py-16 md:py-24">
+        <section className="w-full bg-gray py-10 md:py-24">
             <div className="w-[95%] mx-auto px-4">
                 <h2 className="text-center mb-12 md:mb-20">
                     <span
@@ -127,9 +127,8 @@ const ClientsSection = () => {
                         <br />
                         together!
                     </span>
-                    <span className="lg:hidden md:text-4xl text-xl">
+                    <span className="lg:hidden md:text-4xl text-3xl font-medium leading-none">
                         Our Clients - Let's build
-                        <br />
                         together!
                     </span>
                 </h2>
