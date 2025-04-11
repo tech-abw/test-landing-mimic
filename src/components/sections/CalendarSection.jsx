@@ -17,9 +17,9 @@ const CalendarSection = ({
 
     return (
         <section
-            className={`w-full ${bgColor} py-24 md:py-32 relative flex flex-col items-center justify-center min-h-[550px]`}
+            className={`w-full ${bgColor} py-16 md:py-32 relative flex flex-col items-center justify-center min-h-[550px]`}
         >
-            <h2 className={`${textColor} text-xl md:text-5xl text-center mb-8`}>
+            <h2 className={`${textColor} text-3xl leading-none md:text-5xl text-center lg:mb-8 mb-16`}>
                 Schedule an Appointment
             </h2>
             <div

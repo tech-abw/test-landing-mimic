@@ -69,7 +69,7 @@ const ServicesSection = () => {
                         className="text-black mb-14"
                         style={{
                             fontSize: "30px",
-                            fontWeight: 200,
+                            fontWeight: 300,
                             lineHeight: "30px",
                         }}
                     >
@@ -87,9 +87,9 @@ const ServicesSection = () => {
                             className={`${services[0].bgColor} ${services[0].textColor} p-12 rounded-2xl flex flex-col`}
                             style={{ height: "600px" }}
                         >
-                            <div className="pr-8">
+                            <div>
                                 <h3
-                                    className="mb-8"
+                                    className="mb-10"
                                     style={{
                                         fontSize: "50px",
                                         fontWeight: 200,
@@ -99,7 +99,6 @@ const ServicesSection = () => {
                                     {services[0].title}
                                 </h3>
                                 <p
-                                    className="mb-10"
                                     style={{
                                         fontSize: "30px",
                                         fontWeight: 300,
@@ -109,7 +108,7 @@ const ServicesSection = () => {
                                     {services[0].description}
                                 </p>
                             </div>
-                            <div className="flex justify-center">
+                            <div className="flex justify-center mt-auto">
                                 <img
                                     src={services[0].image}
                                     alt={services[0].title}
@@ -123,23 +122,27 @@ const ServicesSection = () => {
                             className={`${services[1].bgColor} ${services[1].textColor} p-12 rounded-2xl flex flex-col`}
                             style={{ height: "600px" }}
                         >
-                            <h3
-                                className="mb-12"
-                                style={{
-                                    fontSize: "50px",
-                                    fontWeight: 200,
-                                    lineHeight: "50px",
-                                    maxWidth: "300px",
-                                }}
-                            >
-                                {services[1].title}
-                            </h3>
-                            <p
-                                className="mb-10"
-                                style={{ fontSize: "30px", fontWeight: 300 }}
-                            >
-                                {services[1].description}
-                            </p>
+                            <div>
+                                <h3
+                                    className="mb-16"
+                                    style={{
+                                        fontSize: "50px",
+                                        fontWeight: 200,
+                                        lineHeight: "50px",
+                                    }}
+                                >
+                                    {services[1].title}
+                                </h3>
+                                <p
+                                    style={{
+                                        fontSize: "30px",
+                                        fontWeight: 300,
+                                        lineHeight: "30px",
+                                    }}
+                                >
+                                    {services[1].description}
+                                </p>
+                            </div>
                         </div>
                     </div>
 
@@ -148,29 +151,30 @@ const ServicesSection = () => {
                         {services.slice(2).map((service, index) => (
                             <div
                                 key={index}
-                                className={`${service.bgColor} ${service.textColor} p-12 rounded-2xl flex flex-col `}
+                                className={`${service.bgColor} ${service.textColor} p-12 rounded-2xl flex flex-col`}
                                 style={{ height: "500px" }}
                             >
-                                <h3
-                                    className="mb-12"
-                                    style={{
-                                        fontSize: "50px",
-                                        fontWeight: 200,
-                                        lineHeight: "50px",
-                                    }}
-                                >
-                                    {service.title}
-                                </h3>
-                                <p
-                                    className="mb-10"
-                                    style={{
-                                        fontSize: "30px",
-                                        fontWeight: 300,
-                                        lineHeight: "30px",
-                                    }}
-                                >
-                                    {service.description}
-                                </p>
+                                <div >
+                                    <h3
+                                        className="mb-16 lg:mt-12"
+                                        style={{
+                                            fontSize: "50px",
+                                            fontWeight: 200,
+                                            lineHeight: "50px",
+                                        }}
+                                    >
+                                        {service.title}
+                                    </h3>
+                                    <p
+                                        style={{
+                                            fontSize: "30px",
+                                            fontWeight: 300,
+                                            lineHeight: "30px",
+                                        }}
+                                    >
+                                        {service.description}
+                                    </p>
+                                </div>
                             </div>
                         ))}
                     </div>
@@ -188,7 +192,7 @@ const ServicesSection = () => {
                             }`}
                             style={{ height: "300px" }}
                         >
-                            <h3 className="mb-4" style={{ fontSize: "35px" }}>
+                            <h3 className="mb-7" style={{ fontSize: "35px", lineHeight: "35px" }}>
                                 {service.title}
                             </h3>
                             <p
