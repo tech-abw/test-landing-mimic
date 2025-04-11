@@ -74,12 +74,6 @@ const BlogArticle = () => {
                         lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl
                         sit amet nisl.
                     </p>
-                    <p className="lg:text-2xl text-lg">
-                        Sed euismod, nisl vel ultricies lacinia, nisl nisl
-                        aliquam nisl, eget aliquam nisl nisl sit amet nisl. Sed
-                        euismod, nisl vel ultricies lacinia, nisl nisl aliquam
-                        nisl, eget aliquam nisl nisl sit amet nisl.
-                    </p>
                 </div>
 
                 <div className="mb-4 mt-10">
