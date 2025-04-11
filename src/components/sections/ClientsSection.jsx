@@ -153,12 +153,19 @@ const ClientsSection = () => {
                             <motion.div
                                 key={index}
                                 className="flex items-center justify-center"
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
+                                initial={{ 
+                                    opacity: 0, 
+                                    x: index % 2 === 0 ? -20 : 20 
+                                }}
+                                whileInView={{ 
+                                    opacity: 1, 
+                                    x: 0 
+                                }}
                                 viewport={{ once: false, margin: "-100px" }}
                                 transition={{ 
-                                    duration: 0.5, 
-                                    delay: index * 0.1
+                                    duration: 0.8, 
+                                    delay: index * 0.1,
+                                    ease: "easeOut"
                                 }}
                             >
                                 <motion.img
@@ -186,12 +193,19 @@ const ClientsSection = () => {
                             <motion.div
                                 key={index}
                                 className="flex items-center justify-center"
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
+                                initial={{ 
+                                    opacity: 0, 
+                                    x: index % 2 === 0 ? -20 : 20 
+                                }}
+                                whileInView={{ 
+                                    opacity: 1, 
+                                    x: 0 
+                                }}
                                 viewport={{ once: false, margin: "-100px" }}
                                 transition={{ 
-                                    duration: 0.5, 
-                                    delay: 0.1 + index * 0.1
+                                    duration: 0.8, 
+                                    delay: 0.1 + index * 0.1,
+                                    ease: "easeOut"
                                 }}
                             >
                                 <motion.img
@@ -218,10 +232,10 @@ const ClientsSection = () => {
                         {/* Primera columna móvil */}
                         <motion.div 
                             className="flex flex-col items-center space-y-12"
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            initial={{ opacity: 0, x: -15 }}
+                            whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: false, margin: "-50px" }}
-                            transition={{ duration: 0.5 }}
+                            transition={{ duration: 0.7, ease: "easeOut" }}
                         >
                             {mobileColumn1.map((client, index) => (
                                 <motion.div
@@ -259,10 +273,10 @@ const ClientsSection = () => {
                         {/* Segunda columna móvil */}
                         <motion.div 
                             className="flex flex-col items-center space-y-12"
-                            initial={{ opacity: 0, y: 30 }}
+                            initial={{ opacity: 0, y: 15 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: false, margin: "-50px" }}
-                            transition={{ duration: 0.5, delay: 0.1 }}
+                            transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
                         >
                             {mobileColumn2.map((client, index) => (
                                 <motion.div
@@ -300,10 +314,10 @@ const ClientsSection = () => {
                         {/* Tercera columna móvil */}
                         <motion.div 
                             className="flex flex-col items-center space-y-12"
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            initial={{ opacity: 0, x: 15 }}
+                            whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: false, margin: "-50px" }}
-                            transition={{ duration: 0.5, delay: 0.2 }}
+                            transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
                         >
                             {mobileColumn3.map((client, index) => (
                                 <motion.div
