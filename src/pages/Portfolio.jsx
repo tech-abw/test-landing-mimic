@@ -1,5 +1,5 @@
-import React from "react";
 /* eslint-disable no-unused-vars */
+import React from "react";
 import { motion } from "framer-motion";
 
 const Portfolio = () => {
@@ -93,7 +93,7 @@ const Portfolio = () => {
     return (
         <div className="bg-white text-black lg:mt-16 lg:mb-24">
             <div className="w-[95%] mx-auto px-4 py-16">
-                <motion.h1 
+                <motion.h1
                     className="text-3xl lg:text-5xl leading-none lg:w-[35%] mt-10 lg:flex-1"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -103,7 +103,7 @@ const Portfolio = () => {
                     Transform ideas into unique digital experiences.
                 </motion.h1>
 
-                <motion.h1 
+                <motion.h1
                     className="text-2xl lg:text-4xl pb-1 border-b border-black/30 lg:flex-1 mt-16 mb-16 lg:mt-28 lg:mb-24"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -129,9 +129,9 @@ const Portfolio = () => {
                                 initial={{ opacity: 0, y: 50 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: false, margin: "-100px" }}
-                                transition={{ 
-                                    duration: 0.7, 
-                                    delay: rowIndex * 0.1
+                                transition={{
+                                    duration: 0.7,
+                                    delay: rowIndex * 0.1,
                                 }}
                                 whileHover={{ scale: 1.01 }}
                             >
@@ -156,9 +156,9 @@ const Portfolio = () => {
                                 initial={{ opacity: 0, y: 50 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: false, margin: "-100px" }}
-                                transition={{ 
-                                    duration: 0.7, 
-                                    delay: rowIndex * 0.1 + 0.1
+                                transition={{
+                                    duration: 0.7,
+                                    delay: rowIndex * 0.1 + 0.1,
                                 }}
                                 whileHover={{ scale: 1.01 }}
                             >
@@ -184,9 +184,9 @@ const Portfolio = () => {
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: false, margin: "-50px" }}
-                            transition={{ 
-                                duration: 0.5, 
-                                delay: index * 0.1
+                            transition={{
+                                duration: 0.5,
+                                delay: index * 0.1,
                             }}
                             whileHover={{ scale: 1.02 }}
                         >
