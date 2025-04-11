@@ -1,5 +1,7 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const TechStackSection = ({
     bgColor = "bg-black",
@@ -14,19 +16,23 @@ const TechStackSection = ({
                     <div className="hidden lg:flex flex-col justify-center w-[700px] text-left h-[650px]">
                         <div className="flex flex-col justify-between h-full">
                             <div>
-                                <h2
+                                <motion.h2
                                     className={`${textColor} mb-6`}
                                     style={{
                                         fontSize: "65px",
                                         fontWeight: 400,
                                         lineHeight: "65px",
                                     }}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ margin: "-50px" }}
+                                    transition={{ duration: 0.5 }}
                                 >
                                     Our Cutting-Edge
                                     <br />
                                     Tech Stack
-                                </h2>
-                                <p
+                                </motion.h2>
+                                <motion.p
                                     className={`${textColor} mb-16`}
                                     style={{
                                         fontSize: "20px",
@@ -34,13 +40,23 @@ const TechStackSection = ({
                                         lineHeight: "20px",
                                         maxWidth: "400px",
                                     }}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ margin: "-50px" }}
+                                    transition={{ duration: 0.5, delay: 0.1 }}
                                 >
                                     We leverage industry-leading tools to
                                     streamline workflows and ensure the perfect
                                     product for you.
-                                </p>
+                                </motion.p>
                             </div>
-                            <div className="w-full flex gap-3">
+                            <motion.div 
+                                className="w-full flex gap-3"
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ margin: "-50px" }}
+                                transition={{ duration: 0.5, delay: 0.2 }}
+                            >
                                 <Link
                                     to="https://tally.so/r/wb6l9Z"
                                     className="flex items-center justify-center bg-neon-green text-black hover:bg-opacity-90 transition-all"
@@ -69,20 +85,24 @@ const TechStackSection = ({
                                 >
                                     Our Services
                                 </Link>
-                            </div>
+                            </motion.div>
                         </div>
                     </div>
 
                     {/* Columna izquierda con texto - Versión móvil */}
                     <div className="block lg:hidden mb-12">
-                        <h2
+                        <motion.h2
                             className={`${textColor} mb-6 md:text-4xl text-3xl leading-none`}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ margin: "-50px" }}
+                            transition={{ duration: 0.5 }}
                         >
                             Our Cutting-Edge
                             <br />
                             Tech Stack
-                        </h2>
-                        <p
+                        </motion.h2>
+                        <motion.p
                             className={`${textColor} mb-10`}
                             style={{
                                 fontSize: "16px",
@@ -90,11 +110,21 @@ const TechStackSection = ({
                                 lineHeight: "16px",
                                 maxWidth: "300px",
                             }}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ margin: "-50px" }}
+                            transition={{ duration: 0.5, delay: 0.1 }}
                         >
                             We leverage industry-leading tools to streamline
                             workflows and ensure the perfect product for you.
-                        </p>
-                        <div className="w-full justify-center flex gap-5 md:gap-10">
+                        </motion.p>
+                        <motion.div 
+                            className="w-full justify-center flex gap-5 md:gap-10"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ margin: "-50px" }}
+                            transition={{ duration: 0.5, delay: 0.2 }}
+                        >
                             <Link
                                 to="https://tally.so/r/wb6l9Z"
                                 className="flex items-center justify-center bg-neon-green text-black hover:bg-opacity-90 transition-all"
@@ -121,15 +151,19 @@ const TechStackSection = ({
                             >
                                 Our Services
                             </Link>
-                        </div>
+                        </motion.div>
                     </div>
 
                     {/* Columna derecha con imagen */}
                     <div className="w-full lg:w-1/2 flex justify-center items-center">
-                        <img
+                        <motion.img
                             src={image}
                             alt="Tech Stack"
                             className="w-full max-w-[750px] object-contain"
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            viewport={{ margin: "-50px" }}
+                            transition={{ duration: 0.7 }}
                         />
                     </div>
                 </div>

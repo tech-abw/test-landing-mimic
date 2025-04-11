@@ -1,4 +1,6 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 const TestimonialsSection = () => {
     const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -33,12 +35,18 @@ const TestimonialsSection = () => {
             <div className="w-[95%] h-full mx-auto px-4">
                 {/* Layout para móvil */}
                 <div className="block lg:hidden ">
-                    <h2 className="text-black mb-8 md:text-4xl text-3xl leading-none">
+                    <motion.h2 
+                        className="text-black mb-8 md:text-4xl text-3xl leading-none"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: false, margin: "-50px" }}
+                        transition={{ duration: 0.7 }}
+                    >
                         Hear From tens of
                         <br />
                         Clients
-                    </h2>
-                    <p
+                    </motion.h2>
+                    <motion.p
                         className="text-black mb-8"
                         style={{
                             fontSize: "18px",
@@ -46,70 +54,95 @@ const TestimonialsSection = () => {
                             maxWidth: "300px",
                             lineHeight: "18px",
                         }}
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: false, margin: "-50px" }}
+                        transition={{ duration: 0.7, delay: 0.1 }}
                     >
                         Discover what satisfied clients have to say about their
                         experience with our service solutions.
-                    </p>
+                    </motion.p>
 
                     <div className="max-w-2xl mx-auto relative mt-16 lg:mt-0">
-                        <div
+                        <motion.div
                             className="bg-white rounded-2xl p-8"
                             style={{
                                 minHeight: "200px",
                                 border: "1px solid #000",
                             }}
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: false, margin: "-50px" }}
+                            transition={{ duration: 0.7, delay: 0.2 }}
+                            key={currentTestimonial}
                         >
-                            <p
+                            <motion.p
                                 className="mb-4"
                                 style={{
                                     fontSize: "16px",
                                     lineHeight: "16px",
                                     textAlign: "left",
                                 }}
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ duration: 0.5 }}
                             >
                                 {testimonials[currentTestimonial].text}
-                            </p>
-                            <p
+                            </motion.p>
+                            <motion.p
                                 className="font-bold text-start"
                                 style={{
                                     fontSize: "18px",
                                     lineHeight: "18px",
                                 }}
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ duration: 0.5, delay: 0.2 }}
                             >
                                 {testimonials[currentTestimonial].name}
-                            </p>
-                        </div>
+                            </motion.p>
+                        </motion.div>
 
-                        <div className="flex justify-end mt-6 space-x-4">
-                            <button
+                        <motion.div 
+                            className="flex justify-end mt-6 space-x-4"
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            viewport={{ once: false, margin: "-50px" }}
+                            transition={{ duration: 0.7, delay: 0.3 }}
+                        >
+                            <motion.button
                                 onClick={handlePrev}
                                 className="bg-neon-green text-black p-2"
                                 style={{
                                     width: "30px",
                                     height: "30px",
                                 }}
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.95 }}
                             >
                                 <img
                                     src="/images/izquierda.svg"
                                     alt="Flecha izquierda"
                                     className="w-full h-full"
                                 />
-                            </button>
-                            <button
+                            </motion.button>
+                            <motion.button
                                 onClick={handleNext}
                                 className="bg-neon-green text-black p-2"
                                 style={{
                                     width: "30px",
                                     height: "30px",
                                 }}
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.95 }}
                             >
                                 <img
                                     src="/images/derecha.svg"
                                     alt="Flecha derecha"
                                     className="w-full h-full"
                                 />
-                            </button>
-                        </div>
+                            </motion.button>
+                        </motion.div>
                     </div>
                 </div>
 
@@ -122,33 +155,41 @@ const TestimonialsSection = () => {
                 >
                     {/* Columna izquierda - Título y descripción */}
                     <div className="self-start pt-24">
-                        <h2
+                        <motion.h2
                             className="text-black mb-4"
                             style={{
                                 fontSize: "73px",
                                 fontWeight: 400,
                                 lineHeight: "73px",
                             }}
+                            initial={{ opacity: 0, y: 40 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: false, margin: "-100px" }}
+                            transition={{ duration: 0.7 }}
                         >
                             Hear From tens of
                             <br />
                             Clients
-                        </h2>
-                        <p
+                        </motion.h2>
+                        <motion.p
                             className="text-black mt-10"
                             style={{
                                 fontSize: "25px",
                                 fontWeight: 300,
                             }}
+                            initial={{ opacity: 0, y: 40 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: false, margin: "-100px" }}
+                            transition={{ duration: 0.7, delay: 0.1 }}
                         >
                             Discover what satisfied clients have to say about
                             their experience with our service solutions.
-                        </p>
+                        </motion.p>
                     </div>
 
                     {/* Columna derecha - Testimonios y navegación */}
                     <div className="self-end flex flex-col items-center">
-                        <div
+                        <motion.div
                             className="bg-white p-8 text-center w-full flex flex-col justify-center"
                             style={{
                                 borderRadius: "62px",
@@ -156,8 +197,13 @@ const TestimonialsSection = () => {
                                 border: "1px solid #000",
                                 marginBottom: "24px",
                             }}
+                            initial={{ opacity: 0, y: 40 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: false, margin: "-100px" }}
+                            transition={{ duration: 0.7, delay: 0.2 }}
+                            key={currentTestimonial}
                         >
-                            <p
+                            <motion.p
                                 className="mb-4"
                                 style={{
                                     fontSize: "29px",
@@ -165,21 +211,33 @@ const TestimonialsSection = () => {
                                     lineHeight: 1.5,
                                     textAlign: "left",
                                 }}
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ duration: 0.5 }}
                             >
                                 {testimonials[currentTestimonial].text}
-                            </p>
-                            <p
+                            </motion.p>
+                            <motion.p
                                 className="font-bold text-start mt-12"
                                 style={{
                                     fontSize: "25px",
                                 }}
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ duration: 0.5, delay: 0.2 }}
                             >
                                 {testimonials[currentTestimonial].name}
-                            </p>
-                        </div>
+                            </motion.p>
+                        </motion.div>
 
-                        <div className="flex space-x-4 self-end mr-1">
-                            <button
+                        <motion.div 
+                            className="flex space-x-4 self-end mr-1"
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            viewport={{ once: false, margin: "-100px" }}
+                            transition={{ duration: 0.7, delay: 0.3 }}
+                        >
+                            <motion.button
                                 onClick={handlePrev}
                                 className="bg-neon-green text-black flex items-center justify-center"
                                 style={{
@@ -187,14 +245,16 @@ const TestimonialsSection = () => {
                                     height: "59.33px",
                                     borderRadius: "12px",
                                 }}
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
                             >
                                 <img
                                     src="/images/izquierda.svg"
                                     alt="Flecha izquierda"
                                     className="w-[35px] h-[35px]"
                                 />
-                            </button>
-                            <button
+                            </motion.button>
+                            <motion.button
                                 onClick={handleNext}
                                 className="bg-neon-green text-black flex items-center justify-center"
                                 style={{
@@ -202,14 +262,16 @@ const TestimonialsSection = () => {
                                     height: "59.33px",
                                     borderRadius: "12px",
                                 }}
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
                             >
                                 <img
                                     src="/images/derecha.svg"
                                     alt="Flecha derecha"
                                     className="w-[35px] h-[35px]"
                                 />
-                            </button>
-                        </div>
+                            </motion.button>
+                        </motion.div>
                     </div>
                 </div>
             </div>

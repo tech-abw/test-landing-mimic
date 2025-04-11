@@ -1,4 +1,6 @@
+/* eslint-disable no-unused-vars */
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Hero = ({
     title = "Innovation begins\nwith imitation",
@@ -37,44 +39,56 @@ const Hero = ({
                         className="absolute inset-0 flex flex-col justify-center"
                         style={{ paddingLeft: "70px" }}
                     >
-                        <h1
+                        <motion.h1
                             className="text-white mb-6 leading-tight w-[50%]"
                             style={{
                                 fontSize: desktopTitleFontSize,
                                 fontWeight: 400,
                                 lineHeight: desktopTitleFontSize,
                             }}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 0.7 }}
                         >
                             {title.split("\n").map((line, index) => (
                                 <div key={index}>{line}</div>
                             ))}
-                        </h1>
+                        </motion.h1>
 
-                        <p
+                        <motion.p
                             className="text-white mb-14 max-w-md"
                             style={{
                                 fontSize: desktopDescriptionFontSize,
                                 fontWeight: 500,
                                 lineHeight: "1.5",
                             }}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 0.7, delay: 0.2 }}
                         >
                             {description}
-                        </p>
+                        </motion.p>
 
-                        <Link
-                            to={buttonLink}
-                            className="flex items-center justify-center bg-neon-green text-black hover:bg-opacity-90 transition-all"
-                            style={{
-                                width: "170px",
-                                height: "38.66px",
-                                fontSize: "16.66px",
-                                fontWeight: 400,
-                                borderRadius: "12px",
-                                lineHeight: "18px",
-                            }}
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 0.7, delay: 0.3 }}
                         >
-                            {buttonText}
-                        </Link>
+                            <Link
+                                to={buttonLink}
+                                className="flex items-center justify-center bg-neon-green text-black hover:bg-opacity-90 transition-all"
+                                style={{
+                                    width: "170px",
+                                    height: "38.66px",
+                                    fontSize: "16.66px",
+                                    fontWeight: 400,
+                                    borderRadius: "12px",
+                                    lineHeight: "18px",
+                                }}
+                            >
+                                {buttonText}
+                            </Link>
+                        </motion.div>
                     </div>
                 </div>
 
@@ -98,43 +112,55 @@ const Hero = ({
 
                     {/* Contenido superpuesto - móvil */}
                     <div className="absolute inset-0 flex flex-col justify-center p-8">
-                        <h1
+                        <motion.h1
                             className="text-white mb-8 leading-tight"
                             style={{
                                 fontSize: mobileTitleFontSize,
                                 fontWeight: 400,
                                 lineHeight: mobileTitleFontSize,
                             }}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 0.6 }}
                         >
                             {title.split("\n").map((line, index) => (
                                 <div key={index}>{line}</div>
                             ))}
-                        </h1>
+                        </motion.h1>
 
-                        <p
+                        <motion.p
                             className="text-white mb-10 max-w-xs"
                             style={{
                                 fontSize: mobileDescriptionFontSize,
                                 fontWeight: 500,
                                 lineHeight: "1.5",
                             }}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 0.6, delay: 0.1 }}
                         >
                             {description}
-                        </p>
+                        </motion.p>
 
-                        <Link
-                            to={buttonLink}
-                            className="flex items-center justify-center bg-neon-green text-black hover:bg-opacity-90 transition-all"
-                            style={{
-                                width: "120px",
-                                height: "28px",
-                                fontSize: "14px",
-                                fontWeight: 400,
-                                borderRadius: "5px",
-                            }}
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 0.6, delay: 0.2 }}
                         >
-                            {buttonText}
-                        </Link>
+                            <Link
+                                to={buttonLink}
+                                className="flex items-center justify-center bg-neon-green text-black hover:bg-opacity-90 transition-all"
+                                style={{
+                                    width: "120px",
+                                    height: "28px",
+                                    fontSize: "14px",
+                                    fontWeight: 400,
+                                    borderRadius: "5px",
+                                }}
+                            >
+                                {buttonText}
+                            </Link>
+                        </motion.div>
                     </div>
                 </div>
             </div>

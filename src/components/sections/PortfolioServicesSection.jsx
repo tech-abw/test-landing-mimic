@@ -1,4 +1,6 @@
+/* eslint-disable no-unused-vars */
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const PortfolioServicesSection = () => {
     const portfolioItems = [
@@ -100,34 +102,50 @@ const PortfolioServicesSection = () => {
         <section className="w-full bg-black py-16 md:py-24">
             <div className="w-[95%] mx-auto">
                 {/* Texto introductorio */}
-                <div className="text-center mb-6 md:mb-10">
+                <motion.div 
+                    className="text-center mb-6 md:mb-10"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ margin: "-50px" }}
+                    transition={{ duration: 0.6 }}
+                >
                     {/* Título con tamaños específicos */}
                     <h2 className="text-white mb-8">
-                        <span
+                        <motion.span
                             className="hidden lg:inline"
                             style={{
                                 fontSize: "65px",
                                 fontWeight: 400,
                                 lineHeight: "65px",
                             }}
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            viewport={{ margin: "-50px" }}
+                            transition={{ duration: 0.5, delay: 0.2 }}
                         >
                             Portfolio - Explore Unique Ideas
                             <br />
                             Brought to Life
-                        </span>
-                        <span className="lg:hidden md:text-3xl text-3xl leading-none">
+                        </motion.span>
+                        <motion.span 
+                            className="lg:hidden md:text-3xl text-3xl leading-none"
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            viewport={{ margin: "-50px" }}
+                            transition={{ duration: 0.5, delay: 0.2 }}
+                        >
                             Portfolio - Explore Unique Ideas
                             Brought to Life
-                        </span>
+                        </motion.span>
                     </h2>
-                </div>
+                </motion.div>
 
                 {/* Versión Desktop - Layout personalizado */}
                 <div className="hidden lg:block mt-12">
                     {/* Primera fila - 3 elementos */}
                     <div className="flex justify-center gap-6 mb-6">
-                        {portfolioItems.slice(0, 3).map((item) => (
-                            <a
+                        {portfolioItems.slice(0, 3).map((item, index) => (
+                            <motion.a
                                 key={item.id}
                                 href={item.link}
                                 target="_blank"
@@ -138,20 +156,25 @@ const PortfolioServicesSection = () => {
                                     width: `${item.desktopSize.width}px`,
                                     height: `${item.desktopSize.height}px`,
                                 }}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ margin: "-50px" }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                                whileHover={{ scale: 1.02 }}
                             >
                                 <img
                                     src={item.image}
                                     alt={item.alt}
                                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                                 />
-                            </a>
+                            </motion.a>
                         ))}
                     </div>
 
                     {/* Segunda fila - 3 elementos */}
                     <div className="flex justify-center gap-6 mb-6">
-                        {portfolioItems.slice(3, 6).map((item) => (
-                            <a
+                        {portfolioItems.slice(3, 6).map((item, index) => (
+                            <motion.a
                                 key={item.id}
                                 href={item.link}
                                 target="_blank"
@@ -162,20 +185,25 @@ const PortfolioServicesSection = () => {
                                     width: `${item.desktopSize.width}px`,
                                     height: `${item.desktopSize.height}px`,
                                 }}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ margin: "-50px" }}
+                                transition={{ duration: 0.5, delay: 0.1 + index * 0.1 }}
+                                whileHover={{ scale: 1.02 }}
                             >
                                 <img
                                     src={item.image}
                                     alt={item.alt}
                                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                                 />
-                            </a>
+                            </motion.a>
                         ))}
                     </div>
 
                     {/* Tercera fila - 3 elementos */}
                     <div className="flex justify-center gap-6">
-                        {portfolioItems.slice(6, 9).map((item) => (
-                            <a
+                        {portfolioItems.slice(6, 9).map((item, index) => (
+                            <motion.a
                                 key={item.id}
                                 href={item.link}
                                 target="_blank"
@@ -186,21 +214,26 @@ const PortfolioServicesSection = () => {
                                     width: `${item.desktopSize.width}px`,
                                     height: `${item.desktopSize.height}px`,
                                 }}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ margin: "-50px" }}
+                                transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
+                                whileHover={{ scale: 1.02 }}
                             >
                                 <img
                                     src={item.image}
                                     alt={item.alt}
                                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                                 />
-                            </a>
+                            </motion.a>
                         ))}
                     </div>
                 </div>
 
                 {/* Versión móvil - una columna */}
                 <div className="lg:hidden flex flex-col space-y-6 mt-12 gap-6">
-                    {mobileItems.map((item) => (
-                        <a
+                    {mobileItems.map((item, index) => (
+                        <motion.a
                             key={item.id}
                             href={item.link}
                             target="_blank"
@@ -213,50 +246,71 @@ const PortfolioServicesSection = () => {
                                 maxWidth: "100%",
                                 margin: "0 auto",
                             }}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ margin: "-30px" }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                            whileHover={{ scale: 1.02 }}
                         >
                             <img
                                 src={item.image}
                                 alt={item.alt}
                                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                             />
-                        </a>
+                        </motion.a>
                     ))}
                 </div>
 
                 {/* Botón para escritorio */}
-                <div className="hidden lg:flex justify-center mt-24">
-                    <Link
-                        to="/portfolio"
-                        className="flex items-center justify-center bg-neon-green text-black hover:bg-opacity-90 transition-all"
-                        style={{
-                            width: "170px",
-                            height: "38.66px",
-                            fontSize: "16.66px",
-                            fontWeight: 400,
-                            borderRadius: "12px",
-                            lineHeight: "18px",
-                        }}
-                    >
-                        See all projects
-                    </Link>
-                </div>
+                <motion.div 
+                    className="hidden lg:flex justify-center mt-24"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ margin: "-50px" }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                >
+                    <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.2 }}>
+                        <Link
+                            to="/portfolio"
+                            className="flex items-center justify-center bg-neon-green text-black hover:bg-opacity-90 transition-all"
+                            style={{
+                                width: "170px",
+                                height: "38.66px",
+                                fontSize: "16.66px",
+                                fontWeight: 400,
+                                borderRadius: "12px",
+                                lineHeight: "18px",
+                            }}
+                        >
+                            See all projects
+                        </Link>
+                    </motion.div>
+                </motion.div>
 
                 {/* Botón para móvil */}
-                <div className="lg:hidden text-center flex justify-center">
-                    <Link
-                        to="/portfolio"
-                        className="flex items-center justify-center bg-neon-green text-black hover:bg-opacity-90 transition-all"
-                        style={{
-                            width: "120px",
-                            height: "28px",
-                            fontSize: "14px",
-                            fontWeight: 400,
-                            borderRadius: "5px",
-                        }}
-                    >
-                        See all projects
-                    </Link>
-                </div>
+                <motion.div 
+                    className="lg:hidden text-center flex justify-center"
+                    initial={{ opacity: 0, y: 15 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ margin: "-30px" }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                >
+                    <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.2 }}>
+                        <Link
+                            to="/portfolio"
+                            className="flex items-center justify-center bg-neon-green text-black hover:bg-opacity-90 transition-all"
+                            style={{
+                                width: "120px",
+                                height: "28px",
+                                fontSize: "14px",
+                                fontWeight: 400,
+                                borderRadius: "5px",
+                            }}
+                        >
+                            See all projects
+                        </Link>
+                    </motion.div>
+                </motion.div>
             </div>
         </section>
     );

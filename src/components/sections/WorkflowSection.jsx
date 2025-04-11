@@ -1,4 +1,6 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
+import { motion } from "framer-motion";
 
 const WorkflowSection = () => {
     const workflowSteps = [
@@ -47,7 +49,7 @@ const WorkflowSection = () => {
     return (
         <section className="w-full bg-gray py-10 lg:py-24 relative">
             {/* Línea vertical superior */}
-            <div
+            <motion.div
                 className="relative hidden lg:block"
                 style={{
                     left: "50%",
@@ -58,11 +60,21 @@ const WorkflowSection = () => {
                     backgroundColor: "#000",
                     transform: "translateX(-50%)",
                 }}
-            ></div>
+                initial={{ opacity: 0, scaleY: 0 }}
+                whileInView={{ opacity: 1, scaleY: 1 }}
+                viewport={{ once: false, margin: "-100px" }}
+                transition={{ duration: 0.7 }}
+            ></motion.div>
 
             <div className="w-[95%] mx-auto">
                 <div className="text-center mb-12">
-                    <h2 className="lg:mb-10 mb-5">
+                    <motion.h2 
+                        className="lg:mb-10 mb-5"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: false, margin: "-100px" }}
+                        transition={{ duration: 0.7 }}
+                    >
                         <span
                             className="hidden lg:inline"
                             style={{
@@ -80,8 +92,14 @@ const WorkflowSection = () => {
                             <br />
                             Streamlined Workflow
                         </span>
-                    </h2>
-                    <p className="text-center mx-auto">
+                    </motion.h2>
+                    <motion.p 
+                        className="text-center mx-auto"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: false, margin: "-100px" }}
+                        transition={{ duration: 0.7, delay: 0.1 }}
+                    >
                         <span
                             className="hidden lg:inline"
                             style={{
@@ -105,13 +123,13 @@ const WorkflowSection = () => {
                             Our workflow makes it simple and easy to work the
                             best possible together.
                         </span>
-                    </p>
+                    </motion.p>
                 </div>
 
                 {/* Versión desktop */}
                 <div className="hidden lg:flex justify-center gap-8">
-                    {workflowSteps.map((step) => (
-                        <div
+                    {workflowSteps.map((step, index) => (
+                        <motion.div
                             key={step.id}
                             className={`${step.bgColor} ${step.textColor} p-8 flex flex-col items-center text-center`}
                             style={{
@@ -119,10 +137,24 @@ const WorkflowSection = () => {
                                 height: "430px",
                                 borderRadius: "36px",
                             }}
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: false, margin: "-100px" }}
+                            transition={{ 
+                                duration: 0.7, 
+                                delay: index * 0.1 
+                            }}
                         >
-                            <div
+                            <motion.div
                                 className="flex justify-center items-center mb-6 mt-2"
                                 style={{ height: "100px" }}
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: false, margin: "-100px" }}
+                                transition={{ 
+                                    duration: 0.5, 
+                                    delay: 0.2 + index * 0.1 
+                                }}
                             >
                                 <img
                                     src={step.image}
@@ -133,32 +165,46 @@ const WorkflowSection = () => {
                                         objectFit: "contain",
                                     }}
                                 />
-                            </div>
+                            </motion.div>
 
-                            <h3
+                            <motion.h3
                                 className="font-bold mb-3"
                                 style={{ fontSize: "30px", lineHeight: "30px" }}
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                viewport={{ once: false, margin: "-100px" }}
+                                transition={{ 
+                                    duration: 0.5, 
+                                    delay: 0.3 + index * 0.1 
+                                }}
                             >
                                 {step.title}
-                            </h3>
-                            <p
+                            </motion.h3>
+                            <motion.p
                                 style={{
                                     fontSize: "16px",
                                     fontWeight: 500,
                                     lineHeight: 1.5,
                                     marginTop: "20px",
                                 }}
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                viewport={{ once: false, margin: "-100px" }}
+                                transition={{ 
+                                    duration: 0.5, 
+                                    delay: 0.4 + index * 0.1 
+                                }}
                             >
                                 {step.description}
-                            </p>
-                        </div>
+                            </motion.p>
+                        </motion.div>
                     ))}
                 </div>
 
                 {/* Versión móvil */}
                 <div className="lg:hidden space-y-8">
-                    {workflowSteps.map((step) => (
-                        <div
+                    {workflowSteps.map((step, index) => (
+                        <motion.div
                             key={step.id}
                             className={`${step.bgColor} ${step.textColor} p-6 flex flex-col items-center text-center mx-auto`}
                             style={{
@@ -167,10 +213,24 @@ const WorkflowSection = () => {
                                 maxWidth: "100%",
                                 borderRadius: "32px",
                             }}
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: false, margin: "-50px" }}
+                            transition={{ 
+                                duration: 0.5, 
+                                delay: index * 0.1 
+                            }}
                         >
-                            <div
+                            <motion.div
                                 className="flex justify-center items-center mb-4 mt-4"
                                 style={{ height: "70px" }}
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: false, margin: "-50px" }}
+                                transition={{ 
+                                    duration: 0.5, 
+                                    delay: 0.2 + index * 0.1 
+                                }}
                             >
                                 <img
                                     src={step.image}
@@ -181,30 +241,44 @@ const WorkflowSection = () => {
                                         objectFit: "contain",
                                     }}
                                 />
-                            </div>
+                            </motion.div>
 
-                            <h3
+                            <motion.h3
                                 className="font-bold mb-3"
                                 style={{ fontSize: "23px" }}
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                viewport={{ once: false, margin: "-50px" }}
+                                transition={{ 
+                                    duration: 0.5, 
+                                    delay: 0.3 + index * 0.1 
+                                }}
                             >
                                 {step.title}
-                            </h3>
-                            <p
+                            </motion.h3>
+                            <motion.p
                                 style={{
                                     fontSize: "13px",
                                     fontWeight: 500,
                                     lineHeight: 1.5,
                                 }}
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                viewport={{ once: false, margin: "-50px" }}
+                                transition={{ 
+                                    duration: 0.5, 
+                                    delay: 0.4 + index * 0.1 
+                                }}
                             >
                                 {step.description}
-                            </p>
-                        </div>
+                            </motion.p>
+                        </motion.div>
                     ))}
                 </div>
             </div>
 
             {/* Línea vertical inferior */}
-            <div
+            <motion.div
                 className="relative hidden lg:block"
                 style={{
                     top: "50px",
@@ -216,7 +290,11 @@ const WorkflowSection = () => {
                     backgroundColor: "#000",
                     transform: "translateX(-50%)",
                 }}
-            ></div>
+                initial={{ opacity: 0, scaleY: 0 }}
+                whileInView={{ opacity: 1, scaleY: 1 }}
+                viewport={{ once: false, margin: "-100px" }}
+                transition={{ duration: 0.7 }}
+            ></motion.div>
         </section>
     );
 };

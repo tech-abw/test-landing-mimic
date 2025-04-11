@@ -1,4 +1,6 @@
+/* eslint-disable no-unused-vars */
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const PortfolioSection = () => {
     const portfolioItems = [
@@ -69,13 +71,17 @@ const PortfolioSection = () => {
                 {/* Texto introductorio */}
                 <div className="text-center mb-6 md:mb-10">
                     {/* Párrafo con tamaños específicos */}
-                    <p
+                    <motion.p
                         className="text-white"
                         style={{
                             maxWidth: "650px",
                             margin: "0 auto",
                             marginBottom: "55px",
                         }}
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: false, margin: "-100px" }}
+                        transition={{ duration: 0.7 }}
                     >
                         <span
                             className="hidden lg:inline"
@@ -92,10 +98,16 @@ const PortfolioSection = () => {
                             Discover a collection of real-world examples of how
                             we transform ideas into impactful solutions
                         </span>
-                    </p>
+                    </motion.p>
 
                     {/* Título con tamaños específicos */}
-                    <h2 className="text-white mb-8 lg:mb-16">
+                    <motion.h2 
+                        className="text-white mb-8 lg:mb-16"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: false, margin: "-100px" }}
+                        transition={{ duration: 0.7, delay: 0.1 }}
+                    >
                         <span
                             className="hidden lg:inline"
                             style={{
@@ -113,10 +125,16 @@ const PortfolioSection = () => {
                             <br />
                             Brought to Life
                         </span>
-                    </h2>
+                    </motion.h2>
 
                     {/* Botón para escritorio */}
-                    <div className="hidden lg:block">
+                    <motion.div 
+                        className="hidden lg:block"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: false, margin: "-100px" }}
+                        transition={{ duration: 0.7, delay: 0.2 }}
+                    >
                         <Link
                             to="/portfolio"
                             className="flex mx-auto items-center justify-center bg-neon-green text-black hover:bg-opacity-90 transition-all"
@@ -131,10 +149,16 @@ const PortfolioSection = () => {
                         >
                             See all projects
                         </Link>
-                    </div>
+                    </motion.div>
 
                     {/* Botón para móvil */}
-                    <div className="lg:hidden">
+                    <motion.div 
+                        className="lg:hidden"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: false, margin: "-50px" }}
+                        transition={{ duration: 0.7, delay: 0.2 }}
+                    >
                         <Link
                             to="/portfolio"
                             className="flex mx-auto items-center justify-center bg-neon-green text-black hover:bg-opacity-90 transition-all"
@@ -148,7 +172,7 @@ const PortfolioSection = () => {
                         >
                             See all projects
                         </Link>
-                    </div>
+                    </motion.div>
                 </div>
 
                 {/* Versión Desktop - Layout personalizado */}
@@ -156,7 +180,7 @@ const PortfolioSection = () => {
                     {/* Primera fila - 2 elementos */}
                     <div className="flex gap-6 mb-6">
                         {/* Primer elemento - más grande */}
-                        <a
+                        <motion.a
                             href={portfolioItems[0].link}
                             target="_blank"
                             rel="noopener noreferrer"
@@ -166,16 +190,21 @@ const PortfolioSection = () => {
                                 width: `${portfolioItems[0].desktopSize.width}px`,
                                 height: `${portfolioItems[0].desktopSize.height}px`,
                             }}
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: false, margin: "-100px" }}
+                            transition={{ duration: 0.7 }}
+                            whileHover={{ scale: 1.01 }}
                         >
                             <img
                                 src={portfolioItems[0].image}
                                 alt={portfolioItems[0].alt}
                                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                             />
-                        </a>
+                        </motion.a>
 
                         {/* Segundo elemento */}
-                        <a
+                        <motion.a
                             href={portfolioItems[1].link}
                             target="_blank"
                             rel="noopener noreferrer"
@@ -185,19 +214,24 @@ const PortfolioSection = () => {
                                 width: `${portfolioItems[1].desktopSize.width}px`,
                                 height: `${portfolioItems[1].desktopSize.height}px`,
                             }}
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: false, margin: "-100px" }}
+                            transition={{ duration: 0.7, delay: 0.1 }}
+                            whileHover={{ scale: 1.01 }}
                         >
                             <img
                                 src={portfolioItems[1].image}
                                 alt={portfolioItems[1].alt}
                                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                             />
-                        </a>
+                        </motion.a>
                     </div>
 
                     {/* Segunda fila - 2 elementos */}
                     <div className="flex gap-6 mb-6">
                         {/* Tercer elemento */}
-                        <a
+                        <motion.a
                             href={portfolioItems[2].link}
                             target="_blank"
                             rel="noopener noreferrer"
@@ -207,16 +241,21 @@ const PortfolioSection = () => {
                                 width: `${portfolioItems[2].desktopSize.width}px`,
                                 height: `${portfolioItems[2].desktopSize.height}px`,
                             }}
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: false, margin: "-100px" }}
+                            transition={{ duration: 0.7 }}
+                            whileHover={{ scale: 1.01 }}
                         >
                             <img
                                 src={portfolioItems[2].image}
                                 alt={portfolioItems[2].alt}
                                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                             />
-                        </a>
+                        </motion.a>
 
                         {/* Cuarto elemento - más grande */}
-                        <a
+                        <motion.a
                             href={portfolioItems[3].link}
                             target="_blank"
                             rel="noopener noreferrer"
@@ -226,19 +265,24 @@ const PortfolioSection = () => {
                                 width: `${portfolioItems[3].desktopSize.width}px`,
                                 height: `${portfolioItems[3].desktopSize.height}px`,
                             }}
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: false, margin: "-100px" }}
+                            transition={{ duration: 0.7, delay: 0.1 }}
+                            whileHover={{ scale: 1.01 }}
                         >
                             <img
                                 src={portfolioItems[3].image}
                                 alt={portfolioItems[3].alt}
                                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                             />
-                        </a>
+                        </motion.a>
                     </div>
 
                     {/* Tercera fila - 2 elementos */}
                     <div className="flex gap-6">
                         {/* Quinto elemento */}
-                        <a
+                        <motion.a
                             href={portfolioItems[4].link}
                             target="_blank"
                             rel="noopener noreferrer"
@@ -248,16 +292,21 @@ const PortfolioSection = () => {
                                 width: `${portfolioItems[4].desktopSize.width}px`,
                                 height: `${portfolioItems[4].desktopSize.height}px`,
                             }}
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: false, margin: "-100px" }}
+                            transition={{ duration: 0.7 }}
+                            whileHover={{ scale: 1.01 }}
                         >
                             <img
                                 src={portfolioItems[4].image}
                                 alt={portfolioItems[4].alt}
                                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                             />
-                        </a>
+                        </motion.a>
 
                         {/* Sexto elemento */}
-                        <a
+                        <motion.a
                             href={portfolioItems[5].link}
                             target="_blank"
                             rel="noopener noreferrer"
@@ -267,20 +316,25 @@ const PortfolioSection = () => {
                                 width: `${portfolioItems[5].desktopSize.width}px`,
                                 height: `${portfolioItems[5].desktopSize.height}px`,
                             }}
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: false, margin: "-100px" }}
+                            transition={{ duration: 0.7, delay: 0.1 }}
+                            whileHover={{ scale: 1.01 }}
                         >
                             <img
                                 src={portfolioItems[5].image}
                                 alt={portfolioItems[5].alt}
                                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                             />
-                        </a>
+                        </motion.a>
                     </div>
                 </div>
 
                 {/* Versión móvil - una columna */}
                 <div className="lg:hidden flex flex-col gap-5 space-y-6 mt-12">
-                    {mobileItems.map((item) => (
-                        <a
+                    {mobileItems.map((item, index) => (
+                        <motion.a
                             key={item.id}
                             href={item.link}
                             target="_blank"
@@ -293,13 +347,18 @@ const PortfolioSection = () => {
                                 maxWidth: "100%",
                                 margin: "0 auto",
                             }}
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: false, margin: "-50px" }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                            whileHover={{ scale: 1.02 }}
                         >
                             <img
                                 src={item.image}
                                 alt={item.alt}
                                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                             />
-                        </a>
+                        </motion.a>
                     ))}
                 </div>
             </div>

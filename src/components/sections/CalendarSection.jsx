@@ -1,4 +1,6 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect } from "react";
+import { motion } from "framer-motion";
 
 const CalendarSection = ({
     bgColor = "bg-black",
@@ -19,10 +21,16 @@ const CalendarSection = ({
         <section
             className={`w-full ${bgColor} py-16 md:py-32 relative flex flex-col items-center justify-center min-h-[550px]`}
         >
-            <h2 className={`${textColor} text-3xl leading-none md:text-5xl text-center lg:mb-8 mb-16`}>
+            <motion.h2 
+                className={`${textColor} text-3xl leading-none md:text-5xl text-center lg:mb-8 mb-16`}
+                initial={{ opacity: 0, y: -20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ margin: "-50px" }}
+                transition={{ duration: 0.6 }}
+            >
                 Schedule an Appointment
-            </h2>
-            <div
+            </motion.h2>
+            <motion.div
                 className="calendly-inline-widget w-full max-w-[1200px] px-4"
                 data-url="https://calendly.com/ivan-dlg/30min?hide_landing_page_details=1&hide_gdpr_banner=1&back=1&month=2025-04"
                 style={{
@@ -31,6 +39,10 @@ const CalendarSection = ({
                     width: "100%",
                     maxWidth: "1200px",
                 }}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ margin: "-50px" }}
+                transition={{ duration: 0.8, delay: 0.2 }}
             />
         </section>
     );
