@@ -1,3 +1,6 @@
+/* eslint-disable no-unused-vars */
+import { motion } from "framer-motion";
+
 const ClientsSection = () => {
     const topRowClients = [
         {
@@ -114,7 +117,13 @@ const ClientsSection = () => {
     return (
         <section className="w-full bg-gray py-10 md:py-24">
             <div className="w-[95%] mx-auto px-4">
-                <h2 className="text-center mb-12 md:mb-20">
+                <motion.h2 
+                    className="text-center mb-12 md:mb-20"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: false, margin: "-100px" }}
+                    transition={{ duration: 0.7 }}
+                >
                     <span
                         className="hidden lg:inline"
                         style={{
@@ -131,7 +140,7 @@ const ClientsSection = () => {
                         Our Clients - Let's build
                         together!
                     </span>
-                </h2>
+                </motion.h2>
 
                 {/* Contenedor principal con posición relativa */}
                 <div className="relative">
@@ -141,11 +150,18 @@ const ClientsSection = () => {
                         style={{ marginLeft: "5%", marginRight: "5%" }}
                     >
                         {topRowClients.map((client, index) => (
-                            <div
+                            <motion.div
                                 key={index}
                                 className="flex items-center justify-center"
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: false, margin: "-100px" }}
+                                transition={{ 
+                                    duration: 0.5, 
+                                    delay: index * 0.1
+                                }}
                             >
-                                <img
+                                <motion.img
                                     src={client.logo}
                                     alt={client.name}
                                     className="opacity-80 hover:opacity-100 transition-opacity"
@@ -157,19 +173,28 @@ const ClientsSection = () => {
                                             client.desktopSize?.height || "auto"
                                         }px`,
                                     }}
+                                    whileHover={{ scale: 1.05 }}
+                                    transition={{ duration: 0.3 }}
                                 />
-                            </div>
+                            </motion.div>
                         ))}
                     </div>
 
                     {/* Segunda fila de logos - con margen izquierdo de 80px */}
                     <div className="hidden lg:flex justify-between items-center">
                         {bottomRowClients.map((client, index) => (
-                            <div
+                            <motion.div
                                 key={index}
                                 className="flex items-center justify-center"
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: false, margin: "-100px" }}
+                                transition={{ 
+                                    duration: 0.5, 
+                                    delay: 0.1 + index * 0.1
+                                }}
                             >
-                                <img
+                                <motion.img
                                     src={client.logo}
                                     alt={client.name}
                                     className="opacity-80 hover:opacity-100 transition-opacity"
@@ -181,21 +206,36 @@ const ClientsSection = () => {
                                             client.desktopSize?.height || "auto"
                                         }px`,
                                     }}
+                                    whileHover={{ scale: 1.05 }}
+                                    transition={{ duration: 0.3 }}
                                 />
-                            </div>
+                            </motion.div>
                         ))}
                     </div>
 
                     {/* Versión móvil - 3 columnas, 2 logos por columna */}
                     <div className="lg:hidden flex justify-between">
                         {/* Primera columna móvil */}
-                        <div className="flex flex-col items-center space-y-12">
+                        <motion.div 
+                            className="flex flex-col items-center space-y-12"
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: false, margin: "-50px" }}
+                            transition={{ duration: 0.5 }}
+                        >
                             {mobileColumn1.map((client, index) => (
-                                <div
+                                <motion.div
                                     key={index}
                                     className="flex items-center justify-center"
+                                    initial={{ opacity: 0 }}
+                                    whileInView={{ opacity: 1 }}
+                                    viewport={{ once: false, margin: "-50px" }}
+                                    transition={{ 
+                                        duration: 0.5, 
+                                        delay: index * 0.2
+                                    }}
                                 >
-                                    <img
+                                    <motion.img
                                         src={client.logo}
                                         alt={client.name}
                                         className="opacity-80 hover:opacity-100 transition-opacity"
@@ -209,19 +249,34 @@ const ClientsSection = () => {
                                                 "auto"
                                             }px`,
                                         }}
+                                        whileHover={{ scale: 1.05 }}
+                                        transition={{ duration: 0.3 }}
                                     />
-                                </div>
+                                </motion.div>
                             ))}
-                        </div>
+                        </motion.div>
 
                         {/* Segunda columna móvil */}
-                        <div className="flex flex-col items-center space-y-12">
+                        <motion.div 
+                            className="flex flex-col items-center space-y-12"
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: false, margin: "-50px" }}
+                            transition={{ duration: 0.5, delay: 0.1 }}
+                        >
                             {mobileColumn2.map((client, index) => (
-                                <div
+                                <motion.div
                                     key={index}
                                     className="flex items-center justify-center"
+                                    initial={{ opacity: 0 }}
+                                    whileInView={{ opacity: 1 }}
+                                    viewport={{ once: false, margin: "-50px" }}
+                                    transition={{ 
+                                        duration: 0.5, 
+                                        delay: index * 0.2
+                                    }}
                                 >
-                                    <img
+                                    <motion.img
                                         src={client.logo}
                                         alt={client.name}
                                         className="opacity-80 hover:opacity-100 transition-opacity"
@@ -235,19 +290,34 @@ const ClientsSection = () => {
                                                 "auto"
                                             }px`,
                                         }}
+                                        whileHover={{ scale: 1.05 }}
+                                        transition={{ duration: 0.3 }}
                                     />
-                                </div>
+                                </motion.div>
                             ))}
-                        </div>
+                        </motion.div>
 
                         {/* Tercera columna móvil */}
-                        <div className="flex flex-col items-center space-y-12">
+                        <motion.div 
+                            className="flex flex-col items-center space-y-12"
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: false, margin: "-50px" }}
+                            transition={{ duration: 0.5, delay: 0.2 }}
+                        >
                             {mobileColumn3.map((client, index) => (
-                                <div
+                                <motion.div
                                     key={index}
                                     className="flex items-center justify-center"
+                                    initial={{ opacity: 0 }}
+                                    whileInView={{ opacity: 1 }}
+                                    viewport={{ once: false, margin: "-50px" }}
+                                    transition={{ 
+                                        duration: 0.5, 
+                                        delay: index * 0.2
+                                    }}
                                 >
-                                    <img
+                                    <motion.img
                                         src={client.logo}
                                         alt={client.name}
                                         className="opacity-80 hover:opacity-100 transition-opacity"
@@ -261,10 +331,12 @@ const ClientsSection = () => {
                                                 "auto"
                                             }px`,
                                         }}
+                                        whileHover={{ scale: 1.05 }}
+                                        transition={{ duration: 0.3 }}
                                     />
-                                </div>
+                                </motion.div>
                             ))}
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </div>

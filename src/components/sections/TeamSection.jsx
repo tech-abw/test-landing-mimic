@@ -1,4 +1,6 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
+import { motion } from "framer-motion";
 
 const teamMembers = [
     {
@@ -60,18 +62,22 @@ const TeamSection = () => {
                 {/* Sección de título y descripción - Versión de escritorio */}
                 <div className="hidden lg:grid grid-cols-1 gap-4 items-center mb-32">
                     <div className="w-full flex items-center justify-between text-center lg:text-left">
-                        <h2
+                        <motion.h2
                             style={{
                                 fontSize: "65px",
                                 fontWeight: 200,
                                 lineHeight: "65px",
                             }}
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: false, margin: "-100px" }}
+                            transition={{ duration: 0.7 }}
                         >
                             Our team - Remote but
                             <br />
                             relentless team
-                        </h2>
-                        <span
+                        </motion.h2>
+                        <motion.span
                             className={`
                                     text-[100px] 
                                     lg:text-[200px] 
@@ -79,47 +85,77 @@ const TeamSection = () => {
                                     self-start
                                     font-medium
                                 `}
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: false, margin: "-100px" }}
+                            transition={{ duration: 0.8 }}
                         >
                             +5
-                        </span>
+                        </motion.span>
                     </div>
                     <div className="flex justify-between items-center lg:items-center">
-                        <p
+                        <motion.p
                             className="text-gray-600"
                             style={{
                                 fontSize: "25px",
                                 fontWeight: 300,
                                 lineHeight: "25px",
                             }}
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: false, margin: "-100px" }}
+                            transition={{ duration: 0.7, delay: 0.1 }}
                         >
                             Every detail counts, we believe in our team whom
                             stands out for our clients.
-                        </p>
-                        <span
+                        </motion.p>
+                        <motion.span
                             style={{
                                 fontSize: "20px",
                                 fontWeight: 200,
                                 marginTop: "2px",
                                 marginRight: "2%",
                             }}
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            viewport={{ once: false, margin: "-100px" }}
+                            transition={{ duration: 0.7, delay: 0.1 }}
                         >
                             years
-                        </span>
+                        </motion.span>
                     </div>
                 </div>
 
                 {/* Sección de título y descripción - Versión móvil */}
                 <div className="block lg:hidden text-center mb-10">
-                    <h2 className="md:text-3xl text-3xl font-medium mb-5 leading-none mt-5">
+                    <motion.h2 
+                        className="md:text-3xl text-3xl font-medium mb-5 leading-none mt-5"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: false, margin: "-50px" }}
+                        transition={{ duration: 0.7 }}
+                    >
                         Our team - Remote but
                         <br />
                         relentless team
-                    </h2>
-                    <p className="text-gray-600 mb-6 md:text-xl text-base">
+                    </motion.h2>
+                    <motion.p 
+                        className="text-gray-600 mb-6 md:text-xl text-base"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: false, margin: "-50px" }}
+                        transition={{ duration: 0.7, delay: 0.1 }}
+                    >
                         Every detail counts, we believe in our team whom stands
                         out for our clients.
-                    </p>
-                    <div className="flex flex-col items-center mb-6">
+                    </motion.p>
+                    <motion.div 
+                        className="flex flex-col items-center mb-6"
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: false, margin: "-50px" }}
+                        transition={{ duration: 0.7, delay: 0.2 }}
+                    >
                         <span
                             className={`
                                     text-[80px] 
@@ -138,92 +174,150 @@ const TeamSection = () => {
                         >
                             Years
                         </span>
-                    </div>
+                    </motion.div>
                 </div>
 
                 {/* Grid de miembros del equipo */}
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8 justify-items-center">
                     {teamMembers.map((member, index) => (
-                        <div key={index} className="text-center lg:w-[250px]">
-                            <img
+                        <motion.div 
+                            key={index} 
+                            className="text-center lg:w-[250px]"
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: false, margin: "-50px" }}
+                            transition={{ 
+                                duration: 0.7, 
+                                delay: 0.1 + (index % 4) * 0.1
+                            }}
+                        >
+                            <motion.img
                                 src={member.image}
                                 alt={member.name}
                                 className="w-full rounded-lg mb-2 lg:mb-4 object-cover"
                                 style={{ aspectRatio: "1/1" }}
+                                whileHover={{ scale: 1.05 }}
+                                transition={{ duration: 0.3 }}
                             />
-                            <h3 className="font-bold text-base lg:text-3xl">
+                            <motion.h3 
+                                className="font-bold text-base lg:text-3xl"
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                viewport={{ once: false, margin: "-50px" }}
+                                transition={{ 
+                                    duration: 0.7, 
+                                    delay: 0.2 + (index % 4) * 0.1 
+                                }}
+                            >
                                 {member.name}
-                            </h3>
-                            <p className="text-xs lg:text-xl font-medium text-gray-600">
+                            </motion.h3>
+                            <motion.p 
+                                className="text-xs lg:text-xl font-medium text-gray-600"
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                viewport={{ once: false, margin: "-50px" }}
+                                transition={{ 
+                                    duration: 0.7, 
+                                    delay: 0.3 + (index % 4) * 0.1 
+                                }}
+                            >
                                 {member.description}
-                            </p>
-                        </div>
+                            </motion.p>
+                        </motion.div>
                     ))}
                 </div>
 
                 {/* Sección de estadísticas */}
                 <div className="w-full mb-8 flex flex-col lg:flex-row justify-between gap-4 lg:gap-8 lg:mt-12">
                     {/* Proyectos */}
-                    <div className="flex flex-col items-center lg:items-start">
+                    <motion.div 
+                        className="flex flex-col items-center lg:items-start"
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: false, margin: "-50px" }}
+                        transition={{ duration: 0.7 }}
+                    >
                         <div
                             className="lg:flex flex-row"
                             style={{
                                 fontSize: "150px",
                             }}
                         >
-                            <span
+                            <motion.span
                                 className={`
                                     text-[80px] 
                                     lg:text-[200px] 
                                     text-gray-700
                                     font-medium
                                 `}
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: false, margin: "-50px" }}
+                                transition={{ duration: 0.8 }}
                             >
                                 +100
-                            </span>
+                            </motion.span>
                         </div>
-                        <span
+                        <motion.span
                             className="text-gray-600 lg:ml-[30%]"
                             style={{
                                 fontSize: "20px",
                                 fontWeight: 300,
                                 lineHeight: "20px",
                             }}
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            viewport={{ once: false, margin: "-50px" }}
+                            transition={{ duration: 0.7, delay: 0.2 }}
                         >
                             Projects
-                        </span>
-                    </div>
+                        </motion.span>
+                    </motion.div>
 
                     {/* Clientes */}
-                    <div className="flex flex-col items-center lg:items-end">
+                    <motion.div 
+                        className="flex flex-col items-center lg:items-end"
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: false, margin: "-50px" }}
+                        transition={{ duration: 0.7, delay: 0.2 }}
+                    >
                         <div
                             className="lg:flex flex-row"
                             style={{
                                 fontSize: "150px",
                             }}
                         >
-                            <span
+                            <motion.span
                                 className={`
                                     text-[80px] 
                                     lg:text-[200px] 
                                     text-gray-700
                                     font-medium
                                 `}
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: false, margin: "-50px" }}
+                                transition={{ duration: 0.8 }}
                             >
                                 +85
-                            </span>
+                            </motion.span>
                         </div>
-                        <span
+                        <motion.span
                             className="text-gray-600 self-center lg:mr-[8%]"
                             style={{
                                 fontSize: "20px",
                                 fontWeight: 300,
                                 lineHeight: "20px",
                             }}
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            viewport={{ once: false, margin: "-50px" }}
+                            transition={{ duration: 0.7, delay: 0.2 }}
                         >
                             Clients
-                        </span>
-                    </div>
+                        </motion.span>
+                    </motion.div>
                 </div>
             </div>
         </section>
