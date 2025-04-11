@@ -77,7 +77,7 @@ const BlogPage = () => {
     return (
         <div className="w-full bg-gray flex justify-center py-24">
             <div className="lg:w-[95%] w-full mx-4 lg:mx-0 bg-white rounded-2xl shadow-lg px-8 py-12">
-                <h2 className="lg:text-6xl md:text-5xl font-normal text-4xl lg:w-[35%] leading-none mb-12 text-left border-black/30">
+                <h2 className="lg:text-6xl md:text-5xl font-normal text-3xl lg:w-[35%] leading-none mb-12 text-left border-black/30">
                     Discover articles about innovation and ultimate trends
                 </h2>
 
@@ -85,7 +85,7 @@ const BlogPage = () => {
                 <div className="lg:hidden space-y-4 mb-8">
                     {blogSections.map((section, index) => (
                         <div key={index}>
-                            <h2 className="text-xl font-semibold text-left pb-1 border-b border-black/30">
+                            <h2 className="lg:text-xl text-base font-semibold text-left pb-1 border-b border-black/30">
                                 {section.title}
                             </h2>
                         </div>
@@ -98,7 +98,7 @@ const BlogPage = () => {
                         <div className="space-y-4">
                             {blogSections.map((section, index) => (
                                 <div key={index}>
-                                    <h2 className="text-xl font-semibold text-left pb-1 border-b border-black/30">
+                                    <h2 className="lg:text-xl text-base font-semibold text-left pb-1 border-b border-black/30">
                                         {section.title}
                                     </h2>
                                 </div>
@@ -110,7 +110,7 @@ const BlogPage = () => {
                     <div className="lg:w-3/4 w-full space-y-6">
                         {blogSections.map((section, index) => (
                             <div key={index}>
-                                <h3 className="text-2xl font-semibold mb-6 text-left pb-1 border-b border-black/30">
+                                <h3 className="lg:text-2xl text-xl font-semibold mb-6 text-left pb-1 border-b border-black/30">
                                     {section.title}
                                 </h3>
                                 {section.articles.map(
@@ -127,10 +127,10 @@ const BlogPage = () => {
                                                     className="rounded-lg h-24 w-24 mr-6"
                                                 />
                                                 <div>
-                                                    <p className="text-gray-500 mb-2">
+                                                    <p className="lg:text-gray-500 text-sm lg:text-base mb-2">
                                                         {article.date}
                                                     </p>
-                                                    <h4 className="text-lg font-medium">
+                                                    <h4 className="lg:text-lg text-base font-medium">
                                                         {article.title}
                                                     </h4>
                                                 </div>

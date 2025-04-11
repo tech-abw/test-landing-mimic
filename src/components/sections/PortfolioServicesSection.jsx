@@ -115,9 +115,8 @@ const PortfolioServicesSection = () => {
                             <br />
                             Brought to Life
                         </span>
-                        <span className="lg:hidden md:text-3xl text-xl">
+                        <span className="lg:hidden md:text-3xl text-3xl leading-none">
                             Portfolio - Explore Unique Ideas
-                            <br />
                             Brought to Life
                         </span>
                     </h2>
@@ -248,9 +247,9 @@ const PortfolioServicesSection = () => {
                         to="/portfolio"
                         className="flex items-center justify-center bg-neon-green text-black hover:bg-opacity-90 transition-all"
                         style={{
-                            width: "87px",
-                            height: "22px",
-                            fontSize: "10px",
+                            width: "120px",
+                            height: "28px",
+                            fontSize: "14px",
                             fontWeight: 400,
                             borderRadius: "5px",
                         }}

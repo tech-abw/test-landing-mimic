@@ -65,7 +65,7 @@ const AboutHeroSection = () => {
 
                 {/* Versión móvil */}
                 <div className="block lg:hidden bg-purple rounded-2xl p-4 text-center">
-                    <h2 className="text-white mb-10 md:text-4xl text-2xl">
+                    <h2 className="text-white mb-10 md:text-4xl text-3xl leading-none mt-5">
                         Ready to unlock
                         <br />
                         the power of
@@ -76,9 +76,9 @@ const AboutHeroSection = () => {
                     <p
                         className="text-white mb-10"
                         style={{
-                            fontSize: "16px",
+                            fontSize: "18px",
                             fontWeight: 300,
-                            lineHeight: "16px",
+                            lineHeight: "18px",
                         }}
                     >
                         In a fast paced world, take action. Lets build together!
@@ -89,9 +89,9 @@ const AboutHeroSection = () => {
                             to="https://tally.so/r/wb6l9Z"
                             className="flex items-center justify-center bg-neon-green text-black hover:bg-opacity-90 transition-all"
                             style={{
-                                width: "87px",
-                                height: "22px",
-                                fontSize: "10px",
+                                width: "120px",
+                                height: "28px",
+                                fontSize: "14px",
                                 fontWeight: 400,
                                 borderRadius: "5px",
                             }}
@@ -103,7 +103,7 @@ const AboutHeroSection = () => {
                         <img
                             src="/images/about/cohete.png"
                             alt="Rocket"
-                            className="w-1/2 p-2"
+                            className="lg:w-1/2 w-[63%] p-2"
                         />
                     </div>
                 </div>
@@ -124,10 +124,11 @@ const AboutHeroSection = () => {
                     </p>
                     <p
                         style={{
-                            fontSize: "20px",
+                            fontSize: "18px",
                             fontWeight: 200,
+                            lineHeight: "18px",
                         }}
-                        className="lg:hidden mb-14 text-center"
+                        className="lg:hidden mb-14 text-center mt-5"
                     >
                         Discover the complete suite of services we offer,
                         empowering you to build your dream product.
@@ -152,9 +153,9 @@ const AboutHeroSection = () => {
                         to="/services"
                         className="lg:hidden flex items-center justify-center bg-purple text-white hover:bg-opacity-90 transition-all"
                         style={{
-                            width: "87px",
-                            height: "22px",
-                            fontSize: "10px",
+                            width: "120px",
+                            height: "28px",
+                            fontSize: "14px",
                             fontWeight: 400,
                             borderRadius: "5px",
                         }}

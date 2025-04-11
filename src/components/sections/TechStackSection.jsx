@@ -74,9 +74,9 @@ const TechStackSection = ({
                     </div>
 
                     {/* Columna izquierda con texto - Versión móvil */}
-                    <div className="block lg:hidden text-center mb-12">
+                    <div className="block lg:hidden mb-12">
                         <h2
-                            className={`${textColor} mb-8 md:text-4xl text-2xl`}
+                            className={`${textColor} mb-6 md:text-4xl text-3xl leading-none`}
                         >
                             Our Cutting-Edge
                             <br />
@@ -99,9 +99,9 @@ const TechStackSection = ({
                                 to="https://tally.so/r/wb6l9Z"
                                 className="flex items-center justify-center bg-neon-green text-black hover:bg-opacity-90 transition-all"
                                 style={{
-                                    width: "87px",
-                                    height: "22px",
-                                    fontSize: "10px",
+                                    width: "120px",
+                                    height: "28px",
+                                    fontSize: "14px",
                                     fontWeight: 400,
                                     borderRadius: "5px",
                                 }}
@@ -112,9 +112,9 @@ const TechStackSection = ({
                                 to="/services"
                                 className="flex items-center justify-center bg-purple text-white hover:bg-opacity-90 transition-all"
                                 style={{
-                                    width: "87px",
-                                    height: "22px",
-                                    fontSize: "10px",
+                                    width: "120px",
+                                    height: "28px",
+                                    fontSize: "14px",
                                     fontWeight: 400,
                                     borderRadius: "5px",
                                 }}

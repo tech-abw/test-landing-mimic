@@ -12,19 +12,19 @@ const Footer = () => {
                         <img
                             src="/images/footer.svg"
                             alt="Mimic Logo"
-                            className="w-[150px] h-[150px] lg:w-[281.78px] lg:h-[280.66px]"
+                            className="w-[150px] h-[152px] lg:w-[281.78px] lg:h-[280.66px]"
                         />
                     </div>
 
                     {/* Menú */}
                     <div className="mb-8 md:mb-0">
                         <h3
-                            className="font-bold text-base mb-4"
+                            className="font-bold text-base mb-1 lg:mb-4"
                             style={{ fontSize: "20px" }}
                         >
                             Menu
                         </h3>
-                        <ul className="space-y-2 mb-4">
+                        <ul className="lg:space-y-2 mb-4">
                             <li>
                                 <Link
                                     to="/"
@@ -88,7 +88,7 @@ const Footer = () => {
                         </ul>
 
                         {/* Redes sociales */}
-                        <div className="flex space-x-4 mt-10">
+                        <div className="flex space-x-4 lg:mt-10 mt-6">
                             <a href="#" className="text-black">
                                 <img
                                     src="/images/footer-wha.svg"
@@ -116,12 +116,12 @@ const Footer = () => {
                     {/* Contacto */}
                     <div className="mb-8 md:mb-0">
                         <h3
-                            className="font-bold text-base mb-4"
+                            className="font-bold text-base mb-1 lg:mb-4"
                             style={{ fontSize: "20px" }}
                         >
                             Contact us.
                         </h3>
-                        <ul className="space-y-2">
+                        <ul className="lg:space-y-2">
                             <li>
                                 <a
                                     href="mailto:hi@mimic.agency"
@@ -152,12 +152,12 @@ const Footer = () => {
                     {/* Legal */}
                     <div>
                         <h3
-                            className="font-bold text-base mb-4"
+                            className="font-bold text-base mb-1 lg:mb-4"
                             style={{ fontSize: "20px" }}
                         >
                             Legal
                         </h3>
-                        <ul className="space-y-2">
+                        <ul className="lg:space-y-2">
                             <li>
                                 <Link
                                     to="/disclaimer"

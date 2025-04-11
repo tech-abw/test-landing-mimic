@@ -110,7 +110,7 @@ const TeamSection = () => {
 
                 {/* Sección de título y descripción - Versión móvil */}
                 <div className="block lg:hidden text-center mb-10">
-                    <h2 className="md:text-3xl text-xl font-bold mb-5">
+                    <h2 className="md:text-3xl text-3xl font-medium mb-5 leading-none mt-5">
                         Our team - Remote but
                         <br />
                         relentless team
@@ -122,7 +122,7 @@ const TeamSection = () => {
                     <div className="flex flex-col items-center mb-6">
                         <span
                             className={`
-                                    text-[100px] 
+                                    text-[80px] 
                                     lg:text-[200px] 
                                     text-gray-700
                                     font-medium
@@ -151,10 +151,10 @@ const TeamSection = () => {
                                 className="w-full rounded-lg mb-2 lg:mb-4 object-cover"
                                 style={{ aspectRatio: "1/1" }}
                             />
-                            <h3 className="font-bold text-lg lg:text-3xl">
+                            <h3 className="font-bold text-base lg:text-3xl">
                                 {member.name}
                             </h3>
-                            <p className="text-xs lg:text-xl font-bold text-gray-600">
+                            <p className="text-xs lg:text-xl font-medium text-gray-600">
                                 {member.description}
                             </p>
                         </div>
@@ -162,7 +162,7 @@ const TeamSection = () => {
                 </div>
 
                 {/* Sección de estadísticas */}
-                <div className="w-full flex flex-col lg:flex-row justify-between gap-4 lg:gap-8 lg:mt-12">
+                <div className="w-full mb-8 flex flex-col lg:flex-row justify-between gap-4 lg:gap-8 lg:mt-12">
                     {/* Proyectos */}
                     <div className="flex flex-col items-center lg:items-start">
                         <div
@@ -173,7 +173,7 @@ const TeamSection = () => {
                         >
                             <span
                                 className={`
-                                    text-[100px] 
+                                    text-[80px] 
                                     lg:text-[200px] 
                                     text-gray-700
                                     font-medium
@@ -204,7 +204,7 @@ const TeamSection = () => {
                         >
                             <span
                                 className={`
-                                    text-[100px] 
+                                    text-[80px] 
                                     lg:text-[200px] 
                                     text-gray-700
                                     font-medium

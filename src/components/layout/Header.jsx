@@ -75,9 +75,9 @@ const Header = () => {
                         to="https://tally.so/r/wb6l9Z"
                         className="lg:hidden flex items-center justify-center bg-black text-white hover:bg-opacity-90 transition-all"
                         style={{
-                            width: "87px",
-                            height: "22px",
-                            fontSize: "10px",
+                            width: "95px",
+                            height: "28px",
+                            fontSize: "13px",
                             fontWeight: 400,
                             color: "#CCFF00",
                             borderRadius: "5px",
@@ -111,8 +111,8 @@ const Header = () => {
                     >
                         {isMenuOpen ? (
                             <svg
-                                width="20"
-                                height="20"
+                                width="24"
+                                height="24"
                                 viewBox="0 0 20 20"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -132,8 +132,8 @@ const Header = () => {
                             </svg>
                         ) : (
                             <svg
-                                width="20"
-                                height="15.33"
+                                width="28"
+                                height="28"
                                 viewBox="0 0 30 23"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -141,19 +141,19 @@ const Header = () => {
                                 <path
                                     d="M3 3H27"
                                     stroke="black"
-                                    strokeWidth="3"
+                                    strokeWidth="2.5"
                                     strokeLinecap="round"
                                 />
                                 <path
                                     d="M3 11.5H27"
                                     stroke="black"
-                                    strokeWidth="3"
+                                    strokeWidth="3.2"
                                     strokeLinecap="round"
                                 />
                                 <path
                                     d="M3 20H27"
                                     stroke="black"
-                                    strokeWidth="3"
+                                    strokeWidth="3.2"
                                     strokeLinecap="round"
                                 />
                             </svg>
@@ -174,7 +174,7 @@ const Header = () => {
                                 key={item.name}
                                 to={item.path}
                                 className="text-black transition-colors duration-300"
-                                style={{ fontSize: "12px", fontWeight: 400 }}
+                                style={{ fontSize: "15px", fontWeight: 400 }}
                                 onClick={closeMenu}
                             >
                                 {item.name}
