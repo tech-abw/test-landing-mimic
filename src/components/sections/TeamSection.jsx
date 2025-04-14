@@ -50,7 +50,7 @@ const teamMembers = [
     },
     {
         name: "Ivan de la Garza",
-        image: "/images/about/image2.png",
+        image: "/images/about/Ivan.png",
         description: "CRO",
     },
 ];
