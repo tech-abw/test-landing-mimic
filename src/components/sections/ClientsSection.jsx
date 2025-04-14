@@ -6,7 +6,7 @@ import "./ClientsSection.css";
 const ClientsSection = () => {
     const imgBasePath = "/images/clients/";
 
-    const duplicationFactor = 2;
+    const duplicationFactor = 30;
 
     const topRowClients = [
         {
