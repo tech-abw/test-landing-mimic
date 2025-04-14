@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 
 const Portfolio = () => {
     const portfolioItems = [
@@ -92,6 +93,14 @@ const Portfolio = () => {
 
     return (
         <div className="bg-white text-black lg:mt-16 lg:mb-24">
+            <Helmet>
+                <title>Portfolio: Our work</title>
+                <meta name="description" content="Meet our unique digital products we've crafted for our amazing clients." />
+                <meta property="og:title" content="Portfolio: Our work" />
+                <meta property="og:description" content="Meet our unique digital products we've crafted for our amazing clients." />
+                <meta property="twitter:title" content="Portfolio: Our work" />
+                <meta property="twitter:description" content="Meet our unique digital products we've crafted for our amazing clients." />
+            </Helmet>
             <div className="w-[95%] mx-auto px-4 py-16">
                 <motion.h1
                     className="text-3xl lg:text-5xl leading-none lg:w-[35%] mt-10 lg:flex-1"

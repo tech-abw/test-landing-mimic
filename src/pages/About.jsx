@@ -2,10 +2,19 @@ import React from 'react';
 import Hero from '../components/sections/Hero';
 import TeamSection from '../components/sections/TeamSection';
 import AboutHeroSection from '../components/sections/AboutHeroSection';
+import { Helmet } from "react-helmet-async";
 
 const About = () => {
   return (
     <div>
+      <Helmet>
+        <title>Get to know our agency</title>
+        <meta name="description" content="Innovation starts with imitation. We use this principle to craft digital solutions that transform ideas into unique digital experiences." />
+        <meta property="og:title" content="Get to know our agency" />
+        <meta property="og:description" content="Innovation starts with imitation. We use this principle to craft digital solutions that transform ideas into unique digital experiences." />
+        <meta property="twitter:title" content="Get to know our agency" />
+        <meta property="twitter:description" content="Innovation starts with imitation. We use this principle to craft digital solutions that transform ideas into unique digital experiences." />
+      </Helmet>
       <Hero 
         title="At Mimic, we believe that all species, including humans, begin by mimicking"
         description="Whether it's learning to walk or creating art. We use this principle to craft digital solutions that transform ideas into unique digital experiences."

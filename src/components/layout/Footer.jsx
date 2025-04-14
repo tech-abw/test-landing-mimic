@@ -89,21 +89,36 @@ const Footer = () => {
 
                         {/* Redes sociales */}
                         <div className="flex space-x-4 lg:mt-10 mt-6">
-                            <a href="#" className="text-black">
+                            <a
+                                href="https://wa.me/+528181614207"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-black"
+                            >
                                 <img
                                     src="/images/footer-wha.svg"
                                     alt="WhatsApp"
                                     className="h-6 w-6 md:h-8 md:w-8"
                                 />
                             </a>
-                            <a href="#" className="text-black">
+                            <a
+                                href="https://instagram.com/mimic.agency"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-black"
+                            >
                                 <img
                                     src="/images/footer-insta.svg"
                                     alt="Instagram"
                                     className="h-6 w-6 md:h-8 md:w-8"
                                 />
                             </a>
-                            <a href="#" className="text-black">
+                            <a
+                                href="https://linkedin.com/company/mimicagency"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-black"
+                            >
                                 <img
                                     src="/images/footer-linke.svg"
                                     alt="LinkedIn"
@@ -136,8 +151,10 @@ const Footer = () => {
                             </li>
                             <li>
                                 <a
-                                    href="tel:+528181814207"
+                                    href="https://wa.me/+528181614207"
                                     className="text-gray-600 transition-colors"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     style={{
                                         fontSize: "17px",
                                         fontWeight: "200",
