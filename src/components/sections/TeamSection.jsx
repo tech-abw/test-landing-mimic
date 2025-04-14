@@ -34,7 +34,7 @@ const teamMembers = [
         description: "Fullstack IA Engineer",
     },
     {
-        name: "Montserrat Alvarez",
+        name: "Montse A.",
         image: "/images/about/Montse.png",
         description: "Graphic Designer",
     },

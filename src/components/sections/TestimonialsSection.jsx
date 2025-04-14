@@ -7,16 +7,16 @@ const TestimonialsSection = () => {
 
     const testimonials = [
         {
-            text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-            name: "John Doe",
+            text: "Mimic's team have been wonderful. They revamped our site to a pixel perfection. They are well experienced and organized team.",
+            name: "Brian",
         },
         {
-            text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-            name: "Ivan",
+            text: "We shared a Figma design of our new home website, they are reaaally good at what they do. They know everything about marketing and software skills. Really happy with the results!",
+            name: "Natalia",
         },
         {
-            text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-            name: "Martin",
+            text: "We have worked with Mimic team several times, they are an impecable team, really dynamic and understanding in each project. Every result is pixel perfect.",
+            name: "Jazmin",
         },
     ];
 
