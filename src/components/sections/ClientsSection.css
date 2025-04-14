@@ -1,23 +1,24 @@
-/* Animaciones para el carrusel infinito de logos */
-
-/* Animación específica para la primera fila (derecha a izquierda) */
 @keyframes marquee-top {
+    0% {
+        transform: translateX(calc(-100% - 0px));
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes marquee-bottom {
     0% {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(
-            calc(-100% - 0px)
-        ); /* El ancho exacto de un conjunto completo de logos */
+        transform: translateX(calc(-100% - 0px));
     }
 }
 
-/* Animación específica para la segunda fila (izquierda a derecha) */
-@keyframes marquee-bottom {
+@keyframes marquee {
     0% {
-        transform: translateX(
-            calc(-100% - 0px)
-        ); /* El ancho exacto de un conjunto completo de logos */
+        transform: translateX(calc(-100% - 0px));
     }
     100% {
         transform: translateX(0);
@@ -45,12 +46,15 @@
     will-change: transform;
     padding: 10px 0;
     align-items: center;
-    animation: marquee-top 250s linear infinite;
+    animation: marquee 250s linear infinite;
 }
 
-.marquee-reverse .marquee-content {
-    animation: marquee-bottom 250s linear infinite;
-    animation-delay: 0s;
+.marquee-reverse {
+    transform: rotateY(180deg);
+}
+
+.marquee-reverse .marquee-item {
+    transform: rotateY(180deg);
 }
 
 .marquee-container:hover .marquee-content {
