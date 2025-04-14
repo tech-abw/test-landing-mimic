@@ -1,17 +1,19 @@
 /* Animaciones para el carrusel infinito de logos */
 
-@keyframes marquee {
+/* Animación específica para la primera fila (derecha a izquierda) */
+@keyframes marquee-top {
   0% {
-    transform: translateX(100%);
+    transform: translateX(60%);
   }
   100% {
     transform: translateX(-100%);
   }
 }
 
-@keyframes marquee-reverse {
+/* Animación específica para la segunda fila (izquierda a derecha) */
+@keyframes marquee-bottom {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(-60%);
   }
   100% {
     transform: translateX(100%);
@@ -39,11 +41,13 @@
   will-change: transform;
   padding: 10px 0;
   align-items: center;
-  animation: marquee 40s linear infinite;
+  animation: marquee-top 28s linear infinite;
+  animation-delay: 0s;
 }
 
 .marquee-reverse .marquee-content {
-  animation: marquee-reverse 40s linear infinite;
+  animation: marquee-bottom 28s linear infinite;
+  animation-delay: 0s;
 }
 
 .marquee-container:hover .marquee-content {
