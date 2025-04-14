@@ -3,19 +3,15 @@ import PortfolioServicesSection from "../components/sections/PortfolioServicesSe
 import ServicesSection from "../components/sections/ServicesSection";
 import TechStackSection from "../components/sections/TechStackSection";
 import CalendarSection from "../components/sections/CalendarSection";
-import { Helmet } from "react-helmet-async";
+import SEO from "../components/SEO";
 
 const Services = () => {
     return (
         <div>
-            <Helmet>
-                <title>Our services</title>
-                <meta name="description" content="UX UI Design, Website and E-commerce solutions, No-Code / Low code development, AI and Tailored solutions." />
-                <meta property="og:title" content="Our services" />
-                <meta property="og:description" content="UX UI Design, Website and E-commerce solutions, No-Code / Low code development, AI and Tailored solutions." />
-                <meta property="twitter:title" content="Our services" />
-                <meta property="twitter:description" content="UX UI Design, Website and E-commerce solutions, No-Code / Low code development, AI and Tailored solutions." />
-            </Helmet>
+            <SEO
+                title="Our services"
+                description="UX UI Design, Website and E-commerce solutions, No-Code / Low code development, AI and Tailored solutions."
+            />
             <Hero
                 title="We are characterized as Thinkers and Doers"
                 description="We transform ideas into unique digital experiences through innovative design and strategic thinking."
