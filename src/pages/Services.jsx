@@ -16,7 +16,7 @@ const Services = () => {
                 title="We are characterized as Thinkers and Doers"
                 description="We transform ideas into unique digital experiences through innovative design and strategic thinking."
                 backgroundImage="/images/services-hero.png"
-                mobileBackgroundImage="/images/services/hero-mobile.jpg"
+                mobileBackgroundImage="/images/mobile-services.png"
                 buttonText="Our Work"
                 buttonLink="/portfolio"
                 desktopTitleFontSize="78px"
