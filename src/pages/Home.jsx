@@ -19,6 +19,7 @@ const Home = () => {
                 mobileDescriptionFontSize="17px"
                 desktopTitleFontSize="80px"
                 desktopDescriptionFontSize="20px"
+                mobileBackgroundImage="/images/Mobile_Pulpo.png"
             />
             <ClientsSection />
             <PortfolioSection />
