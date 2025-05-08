@@ -24,7 +24,7 @@ const services = [
         description:
             "AI Agents, Copilots, automations and much more. The sky is the limit.",
         bgColor: "bg-white",
-        textColor: "text-white",
+        textColor: "text-black",
         hasImage: false,
     },
     {
