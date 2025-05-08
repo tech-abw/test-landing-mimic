@@ -6,7 +6,7 @@ const teamMembers = [
     {
         name: "Ignacio Zanotto",
         image: "/images/about/Nacho.png",
-        description: "CTO",
+        description: "Fractional CTO",
     },
     {
         name: "Manuel Latorre",
@@ -51,7 +51,7 @@ const teamMembers = [
     {
         name: "Ivan de la Garza",
         image: "/images/about/Ivan.png",
-        description: "CRO",
+        description: "Co-Founder / CRO",
     },
 ];
 
