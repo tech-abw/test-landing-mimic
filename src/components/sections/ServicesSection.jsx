@@ -20,11 +20,11 @@ const services = [
         hasImage: false,
     },
     {
-        title: "No-Code/Low-Code Development",
+        title: "AI Solutions",
         description:
-            "Speeding up delivery with platforms like Bubble, Flutterflow and Webflow.",
+            "AI Agents, Copilots, automations and much more. The sky is the limit.",
         bgColor: "bg-white",
-        textColor: "text-black",
+        textColor: "text-white",
         hasImage: false,
     },
     {
@@ -36,9 +36,9 @@ const services = [
         hasImage: false,
     },
     {
-        title: "AI Solutions",
+        title: "Consulting",
         description:
-            "AI chats, automatizations, Agents, workflows and much more. The sky is the limit.",
+            "With our broad expertise, we focus in serving as your Fractional CTO.",
         bgColor: "bg-neon-green",
         textColor: "text-black",
         hasImage: false,
