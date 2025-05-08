@@ -10,7 +10,7 @@ const Services = () => {
         <div>
             <SEO
                 title="Our services"
-                description="UX UI Design, Website and E-commerce solutions, No-Code / Low code development, AI and Tailored solutions."
+                description="UX UI Design, Website and E-commerce solutions, Consulting, AI and Tailored solutions."
             />
             <Hero
                 title="We are characterized as Thinkers and Doers"
