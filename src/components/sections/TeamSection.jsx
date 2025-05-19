@@ -4,9 +4,10 @@ import { motion } from "framer-motion";
 
 const teamMembers = [
     {
-        name: "Ignacio Zanotto",
-        image: "/images/about/Nacho.png",
-        description: "Fractional CTO",
+         name: "Ivan de la Garza",
+        image: "/images/about/Ivan.png",
+        description: "Co-Founder / CRO",
+        
     },
     {
         name: "Manuel Latorre",
@@ -49,9 +50,10 @@ const teamMembers = [
         description: "Marketing specialist",
     },
     {
-        name: "Ivan de la Garza",
-        image: "/images/about/Ivan.png",
-        description: "Co-Founder / CRO",
+        name: "Ignacio Zanotto",
+        image: "/images/about/Nacho.png",
+        description: "Fractional CTO",
+       
     },
 ];
 
