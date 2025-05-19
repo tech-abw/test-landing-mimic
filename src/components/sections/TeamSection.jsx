@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const teamMembers = [
     {
-         name: "Ivan de la Garza",
+         name: "Iván de la Garza",
         image: "/images/about/Ivan.png",
         description: "Co-Founder / CRO",
         
