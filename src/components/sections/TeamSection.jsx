@@ -10,7 +10,7 @@ const teamMembers = [
         
     },
     {
-        name: "Miguel L",
+        name: "Miguel L.",
         image: "/images/about/dummy-team.png",
         description: "Front-End Developer",
     },
