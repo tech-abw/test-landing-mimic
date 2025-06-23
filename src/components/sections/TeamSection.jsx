@@ -10,8 +10,8 @@ const teamMembers = [
         
     },
     {
-        name: "Manuel Latorre",
-        image: "/images/about/Manuel-latorre.png",
+        name: "Miguel L",
+        image: "/images/about/dummy-team.png",
         description: "Front-End Developer",
     },
     {
@@ -20,9 +20,9 @@ const teamMembers = [
         description: "UX UI Designer",
     },
     {
-        name: "Martin Alturria",
-        image: "/images/about/Martin-alturria.png",
-        description: "Back-End Developer",
+        name: "Gabriel M.",
+        image: "/images/about/dummy-team.png",
+        description: "Fullstack Developer",
     },
     {
         name: "Sasha Solano",
@@ -49,12 +49,7 @@ const teamMembers = [
         image: "/images/about/Amanda.png",
         description: "Marketing specialist",
     },
-    {
-        name: "Ignacio Zanotto",
-        image: "/images/about/Nacho.png",
-        description: "Fractional CTO",
-       
-    },
+ 
 ];
 
 const TeamSection = () => {
