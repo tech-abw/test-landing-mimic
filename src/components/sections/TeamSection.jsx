@@ -15,9 +15,9 @@ const teamMembers = [
         description: "Front-End Developer",
     },
     {
-        name: "Mariana Vega",
-        image: "/images/about/Mariana.png",
-        description: "UX UI Designer",
+        name: "John Rodriguez",
+        image: "/images/about/John.png",
+        description: "Fullstack IA Engineer",
     },
     {
         name: "Gabriel M.",
@@ -30,9 +30,9 @@ const teamMembers = [
         description: "Front-End Developer",
     },
     {
-        name: "John Rodriguez",
-        image: "/images/about/John.png",
-        description: "Fullstack IA Engineer",
+        name: "Mariana Vega",
+        image: "/images/about/Mariana.png",
+        description: "UX UI Designer",
     },
     {
         name: "Montse A.",
