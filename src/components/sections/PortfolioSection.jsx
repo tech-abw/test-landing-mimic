@@ -1,13 +1,16 @@
 /* eslint-disable no-unused-vars */
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const PortfolioSection = () => {
+    const { t } = useTranslation();
+
     const portfolioItems = [
         {
             id: 1,
             image: "/images/portfolio/portfolio-1.png",
-            alt: "Portfolio item 1 - Laptop display",
+            alt: t("portfolio_item_1_alt"),
             desktopSize: { width: 1119, height: 713 },
             mobileSize: { width: 358.69, height: 256 },
             borderRadius: { desktop: 38, mobile: 32 },
@@ -17,7 +20,7 @@ const PortfolioSection = () => {
         {
             id: 2,
             image: "/images/portfolio/portfolio-2.png",
-            alt: "Portfolio item 2 - Website on laptop",
+            alt: t("portfolio_item_2_alt"),
             desktopSize: { width: 732, height: 713 },
             mobileSize: { width: 358.55, height: 418 },
             borderRadius: { desktop: 38, mobile: 32 },
@@ -27,7 +30,7 @@ const PortfolioSection = () => {
         {
             id: 3,
             image: "/images/portfolio/portfolio-3.png",
-            alt: "Portfolio item 3 - Mobile app",
+            alt: t("portfolio_item_3_alt"),
             desktopSize: { width: 799, height: 817 },
             mobileSize: { width: 359, height: 433 },
             borderRadius: { desktop: 38, mobile: 32 },
@@ -37,7 +40,7 @@ const PortfolioSection = () => {
         {
             id: 4,
             image: "/images/portfolio/portfolio-4.png",
-            alt: "Portfolio item 4 - Tablet website",
+            alt: t("portfolio_item_4_alt"),
             desktopSize: { width: 1050, height: 817 },
             borderRadius: { desktop: 38 },
             showOnMobile: false,
@@ -46,7 +49,7 @@ const PortfolioSection = () => {
         {
             id: 5,
             image: "/images/portfolio/portfolio-5.png",
-            alt: "Portfolio item 5 - Tablet app",
+            alt: t("portfolio_item_5_alt"),
             desktopSize: { width: 924, height: 707 },
             borderRadius: { desktop: 38 },
             showOnMobile: false,
@@ -55,7 +58,7 @@ const PortfolioSection = () => {
         {
             id: 6,
             image: "/images/portfolio/portfolio-6.png",
-            alt: "Portfolio item 6 - Laptop display",
+            alt: t("portfolio_item_6_alt"),
             desktopSize: { width: 924, height: 707 },
             borderRadius: { desktop: 38 },
             showOnMobile: false,
@@ -91,12 +94,10 @@ const PortfolioSection = () => {
                                 lineHeight: 1.5,
                             }}
                         >
-                            Discover a collection of real-world examples of how
-                            we transform ideas into impactful solutions
+                            {t("portfolio_description")}
                         </span>
                         <span className="lg:hidden text-xs md:text-base font-medium leading-none">
-                            Discover a collection of real-world examples of how
-                            we transform ideas into impactful solutions
+                            {t("portfolio_description")}
                         </span>
                     </motion.p>
 
@@ -115,15 +116,11 @@ const PortfolioSection = () => {
                                 fontWeight: 400,
                                 lineHeight: "65px",
                             }}
+                            dangerouslySetInnerHTML={{ __html: t("portfolio_title_html") }}
                         >
-                            Portfolio - Explore Unique Ideas
-                            <br />
-                            Brought to Life
                         </span>
                         <span className="lg:hidden lg:text-3xl md:text-2xl text-3xl font-medium leading-none">
-                            Portfolio - Explore Unique Ideas
-                            <br />
-                            Brought to Life
+                           {t("portfolio_title_plain")}
                         </span>
                     </motion.h2>
 
@@ -147,7 +144,7 @@ const PortfolioSection = () => {
                                 lineHeight: "18px",
                             }}
                         >
-                            See all projects
+                            {t('portfolio_button')}
                         </Link>
                     </motion.div>
 
@@ -170,7 +167,7 @@ const PortfolioSection = () => {
                                 borderRadius: "5px",
                             }}
                         >
-                            See all projects
+                            {t('portfolio_button')}
                         </Link>
                     </motion.div>
                 </div>

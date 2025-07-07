@@ -1,141 +1,44 @@
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
 import React from "react";
+import { useTranslation } from "react-i18next";
 import "./ClientsSection.css";
 
 const ClientsSection = () => {
+    const { t } = useTranslation();
     const imgBasePath = "/images/clients/";
 
+    // Define client data
     const duplicationFactor = 30;
-
     const topRowClients = [
-        {
-            name: "Insights to Behavior",
-            logo: `${imgBasePath}insights-to-behavior.png`,
-            desktopSize: { width: 143.5, height: 37.63 },
-            mobileSize: { width: 83, height: 25.95 },
-            showOnMobile: true,
-            mobileOrder: 1,
-        },
-        {
-            name: "Ecompack",
-            logo: `${imgBasePath}ecompack.png`,
-            desktopSize: { width: 176.73, height: 35.3 },
-            mobileSize: { width: 90.23, height: 20.02 },
-            showOnMobile: true,
-            mobileOrder: 2,
-        },
-        {
-            name: "Astelaris",
-            logo: `${imgBasePath}astelaris.png`,
-            desktopSize: { width: 137.11, height: 36.79 },
-            mobileSize: { width: 71.12, height: 17.74 },
-            showOnMobile: true,
-            mobileOrder: 3,
-        },
-        {
-            name: "Mita",
-            logo: `${imgBasePath}mita.png`,
-            desktopSize: { width: 72.84, height: 66.8 },
-            showOnMobile: false,
-        },
-        {
-            name: "Ultima",
-            logo: `${imgBasePath}ultima.png`,
-            desktopSize: { width: 99.31, height: 47.35 },
-            showOnMobile: false,
-        },
-        {
-            name: "CSSIS",
-            logo: `${imgBasePath}cssis.png`,
-            desktopSize: { width: 104.49, height: 33.42 },
-            showOnMobile: false,
-        },
-        {
-            name: "Zengure",
-            logo: `${imgBasePath}zengure.png`,
-            desktopSize: { width: 138.13, height: 41.89 },
-            showOnMobile: false,
-        },
+        { name: "Astelaris", logo: "astelaris.png" },
+        { name: "Aurea", logo: "aurea.png" },
+        { name: "Cssis", logo: "cssis.png" },
+        { name: "Ecompack", logo: "ecompack.png" },
+        { name: "Gravity", logo: "gravity.png" },
+        { name: "Insights to Behavior", logo: "insights-to-behavior.png" },
+        { name: "Mita", logo: "mita.png" },
     ];
-
     const bottomRowClients = [
-        {
-            name: "Think",
-            logo: `${imgBasePath}think.png`,
-            desktopSize: { width: 91.12, height: 51.15 },
-            mobileSize: { width: 70.83, height: 27.67 },
-            showOnMobile: true,
-            mobileOrder: 4,
-        },
-        {
-            name: "Gravity",
-            logo: `${imgBasePath}gravity.png`,
-            desktopSize: { width: 121.08, height: 40.33 },
-            mobileSize: { width: 80.39, height: 27.45 },
-            showOnMobile: true,
-            mobileOrder: 5,
-        },
-        {
-            name: "Santa Eugenia",
-            logo: `${imgBasePath}santa-eugenia.png`,
-            desktopSize: { width: 118.84, height: 62.43 },
-            mobileSize: { width: 80.31, height: 30.59 },
-            showOnMobile: true,
-            mobileOrder: 6,
-        },
-        {
-            name: "Silvesa",
-            logo: `${imgBasePath}silvesa.png`,
-            desktopSize: { width: 107.9, height: 64.25 },
-            showOnMobile: false,
-        },
-        {
-            name: "Aurea",
-            logo: `${imgBasePath}aurea.png`,
-            desktopSize: { width: 150.6, height: 48.71 },
-            showOnMobile: false,
-        },
-        {
-            name: "Plancidad",
-            logo: `${imgBasePath}plancidad100.png`,
-            desktopSize: { width: 142.6, height: 40.61 },
-            showOnMobile: false,
-        },
-        {
-            name: "Vitaflow",
-            logo: `${imgBasePath}vitaflow.png`,
-            desktopSize: { width: 160.94, height: 30.08 },
-            mobileSize: { width: 77.6, height: 14.5 },
-            showOnMobile: false,
-        },
+        { name: "Plancidad 100", logo: "plancidad100.png" },
+        { name: "Santa Eugenia", logo: "santa-eugenia.png" },
+        { name: "Silvesa", logo: "silvesa.png" },
+        { name: "Think", logo: "think.png" },
+        { name: "Ultima", logo: "ultima.png" },
+        { name: "Vitaflow", logo: "vitaflow.png" },
+        { name: "Zengure", logo: "zengure.png" },
     ];
 
-    const mobileClients = [
-        ...topRowClients.filter((client) => client.showOnMobile !== false),
-        ...bottomRowClients.filter((client) => client.showOnMobile !== false),
-    ].sort((a, b) => a.mobileOrder - b.mobileOrder);
+    // Data for mobile view
+    const mobileClients = [...topRowClients, ...bottomRowClients].sort(() => Math.random() - 0.5);
+    const mobileColumn1 = mobileClients.slice(0, 5);
+    const mobileColumn2 = mobileClients.slice(5, 10);
+    const mobileColumn3 = mobileClients.slice(10, 14);
 
-    const mobileColumn1 = [mobileClients[0], mobileClients[3]];
-    const mobileColumn2 = [mobileClients[1], mobileClients[4]];
-    const mobileColumn3 = [mobileClients[2], mobileClients[5]];
-
-    const duplicateArray = (arr, times) => {
-        let result = [];
-        for (let i = 0; i < times; i++) {
-            result = [...result, ...arr];
-        }
-        return result;
-    };
-
-    const duplicatedTopClients = duplicateArray(
-        topRowClients,
-        duplicationFactor
-    );
-    const duplicatedBottomClients = duplicateArray(
-        bottomRowClients,
-        duplicationFactor
-    );
+    // Duplicate arrays for seamless marquee effect
+    const duplicateArray = (arr, times) => Array(times).fill(arr).flat();
+    const duplicatedTopClients = duplicateArray(topRowClients, duplicationFactor);
+    const duplicatedBottomClients = duplicateArray(bottomRowClients, duplicationFactor);
 
     return (
         <section className="w-full bg-gray py-10 md:py-24">
@@ -149,263 +52,50 @@ const ClientsSection = () => {
                 >
                     <span
                         className="hidden lg:inline"
-                        style={{
-                            fontSize: "65px",
-                            fontWeight: 400,
-                            lineHeight: "65px",
-                        }}
-                    >
-                        Our Clients - Let's build
-                        <br />
-                        together!
-                    </span>
+                        style={{ fontSize: "65px", fontWeight: 400, lineHeight: "65px" }}
+                        dangerouslySetInnerHTML={{ __html: t("clients_title_html") }}
+                    ></span>
                     <span className="lg:hidden md:text-4xl text-3xl font-medium leading-none">
-                        Our Clients - Let's build together!
+                        {t("clients_title_plain")}
                     </span>
                 </motion.h2>
 
-                {/* Contenedor principal con posición relativa */}
                 <div className="relative">
-                    {/* Primera fila de logos con marquee CSS */}
+                    {/* Desktop marquee rows */}
                     <div className="hidden lg:block mb-16">
                         <div className="marquee-container">
                             <div className="marquee-content">
                                 {duplicatedTopClients.map((client, index) => (
-                                    <div
-                                        key={`top-${index}`}
-                                        className="marquee-item"
-                                    >
-                                        <img
-                                            src={client.logo}
-                                            alt={client.name}
-                                            style={{
-                                                width: `${
-                                                    client.desktopSize?.width ||
-                                                    "auto"
-                                                }px`,
-                                                height: `${
-                                                    client.desktopSize
-                                                        ?.height || "auto"
-                                                }px`,
-                                                objectFit: "contain",
-                                                minWidth: "60px",
-                                            }}
-                                            loading="eager"
-                                            onError={(e) => {
-                                                console.error(
-                                                    `Error en imagen: ${client.name}`
-                                                );
-                                                e.target.style.border =
-                                                    "1px dashed #999";
-                                                e.target.style.width = "100px";
-                                                e.target.style.height = "40px";
-                                            }}
-                                        />
-                                    </div>
+                                    <img key={index} src={`${imgBasePath}${client.logo}`} alt={client.name} className="h-12 mx-12" />
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                    <div className="hidden lg:block">
+                        <div className="marquee-container marquee-reverse">
+                            <div className="marquee-content">
+                                {duplicatedBottomClients.map((client, index) => (
+                                    <img key={index} src={`${imgBasePath}${client.logo}`} alt={client.name} className="h-12 mx-12" />
                                 ))}
                             </div>
                         </div>
                     </div>
 
-                    {/* Segunda fila de logos con marquee CSS */}
-                    <div className="hidden lg:block">
-                        <div className="marquee-container marquee-reverse">
-                            <div className="marquee-content">
-                                {duplicatedBottomClients.map(
-                                    (client, index) => (
-                                        <div
-                                            key={`bottom-${index}`}
-                                            className="marquee-item"
-                                        >
-                                            <img
-                                                src={client.logo}
-                                                alt={client.name}
-                                                style={{
-                                                    width: `${
-                                                        client.desktopSize
-                                                            ?.width || "auto"
-                                                    }px`,
-                                                    height: `${
-                                                        client.desktopSize
-                                                            ?.height || "auto"
-                                                    }px`,
-                                                    objectFit: "contain",
-                                                    minWidth: "60px",
-                                                }}
-                                                loading="eager"
-                                                onError={(e) => {
-                                                    console.error(
-                                                        `Error en imagen: ${client.name}`
-                                                    );
-                                                    e.target.style.border =
-                                                        "1px dashed #999";
-                                                    e.target.style.width =
-                                                        "100px";
-                                                    e.target.style.height =
-                                                        "40px";
-                                                }}
-                                            />
-                                        </div>
-                                    )
-                                )}
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Versión móvil - 3 columnas, 2 logos por columna */}
+                    {/* Mobile columns */}
                     <div className="lg:hidden flex justify-between">
-                        {/* Primera columna móvil */}
-                        <motion.div
-                            className="flex flex-col items-center space-y-12"
-                            initial={{ opacity: 0, x: -15 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: false, margin: "-50px" }}
-                            transition={{ duration: 0.7, ease: "easeOut" }}
-                        >
-                            {mobileColumn1.map((client, index) => (
-                                <motion.div
-                                    key={index}
-                                    className="flex items-center justify-center"
-                                    initial={{ opacity: 0 }}
-                                    whileInView={{ opacity: 1 }}
-                                    viewport={{ once: false, margin: "-50px" }}
-                                    transition={{
-                                        duration: 0.5,
-                                        delay: index * 0.2,
-                                    }}
-                                >
-                                    <motion.img
-                                        src={client.logo}
-                                        alt={client.name}
-                                        className="opacity-80 hover:opacity-100 transition-opacity"
-                                        style={{
-                                            width: `${
-                                                client.mobileSize?.width ||
-                                                "auto"
-                                            }px`,
-                                            height: `${
-                                                client.mobileSize?.height ||
-                                                "auto"
-                                            }px`,
-                                            objectFit: "contain",
-                                        }}
-                                        whileHover={{ scale: 1.05 }}
-                                        transition={{ duration: 0.3 }}
-                                        onError={(e) => {
-                                            console.error(
-                                                `Error en imagen móvil: ${client.name}`
-                                            );
-                                            e.target.style.border =
-                                                "1px dashed #999";
-                                        }}
-                                    />
-                                </motion.div>
+                        <motion.div className="flex flex-col items-center space-y-12" initial={{ opacity: 0, x: -15 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: false, margin: "-50px" }} transition={{ duration: 0.7, ease: "easeOut" }}>
+                            {mobileColumn1.map((client) => (
+                                <img key={client.name} src={`${imgBasePath}${client.logo}`} alt={client.name} className="h-10" />
                             ))}
                         </motion.div>
-
-                        {/* Segunda columna móvil */}
-                        <motion.div
-                            className="flex flex-col items-center space-y-12"
-                            initial={{ opacity: 0, y: 15 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: false, margin: "-50px" }}
-                            transition={{
-                                duration: 0.7,
-                                delay: 0.1,
-                                ease: "easeOut",
-                            }}
-                        >
-                            {mobileColumn2.map((client, index) => (
-                                <motion.div
-                                    key={index}
-                                    className="flex items-center justify-center"
-                                    initial={{ opacity: 0 }}
-                                    whileInView={{ opacity: 1 }}
-                                    viewport={{ once: false, margin: "-50px" }}
-                                    transition={{
-                                        duration: 0.5,
-                                        delay: index * 0.2,
-                                    }}
-                                >
-                                    <motion.img
-                                        src={client.logo}
-                                        alt={client.name}
-                                        className="opacity-80 hover:opacity-100 transition-opacity"
-                                        style={{
-                                            width: `${
-                                                client.mobileSize?.width ||
-                                                "auto"
-                                            }px`,
-                                            height: `${
-                                                client.mobileSize?.height ||
-                                                "auto"
-                                            }px`,
-                                            objectFit: "contain",
-                                        }}
-                                        whileHover={{ scale: 1.05 }}
-                                        transition={{ duration: 0.3 }}
-                                        onError={(e) => {
-                                            console.error(
-                                                `Error en imagen móvil: ${client.name}`
-                                            );
-                                            e.target.style.border =
-                                                "1px dashed #999";
-                                        }}
-                                    />
-                                </motion.div>
+                        <motion.div className="flex flex-col items-center space-y-12" initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, margin: "-50px" }} transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}>
+                            {mobileColumn2.map((client) => (
+                                <img key={client.name} src={`${imgBasePath}${client.logo}`} alt={client.name} className="h-10" />
                             ))}
                         </motion.div>
-
-                        {/* Tercera columna móvil */}
-                        <motion.div
-                            className="flex flex-col items-center space-y-12"
-                            initial={{ opacity: 0, x: 15 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: false, margin: "-50px" }}
-                            transition={{
-                                duration: 0.7,
-                                delay: 0.2,
-                                ease: "easeOut",
-                            }}
-                        >
-                            {mobileColumn3.map((client, index) => (
-                                <motion.div
-                                    key={index}
-                                    className="flex items-center justify-center"
-                                    initial={{ opacity: 0 }}
-                                    whileInView={{ opacity: 1 }}
-                                    viewport={{ once: false, margin: "-50px" }}
-                                    transition={{
-                                        duration: 0.5,
-                                        delay: index * 0.2,
-                                    }}
-                                >
-                                    <motion.img
-                                        src={client.logo}
-                                        alt={client.name}
-                                        className="opacity-80 hover:opacity-100 transition-opacity"
-                                        style={{
-                                            width: `${
-                                                client.mobileSize?.width ||
-                                                "auto"
-                                            }px`,
-                                            height: `${
-                                                client.mobileSize?.height ||
-                                                "auto"
-                                            }px`,
-                                            objectFit: "contain",
-                                        }}
-                                        whileHover={{ scale: 1.05 }}
-                                        transition={{ duration: 0.3 }}
-                                        onError={(e) => {
-                                            console.error(
-                                                `Error en imagen móvil: ${client.name}`
-                                            );
-                                            e.target.style.border =
-                                                "1px dashed #999";
-                                        }}
-                                    />
-                                </motion.div>
+                        <motion.div className="flex flex-col items-center space-y-12" initial={{ opacity: 0, x: 15 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: false, margin: "-50px" }} transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}>
+                            {mobileColumn3.map((client) => (
+                                <img key={client.name} src={`${imgBasePath}${client.logo}`} alt={client.name} className="h-10" />
                             ))}
                         </motion.div>
                     </div>

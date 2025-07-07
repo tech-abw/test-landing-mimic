@@ -1,22 +1,24 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const TestimonialsSection = () => {
+    const { t } = useTranslation();
     const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
     const testimonials = [
         {
-            text: "Mimic's team have been wonderful. They revamped our site to a pixel perfection. They are well experienced and organized team.",
-            name: "Brian",
+            name: t('testimonial_1_name'),
+            text: t('testimonial_1_text'),
         },
         {
-            text: "We shared a Figma design of our new home website, they are reaaally good at what they do. They know everything about marketing and software skills. Really happy with the results!",
-            name: "Natalia",
+            name: t('testimonial_2_name'),
+            text: t('testimonial_2_text'),
         },
         {
-            text: "We have worked with Mimic team several times, they are an impecable team, really dynamic and understanding in each project. Every result is pixel perfect.",
-            name: "Jazmin",
+            name: t('testimonial_3_name'),
+            text: t('testimonial_3_text'),
         },
     ];
 
@@ -42,9 +44,9 @@ const TestimonialsSection = () => {
                         viewport={{ once: false, margin: "-50px" }}
                         transition={{ duration: 0.7 }}
                     >
-                        Hear From tens of
+                        {t("testimonials_title_part1")}
                         <br />
-                        Clients
+                        {t("testimonials_title_part2")}
                     </motion.h2>
                     <motion.p
                         className="text-black mb-8"
@@ -59,8 +61,7 @@ const TestimonialsSection = () => {
                         viewport={{ once: false, margin: "-50px" }}
                         transition={{ duration: 0.7, delay: 0.1 }}
                     >
-                        Discover what satisfied clients have to say about their
-                        experience with our service solutions.
+                        {t("testimonials_description")}
                     </motion.p>
 
                     <div className="max-w-2xl mx-auto relative mt-16 lg:mt-0">
@@ -167,9 +168,9 @@ const TestimonialsSection = () => {
                             viewport={{ once: false, margin: "-100px" }}
                             transition={{ duration: 0.7 }}
                         >
-                            Hear From tens of
+                            {t("testimonials_title_part1")}
                             <br />
-                            Clients
+                            {t("testimonials_title_part2")}
                         </motion.h2>
                         <motion.p
                             className="text-black mt-10"
@@ -182,8 +183,7 @@ const TestimonialsSection = () => {
                             viewport={{ once: false, margin: "-100px" }}
                             transition={{ duration: 0.7, delay: 0.1 }}
                         >
-                            Discover what satisfied clients have to say about
-                            their experience with our service solutions.
+                            {t("testimonials_description")}
                         </motion.p>
                     </div>
 

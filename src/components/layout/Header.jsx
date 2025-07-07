@@ -1,20 +1,28 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import Logo from "../ui/Logo";
 
 const Header = () => {
+    const { t, i18n } = useTranslation();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const menuRef = useRef(null);
     const buttonRef = useRef(null);
 
     const navItems = [
-        { name: "Home", path: "/" },
-        { name: "About Us", path: "/about" },
-        { name: "Services", path: "/services" },
-        { name: "Blog", path: "/blog" },
+        { name: t("nav_home"), path: "/" },
+        { name: t("nav_about"), path: "/about" },
+        { name: t("nav_services"), path: "/services" },
+        { name: t("nav_blog"), path: "/blog" },
     ];
 
-    // Cerrar menú cuando se hace clic fuera de él
+    const changeLanguage = (lng) => {
+        i18n.changeLanguage(lng);
+        if (isMenuOpen) {
+            closeMenu();
+        }
+    };
+
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (
@@ -34,7 +42,6 @@ const Header = () => {
         };
     }, [isMenuOpen]);
 
-    // Función para cerrar el menú
     const closeMenu = () => {
         setIsMenuOpen(false);
     };
@@ -42,12 +49,10 @@ const Header = () => {
     return (
         <header className="fixed w-full flex justify-center items-center bg-gray py-3 z-50">
             <div className="flex w-[92%] items-center justify-between">
-                {/* Logo */}
                 <div className="flex items-center">
                     <Logo />
                 </div>
 
-                {/* Navegación central - solo visible en desktop */}
                 <nav className="hidden lg:flex items-center">
                     {navItems.map((item, index) => (
                         <div key={item.name} className="flex items-center">
@@ -68,9 +73,13 @@ const Header = () => {
                     ))}
                 </nav>
 
-                {/* Botón Start here - versión desktop y móvil */}
-                <div className="flex items-center">
-                    {/* Botón para móvil */}
+                <div className="flex items-center gap-4">
+                    <div className="hidden lg:flex items-center">
+                        <button onClick={() => changeLanguage('en')} className={`px-2 font-semibold ${i18n.language === 'en' ? 'text-black' : 'text-gray-500 hover:text-black'}`} disabled={i18n.language === 'en'}>EN</button>
+                        <span className="text-gray-400">|</span>
+                        <button onClick={() => changeLanguage('es')} className={`px-2 font-semibold ${i18n.language === 'es' ? 'text-black' : 'text-gray-500 hover:text-black'}`} disabled={i18n.language === 'es'}>ES</button>
+                    </div>
+
                     <Link
                         to="https://tally.so/r/wb6l9Z"
                         className="lg:hidden flex items-center justify-center bg-black text-white hover:bg-opacity-90 transition-all"
@@ -83,10 +92,9 @@ const Header = () => {
                             borderRadius: "5px",
                         }}
                     >
-                        Start here
+                        {t('start_here_button')}
                     </Link>
 
-                    {/* Botón para desktop */}
                     <Link
                         to="https://tally.so/r/wb6l9Z"
                         className="hidden lg:flex items-center justify-center bg-black text-white hover:bg-opacity-90 transition-all"
@@ -99,10 +107,9 @@ const Header = () => {
                             borderRadius: "12px",
                         }}
                     >
-                        Start here
+                        {t('start_here_button')}
                     </Link>
 
-                    {/* Menú hamburguesa para móvil */}
                     <button
                         ref={buttonRef}
                         className="lg:hidden ml-4 flex items-center justify-center"
@@ -110,64 +117,23 @@ const Header = () => {
                         style={{ width: "30.19px", height: "23px" }}
                     >
                         {isMenuOpen ? (
-                            <svg
-                                width="24"
-                                height="24"
-                                viewBox="0 0 20 20"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M3 3L17 17"
-                                    stroke="black"
-                                    strokeWidth="2.5"
-                                    strokeLinecap="round"
-                                />
-                                <path
-                                    d="M3 17L17 3"
-                                    stroke="black"
-                                    strokeWidth="2.5"
-                                    strokeLinecap="round"
-                                />
+                            <svg width="24" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 3L17 17" stroke="black" strokeWidth="2.5" strokeLinecap="round" />
+                                <path d="M3 17L17 3" stroke="black" strokeWidth="2.5" strokeLinecap="round" />
                             </svg>
                         ) : (
-                            <svg
-                                width="28"
-                                height="28"
-                                viewBox="0 0 30 23"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M3 3H27"
-                                    stroke="black"
-                                    strokeWidth="2.5"
-                                    strokeLinecap="round"
-                                />
-                                <path
-                                    d="M3 11.5H27"
-                                    stroke="black"
-                                    strokeWidth="3.2"
-                                    strokeLinecap="round"
-                                />
-                                <path
-                                    d="M3 20H27"
-                                    stroke="black"
-                                    strokeWidth="3.2"
-                                    strokeLinecap="round"
-                                />
+                            <svg width="28" height="28" viewBox="0 0 30 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 3H27" stroke="black" strokeWidth="2.5" strokeLinecap="round" />
+                                <path d="M3 11.5H27" stroke="black" strokeWidth="3.2" strokeLinecap="round" />
+                                <path d="M3 20H27" stroke="black" strokeWidth="3.2" strokeLinecap="round" />
                             </svg>
                         )}
                     </button>
                 </div>
             </div>
 
-            {/* Menú móvil */}
             {isMenuOpen && (
-                <div
-                    ref={menuRef}
-                    className="lg:hidden bg-gray w-full py-6 px-6 absolute top-full left-0 shadow-md"
-                >
+                <div ref={menuRef} className="lg:hidden bg-gray w-full py-6 px-6 absolute top-full left-0 shadow-md">
                     <div className="flex flex-col space-y-4">
                         {navItems.map((item) => (
                             <Link
@@ -180,6 +146,11 @@ const Header = () => {
                                 {item.name}
                             </Link>
                         ))}
+                        <div className="flex items-center justify-center pt-4 border-t mt-4">
+                            <button onClick={() => changeLanguage('en')} className={`font-semibold ${i18n.language === 'en' ? 'text-black' : 'text-gray-500'}`} disabled={i18n.language === 'en'}>English</button>
+                            <span className="mx-2 text-gray-400">|</span>
+                            <button onClick={() => changeLanguage('es')} className={`font-semibold ${i18n.language === 'es' ? 'text-black' : 'text-gray-500'}`} disabled={i18n.language === 'es'}>Español</button>
+                        </div>
                     </div>
                 </div>
             )}

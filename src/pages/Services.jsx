@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import Hero from "../components/sections/Hero";
 import PortfolioServicesSection from "../components/sections/PortfolioServicesSection";
 import ServicesSection from "../components/sections/ServicesSection";
@@ -6,18 +7,19 @@ import CalendarSection from "../components/sections/CalendarSection";
 import SEO from "../components/SEO";
 
 const Services = () => {
+    const { t } = useTranslation();
     return (
         <div>
             <SEO
-                title="Our services"
-                description="UX UI Design, Website and E-commerce solutions, Consulting, AI and Tailored solutions."
+                title={t('services_seo_title')}
+                description={t('services_seo_description')}
             />
             <Hero
-                title="We are characterized as Thinkers and Doers"
-                description="We transform ideas into unique digital experiences through innovative design and strategic thinking."
+                title={t('services_hero_title')}
+                description={t('services_hero_description')}
                 backgroundImage="/images/services-hero.png"
                 mobileBackgroundImage="/images/mobile-services.png"
-                buttonText="Our Work"
+                buttonText={t('services_hero_button')}
                 buttonLink="/portfolio"
                 desktopTitleFontSize="78px"
                 mobileTitleFontSize="43px"

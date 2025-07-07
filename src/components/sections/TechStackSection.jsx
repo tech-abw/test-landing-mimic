@@ -2,12 +2,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
+
 
 const TechStackSection = ({
     bgColor = "bg-black",
     textColor = "text-white",
     image = "/images/tech/techstack.png",
 }) => {
+    const { t } = useTranslation();
+
     return (
         <section className={`w-full ${bgColor} py-16 lg:py-32 relative`}>
             <div className="w-[95%] mx-auto px-4">
@@ -28,9 +32,9 @@ const TechStackSection = ({
                                     viewport={{ margin: "-50px" }}
                                     transition={{ duration: 0.5 }}
                                 >
-                                    Our Cutting-Edge
+                                    {t("techStack_title_part1")}
                                     <br />
-                                    Tech Stack
+                                    {t("techStack_title_part2")}
                                 </motion.h2>
                                 <motion.p
                                     className={`${textColor} mb-16`}
@@ -45,9 +49,7 @@ const TechStackSection = ({
                                     viewport={{ margin: "-50px" }}
                                     transition={{ duration: 0.5, delay: 0.1 }}
                                 >
-                                    We leverage industry-leading tools to
-                                    streamline workflows and ensure the perfect
-                                    product for you.
+                                    {t("techStack_description")}
                                 </motion.p>
                             </div>
                             <motion.div 
@@ -69,7 +71,7 @@ const TechStackSection = ({
                                         lineHeight: "18px",
                                     }}
                                 >
-                                    Start here
+                                    {t("techStack_button_start")}
                                 </Link>
                                 <Link
                                     to="/services"
@@ -83,7 +85,7 @@ const TechStackSection = ({
                                         lineHeight: "18px",
                                     }}
                                 >
-                                    Our Services
+                                    {t("techStack_button_services")}
                                 </Link>
                             </motion.div>
                         </div>
@@ -98,9 +100,9 @@ const TechStackSection = ({
                             viewport={{ margin: "-50px" }}
                             transition={{ duration: 0.5 }}
                         >
-                            Our Cutting-Edge
+                            {t("techStack_title_part1")}
                             <br />
-                            Tech Stack
+                            {t("techStack_title_part2")}
                         </motion.h2>
                         <motion.p
                             className={`${textColor} mb-10`}
@@ -115,8 +117,7 @@ const TechStackSection = ({
                             viewport={{ margin: "-50px" }}
                             transition={{ duration: 0.5, delay: 0.1 }}
                         >
-                            We leverage industry-leading tools to streamline
-                            workflows and ensure the perfect product for you.
+                            {t("techStack_description")}
                         </motion.p>
                         <motion.div 
                             className="w-full justify-center flex gap-5 md:gap-10"
@@ -136,7 +137,7 @@ const TechStackSection = ({
                                     borderRadius: "5px",
                                 }}
                             >
-                                Start here
+                                {t("techStack_button_start")}
                             </Link>
                             <Link
                                 to="/services"
@@ -149,7 +150,7 @@ const TechStackSection = ({
                                     borderRadius: "5px",
                                 }}
                             >
-                                Our Services
+                                {t("techStack_button_services")}
                             </Link>
                         </motion.div>
                     </div>

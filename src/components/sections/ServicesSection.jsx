@@ -1,51 +1,49 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import { motion } from "framer-motion";
-
-const services = [
-    {
-        title: "UX/UI Design",
-        description: "Crafting user-friendly and visually stunning interfaces.",
-        image: "/images/services/ux-ui-design.png",
-        bgColor: "bg-neon-green",
-        textColor: "text-black",
-        hasImage: true,
-    },
-    {
-        title: "Website & E-commerce Solutions",
-        description:
-            "Building powerful solutions in Wordpress, Webflow, Framer, Squarespace, and Shopify.",
-        bgColor: "bg-grays",
-        textColor: "text-black",
-        hasImage: false,
-    },
-    {
-        title: "AI Solutions",
-        description:
-            "AI Agents, Copilots, automations and much more. The sky is the limit.",
-        bgColor: "bg-white",
-        textColor: "text-black",
-        hasImage: false,
-    },
-    {
-        title: "Tailored Solutions",
-        description:
-            "Personalized Apps, CRMs, ERPs designed to fit your unique needs.",
-        bgColor: "bg-black",
-        textColor: "text-white",
-        hasImage: false,
-    },
-    {
-        title: "Consulting",
-        description:
-            "With our broad expertise, we focus in serving as your Fractional CTO.",
-        bgColor: "bg-neon-green",
-        textColor: "text-black",
-        hasImage: false,
-    },
-];
+import { useTranslation } from "react-i18next";
 
 const ServicesSection = () => {
+    const { t } = useTranslation();
+
+    const services = [
+        {
+            title: t("services_ux_ui_title"),
+            description: t("services_ux_ui_description"),
+            image: "/images/services/ux-ui-design.png",
+            bgColor: "bg-neon-green",
+            textColor: "text-black",
+            hasImage: true,
+        },
+        {
+            title: t("services_website_ecommerce_title"),
+            description: t("services_website_ecommerce_description"),
+            bgColor: "bg-grays",
+            textColor: "text-black",
+            hasImage: false,
+        },
+        {
+            title: t("services_ai_solutions_title"),
+            description: t("services_ai_solutions_description"),
+            bgColor: "bg-white",
+            textColor: "text-black",
+            hasImage: false,
+        },
+        {
+            title: t("services_tailored_solutions_title"),
+            description: t("services_tailored_solutions_description"),
+            bgColor: "bg-black",
+            textColor: "text-white",
+            hasImage: false,
+        },
+        {
+            title: t("services_consulting_title"),
+            description: t("services_consulting_description"),
+            bgColor: "bg-neon-green",
+            textColor: "text-black",
+            hasImage: false,
+        },
+    ];
     return (
         <section className="w-full bg-gray py-16 px-4">
             <div className="w-[95%] mx-auto">
@@ -64,8 +62,7 @@ const ServicesSection = () => {
                         viewport={{ margin: "-50px" }}
                         transition={{ duration: 0.7 }}
                     >
-                        Discover the complete suite of services we offer,
-                        empowering you to build your dream product.
+                        {t('about_hero_section_discover_services')}
                     </motion.p>
                 </div>
 
@@ -83,8 +80,7 @@ const ServicesSection = () => {
                         viewport={{ margin: "-50px" }}
                         transition={{ duration: 0.6 }}
                     >
-                        Discover the complete suite of services we offer,
-                        empowering you to build your dream product.
+                        {t('about_hero_section_discover_services')}
                     </motion.p>
                 </div>
 

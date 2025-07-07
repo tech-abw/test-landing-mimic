@@ -2,52 +2,55 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const AboutHeroSection = () => {
+    const { t } = useTranslation();
     return (
         <section className="w-full bg-black py-16">
             <div className="w-[95%] mx-auto px-4">
                 {/* Versión de escritorio */}
                 <div
-                    className="hidden lg:block bg-purple rounded-2xl p-8 items-center justify-center"
+                    className="hidden lg:block bg-purple rounded-2xl p-8"
                     style={{ height: "700px" }}
                 >
-                    <div className="flex items-center justify-center w-full">
-                        <div className="w-1/2 pr-8">
-                            <motion.h2
-                                className="text-white mb-10 lg:mt-16"
-                                style={{
-                                    fontSize: "65px",
-                                    fontWeight: 400,
-                                    lineHeight: 1.2,
-                                }}
-                                initial={{ opacity: 0, y: 40 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: false, margin: "-100px" }}
-                                transition={{ duration: 0.7 }}
-                            >
-                                Ready to unlock
-                                <br />
-                                the power of
-                                <br />
-                                your biz?
-                            </motion.h2>
-                            <motion.p
-                                className="text-white mb-4 lg:mb-44"
-                                style={{
-                                    fontSize: "18px",
-                                    fontWeight: 300,
-                                    lineHeight: "18px",
-                                    maxWidth: "400px",
-                                }}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: false, margin: "-100px" }}
-                                transition={{ duration: 0.7, delay: 0.1 }}
-                            >
-                                In a fast paced world, take action. Lets build
-                                together!
-                            </motion.p>
+                    <div className="flex items-center justify-center w-full h-full">
+                        <div className="w-1/2 pr-8 flex flex-col justify-between h-full">
+                            <div>
+                                <motion.h2
+                                    className="text-white mb-10"
+                                    style={{
+                                        fontSize: "65px",
+                                        fontWeight: 400,
+                                        lineHeight: 1.2,
+                                    }}
+                                    initial={{ opacity: 0, y: 40 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: false, margin: "-100px" }}
+                                    transition={{ duration: 0.7 }}
+                                >
+                                    {t('about_hero_section_title_part1')}
+                                    <br />
+                                    {t('about_hero_section_title_part2')}
+                                    <br />
+                                    {t('about_hero_section_title_part3')}
+                                </motion.h2>
+                                <motion.p
+                                    className="text-white mb-4"
+                                    style={{
+                                        fontSize: "18px",
+                                        fontWeight: 300,
+                                        lineHeight: "18px",
+                                        maxWidth: "400px",
+                                    }}
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: false, margin: "-100px" }}
+                                    transition={{ duration: 0.7, delay: 0.1 }}
+                                >
+                                    {t('about_hero_section_description')}
+                                </motion.p>
+                            </div>
                             <motion.div
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -64,17 +67,18 @@ const AboutHeroSection = () => {
                                         fontWeight: 400,
                                         borderRadius: "12px",
                                         lineHeight: "18px",
+                                        padding: "10px 20px"
                                     }}
                                 >
-                                    Start here
+                                    {t('about_hero_section_start_button')}
                                 </Link>
                             </motion.div>
                         </div>
-                        <div className="w-1/3 flex justify-center">
+                        <div className="w-1/3 flex justify-center items-center">
                             <motion.img
                                 src="/images/about/cohete.png"
                                 alt="Rocket"
-                                className="w-full p-1 lg:mt-16"
+                                className="w-full p-1"
                                 initial={{ opacity: 0, y: 50 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: false, margin: "-100px" }}
@@ -85,7 +89,7 @@ const AboutHeroSection = () => {
                 </div>
 
                 {/* Versión móvil */}
-                <div className="block lg:hidden bg-purple rounded-2xl p-4 text-center">
+                <div className="block lg:hidden bg-purple rounded-2xl p-4 pb-12 text-center">
                     <motion.h2 
                         className="text-white mb-10 md:text-4xl text-3xl leading-none mt-5"
                         initial={{ opacity: 0, y: 30 }}
@@ -93,11 +97,11 @@ const AboutHeroSection = () => {
                         viewport={{ once: false, margin: "-50px" }}
                         transition={{ duration: 0.7 }}
                     >
-                        Ready to unlock
+                        {t('about_hero_section_title_part1')}
                         <br />
-                        the power of
+                        {t('about_hero_section_title_part2')}
                         <br />
-                        your biz?
+                        {t('about_hero_section_title_part3')}
                     </motion.h2>
 
                     <motion.p
@@ -112,7 +116,7 @@ const AboutHeroSection = () => {
                         viewport={{ once: false, margin: "-50px" }}
                         transition={{ duration: 0.7, delay: 0.1 }}
                     >
-                        In a fast paced world, take action. Lets build together!
+                        {t('about_hero_section_description')}
                     </motion.p>
 
                     <motion.div 
@@ -133,7 +137,7 @@ const AboutHeroSection = () => {
                                 borderRadius: "5px",
                             }}
                         >
-                            Start here
+                            {t('about_hero_section_start_button')}
                         </Link>
                     </motion.div>
                     <motion.div 
@@ -166,8 +170,7 @@ const AboutHeroSection = () => {
                         viewport={{ once: false, margin: "-100px" }}
                         transition={{ duration: 0.7 }}
                     >
-                        Discover the complete suite of services we offer,
-                        empowering you to build your dream product.
+                        {t('about_hero_section_discover_services')}
                     </motion.p>
                     <motion.p
                         style={{
@@ -181,8 +184,7 @@ const AboutHeroSection = () => {
                         viewport={{ once: false, margin: "-50px" }}
                         transition={{ duration: 0.7 }}
                     >
-                        Discover the complete suite of services we offer,
-                        empowering you to build your dream product.
+                        {t('about_hero_section_discover_services')}
                     </motion.p>
 
                     <motion.div
@@ -203,7 +205,7 @@ const AboutHeroSection = () => {
                                 lineHeight: "18px",
                             }}
                         >
-                            Our services
+                            {t('about_hero_section_services_button')}
                         </Link>
                     </motion.div>
 
@@ -224,7 +226,7 @@ const AboutHeroSection = () => {
                                 borderRadius: "5px",
                             }}
                         >
-                            Our services
+                            {t('about_hero_section_services_button')}
                         </Link>
                     </motion.div>
                 </div>

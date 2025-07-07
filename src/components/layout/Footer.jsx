@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+    const { t } = useTranslation();
     const currentYear = new Date().getFullYear();
 
     return (
@@ -22,7 +24,7 @@ const Footer = () => {
                             className="font-bold text-base mb-1 lg:mb-4"
                             style={{ fontSize: "20px" }}
                         >
-                            Menu
+                            {t("footer_menu")}
                         </h3>
                         <ul className="lg:space-y-2 mb-4">
                             <li>
@@ -34,7 +36,7 @@ const Footer = () => {
                                         fontWeight: "200",
                                     }}
                                 >
-                                    Home
+                                    {t("nav_home")}
                                 </Link>
                             </li>
                             <li>
@@ -46,7 +48,7 @@ const Footer = () => {
                                         fontWeight: "200",
                                     }}
                                 >
-                                    About Us
+                                    {t("nav_about")}
                                 </Link>
                             </li>
                             <li>
@@ -58,7 +60,7 @@ const Footer = () => {
                                         fontWeight: "200",
                                     }}
                                 >
-                                    Services
+                                    {t("nav_services")}
                                 </Link>
                             </li>
                             <li>
@@ -70,7 +72,7 @@ const Footer = () => {
                                         fontWeight: "200",
                                     }}
                                 >
-                                    Portfolio
+                                    {t("footer_portfolio")}
                                 </Link>
                             </li>
                             <li>
@@ -82,7 +84,7 @@ const Footer = () => {
                                         fontWeight: "200",
                                     }}
                                 >
-                                    Blog
+                                    {t("nav_blog")}
                                 </Link>
                             </li>
                         </ul>
@@ -134,7 +136,7 @@ const Footer = () => {
                             className="font-bold text-base mb-1 lg:mb-4"
                             style={{ fontSize: "20px" }}
                         >
-                            Contact us.
+                            {t("footer_contact_us")}
                         </h3>
                         <ul className="lg:space-y-2">
                             <li>
@@ -172,7 +174,7 @@ const Footer = () => {
                             className="font-bold text-base mb-1 lg:mb-4"
                             style={{ fontSize: "20px" }}
                         >
-                            Legal
+                            {t("footer_legal")}
                         </h3>
                         <ul className="lg:space-y-2">
                             <li>
@@ -184,7 +186,7 @@ const Footer = () => {
                                         fontWeight: "200",
                                     }}
                                 >
-                                    Disclaimer
+                                    {t("footer_disclaimer")}
                                 </Link>
                             </li>
                             <li>
@@ -196,7 +198,7 @@ const Footer = () => {
                                         fontWeight: "200",
                                     }}
                                 >
-                                    Privacy Policy
+                                    {t("footer_privacy_policy")}
                                 </Link>
                             </li>
                             <li>
@@ -208,7 +210,7 @@ const Footer = () => {
                                         fontWeight: "200",
                                     }}
                                 >
-                                    Cookie Policy
+                                    {t("footer_cookie_policy")}
                                 </Link>
                             </li>
                         </ul>
@@ -217,7 +219,7 @@ const Footer = () => {
 
                 {/* Copyright */}
                 <div className="text-sm text-gray-600 lg:mt-32">
-                    <p>©{currentYear}. Mimic. All rights reserved.</p>
+                    <p>{t("footer_copyright", { year: currentYear })}</p>
                 </div>
             </div>
         </footer>

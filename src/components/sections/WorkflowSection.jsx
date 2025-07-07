@@ -1,14 +1,16 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const WorkflowSection = () => {
+    const { t } = useTranslation();
+
     const workflowSteps = [
         {
             id: "1",
-            title: "Discovery",
-            description:
-                "During a video call we map the specifics of each project to understand every detail.",
+            title: t("workflow_step_1_title_v2"),
+            description: t("workflow_step_1_description_v2"),
             bgColor: "bg-black",
             textColor: "text-white",
             image: "/images/workflow/image1.svg",
@@ -16,9 +18,8 @@ const WorkflowSection = () => {
         },
         {
             id: "2",
-            title: "Set-up",
-            description:
-                "To get started. We develop a Project brief, Gantt chart and a project Roadmap.",
+            title: t("workflow_step_2_title_v2"),
+            description: t("workflow_step_2_description_v2"),
             bgColor: "bg-neon-green",
             textColor: "text-black",
             image: "/images/workflow/setup.svg",
@@ -26,9 +27,8 @@ const WorkflowSection = () => {
         },
         {
             id: "3",
-            title: "Visualization and meetings",
-            description:
-                "During the project we have specific meetings depending on the phase of the project, and we share the progress of the project with you and your team.",
+            title: t("workflow_step_3_title_v2"),
+            description: t("workflow_step_3_description_v2"),
             bgColor: "bg-neon-green",
             textColor: "text-black",
             image: "/images/workflow/meetings.svg",
@@ -36,9 +36,8 @@ const WorkflowSection = () => {
         },
         {
             id: "4",
-            title: "Reviews, testing and delivery",
-            description:
-                "We are commited with your final satisfaction, we go through your reviews, test the products and deliver in time and shape.",
+            title: t("workflow_step_4_title_v2"),
+            description: t("workflow_step_4_description_v2"),
             bgColor: "bg-neon-green",
             textColor: "text-black",
             image: "/images/workflow/delivery.svg",
@@ -69,7 +68,7 @@ const WorkflowSection = () => {
             <div className="w-[95%] mx-auto">
                 <div className="text-center mb-12">
                     <motion.h2 
-                        className="lg:mb-10 mb-5"
+                        className="lg:mb-10 mb-5 text-3xl font-medium leading-none md:text-4xl lg:text-[65px] lg:leading-[65px] lg:font-normal"
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: false, margin: "-100px" }}
@@ -77,84 +76,43 @@ const WorkflowSection = () => {
                     >
                         <span
                             className="hidden lg:inline"
-                            style={{
-                                fontSize: "65px",
-                                fontWeight: 400,
-                                lineHeight: "65px",
-                            }}
+                            dangerouslySetInnerHTML={{ __html: t("workflow_title_html_v2") }}
                         >
-                            How it works - Our
-                            <br />
-                            Streamlined Workflow
                         </span>
-                        <span className="lg:hidden md:text-4xl text-3xl font-medium leading-none">
-                            How it works - Our
-                            <br />
-                            Streamlined Workflow
+                        <span className="lg:hidden">
+                            {t("workflow_title_plain_v2")}
                         </span>
                     </motion.h2>
                     <motion.p 
-                        className="text-center mx-auto"
+                        className="text-center mx-auto text-[18px] font-light leading-[18px] max-w-[350px] lg:text-[25px] lg:font-medium lg:leading-[25px] lg:max-w-[800px]"
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: false, margin: "-100px" }}
                         transition={{ duration: 0.7, delay: 0.1 }}
                     >
-                        <span
-                            className="hidden lg:inline"
-                            style={{
-                                fontSize: "25px",
-                                fontWeight: 500,
-                                maxWidth: "800px",
-                                lineHeight: "25px",
-                            }}
-                        >
-                            Our workflow makes it simple and easy to work the
-                            best possible together.
-                        </span>
-                        <span
-                            className="lg:hidden"
-                            style={{
-                                fontSize: "18px",
-                                fontWeight: 300,
-                                lineHeight: "18px",
-                            }}
-                        >
-                            Our workflow makes it simple and easy to work the
-                            best possible together.
-                        </span>
+                        {t('workflow_subtitle_v2')}
                     </motion.p>
                 </div>
 
-                {/* Versión desktop */}
-                <div className="hidden lg:flex justify-center gap-8">
+                {/* Versión de escritorio - 4 columnas */}
+                <div className="hidden lg:grid grid-cols-4 gap-8">
                     {workflowSteps.map((step, index) => (
                         <motion.div
                             key={step.id}
-                            className={`${step.bgColor} ${step.textColor} p-8 flex flex-col items-center text-center`}
-                            style={{
-                                width: "403px",
-                                height: "430px",
-                                borderRadius: "36px",
-                            }}
+                            className={`p-6 rounded-lg shadow-lg flex flex-col items-center text-center ${step.bgColor} ${step.textColor}`}
+                            style={{ borderRadius: "32px" }}
                             initial={{ opacity: 0, y: 50 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: false, margin: "-100px" }}
-                            transition={{ 
-                                duration: 0.7, 
-                                delay: index * 0.1 
-                            }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
                         >
                             <motion.div
-                                className="flex justify-center items-center mb-6 mt-2"
-                                style={{ height: "100px" }}
+                                className="flex justify-center items-center mb-4 mt-4"
+                                style={{ height: "150px" }}
                                 initial={{ opacity: 0, scale: 0.8 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: false, margin: "-100px" }}
-                                transition={{ 
-                                    duration: 0.5, 
-                                    delay: 0.2 + index * 0.1 
-                                }}
+                                transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
                             >
                                 <img
                                     src={step.image}
@@ -168,15 +126,11 @@ const WorkflowSection = () => {
                             </motion.div>
 
                             <motion.h3
-                                className="font-bold mb-3"
-                                style={{ fontSize: "30px", lineHeight: "30px" }}
+                                className="text-2xl font-bold mb-4"
                                 initial={{ opacity: 0 }}
                                 whileInView={{ opacity: 1 }}
                                 viewport={{ once: false, margin: "-100px" }}
-                                transition={{ 
-                                    duration: 0.5, 
-                                    delay: 0.3 + index * 0.1 
-                                }}
+                                transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
                             >
                                 {step.title}
                             </motion.h3>
@@ -185,15 +139,11 @@ const WorkflowSection = () => {
                                     fontSize: "16px",
                                     fontWeight: 500,
                                     lineHeight: 1.5,
-                                    marginTop: "20px",
                                 }}
                                 initial={{ opacity: 0 }}
                                 whileInView={{ opacity: 1 }}
                                 viewport={{ once: false, margin: "-100px" }}
-                                transition={{ 
-                                    duration: 0.5, 
-                                    delay: 0.4 + index * 0.1 
-                                }}
+                                transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
                             >
                                 {step.description}
                             </motion.p>
@@ -201,22 +151,19 @@ const WorkflowSection = () => {
                     ))}
                 </div>
 
-                {/* Versión móvil */}
-                <div className="lg:hidden space-y-8">
+                {/* Versión móvil - 1 columna */}
+                <div className="lg:hidden grid grid-cols-1 gap-8">
                     {workflowSteps.map((step, index) => (
                         <motion.div
                             key={step.id}
-                            className={`${step.bgColor} ${step.textColor} p-6 flex flex-col items-center text-center mx-auto`}
+                            className={`p-6 rounded-lg shadow-lg flex flex-col items-center text-center ${step.bgColor} ${step.textColor}`}
                             style={{
-                                width: "328px",
-                                height: "303px",
-                                maxWidth: "100%",
                                 borderRadius: "32px",
                             }}
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: false, margin: "-50px" }}
-                            transition={{ 
+                            transition={{
                                 duration: 0.5, 
                                 delay: index * 0.1 
                             }}

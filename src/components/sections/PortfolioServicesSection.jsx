@@ -1,8 +1,10 @@
 /* eslint-disable no-unused-vars */
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const PortfolioServicesSection = () => {
+    const { t } = useTranslation();
     const portfolioItems = [
         {
             id: 1,
@@ -122,10 +124,8 @@ const PortfolioServicesSection = () => {
                             whileInView={{ opacity: 1 }}
                             viewport={{ margin: "-50px" }}
                             transition={{ duration: 0.5, delay: 0.2 }}
+                            dangerouslySetInnerHTML={{ __html: t('portfolio_title_html') }}
                         >
-                            Portfolio - Explore Unique Ideas
-                            <br />
-                            Brought to Life
                         </motion.span>
                         <motion.span 
                             className="lg:hidden md:text-3xl text-3xl leading-none"
@@ -134,8 +134,7 @@ const PortfolioServicesSection = () => {
                             viewport={{ margin: "-50px" }}
                             transition={{ duration: 0.5, delay: 0.2 }}
                         >
-                            Portfolio - Explore Unique Ideas
-                            Brought to Life
+                            {t('portfolio_title_plain')}
                         </motion.span>
                     </h2>
                 </motion.div>
@@ -272,7 +271,7 @@ const PortfolioServicesSection = () => {
                     <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.2 }}>
                         <Link
                             to="/portfolio"
-                            className="flex items-center justify-center bg-neon-green text-black hover:bg-opacity-90 transition-all"
+                            className="flex items-center justify-center text-center bg-neon-green text-black hover:bg-opacity-90 transition-all"
                             style={{
                                 width: "170px",
                                 height: "38.66px",
@@ -282,7 +281,7 @@ const PortfolioServicesSection = () => {
                                 lineHeight: "18px",
                             }}
                         >
-                            See all projects
+                            {t('portfolio_button')}
                         </Link>
                     </motion.div>
                 </motion.div>
@@ -298,7 +297,7 @@ const PortfolioServicesSection = () => {
                     <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.2 }}>
                         <Link
                             to="/portfolio"
-                            className="flex items-center justify-center bg-neon-green text-black hover:bg-opacity-90 transition-all"
+                            className="flex items-center justify-center text-center bg-neon-green text-black hover:bg-opacity-90 transition-all"
                             style={{
                                 width: "120px",
                                 height: "28px",
@@ -307,7 +306,7 @@ const PortfolioServicesSection = () => {
                                 borderRadius: "5px",
                             }}
                         >
-                            See all projects
+                            {t('portfolio_button')}
                         </Link>
                     </motion.div>
                 </motion.div>

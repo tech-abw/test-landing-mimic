@@ -1,11 +1,13 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const CalendarSection = ({
     bgColor = "bg-black",
     textColor = "text-white",
 }) => {
+    const { t } = useTranslation();
     useEffect(() => {
         const script = document.createElement("script");
         script.src = "https://assets.calendly.com/assets/external/widget.js";
@@ -23,12 +25,13 @@ const CalendarSection = ({
         >
             <motion.h2 
                 className={`${textColor} text-3xl leading-none md:text-5xl text-center lg:mb-8 mb-16`}
+                data-discover
                 initial={{ opacity: 0, y: -20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ margin: "-50px" }}
                 transition={{ duration: 0.6 }}
             >
-                Schedule an Appointment
+                {t('calendar_section_title')}
             </motion.h2>
             <motion.div
                 className="calendly-inline-widget w-full max-w-[1200px] px-4"

@@ -1,58 +1,58 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import { motion } from "framer-motion";
-
-const teamMembers = [
-    {
-         name: "Iván de la Garza",
-        image: "/images/about/Ivan.png",
-        description: "Co-Founder / CRO",
-        
-    },
-    {
-        name: "Miguel L.",
-        image: "/images/about/dummy-team.png",
-        description: "Front-End Developer",
-    },
-    {
-        name: "John Rodriguez",
-        image: "/images/about/John.png",
-        description: "Fullstack IA Engineer",
-    },
-    {
-        name: "Gabriel M.",
-        image: "/images/about/dummy-team.png",
-        description: "Fullstack Developer",
-    },
-    {
-        name: "Sasha Solano",
-        image: "/images/about/Sasha.png",
-        description: "Front-End Developer",
-    },
-    {
-        name: "Mariana Vega",
-        image: "/images/about/Mariana.png",
-        description: "UX UI Designer",
-    },
-    {
-        name: "Montse A.",
-        image: "/images/about/Montse.png",
-        description: "Graphic Designer",
-    },
-    {
-        name: "Jennifer Ruiz",
-        image: "/images/about/Jennifer.png",
-        description: "Marketing specialist",
-    },
-    {
-        name: "Amanda Aguirre",
-        image: "/images/about/Amanda.png",
-        description: "Marketing specialist",
-    },
- 
-];
+import { useTranslation } from "react-i18next";
 
 const TeamSection = () => {
+    const { t } = useTranslation();
+
+    const teamMembers = [
+        {
+            name: "Iván de la Garza",
+            image: "/images/about/Ivan.png",
+            description: t("team_role_cro"),
+        },
+        {
+            name: "Miguel L.",
+            image: "/images/about/dummy-team.png",
+            description: t("team_role_frontend"),
+        },
+        {
+            name: "John Rodriguez",
+            image: "/images/about/John.png",
+            description: t("team_role_fullstack_ai"),
+        },
+        {
+            name: "Gabriel M.",
+            image: "/images/about/dummy-team.png",
+            description: t("team_role_fullstack"),
+        },
+        {
+            name: "Sasha Solano",
+            image: "/images/about/Sasha.png",
+            description: t("team_role_frontend"),
+        },
+        {
+            name: "Mariana Vega",
+            image: "/images/about/Mariana.png",
+            description: t("team_role_ux_ui"),
+        },
+        {
+            name: "Montse A.",
+            image: "/images/about/Montse.png",
+            description: t("team_role_graphic_designer"),
+        },
+        {
+            name: "Jennifer Ruiz",
+            image: "/images/about/Jennifer.png",
+            description: t("team_role_marketing"),
+        },
+        {
+            name: "Amanda Aguirre",
+            image: "/images/about/Amanda.png",
+            description: t("team_role_marketing"),
+        },
+    ];
     return (
         <section className="bg-gray py-2 lg:py-16 px-4">
             <div className="w-[90%] mx-auto">
@@ -70,9 +70,9 @@ const TeamSection = () => {
                             viewport={{ once: false, margin: "-100px" }}
                             transition={{ duration: 0.7 }}
                         >
-                            Our team - Remote but
+                            {t('team_title_part1')}
                             <br />
-                            relentless team
+                            {t('team_title_part2')}
                         </motion.h2>
                         <motion.span
                             className={`
@@ -103,8 +103,7 @@ const TeamSection = () => {
                             viewport={{ once: false, margin: "-100px" }}
                             transition={{ duration: 0.7, delay: 0.1 }}
                         >
-                            Every detail counts, we believe in our team whom
-                            stands out for our clients.
+{t('team_description')}
                         </motion.p>
                         <motion.span
                             style={{
@@ -118,7 +117,7 @@ const TeamSection = () => {
                             viewport={{ once: false, margin: "-100px" }}
                             transition={{ duration: 0.7, delay: 0.1 }}
                         >
-                            years
+                            {t('team_years')}
                         </motion.span>
                     </div>
                 </div>
@@ -132,9 +131,9 @@ const TeamSection = () => {
                         viewport={{ once: false, margin: "-50px" }}
                         transition={{ duration: 0.7 }}
                     >
-                        Our team - Remote but
+                        {t('team_title_part1')}
                         <br />
-                        relentless team
+                        {t('team_title_part2')}
                     </motion.h2>
                     <motion.p 
                         className="text-gray-600 mb-6 md:text-xl text-base"
@@ -143,8 +142,7 @@ const TeamSection = () => {
                         viewport={{ once: false, margin: "-50px" }}
                         transition={{ duration: 0.7, delay: 0.1 }}
                     >
-                        Every detail counts, we believe in our team whom stands
-                        out for our clients.
+{t('team_description')}
                     </motion.p>
                     <motion.div 
                         className="flex flex-col items-center mb-6"
@@ -169,7 +167,7 @@ const TeamSection = () => {
                                 fontWeight: 200,
                             }}
                         >
-                            Years
+                            {t('team_years')}
                         </span>
                     </motion.div>
                 </div>
@@ -267,7 +265,7 @@ const TeamSection = () => {
                             viewport={{ once: false, margin: "-50px" }}
                             transition={{ duration: 0.7, delay: 0.2 }}
                         >
-                            Projects
+                            {t('team_projects')}
                         </motion.span>
                     </motion.div>
 
@@ -312,7 +310,7 @@ const TeamSection = () => {
                             viewport={{ once: false, margin: "-50px" }}
                             transition={{ duration: 0.7, delay: 0.2 }}
                         >
-                            Clients
+                            {t('team_clients')}
                         </motion.span>
                     </motion.div>
                 </div>
