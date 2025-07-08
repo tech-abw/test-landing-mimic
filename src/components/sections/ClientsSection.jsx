@@ -30,10 +30,7 @@ const ClientsSection = () => {
     ];
 
     // Data for mobile view
-    const mobileClients = [...topRowClients, ...bottomRowClients].sort(() => Math.random() - 0.5);
-    const mobileColumn1 = mobileClients.slice(0, 5);
-    const mobileColumn2 = mobileClients.slice(5, 10);
-    const mobileColumn3 = mobileClients.slice(10, 14);
+    const mobileClients = [...topRowClients, ...bottomRowClients].sort(() => Math.random() - 0.5).slice(0, 6);
 
     // Duplicate arrays for seamless marquee effect
     const duplicateArray = (arr, times) => Array(times).fill(arr).flat();
@@ -81,23 +78,20 @@ const ClientsSection = () => {
                         </div>
                     </div>
 
-                    {/* Mobile columns */}
-                    <div className="lg:hidden flex justify-between">
-                        <motion.div className="flex flex-col items-center space-y-12" initial={{ opacity: 0, x: -15 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: false, margin: "-50px" }} transition={{ duration: 0.7, ease: "easeOut" }}>
-                            {mobileColumn1.map((client) => (
-                                <img key={client.name} src={`${imgBasePath}${client.logo}`} alt={client.name} className="h-10" />
-                            ))}
-                        </motion.div>
-                        <motion.div className="flex flex-col items-center space-y-12" initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, margin: "-50px" }} transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}>
-                            {mobileColumn2.map((client) => (
-                                <img key={client.name} src={`${imgBasePath}${client.logo}`} alt={client.name} className="h-10" />
-                            ))}
-                        </motion.div>
-                        <motion.div className="flex flex-col items-center space-y-12" initial={{ opacity: 0, x: 15 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: false, margin: "-50px" }} transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}>
-                            {mobileColumn3.map((client) => (
-                                <img key={client.name} src={`${imgBasePath}${client.logo}`} alt={client.name} className="h-10" />
-                            ))}
-                        </motion.div>
+                    {/* Mobile grid */}
+                    <div className="lg:hidden flex flex-wrap justify-center items-center gap-y-10 gap-x-4">
+                        {mobileClients.map((client, index) => (
+                            <motion.div
+                                key={client.name}
+                                className="w-1/4 flex justify-center"
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: false, margin: "-50px" }}
+                                transition={{ duration: 0.5, delay: index * 0.05 }}
+                            >
+                                <img src={`${imgBasePath}${client.logo}`} alt={client.name} className="h-8" />
+                            </motion.div>
+                        ))}
                     </div>
                 </div>
             </div>

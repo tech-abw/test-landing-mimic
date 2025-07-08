@@ -5,8 +5,8 @@
 
 @layer components {
   .btn-hero {
-    @apply flex items-center justify-center bg-neon-green text-black hover:bg-opacity-90 transition-all font-normal rounded-[12px] text-[16.66px] leading-[18px];
-    width: 170px;
+    @apply flex items-center justify-center bg-neon-green text-black hover:bg-opacity-90 transition-all font-normal rounded-[5px] text-[14px] leading-[18px];
+    width: 150px;
     height: 38.66px;
   }
 }

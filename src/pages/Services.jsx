@@ -21,7 +21,7 @@ const Services = () => {
                 mobileBackgroundImage="/images/mobile-services.png"
                 buttonText={t('services_hero_button')}
                 buttonLink="/portfolio"
-                desktopTitleFontSize="78px"
+                desktopTitleFontSize="76px"
                 mobileTitleFontSize="43px"
                 mobileDescriptionFontSize="17px"
             />

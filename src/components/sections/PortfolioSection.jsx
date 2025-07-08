@@ -136,12 +136,11 @@ const PortfolioSection = () => {
                             to="/portfolio"
                             className="flex mx-auto items-center justify-center bg-neon-green text-black hover:bg-opacity-90 transition-all"
                             style={{
-                                width: "170px",
-                                height: "38.66px",
-                                fontSize: "16.66px",
-                                fontWeight: 400,
+                                width: "210px",
+                                height: "42px",
+                                fontSize: "16px",
+                                fontWeight: "500",
                                 borderRadius: "12px",
-                                lineHeight: "18px",
                             }}
                         >
                             {t('portfolio_button')}
@@ -160,10 +159,10 @@ const PortfolioSection = () => {
                             to="/portfolio"
                             className="flex mx-auto items-center justify-center bg-neon-green text-black hover:bg-opacity-90 transition-all"
                             style={{
-                                width: "120px",
-                                height: "28px",
+                                width: "170px",
+                                height: "38.66px",
                                 fontSize: "14px",
-                                fontWeight: 400,
+                                fontWeight: "500",
                                 borderRadius: "5px",
                             }}
                         >

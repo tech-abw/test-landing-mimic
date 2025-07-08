@@ -74,41 +74,48 @@ const Header = () => {
                 </nav>
 
                 <div className="flex items-center gap-4">
-                    <div className="hidden lg:flex items-center">
-                        <button onClick={() => changeLanguage('en')} className={`px-2 font-semibold ${i18n.language === 'en' ? 'text-black' : 'text-gray-500 hover:text-black'}`} disabled={i18n.language === 'en'}>EN</button>
-                        <span className="text-gray-400">|</span>
-                        <button onClick={() => changeLanguage('es')} className={`px-2 font-semibold ${i18n.language === 'es' ? 'text-black' : 'text-gray-500 hover:text-black'}`} disabled={i18n.language === 'es'}>ES</button>
-                    </div>
-
+                    {/* Botón 'Start Here' para móvil */}
                     <Link
                         to="https://tally.so/r/wb6l9Z"
                         className="lg:hidden flex items-center justify-center bg-black text-white hover:bg-opacity-90 transition-all"
                         style={{
-                            width: "95px",
-                            height: "28px",
-                            fontSize: "13px",
+                            width: "150px",
+                            fontSize: "14px",
                             fontWeight: 400,
                             color: "#CCFF00",
                             borderRadius: "5px",
+                            height: "38.66px",
                         }}
                     >
                         {t('start_here_button')}
                     </Link>
 
-                    <Link
-                        to="https://tally.so/r/wb6l9Z"
-                        className="hidden lg:flex items-center justify-center bg-black text-white hover:bg-opacity-90 transition-all"
-                        style={{
-                            width: "170px",
-                            height: "38.67px",
-                            fontSize: "17px",
-                            fontWeight: 400,
-                            color: "#CCFF00",
-                            borderRadius: "12px",
-                        }}
-                    >
-                        {t('start_here_button')}
-                    </Link>
+                    {/* Contenedor para 'Start Here' y selector de idioma en desktop */}
+                    <div className="hidden lg:flex items-center gap-4">
+                        <Link
+                            to="https://tally.so/r/wb6l9Z"
+                            className="flex items-center justify-center bg-black text-white hover:bg-opacity-90 transition-all"
+                            style={{
+                                width: "170px",
+                                height: "38.67px",
+                                fontSize: "17px",
+                                fontWeight: 400,
+                                color: "#CCFF00",
+                                borderRadius: "12px",
+                            }}
+                        >
+                            {t('start_here_button')}
+                        </Link>
+
+                        <button 
+                            onClick={() => changeLanguage(i18n.language === 'en' ? 'es' : 'en')}
+                            className="font-semibold text-black hover:text-gray-600 transition-colors flex items-center gap-2"
+                            style={{ fontSize: "17px", fontWeight: 400 }}
+                        >
+                            {i18n.language === 'en' ? 'ES' : 'EN'}
+                            <img src="/images/idioma.svg" alt="Language selector" className="w-5 h-5" />
+                        </button>
+                    </div>
 
                     <button
                         ref={buttonRef}
@@ -147,9 +154,13 @@ const Header = () => {
                             </Link>
                         ))}
                         <div className="flex items-center justify-center pt-4 border-t mt-4">
-                            <button onClick={() => changeLanguage('en')} className={`font-semibold ${i18n.language === 'en' ? 'text-black' : 'text-gray-500'}`} disabled={i18n.language === 'en'}>English</button>
-                            <span className="mx-2 text-gray-400">|</span>
-                            <button onClick={() => changeLanguage('es')} className={`font-semibold ${i18n.language === 'es' ? 'text-black' : 'text-gray-500'}`} disabled={i18n.language === 'es'}>Español</button>
+                            <button 
+                                onClick={() => changeLanguage(i18n.language === 'en' ? 'es' : 'en')}
+                                className="font-semibold text-black hover:text-gray-600 transition-colors flex items-center gap-2"
+                            >
+                                {i18n.language === 'en' ? 'Español' : 'English'}
+                                <img src="/images/idioma.svg" alt="Language selector" className="w-5 h-5" />
+                            </button>
                         </div>
                     </div>
                 </div>

@@ -130,8 +130,8 @@ const AboutHeroSection = () => {
                             to="https://tally.so/r/wb6l9Z"
                             className="flex items-center justify-center bg-neon-green text-black hover:bg-opacity-90 transition-all"
                             style={{
-                                width: "120px",
-                                height: "28px",
+                                width: "170px",
+                                height: "38.66px",
                                 fontSize: "14px",
                                 fontWeight: 400,
                                 borderRadius: "5px",
@@ -219,8 +219,8 @@ const AboutHeroSection = () => {
                             to="/services"
                             className="lg:hidden flex items-center justify-center bg-purple text-white hover:bg-opacity-90 transition-all"
                             style={{
-                                width: "120px",
-                                height: "28px",
+                                width: "170px",
+                                height: "38.66px",
                                 fontSize: "14px",
                                 fontWeight: 400,
                                 borderRadius: "5px",
