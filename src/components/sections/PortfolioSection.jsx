@@ -159,7 +159,7 @@ const PortfolioSection = () => {
                             to="/portfolio"
                             className="flex mx-auto items-center justify-center bg-neon-green text-black hover:bg-opacity-90 transition-all"
                             style={{
-                                width: "170px",
+                                width: "180px",
                                 height: "38.66px",
                                 fontSize: "14px",
                                 fontWeight: "500",

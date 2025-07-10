@@ -18,7 +18,7 @@ const Hero = ({
     const { t } = useTranslation();
 
     return (
-        <div className="w-full bg-gray pt-20">
+        <div className="w-full bg-gray pt-16">
             <section className="relative w-[95%] h-[calc(100vh-5rem)] mx-auto rounded-[40px] overflow-hidden">
                 {/* Background Images */}
                 <div className="absolute inset-0 w-full h-full">

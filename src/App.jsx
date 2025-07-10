@@ -11,7 +11,9 @@ import Disclaimer from "./pages/Disclaimer";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import CookiePolicy from "./pages/CookiePolicy";
 import Portfolio from "./pages/Portfolio";
+import AISolutions from "./pages/AISolutions";
 import NotFound from "./pages/NotFound";
+import UXUIDesigns from "./pages/UXUIDesigns";
 
 function App() {
     return (
@@ -27,6 +29,8 @@ function App() {
                         <Route path="/blog" element={<Blog />} />
                         <Route path="/blog/:id" element={<BlogArticle />} />
                         <Route path="/disclaimer" element={<Disclaimer />} />
+                        <Route path="/ai-solutions" element={<AISolutions />} />
+                        <Route path="/ux-ui-designs" element={<UXUIDesigns />} />
                         <Route
                             path="/privacy-policy"
                             element={<PrivacyPolicy />}
