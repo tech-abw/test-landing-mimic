@@ -1,16 +1,16 @@
 import React from 'react';
 import TwoColumnSection from '../common/TwoColumnSection';
-import { useTranslation } from 'react-i18next'; 
+import { useTranslation } from 'react-i18next';
 
-const AIAboutSeccion = () => {
+const ConsultingAboutSection = () => {
   const { t } = useTranslation();
-  const title = t("AI_AboutSection_title");
-  const text = t("AI_AboutSection_text");
+  const title = t("Consulting_AboutSection_title");
+  const text = t("Consulting_AboutSection_text");
 
   return (
     <div className="bg-gray" style={{ color: '#1a1a1a' }}>
       <TwoColumnSection 
-        imageSrc="/images/ia.webp"
+        imageSrc="/images/Consulting/Our_expertise.webp"
         title={title}
         text={text}
         imageSide="left"
@@ -19,5 +19,5 @@ const AIAboutSeccion = () => {
   );
 };
 
-export default AIAboutSeccion;
+export default ConsultingAboutSection;
 

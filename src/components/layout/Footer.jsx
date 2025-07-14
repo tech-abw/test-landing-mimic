@@ -2,8 +2,9 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 const Footer = () => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
     const currentYear = new Date().getFullYear();
+    const lang = i18n.language;
 
     return (
         <footer className="bg-gray py-12">
@@ -29,7 +30,7 @@ const Footer = () => {
                         <ul className="lg:space-y-2 mb-4">
                             <li>
                                 <Link
-                                    to="/"
+                                    to={`/${lang}`}
                                     className="text-gray-600 transition-colors"
                                     style={{
                                         fontSize: "17px",
@@ -41,7 +42,7 @@ const Footer = () => {
                             </li>
                             <li>
                                 <Link
-                                    to="/about"
+                                    to={`/${lang}/${t('routes.about')}`}
                                     className="text-gray-600 transition-colors"
                                     style={{
                                         fontSize: "17px",
@@ -53,7 +54,7 @@ const Footer = () => {
                             </li>
                             <li>
                                 <Link
-                                    to="/services"
+                                    to={`/${lang}/${t('routes.services')}`}
                                     className="text-gray-600 transition-colors"
                                     style={{
                                         fontSize: "17px",
@@ -65,7 +66,7 @@ const Footer = () => {
                             </li>
                             <li>
                                 <Link
-                                    to="/portfolio"
+                                    to={`/${lang}/${t('routes.portfolio')}`}
                                     className="text-gray-600 transition-colors"
                                     style={{
                                         fontSize: "17px",
@@ -77,7 +78,7 @@ const Footer = () => {
                             </li>
                             <li>
                                 <Link
-                                    to="/blog"
+                                    to={`/${lang}/${t('routes.blog')}`}
                                     className="text-gray-600 transition-colors"
                                     style={{
                                         fontSize: "17px",
@@ -179,7 +180,7 @@ const Footer = () => {
                         <ul className="lg:space-y-2">
                             <li>
                                 <Link
-                                    to="/disclaimer"
+                                    to={`/${lang}/${t('routes.disclaimer')}`}
                                     className="text-gray-600 transition-colors"
                                     style={{
                                         fontSize: "17px",
@@ -191,7 +192,7 @@ const Footer = () => {
                             </li>
                             <li>
                                 <Link
-                                    to="/privacy-policy"
+                                    to={`/${lang}/${t('routes.privacy-policy')}`}
                                     className="text-gray-600 transition-colors"
                                     style={{
                                         fontSize: "17px",
@@ -203,7 +204,7 @@ const Footer = () => {
                             </li>
                             <li>
                                 <Link
-                                    to="/cookie-policy"
+                                    to={`/${lang}/${t('routes.cookie-policy')}`}
                                     className="text-gray-600 transition-colors"
                                     style={{
                                         fontSize: "17px",

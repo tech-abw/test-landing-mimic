@@ -2,8 +2,8 @@ import { useTranslation } from "react-i18next";
 import Hero from "../components/sections/Hero";
 import CalendarSection from "../components/sections/CalendarSection";
 import SEO from "../components/SEO";
-import SliderIAServices from "../components/sections/SliderIAServices";
-import ToolsSectionAI from '../components/sections/ToolsSectionAI';
+import SliderUXUIServices from "../components/sections/SliderUXUIServices";
+import ToolsSectionUxUi from '../components/sections/ToolsSectionUxUi';
 import WorkflowSection from '../components/sections/WorkflowSection';
 import UXUIAboutSection from "../components/sections/UXUIAboutSection";
 
@@ -26,9 +26,9 @@ const UXUIDesigns = () => {
                 mobileTitleFontSize="43px"
                 mobileDescriptionFontSize="17px"
             />
-            <SliderIAServices />
+            <SliderUXUIServices />
             <UXUIAboutSection />
-            <ToolsSectionAI />
+            <ToolsSectionUxUi />
             <WorkflowSection />
             <CalendarSection />
         </div>

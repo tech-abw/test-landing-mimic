@@ -2,8 +2,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import SEO from "../components/SEO";
+import { useTranslation } from "react-i18next";
 
 const Portfolio = () => {
+    const { t } = useTranslation();
     const portfolioItems = [
         {
             id: 1,
@@ -94,8 +96,8 @@ const Portfolio = () => {
     return (
         <div className="bg-white text-black lg:mt-16 lg:mb-24">
             <SEO
-                title="Portfolio: Our work"
-                description="Meet our unique digital products we've crafted for our amazing clients."
+                title={t("portfolio.seo.title")}
+                description={t("portfolio.seo.description")}
             />
             <div className="w-[95%] mx-auto px-4 py-16">
                 <motion.h1
@@ -105,7 +107,7 @@ const Portfolio = () => {
                     viewport={{ once: false, margin: "-100px" }}
                     transition={{ duration: 0.7 }}
                 >
-                    Transform ideas into unique digital experiences.
+                    {t("portfolio.title")}
                 </motion.h1>
 
                 <motion.h1
@@ -115,7 +117,7 @@ const Portfolio = () => {
                     viewport={{ once: false, margin: "-100px" }}
                     transition={{ duration: 0.7, delay: 0.1 }}
                 >
-                    Our work
+                    {t("portfolio.subtitle")}
                 </motion.h1>
 
                 {/* Desktop Layout */}
@@ -142,7 +144,9 @@ const Portfolio = () => {
                             >
                                 <img
                                     src={portfolioItems[startIndex].image}
-                                    alt={`Portfolio item ${startIndex + 1}`}
+                                    alt={t("portfolio.itemAlt", {
+                                        id: startIndex + 1,
+                                    })}
                                     className="w-full h-full object-cover"
                                 />
                             </motion.a>
@@ -169,7 +173,9 @@ const Portfolio = () => {
                             >
                                 <img
                                     src={portfolioItems[startIndex + 1].image}
-                                    alt={`Portfolio item ${startIndex + 2}`}
+                                    alt={t("portfolio.itemAlt", {
+                                        id: startIndex + 2,
+                                    })}
                                     className="w-full h-full object-cover"
                                 />
                             </motion.a>
@@ -197,7 +203,7 @@ const Portfolio = () => {
                         >
                             <img
                                 src={item.image}
-                                alt={`Portfolio item ${item.id}`}
+                                alt={t("portfolio.itemAlt", { id: item.id })}
                                 className="w-full h-full object-cover"
                             />
                         </motion.a>

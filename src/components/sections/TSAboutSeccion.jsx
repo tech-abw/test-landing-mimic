@@ -2,10 +2,10 @@ import React from 'react';
 import TwoColumnSection from '../common/TwoColumnSection';
 import { useTranslation } from 'react-i18next'; 
 
-const AIAboutSeccion = () => {
+const TSAboutSection = () => {
   const { t } = useTranslation();
-  const title = t("AI_AboutSection_title");
-  const text = t("AI_AboutSection_text");
+  const title = t("TS_AboutSection_title");
+  const text = t("TS_AboutSection_text");
 
   return (
     <div className="bg-gray" style={{ color: '#1a1a1a' }}>
@@ -19,5 +19,5 @@ const AIAboutSeccion = () => {
   );
 };
 
-export default AIAboutSeccion;
+export default TSAboutSection;
 
