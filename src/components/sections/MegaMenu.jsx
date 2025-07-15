@@ -2,15 +2,11 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import Logo from '../ui/Logo'; // Import the Logo component
 
-const MegaMenu = ({ items, isMobileMenuOpen, toggleMenu, closeMenu, isDesktop, menuRef, buttonRef }) => {
+const MegaMenu = ({ items, isMobileMenuOpen, toggleMenu, closeMenu, isDesktop, menuRef, buttonRef, handleLanguageChange }) => {
     const { t, i18n } = useTranslation();
     const [openSubmenu, setOpenSubmenu] = useState(null);
-
-    const handleLanguageChange = () => {
-        const newLang = i18n.language === 'es' ? 'en' : 'es';
-        i18n.changeLanguage(newLang);
-    };
 
     const handleSubmenuEnter = (index) => {
         if (isDesktop) {
@@ -75,109 +71,134 @@ const MegaMenu = ({ items, isMobileMenuOpen, toggleMenu, closeMenu, isDesktop, m
                             ></div>
                         )}
                         <AnimatePresence>
-                        {item.submenu && openSubmenu === index && (
-                            <motion.div 
-                                className="fixed top-20 left-10 right-10 -translate-x-1/2  p-8 bg-black bg-opacity-80 backdrop-blur-lg rounded-lg shadow-lg"
-                                initial="hidden"
-                                animate="visible"
-                                exit="hidden"
-                                variants={menuVariants}
-                                transition={{ duration: 0.5, ease: [0.25, 0.8, 0.25, 1] }}
+                            {item.submenu && openSubmenu === index && (
+                                <motion.div 
+                                    className="fixed top-20 left-10 right-10 -translate-x-1/2  p-8 bg-black bg-opacity-80 backdrop-blur-lg rounded-lg shadow-lg"
+                                    initial="hidden"
+                                    animate="visible"
+                                    exit="hidden"
+                                    variants={menuVariants}
+                                    transition={{ duration: 0.5, ease: [0.25, 0.8, 0.25, 1] }}
+                                >
+                                    <div className="w-full text-white flex justify-between items-start relative">
+                                        {/* Pointer */}
+                                        <div className="absolute -top-10 left-[51%] translate-x-0 w-0 h-0 
+                                            border-l-[10px] border-l-transparent
+                                            border-r-[10px] border-r-transparent
+                                            border-b-[10px] border-b-black"></div>
 
-                            >
-                                <div className="w-full text-white flex justify-between items-start relative">
-                                    {/* Pointer */}
-                                    <div className="absolute -top-10 left-[51%] translate-x-0 w-0 h-0 
-                                        border-l-[10px] border-l-transparent
-                                        border-r-[10px] border-r-transparent
-                                        border-b-[10px] border-b-black"></div>
+                                        {/* Promotional Banner */}
+                                        <div className="w-1/3 bg-stone-200 bg-opacity-90 p-6 rounded-lg border border-lime-400">
+                                            <p className="text-black text-center font-semibold">Banner promocional</p>
+                                        </div>
 
-                                    {/* Promotional Banner */}
-                                    <div className="w-1/3 bg-stone-200 bg-opacity-90 p-6 rounded-lg border border-lime-400">
-                                        <p className="text-black text-center font-semibold">Banner promocional</p>
+                                        {/* Links */}
+                                        <div className="w-2/3 grid grid-cols-2 gap-x-12 gap-y-6 pl-12">
+                                            {item.submenu.map((submenu, subIndex) => (
+                                                <div key={subIndex}>
+                                                    <ul>
+                                                        {submenu.links.map((link, linkIndex) => (
+                                                            <li key={linkIndex} className="mb-3 flex items-center">
+                                                                <span className="w-2 h-2 bg-lime-400 rounded-full mr-3"></span>
+                                                                <Link to={link.path} className="text-gray-300 hover:text-white transition-colors duration-300">
+                                                                    {t(link.name)}
+                                                                </Link>
+                                                            </li>
+                                                        ))}
+                                                    </ul>
+                                                </div>
+                                            ))}
+                                        </div>
                                     </div>
-
-                                    {/* Links */}
-                                    <div className="w-2/3 grid grid-cols-2 gap-x-12 gap-y-6 pl-12">
-                                        {item.submenu.map((submenu, subIndex) => (
-                                            <div key={subIndex}>
-                                                <ul>
-                                                    {submenu.links.map((link, linkIndex) => (
-                                                        <li key={linkIndex} className="mb-3 flex items-center">
-                                                            <span className="w-2 h-2 bg-lime-400 rounded-full mr-3"></span>
-                                                            <Link to={link.path} className="text-gray-300 hover:text-white transition-colors duration-300">
-                                                                {t(link.name)}
-                                                            </Link>
-                                                        </li>
-                                                    ))}
-                                                </ul>
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
-                            </motion.div>
-                        )}
+                                </motion.div>
+                            )}
                         </AnimatePresence>
                     </li>
                 ))}
             </ul>
 
             {/* Mobile Menu Button */}
-            <div className="lg:hidden">
-                <button onClick={toggleMenu} ref={buttonRef}>
-                    <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                    </svg>
-                </button>
-            </div>
+            <button onClick={toggleMenu} className="lg:hidden z-50" ref={buttonRef}>
+                <svg className="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
 
             {/* Mobile Menu */}
-            {isMobileMenuOpen && !isDesktop && (
-                <motion.div 
-                    className="absolute top-full left-0 mt-4 w-[92vw] p-8 bg-black bg-opacity-80 backdrop-blur-lg rounded-lg shadow-lg"
-                    initial={{ opacity: 0, y: -10, scale: 0.95 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: -20, scale: 0.94 }}
-                    transition={{ duration: 0.5, ease: [0.25, 0.8, 0.25, 1] }}
-                  
-                >
-                    <ul className="relative flex items-center">
-                        {items.map((item, index) => (
-                            <li key={index} className="text-center">
-                                {item.submenu ? (
-                                    <div>
-                                        <button onClick={() => handleSubmenuClick(index)} className="text-white text-xl font-medium w-full">
+            <AnimatePresence>
+                {isMobileMenuOpen && (
+                    <motion.div
+                        initial={{ y: "-100%", opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        exit={{ y: "-100%", opacity: 0 }}
+                        transition={{ duration: 0.4, ease: [0.25, 1, 0.5, 1] }}
+                        className="fixed top-0 left-0 right-0 h-[50vh] bg-gray z-50 p-6 flex flex-col shadow-xl"
+                    >
+                        {/* Header */}
+                        <div className="flex justify-between items-center mb-12 flex-shrink-0">
+                            <Logo />
+                            <div className="flex items-center gap-4">
+                                <button className="bg-black text-lime-400 font-bold py-2 px-6 rounded-md hover:bg-gray-800 transition-all duration-300">
+                                    {t('nav.start_here')}
+                                </button>
+                                <button onClick={closeMenu}>
+                                    <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        {/* Scrollable Menu List */}
+                        <ul className="flex-grow overflow-y-auto space-y-6">
+                            {items.map((item, index) => (
+                                <li key={index} className="w-full">
+                                    {item.submenu ? (
+                                        <div>
+                                            <button onClick={() => handleSubmenuClick(index)} className="text-black text-xl font-light w-full text-left">
+                                                {t(item.name)}
+                                            </button>
+                                            {openSubmenu === index && (
+                                                <div className="mt-4 pl-4 space-y-4">
+                                                    {item.submenu.map((submenu, subIndex) => (
+                                                        <div key={subIndex}>
+                                                            <h3 className="font-semibold text-lg text-black mb-2">{t(submenu.heading)}</h3>
+                                                            <ul className="space-y-3">
+                                                                {submenu.links.map((link, linkIndex) => (
+                                                                    <li key={linkIndex}>
+                                                                        <Link to={link.path} onClick={closeMenu} className="text-black hover:text-gray-600 transition-colors duration-300 font-light">
+                                                                            {t(link.name)}
+                                                                        </Link>
+                                                                    </li>
+                                                                ))}
+                                                            </ul>
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            )}
+                                        </div>
+                                    ) : (
+                                        <Link to={item.path} onClick={closeMenu} className="text-black text-xl font-light">
                                             {t(item.name)}
-                                        </button>
-                                        {openSubmenu === index && (
-                                            <div className="mt-4 space-y-4">
-                                                {item.submenu.map((submenu, subIndex) => (
-                                                    <div key={subIndex}>
-                                                        <h3 className="font-bold text-lg text-white mb-2">{t(submenu.heading)}</h3>
-                                                        <ul className="space-y-2">
-                                                            {submenu.links.map((link, linkIndex) => (
-                                                                <li key={linkIndex}>
-                                                                    <Link to={link.path} onClick={closeMenu} className="text-gray-300 hover:text-white transition-colors duration-300">
-                                                                        {t(link.name)}
-                                                                    </Link>
-                                                                </li>
-                                                            ))}
-                                                        </ul>
-                                                    </div>
-                                                ))}
-                                            </div>
-                                        )}
-                                    </div>
-                                ) : (
-                                    <Link to={item.path} onClick={closeMenu} className="text-white text-xl font-medium">
-                                        {t(item.name)}
-                                    </Link>
-                                )}
-                            </li>
-                        ))}
-                    </ul>
-                </motion.div>
-            )}
+                                        </Link>
+                                    )}
+                                </li>
+                            ))}
+                        </ul>
+
+                        {/* Pinned Footer with Language Switcher */}
+                        <div className="mt-auto pt-6 flex-shrink-0">
+                            <button 
+                                onClick={() => handleLanguageChange(i18n.language.startsWith('en') ? 'es' : 'en')}
+                                className="font-semibold text-black hover:text-gray-600 transition-colors flex items-center gap-2 text-xl font-light"
+                            >
+                                {i18n.language.startsWith('en') ? 'ES' : 'EN'}
+                                <img src="/images/idioma.svg" alt="Language selector" className="w-5 h-5" />
+                            </button>
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </nav>
     );
 };

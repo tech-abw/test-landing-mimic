@@ -101,7 +101,7 @@ export default function AppContainer() {
         <BrowserRouter>
             <ScrollToTop />
             <Routes>
-                <Route path="/" element={<Navigate to={`/${i18n.language}`} replace />} />
+                <Route path="/" element={<Navigate to={`/${i18n.language.split('-')[0]}`} replace />} />
                 <Route path="/:lng/*" element={<LocalizedRoutes />} />
             </Routes>
         </BrowserRouter>

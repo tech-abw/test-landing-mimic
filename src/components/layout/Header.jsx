@@ -82,15 +82,20 @@ const Header = () => {
                 <div className="flex-shrink-0">
                     <Logo />
                 </div>
-                <MegaMenu 
-                    items={navItems} 
-                    isMobileMenuOpen={isMenuOpen} 
-                    closeMenu={closeMenu}
-                    toggleMenu={toggleMenu}
-                    isDesktop={isDesktop}
-                    menuRef={menuRef}
-                    buttonRef={buttonRef}
-                />
+
+                {/* Desktop: MegaMenu in the center, buttons on the right */}
+                <div className="hidden lg:flex flex-grow justify-center">
+                    <MegaMenu 
+                        items={navItems} 
+                        isMobileMenuOpen={isMenuOpen} 
+                        closeMenu={closeMenu}
+                        toggleMenu={toggleMenu}
+                        isDesktop={isDesktop}
+                        menuRef={menuRef}
+                        buttonRef={buttonRef}
+                        handleLanguageChange={handleLanguageChange}
+                    />
+                </div>
                 <div className="hidden lg:flex items-center space-x-4 flex-shrink-0">
                     <button className="bg-black text-lime-400 font-bold py-2 px-6 rounded-md hover:bg-gray-800 transition-all duration-300">
                         {t('nav.start_here')}
@@ -102,6 +107,23 @@ const Header = () => {
                         {i18n.language === 'en' ? 'ES' : 'EN'}
                         <img src="/images/idioma.svg" alt="Language selector" className="w-5 h-5" />
                     </button>
+                </div>
+
+                {/* Mobile: Buttons on the right */}
+                <div className="lg:hidden flex items-center space-x-4">
+                    <button className="bg-black text-lime-400 font-bold py-2 px-6 rounded-md hover:bg-gray-800 transition-all duration-300">
+                        {t('nav.start_here')}
+                    </button>
+                    <MegaMenu 
+                        items={navItems} 
+                        isMobileMenuOpen={isMenuOpen} 
+                        closeMenu={closeMenu}
+                        toggleMenu={toggleMenu}
+                        isDesktop={isDesktop}
+                        menuRef={menuRef}
+                        buttonRef={buttonRef}
+                        handleLanguageChange={handleLanguageChange}
+                    />
                 </div>
             </div>
         </header>

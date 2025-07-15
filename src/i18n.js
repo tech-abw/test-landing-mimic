@@ -29,6 +29,7 @@ i18n
     },
     detection: {
       order: ['path', 'navigator'],
+      load: 'languageOnly', // This will strip the region code (e.g., en-US -> en)
     },
     react: {
       useSuspense: true, // Asegura que las traducciones se carguen antes de renderizar
