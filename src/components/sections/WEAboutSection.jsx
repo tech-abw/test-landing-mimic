@@ -10,7 +10,7 @@ const WEAboutSection = () => {
   return (
     <div className="bg-gray" style={{ color: '#1a1a1a' }}>
       <TwoColumnSection 
-        imageSrc="/images/websiteEcommerce/sites_that_dazzle_visitors.webp"
+        imageSrc="/images/WE/sites_that_dazzle_visitors.webp"
         title={title}
         text={text}
         imageSide="left"
