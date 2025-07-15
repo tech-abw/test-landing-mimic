@@ -26,7 +26,7 @@ const TailoredSolutions = () => {
                 mobileTitleFontSize="43px"
                 mobileDescriptionFontSize="17px"
             />
-            <SliderTSServices />
+            <SliderTSServices/>
             <TSAboutSection />
             <ToolsSectionTS />
             <WorkflowSection />
