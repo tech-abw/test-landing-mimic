@@ -41,7 +41,7 @@ const TechStackSection = ({
                                     style={{
                                         fontSize: "20px",
                                         fontWeight: 200,
-                                        lineHeight: "20px",
+                                        lineHeight: "1.5",
                                         maxWidth: "400px",
                                     }}
                                     initial={{ opacity: 0, y: 20 }}

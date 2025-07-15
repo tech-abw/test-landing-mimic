@@ -8,14 +8,14 @@ const AboutHeroSection = () => {
     const { t } = useTranslation();
     return (
         <section className="w-full bg-black py-16">
-            <div className="w-[95%] mx-auto px-4">
+            <div className="w-[95%] mx-auto px-4 ">
                 {/* Versión de escritorio */}
                 <div
-                    className="hidden lg:block bg-purple rounded-2xl p-8"
+                    className="hidden lg:block bg-purple rounded-2xl p-8 "
                     style={{ height: "700px" }}
                 >
                     <div className="flex items-center justify-center w-full h-full">
-                        <div className="w-1/2 pr-8 flex flex-col justify-between h-full">
+                        <div className="w-1/2 pr-8">
                             <div>
                                 <motion.h2
                                     className="text-white mb-10"
@@ -40,7 +40,7 @@ const AboutHeroSection = () => {
                                     style={{
                                         fontSize: "18px",
                                         fontWeight: 300,
-                                        lineHeight: "18px",
+                                        lineHeight: "1.5",
                                         maxWidth: "400px",
                                     }}
                                     initial={{ opacity: 0, y: 30 }}

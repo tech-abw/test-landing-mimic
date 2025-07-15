@@ -1,28 +1,11 @@
-@keyframes marquee-top {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(calc(100% + 0px));
-    }
+@keyframes marquee-left {
+    from { transform: translateX(0); }
+    to { transform: translateX(calc(-100% - 80px)); }
 }
 
-@keyframes marquee-bottom {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(calc(-100% - 0px));
-    }
-}
-
-@keyframes marquee {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(calc(-100% - 0px));
-    }
+@keyframes marquee-right {
+    from { transform: translateX(calc(-100% - 80px)); }
+    to { transform: translateX(0); }
 }
 
 .marquee-container {
@@ -35,7 +18,7 @@
 
 .marquee-content {
     display: flex;
-    gap: 80px;
+    gap: 80px; /* This should match the gap in the keyframes */
     position: absolute;
     left: 0;
     top: 0;
@@ -44,15 +27,14 @@
     will-change: transform;
     padding: 10px 0;
     align-items: center;
-    animation: marquee 250s linear infinite;
 }
 
-.marquee-reverse {
-    transform: rotateY(180deg);
+.marquee-top .marquee-content {
+    animation: marquee-left 250s linear infinite;
 }
-
-.marquee-reverse .marquee-item {
-    transform: rotateY(180deg);
+  
+.marquee-reverse .marquee-content {
+    animation: marquee-right 250s linear infinite;
 }
 
 .marquee-container:hover .marquee-content {

@@ -60,7 +60,7 @@ const ClientsSection = () => {
                 <div className="relative">
                     {/* Desktop marquee rows */}
                     <div className="hidden lg:block mb-16">
-                        <div className="marquee-container">
+                        <div className="marquee-container marquee-top">
                             <div className="marquee-content">
                                 {duplicatedTopClients.map((client, index) => (
                                     <img key={index} src={`${imgBasePath}${client.logo}`} alt={client.name} className="h-12 mx-12" />

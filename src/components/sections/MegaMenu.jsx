@@ -33,9 +33,26 @@ const MegaMenu = ({ items, isMobileMenuOpen, toggleMenu, closeMenu, isDesktop, m
     };
 
     const menuVariants = {
-        hidden: { opacity: 0, y: -20 },
-        visible: { opacity: 1, y: 0 },
-    };
+        hidden: {
+          opacity: 0,
+          scale: 0.97,
+          y: -6,
+          transition: {
+            duration: 0.8,       // ⏱️ salida más larga
+            ease: [0.33, 1, 0.68, 1],  // curva suave tipo ease-out
+          },
+        },
+        visible: {
+          opacity: 1,
+          scale: 1,
+          y: 0,
+          transition: {
+            duration: 0.5,       // ⏱️ entrada rápida pero elegante
+            ease: [0.25, 0.8, 0.25, 1],
+          },
+        },
+      };
+      
 
     return (
         <nav ref={menuRef} className="flex-grow flex justify-center items-center ">
@@ -57,6 +74,7 @@ const MegaMenu = ({ items, isMobileMenuOpen, toggleMenu, closeMenu, isDesktop, m
                                 style={{ height: "16px", width: "1px" }}
                             ></div>
                         )}
+                        <AnimatePresence>
                         {item.submenu && openSubmenu === index && (
                             <motion.div 
                                 className="fixed top-20 left-10 right-10 -translate-x-1/2  p-8 bg-black bg-opacity-80 backdrop-blur-lg rounded-lg shadow-lg"
@@ -64,7 +82,8 @@ const MegaMenu = ({ items, isMobileMenuOpen, toggleMenu, closeMenu, isDesktop, m
                                 animate="visible"
                                 exit="hidden"
                                 variants={menuVariants}
-                                transition={{ duration: 0.3 }}
+                                transition={{ duration: 0.5, ease: [0.25, 0.8, 0.25, 1] }}
+
                             >
                                 <div className="w-full text-white flex justify-between items-start relative">
                                     {/* Pointer */}
@@ -98,6 +117,7 @@ const MegaMenu = ({ items, isMobileMenuOpen, toggleMenu, closeMenu, isDesktop, m
                                 </div>
                             </motion.div>
                         )}
+                        </AnimatePresence>
                     </li>
                 ))}
             </ul>
@@ -115,11 +135,11 @@ const MegaMenu = ({ items, isMobileMenuOpen, toggleMenu, closeMenu, isDesktop, m
             {isMobileMenuOpen && !isDesktop && (
                 <motion.div 
                     className="absolute top-full left-0 mt-4 w-[92vw] p-8 bg-black bg-opacity-80 backdrop-blur-lg rounded-lg shadow-lg"
-                    initial="hidden"
-                    animate="visible"
-                    exit="hidden"
-                    variants={menuVariants}
-                    transition={{ duration: 0.3 }}
+                    initial={{ opacity: 0, y: -10, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: -20, scale: 0.94 }}
+                    transition={{ duration: 0.5, ease: [0.25, 0.8, 0.25, 1] }}
+                  
                 >
                     <ul className="relative flex items-center">
                         {items.map((item, index) => (
