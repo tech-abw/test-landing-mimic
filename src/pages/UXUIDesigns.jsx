@@ -19,7 +19,7 @@ const UXUIDesigns = () => {
                 title={t('title_UX/UI_Designs')}
                 description={t('description_UX/UI_Designs')}
                 backgroundImage="/images/UX_UI_Design.webp"
-                mobileBackgroundImage="/images/UX_UI_Design.png"
+                mobileBackgroundImage="/images/UX_UI_Design.webp"
                 buttonText={t('button_UX/UI_Designs')}
                 buttonLink="/portfolio"
                 desktopTitleFontSize="76px"

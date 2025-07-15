@@ -73,10 +73,30 @@
   }
 
   .section-title {
-    font-size: 2.5rem;
+    font-size: 1.875rem
   }
 
   .section-text {
     font-size: 0.95rem;
   }
+  .two-column-section {
+    flex-direction: column;
+    padding: 3rem 1.5rem;
+    gap: 2rem;
+    width: 100%;
+    min-height: auto;
+  }
+
+  .image-column,
+  .text-column {
+    order: unset; /* opcional, por si quieres ignorar el orden personalizado en mobile */
+    width: 100%;
+  }
+
+  .section-image {
+    height: 240px; /* asegúrate que la imagen tenga altura definida */
+    background-size: cover;
+    background-position: center;
+  }
+
 }
