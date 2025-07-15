@@ -9,19 +9,19 @@ const ToolsSectionUxUi = () => {
     const tools = [
         {
             name: t("UX_Research", "UX Research"),
-            description: t("UX_Research_description", "Lorem Ipsum is simply dummy text of the printing and typesetting industry."),
-            icon: "/images/IA/test.png",
+            description: t("UX_Research_description", "We define the right experience through user research, personas, and journey mapping — ensuring every design decision is grounded in real user needs and business goals."),
+            icon: "/images/UXUI/UX_Research.png",
         },
         {
             name: t("UI_Kit", "UI Kit"),
             description: t("UI_Kit_description", "Lorem Ipsum is simply dummy text of the printing and typesetting industry."),
-            icon: "/images/IA/test.png",
+            icon: "/images/UXUI/UI-Kit.png",
 
         },
         {
             name: t("Special_projects", "Special projects"),
             description: t("Special_projects_description", "Lorem Ipsum is simply dummy text of the printing and typesetting industry."),
-            icon: "/images/IA/test.png",
+            icon: "/images/UXUI/start.png",
         },
     ];
 
