@@ -10,18 +10,18 @@ const ToolsSectionAI = () => {
         {
             name: t("AI_chats", "AI chats"),
             description: t("AI_chats_description", "Lorem Ipsum is simply dummy text of the printing and typesetting industry."),
-            icon: "/images/IA/test.png",
+            icon: "/images/IA/AI-chats.png",
         },
         {
             name: t("AI_automations", "AI automations"),
             description: t("AI_automations_description", "Lorem Ipsum is simply dummy text of the printing and typesetting industry."),
-            icon: "/images/IA/test.png",
+            icon: "/images/IA/AI-automations.png",
 
         },
         {
             name: t("AI_agents", "AI agents"),
             description: t("AI_agents_description", "Lorem Ipsum is simply dummy text of the printing and typesetting industry."),
-            icon: "/images/IA/test.png",
+            icon: "/images/IA/AI-agents.png",
         },
     ];
 
