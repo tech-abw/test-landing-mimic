@@ -20,9 +20,11 @@ const MegaMenu = ({ items, isMobileMenuOpen, toggleMenu, closeMenu, isDesktop, m
 
     const handleSubmenuLeave = () => {
         if (isDesktop) {
+          setTimeout(() => {
             setOpenSubmenu(null);
+          }, 2000); // da tiempo para que el clic se registre
         }
-    };
+      };
 
     const handleSubmenuClick = (index) => {
         if (!isDesktop) {
@@ -57,7 +59,7 @@ const MegaMenu = ({ items, isMobileMenuOpen, toggleMenu, closeMenu, isDesktop, m
                         )}
                         {item.submenu && openSubmenu === index && (
                             <motion.div 
-                                className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-[92vw] p-8 bg-black bg-opacity-80 backdrop-blur-lg rounded-lg shadow-lg"
+                                className="fixed top-20 left-10 right-10 -translate-x-1/2  p-8 bg-black bg-opacity-80 backdrop-blur-lg rounded-lg shadow-lg"
                                 initial="hidden"
                                 animate="visible"
                                 exit="hidden"
@@ -66,7 +68,7 @@ const MegaMenu = ({ items, isMobileMenuOpen, toggleMenu, closeMenu, isDesktop, m
                             >
                                 <div className="w-full text-white flex justify-between items-start relative">
                                     {/* Pointer */}
-                                    <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-0 h-0 
+                                    <div className="absolute -top-10 left-[51%] translate-x-0 w-0 h-0 
                                         border-l-[10px] border-l-transparent
                                         border-r-[10px] border-r-transparent
                                         border-b-[10px] border-b-black"></div>

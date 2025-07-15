@@ -78,7 +78,7 @@ const Header = () => {
 
     return (
         <header className="fixed w-full flex justify-center items-center  py-3 z-50 bg-gray">
-            <div className="flex w-[92%] items-center justify-between">
+            <div className="flex w-full max-w-screen-2xl px-6 items-center justify-between">
                 <div className="flex-shrink-0">
                     <Logo />
                 </div>
