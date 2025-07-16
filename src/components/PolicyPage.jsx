@@ -2,7 +2,7 @@ import React from "react";
 
 const PolicyPage = ({ title, lastUpdated, sections }) => {
     return (
-        <div className="w-full flex justify-center py-24 min-h-[150vh]">
+        <div className="w-full flex justify-center py-24">
             <div className="md:w-[95%] w-full mx-4 md:mx-0 bg-white rounded-2xl shadow-lg px-8 py-12">
                 <h1 className="text-3xl lg:text-4xl font-medium mb-8 text-left w-fit pb-1 border-b border-black/30">
                     {title}
