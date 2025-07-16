@@ -6,7 +6,8 @@ import AboutHeroSection from '../components/sections/AboutHeroSection';
 import SEO from "../components/SEO";
 
 const About = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language;
   return (
     <div>
       <SEO
@@ -19,7 +20,7 @@ const About = () => {
         backgroundImage="/images/about-hero.png"
         mobileBackgroundImage="/images/about-mobile.png"
         buttonText={t('about_hero_button')}
-        buttonLink="/services"
+        buttonLink={`/${lang}/${t('routes.services')}`}
         mobileTitleFontSize='39px'
         mobileDescriptionFontSize='17px'
       />

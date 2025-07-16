@@ -161,7 +161,7 @@ const TestimonialsSection = () => {
                             style={{
                                 fontSize: "73px",
                                 fontWeight: 400,
-                                lineHeight: "73px",
+                                lineHeight: "65px",
                             }}
                             initial={{ opacity: 0, y: 40 }}
                             whileInView={{ opacity: 1, y: 0 }}

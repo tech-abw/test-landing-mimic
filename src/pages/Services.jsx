@@ -7,7 +7,8 @@ import CalendarSection from "../components/sections/CalendarSection";
 import SEO from "../components/SEO";
 
 const Services = () => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+    const lang = i18n.language;
     return (
         <div>
             <SEO
@@ -15,12 +16,12 @@ const Services = () => {
                 description={t('services_seo_description')}
             />
             <Hero
-                title={t('services_hero_title')}cd
+                title={t('services_hero_title')}
                 description={t('services_hero_description')}
                 backgroundImage="/images/services-hero.png"
                 mobileBackgroundImage="/images/mobile-services.png"
                 buttonText={t('services_hero_button')}
-                buttonLink="/portfolio"
+                buttonLink={`/${lang}/${t('routes.services')}`}
                 desktopTitleFontSize="76px"
                 mobileTitleFontSize="43px"
                 mobileDescriptionFontSize="17px"

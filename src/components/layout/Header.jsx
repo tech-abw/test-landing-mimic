@@ -97,9 +97,11 @@ const Header = () => {
                     />
                 </div>
                 <div className="hidden lg:flex items-center space-x-4 flex-shrink-0">
-                    <button className="bg-black text-lime-400 font-bold py-2 px-6 rounded-md hover:bg-gray-800 transition-all duration-300">
+                    <Link to="https://tally.so/r/wb6l9Z">
+                    <button className="bg-black text-lime-400  py-2 px-6 rounded-md hover:bg-gray-800 transition-all duration-300 w-[150px]">
                         {t('nav.start_here')}
                     </button>
+                    </Link>
                     <button 
                         onClick={() => handleLanguageChange(i18n.language === 'en' ? 'es' : 'en')}
                         className="font-semibold text-black hover:text-gray-600 transition-colors flex items-center gap-2"
@@ -110,7 +112,7 @@ const Header = () => {
                 </div>
 
                 {/* Mobile: Buttons on the right */}
-                <div className="lg:hidden flex items-center space-x-4">
+                <div className="lg:hidden flex items-center space-x-4 ">
                     <button className="bg-black text-lime-400 font-bold py-2 px-6 rounded-md hover:bg-gray-800 transition-all duration-300">
                         {t('nav.start_here')}
                     </button>

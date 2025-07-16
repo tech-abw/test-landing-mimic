@@ -10,7 +10,8 @@ const TechStackSection = ({
     textColor = "text-white",
     image = "/images/tech/techstack.png",
 }) => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+    const lang = i18n.language;
 
     return (
         <section className={`w-full ${bgColor} py-16 lg:py-32 relative`}>
@@ -67,21 +68,21 @@ const TechStackSection = ({
                                         height: "38.66px",
                                         fontSize: "16.66px",
                                         fontWeight: 400,
-                                        borderRadius: "12px",
+                                        borderRadius: "5px",
                                         lineHeight: "18px",
                                     }}
                                 >
                                     {t("techStack_button_start")}
                                 </Link>
                                 <Link
-                                    to="/services"
+                                     to={`/${lang}/${t('routes.services')}`}
                                     className="flex items-center justify-center bg-purple text-white hover:bg-opacity-90 transition-all"
                                     style={{
                                         width: "170px",
                                         height: "38.66px",
                                         fontSize: "16.66px",
                                         fontWeight: 400,
-                                        borderRadius: "12px",
+                                        borderRadius: "5px",
                                         lineHeight: "18px",
                                     }}
                                 >
@@ -133,7 +134,7 @@ const TechStackSection = ({
                                 {t("techStack_button_start")}
                             </Link>
                             <Link
-                                to="/services"
+                                to={`/${lang}/${t('routes.services')}`}
                                 className="flex items-center justify-center bg-purple text-white hover:bg-opacity-90 transition-all px-5 py-2.5 rounded-lg text-sm font-medium"
                             >
                                 {t("techStack_button_services")}

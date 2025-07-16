@@ -5,7 +5,8 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
 const AboutHeroSection = () => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+    const lang = i18n.language;
     return (
         <section className="w-full bg-black py-16">
             <div className="w-[95%] mx-auto px-4 ">
@@ -40,7 +41,7 @@ const AboutHeroSection = () => {
                                     style={{
                                         fontSize: "18px",
                                         fontWeight: 300,
-                                        lineHeight: "1.5",
+                                        lineHeight: "20px",
                                         maxWidth: "400px",
                                     }}
                                     initial={{ opacity: 0, y: 30 }}
@@ -65,7 +66,7 @@ const AboutHeroSection = () => {
                                         height: "38.66px",
                                         fontSize: "16.66px",
                                         fontWeight: 400,
-                                        borderRadius: "12px",
+                                        borderRadius: "5px",
                                         lineHeight: "18px",
                                         padding: "10px 20px"
                                     }}
@@ -160,7 +161,7 @@ const AboutHeroSection = () => {
                         style={{
                             fontSize: "65px",
                             fontWeight: 200,
-                            lineHeight: "76px",
+                            lineHeight: "65px",
                             textAlign: "center",
                             maxWidth: "1200px",
                         }}
@@ -194,14 +195,14 @@ const AboutHeroSection = () => {
                         transition={{ duration: 0.7, delay: 0.2 }}
                     >
                         <Link
-                            to="/services"
+                            to={`/${lang}/${t('routes.services')}`}
                             className="hidden lg:flex items-center justify-center bg-purple text-white hover:bg-opacity-90 transition-all"
                             style={{
                                 width: "170px",
                                 height: "38.66px",
                                 fontSize: "16.66px",
                                 fontWeight: 400,
-                                borderRadius: "12px",
+                                borderRadius: "5px",
                                 lineHeight: "18px",
                             }}
                         >
@@ -216,7 +217,7 @@ const AboutHeroSection = () => {
                         transition={{ duration: 0.7, delay: 0.2 }}
                     >
                         <Link
-                            to="/services"
+                            to={`/${lang}/${t('routes.services')}`}
                             className="lg:hidden flex items-center justify-center bg-purple text-white hover:bg-opacity-90 transition-all"
                             style={{
                                 width: "170px",

@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
 const PortfolioSection = () => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+    const lang = i18n.language;
 
     const portfolioItems = [
         {
@@ -133,14 +134,14 @@ const PortfolioSection = () => {
                         transition={{ duration: 0.7, delay: 0.2 }}
                     >
                         <Link
-                            to="/portfolio"
+                            to={`/${lang}/${t('routes.portfolio')}`}
                             className="flex mx-auto items-center justify-center bg-neon-green text-black hover:bg-opacity-90 transition-all"
                             style={{
                                 width: "210px",
                                 height: "42px",
                                 fontSize: "16px",
                                 fontWeight: "500",
-                                borderRadius: "12px",
+                                borderRadius: "5px",
                             }}
                         >
                             {t('portfolio_button')}
@@ -156,7 +157,7 @@ const PortfolioSection = () => {
                         transition={{ duration: 0.7, delay: 0.2 }}
                     >
                         <Link
-                            to="/portfolio"
+                            to={`/${lang}/${t('routes.portfolio')}`}
                             className="flex mx-auto items-center justify-center bg-neon-green text-black hover:bg-opacity-90 transition-all"
                             style={{
                                 width: "180px",

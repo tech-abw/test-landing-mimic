@@ -99,7 +99,7 @@ const ServicesSection = () => {
                         {/* Card 1 */}
                         <Link to={services[0].url} className="block">
                             <motion.div
-                                className={`${services[0].bgColor} ${services[0].textColor} p-12 rounded-2xl flex flex-col`}
+                                className={`${services[0].bgColor} ${services[0].textColor} rounded-2xl flex flex-col`}
                                 style={{ height: "600px" }}
                                 initial={{ opacity: 0, x: -30 }}
                                 whileInView={{ opacity: 1, x: 0 }}
@@ -112,7 +112,7 @@ const ServicesSection = () => {
                                         style={{
                                             fontSize: "50px",
                                             fontWeight: 200,
-                                            lineHeight: "50px",
+                                            lineHeight: "65px",
                                         }}
                                         initial={{ opacity: 0 }}
                                         whileInView={{ opacity: 1 }}
@@ -167,7 +167,7 @@ const ServicesSection = () => {
                                         style={{
                                             fontSize: "50px",
                                             fontWeight: 200,
-                                            lineHeight: "50px",
+                                            lineHeight: "65px",
                                         }}
                                         initial={{ opacity: 0 }}
                                         whileInView={{ opacity: 1 }}
@@ -215,7 +215,7 @@ const ServicesSection = () => {
                                             style={{
                                                 fontSize: "50px",
                                                 fontWeight: 200,
-                                                lineHeight: "50px",
+                                                lineHeight: "65px",
                                             }}
                                             initial={{ opacity: 0 }}
                                             whileInView={{ opacity: 1 }}

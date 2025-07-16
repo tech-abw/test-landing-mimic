@@ -39,7 +39,7 @@ const Hero = ({
                 <div className="hidden lg:flex absolute inset-0 flex-col justify-center pl-[70px] py-32">
                     <motion.h1
                         className="text-white mb-6 leading-tight w-[50%]"
-                        style={{ fontSize: desktopTitleFontSize, fontWeight: 400, lineHeight: desktopTitleFontSize }}
+                        style={{ fontSize: desktopTitleFontSize, fontWeight: 400, lineHeight: "65px" }}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.7 }}
