@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
@@ -16,18 +16,17 @@ const MegaMenu = ({ items, isMobileMenuOpen, toggleMenu, closeMenu, isDesktop, m
 
     const handleSubmenuLeave = () => {
         if (isDesktop) {
-          setTimeout(() => {
             setOpenSubmenu(null);
-          }, 2000); // da tiempo para que el clic se registre
         }
-      };
+    };
 
     const handleSubmenuClick = (index) => {
         if (!isDesktop) {
             setOpenSubmenu(openSubmenu === index ? null : index);
         }
     };
-
+    
+      
     const menuVariants = {
         hidden: {
           opacity: 0,
@@ -48,28 +47,31 @@ const MegaMenu = ({ items, isMobileMenuOpen, toggleMenu, closeMenu, isDesktop, m
           },
         },
       };
-      
 
     return (
         <nav ref={menuRef} className="flex-grow flex justify-center items-center ">
             {/* Desktop Menu */}
             <ul className={`hidden lg:flex items-center space-x-4`}>
                 {items.map((item, index) => (
-                    <li 
-                        key={index} 
-                        className="relative flex items-center" 
+                    <div
+                        key={index}
+                        className="relative flex items-center"
                         onMouseEnter={() => handleSubmenuEnter(index)}
                         onMouseLeave={handleSubmenuLeave}
                     >
-                        <Link to={item.path} className="text-black hover:text-gray-600 transition-colors duration-300">
-                            {t(item.name)}
-                        </Link>
-                        {index < items.length - 1 && (
-                            <div
-                                className="bg-black mx-4"
-                                style={{ height: "16px", width: "1px" }}
-                            ></div>
-                        )}
+                        <li 
+                            className="flex items-center" 
+                        >
+                            <Link to={item.path} onClick={handleSubmenuLeave} className="text-black hover:text-gray-600 transition-colors duration-300">
+                                {t(item.name)}
+                            </Link>
+                            {index < items.length - 1 && (
+                                <div
+                                    className="bg-black mx-4"
+                                    style={{ height: "16px", width: "1px" }}
+                                ></div>
+                            )}
+                        </li>
                         <AnimatePresence>
                             {item.submenu && openSubmenu === index && (
                                 <motion.div 
@@ -90,6 +92,15 @@ const MegaMenu = ({ items, isMobileMenuOpen, toggleMenu, closeMenu, isDesktop, m
                                         {/* Promotional Banner */}
                                         <div className="w-1/3 bg-stone-200 bg-opacity-90 p-6 rounded-lg border border-lime-400">
                                             <p className="text-black text-center font-semibold">Banner promocional</p>
+                                            {item.promoBanner && (
+                                                 <Link 
+                                                     to={item.promoBanner.link.path} 
+                                                     onClick={handleSubmenuLeave}
+                                                     className="mt-auto bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition-colors"
+                                                 >
+                                                    {t(item.promoBanner.link.name)}
+                                                </Link>
+                                            )}
                                         </div>
 
                                         {/* Links */}
@@ -100,7 +111,11 @@ const MegaMenu = ({ items, isMobileMenuOpen, toggleMenu, closeMenu, isDesktop, m
                                                         {submenu.links.map((link, linkIndex) => (
                                                             <li key={linkIndex} className="mb-3 flex items-center">
                                                                 <span className="w-2 h-2 bg-lime-400 rounded-full mr-3"></span>
-                                                                <Link to={link.path} className="text-gray-300 hover:text-white transition-colors duration-300">
+                                                                <Link 
+                                                                    to={link.path} 
+                                                                    onClick={handleSubmenuLeave}
+                                                                    className="text-white hover:text-gray-300 transition-colors duration-300"
+                                                                >
                                                                     {t(link.name)}
                                                                 </Link>
                                                             </li>
@@ -113,7 +128,7 @@ const MegaMenu = ({ items, isMobileMenuOpen, toggleMenu, closeMenu, isDesktop, m
                                 </motion.div>
                             )}
                         </AnimatePresence>
-                    </li>
+                    </div>
                 ))}
             </ul>
 
@@ -166,7 +181,11 @@ const MegaMenu = ({ items, isMobileMenuOpen, toggleMenu, closeMenu, isDesktop, m
                                                             <ul className="space-y-3">
                                                                 {submenu.links.map((link, linkIndex) => (
                                                                     <li key={linkIndex}>
-                                                                        <Link to={link.path} onClick={closeMenu} className="text-black hover:text-gray-600 transition-colors duration-300 font-light">
+                                                                        <Link 
+                                                                            to={link.path} 
+                                                                            onClick={closeMenu}
+                                                                            className="text-black hover:text-gray-600 transition-colors duration-300 font-light"
+                                                                        >
                                                                             {t(link.name)}
                                                                         </Link>
                                                                     </li>

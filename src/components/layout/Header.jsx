@@ -68,7 +68,7 @@ const Header = () => {
                    // heading: 'nav.submenu.strategy',
                     links: [
                         { name: 'Tailored solutions', path: `/${lang}/${t('routes.tailored-solutions')}` },
-                        { name: 'Consulting', path: `/${lang}/${t('routes.services')}/consulting` },
+                        { name: 'Consulting', path: `/${lang}/${t('routes.consulting')}` },
                     ]
                 }
             ]

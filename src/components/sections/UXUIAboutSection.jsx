@@ -5,7 +5,16 @@ import { useTranslation } from 'react-i18next';
 const UXUIAboutSection = () => {
   const { t } = useTranslation();
   const title = t("UXUI_AboutSection_title");
-  const text = t("UXUI_AboutSection_text");
+  const text = (
+    <>
+      <p>{t("UXUI_AboutSection_text")}</p>
+      <p><br/>{t("UXUI_AboutSection_text2")}</p>
+    </>
+  );
+
+
+
+
 
   return (
     <div className="bg-gray" style={{ color: '#1a1a1a' }}>

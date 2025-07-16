@@ -115,7 +115,7 @@ const Portfolio = () => {
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: false, margin: "-100px" }}
-                    transition={{ duration: 0.7, delay: 0.1 }}
+                    transition={{ duration: 0.7}}
                 >
                     {t("portfolio.subtitle")}
                 </motion.h1>
@@ -134,13 +134,12 @@ const Portfolio = () => {
                                     borderRadius: "20px",
                                 }}
                                 initial={{ opacity: 0, y: 50 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: false, margin: "-100px" }}
+                                animate={{ opacity: 1, y: 0 }}
                                 transition={{
                                     duration: 0.7,
-                                    delay: rowIndex * 0.1,
+                                    delay: rowIndex * 0.1 + 0.1,
                                 }}
-                                whileHover={{ scale: 1.01 }}
+                                whileHover={{ scale: 1.01 }}                             
                             >
                                 <img
                                     src={portfolioItems[startIndex].image}
@@ -163,8 +162,7 @@ const Portfolio = () => {
                                     borderRadius: "20px",
                                 }}
                                 initial={{ opacity: 0, y: 50 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: false, margin: "-100px" }}
+                                animate={{ opacity: 1, y: 0 }}
                                 transition={{
                                     duration: 0.7,
                                     delay: rowIndex * 0.1 + 0.1,
