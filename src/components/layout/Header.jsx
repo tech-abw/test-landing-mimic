@@ -57,7 +57,7 @@ const Header = () => {
             path: `/${lang}/${t('routes.services')}`,
             submenu: [
                 {
-                    heading: 'nav.submenu.design_development',
+                    //heading: 'nav.submenu.design_development',
                     links: [
                         { name: 'UX-UI Design', path: `/${lang}/${t('routes.ux-ui-designs')}` },
                         { name: 'Website & E-commerce', path: `/${lang}/${t('routes.website-ecommerce-solutions')}` },
@@ -65,7 +65,7 @@ const Header = () => {
                     ]
                 },
                 {
-                    heading: 'nav.submenu.strategy',
+                   // heading: 'nav.submenu.strategy',
                     links: [
                         { name: 'Tailored solutions', path: `/${lang}/${t('routes.tailored-solutions')}` },
                         { name: 'Consulting', path: `/${lang}/${t('routes.services')}/consulting` },
