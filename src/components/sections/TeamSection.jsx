@@ -13,7 +13,7 @@ const TeamSection = () => {
             description: t("team_role_cro"),
         },
         {
-            name: "Karen Quintana.",
+            name: "Karen Quintana",
             image: "/images/about/dummy-team.webp",
             description: t("team_role_coo"),
         },

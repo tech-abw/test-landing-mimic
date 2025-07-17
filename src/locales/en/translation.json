@@ -240,6 +240,11 @@
   "Budget_optimization_description": "Optimize your budget for maximum impact and efficiency.",
   "team_role_coo": "COO",
   "team_role_strategic_partnerships": "Strategic Partnerships",
+  "promoBanner": {
+    "title": "Special Offer!",
+    "alt": "Mimic promotional banner"
+  },
+  "nav.promo.description": "AI solutions to boost your business.",
   "routes": {
     "home": "",
     "about": "about",

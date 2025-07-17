@@ -90,23 +90,19 @@ const MegaMenu = ({ items, isMobileMenuOpen, toggleMenu, closeMenu, isDesktop, m
                                             border-b-[10px] border-b-black"></div>
 
                                         {/* Promotional Banner */}
-                                        <div className="w-1/3 bg-stone-200 bg-opacity-90 p-6 rounded-lg border border-lime-400">
-                                            <p className="text-black text-center font-semibold">Banner promocional</p>
-                                            {item.promoBanner && (
-                                                 <Link 
-                                                     to={item.promoBanner.link.path} 
-                                                     onClick={handleSubmenuLeave}
-                                                     className="mt-auto bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition-colors"
-                                                 >
-                                                    {t(item.promoBanner.link.name)}
-                                                </Link>
-                                            )}
+                                        <div className="w-1/3 bg-stone-200 h-[120px]  bg-opacity-90 p-6 rounded-lg border border-lime-400 relative overflow-hidden">
+                                        {/* Imagen que ocupa todo el div */}
+                                        <img
+                                            src="/images/BannersPromocional/banner-promocion.webp"
+                                            alt="Banner promocional"
+                                            className="absolute inset-0 w-full h-full object-fill"
+                                        />                                    
                                         </div>
-
                                         {/* Links */}
                                         <div className="w-2/3 grid grid-cols-2 gap-x-12 gap-y-6 pl-12">
                                             {item.submenu.map((submenu, subIndex) => (
                                                 <div key={subIndex}>
+                                                    <h3 className="font-semibold text-lg text-white mb-4">{t(submenu.heading)}</h3>
                                                     <ul>
                                                         {submenu.links.map((link, linkIndex) => (
                                                             <li key={linkIndex} className="mb-3 flex items-center">

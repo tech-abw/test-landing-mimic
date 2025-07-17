@@ -249,6 +249,11 @@
   "Go_To_Market_description": "Lanza efectivamente con estrategia, mensaje, posiciónamiento y planificación temprana de penetración.",
   "team_role_coo": "COO",
   "team_role_strategic_partnerships": "Strategic Partnerships",
+  "promoBanner": {
+    "title": "¡Oferta Especial!",
+    "alt": "Banner promocional de Mimic"
+  },
+  "nav.promo.description": "Soluciones de IA para impulsar tu negocio.",
   "routes": {
     "home": "",
     "about": "nosotros",
