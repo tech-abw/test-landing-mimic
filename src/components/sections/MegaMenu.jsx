@@ -143,7 +143,7 @@ const MegaMenu = ({ items, isMobileMenuOpen, toggleMenu, closeMenu, isDesktop, m
                         animate={{ y: 0, opacity: 1 }}
                         exit={{ y: "-100%", opacity: 0 }}
                         transition={{ duration: 0.4, ease: [0.25, 1, 0.5, 1] }}
-                        className="fixed top-0 left-0 right-0 h-[100vh] bg-gray z-50 p-6 flex flex-col shadow-xl"
+                        className="fixed top-0 left-0 right-0 h-[95vh] bg-gray z-50 p-6 flex flex-col shadow-xl"
                     >
                         {/* Header */}
                         <div className="flex justify-between items-center mb-12 flex-shrink-0">
