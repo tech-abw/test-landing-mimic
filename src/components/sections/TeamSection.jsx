@@ -9,48 +9,54 @@ const TeamSection = () => {
     const teamMembers = [
         {
             name: "Iván de la Garza",
-            image: "/images/about/Ivan.png",
+            image: "/images/about/Ivan.webp",
             description: t("team_role_cro"),
         },
         {
-            name: "Miguel L.",
-            image: "/images/about/dummy-team.png",
-            description: t("team_role_frontend"),
-        },
-        {
-            name: "John Rodriguez",
-            image: "/images/about/John.png",
-            description: t("team_role_fullstack_ai"),
+            name: "Karen Quintana.",
+            image: "/images/about/dummy-team.webp",
+            description: t("team_role_coo"),
         },
         {
             name: "Gabriel M.",
-            image: "/images/about/dummy-team.png",
+            image: "/images/about/dummy-team.webp",
             description: t("team_role_fullstack"),
         },
         {
+            name: "Felipe C.",
+            image: "/images/about/dummy-team.webp",
+            description: t("team_role_fullstack"),
+        },
+        
+        {
             name: "Sasha Solano",
-            image: "/images/about/Sasha.png",
+            image: "/images/about/Sasha.webp",
             description: t("team_role_frontend"),
         },
         {
             name: "Mariana Vega",
-            image: "/images/about/Mariana.png",
+            image: "/images/about/Mariana.webp",
             description: t("team_role_ux_ui"),
         },
         {
             name: "Montse A.",
-            image: "/images/about/Montse.png",
+            image: "/images/about/Montse.webp",
             description: t("team_role_graphic_designer"),
         },
         {
             name: "Jennifer Ruiz",
-            image: "/images/about/Jennifer.png",
+            image: "/images/about/Jennifer.webp",
             description: t("team_role_marketing"),
         },
         {
             name: "Amanda Aguirre",
-            image: "/images/about/Amanda.png",
+            image: "/images/about/Amanda.webp",
             description: t("team_role_marketing"),
+        },
+        {
+            name: "Enrique P.",
+            image: "/images/about/dummy-team.webp",
+            description: t("team_role_strategic_partnerships"),
         },
     ];
     return (

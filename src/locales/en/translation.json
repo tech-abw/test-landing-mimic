@@ -182,7 +182,7 @@
   "UXUI_AboutSection_text": "Visual design is more than just aesthetics — it’s the foundation of how users connect with your brand. A strong UX/UI ensures every interaction feels effortless, intuitive, and engaging. It builds trust, communicates value instantly, and keeps users coming back. ",
   "UXUI_AboutSection_text2": "Great design transforms ideas into experiences that convert, retain, and delight. Whether it’s a website, app, or platform, thoughtful UX/UI is what turns functionality into a product people love to use.",
   "AI_AboutSection_title": "Stay ahead of what's happening",
-  "AI_AboutSection_text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+  "AI_AboutSection_text": "We help you harness the power of artificial intelligence to automate, optimize, and scale. From custom chatbots and predictive systems to AI-driven content and workflows, our solutions are tailored to solve real business problems. We turn complex technologies into practical tools that make your operations smarter, faster, and more efficient.",
   "UX_Research": "UX Research",
   "UX_Research_description": "We define the right experience through user research, personas, and journey mapping — ensuring every design decision is grounded in real user needs and business goals.",
   "UI_Kit": "UI Kit",
@@ -238,6 +238,8 @@
   "Technology_description": "Choose the right tools and technologies to build a product that meets your needs and scales with your business.",
   "Budget_optimization": "Budget optimization",
   "Budget_optimization_description": "Optimize your budget for maximum impact and efficiency.",
+  "team_role_coo": "COO",
+  "team_role_strategic_partnerships": "Strategic Partnerships",
   "routes": {
     "home": "",
     "about": "about",
