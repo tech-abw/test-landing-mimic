@@ -59,16 +59,16 @@ const ClientsSection = () => {
 
                 <div className="relative">
                     {/* Desktop marquee rows */}
-                    <div className="hidden lg:block mb-16">
+                    <div className="block mb-16">
                         <div className="marquee-container marquee-top">
                             <div className="marquee-content">
                                 {duplicatedTopClients.map((client, index) => (
-                                    <img key={index} src={`${imgBasePath}${client.logo}`} alt={client.name} className="h-12 mx-12" />
+                                    <img key={index} src={`${imgBasePath}${client.logo}`} alt={client.name} className="h-8 sm:h-12 mx-6" />
                                 ))}
                             </div>
                         </div>
                     </div>
-                    <div className="hidden lg:block">
+                    <div className="block mb-16">
                         <div className="marquee-container marquee-reverse">
                             <div className="marquee-content">
                                 {duplicatedBottomClients.map((client, index) => (
@@ -79,7 +79,7 @@ const ClientsSection = () => {
                     </div>
 
                     {/* Mobile grid */}
-                    <div className="lg:hidden flex flex-wrap justify-center items-center gap-y-10 gap-x-4">
+                   {/*<div className="lg:hidden flex flex-wrap justify-center items-center gap-y-10 gap-x-4">
                         {mobileClients.map((client, index) => (
                             <motion.div
                                 key={client.name}
@@ -92,7 +92,7 @@ const ClientsSection = () => {
                                 <img src={`${imgBasePath}${client.logo}`} alt={client.name} className="h-8" />
                             </motion.div>
                         ))}
-                    </div>
+                    </div>*/}
                 </div>
             </div>
         </section>
