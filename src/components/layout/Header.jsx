@@ -113,9 +113,11 @@ const Header = () => {
 
                 {/* Mobile: Buttons on the right */}
                 <div className="lg:hidden flex items-center space-x-4 ">
+                    <Link to="https://tally.so/r/wb6l9Z">
                     <button className="bg-black text-lime-400 font-bold py-2 px-6 rounded-md hover:bg-gray-800 transition-all duration-300">
                         {t('nav.start_here')}
                     </button>
+                    </Link>
                     <MegaMenu 
                         items={navItems} 
                         isMobileMenuOpen={isMenuOpen} 
