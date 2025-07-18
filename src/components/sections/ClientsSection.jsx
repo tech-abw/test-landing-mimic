@@ -72,7 +72,7 @@ const ClientsSection = () => {
                         <div className="marquee-container marquee-reverse">
                             <div className="marquee-content">
                                 {duplicatedBottomClients.map((client, index) => (
-                                    <img key={index} src={`${imgBasePath}${client.logo}`} alt={client.name} className="h-12 mx-12" />
+                                    <img key={index} src={`${imgBasePath}${client.logo}`} alt={client.name} className="h-8 sm:h-12 mx-6" />
                                 ))}
                             </div>
                         </div>
