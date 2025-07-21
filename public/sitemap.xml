@@ -1,51 +1,116 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Inglés -->
   <url>
-    <loc>https://mimic.agency/</loc>
+    <loc>https://www.mimic.agency/en</loc>
     <lastmod>2025-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://mimic.agency/about</loc>
+    <loc>https://www.mimic.agency/en/about</loc>
     <lastmod>2025-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mimic.agency/services</loc>
+    <loc>https://www.mimic.agency/en/services</loc>
     <lastmod>2025-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mimic.agency/blog</loc>
+    <loc>https://www.mimic.agency/en/ux-ui-designs</loc>
     <lastmod>2025-04-01</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mimic.agency/portfolio</loc>
+    <loc>https://www.mimic.agency/en/website-ecommerce-solutions</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mimic.agency/en/ai-solutions</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mimic.agency/en/tailored-solutions</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.mimic.agency/en/consulting</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.mimic.agency/en/portfolio</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Español -->
+  <url>
+    <loc>https://www.mimic.agency/es</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.mimic.agency/es/nosotros</loc>
     <lastmod>2025-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mimic.agency/disclaimer</loc>
+    <loc>https://www.mimic.agency/es/servicios</loc>
     <lastmod>2025-04-01</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mimic.agency/privacy-policy</loc>
+    <loc>https://www.mimic.agency/es/disenos-ux-ui</loc>
     <lastmod>2025-04-01</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mimic.agency/cookie-policy</loc>
+    <loc>https://www.mimic.agency/es/soluciones-web-ecommerce</loc>
     <lastmod>2025-04-01</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
-</urlset> 
+  <url>
+    <loc>https://www.mimic.agency/es/soluciones-ia</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mimic.agency/es/soluciones-a-medida</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.mimic.agency/es/consulting</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.mimic.agency/es/portafolio</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
