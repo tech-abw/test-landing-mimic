@@ -245,7 +245,7 @@
     "alt": "Mimic promotional banner"
   },
   "nav.promo.description": "AI solutions to boost your business.",
-  "megaMenuBannerImage": "/images/BannersPromocional/banner-promocion-en.webp",
+  "megaMenuBannerImage": "/images/BannersPromocional/banner-promocion.webp",
   "routes": {
     "home": "",
     "about": "about",
