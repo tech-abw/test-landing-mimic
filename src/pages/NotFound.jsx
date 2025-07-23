@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 const NotFound = () => {
     const { t } = useTranslation();
     return (
-        <div className="flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col items-center justify-center py-32 px-4 sm:px-6 lg:px-8">
             <SEO
                 title={t('not_found_seo_title')}
                 description={t('not_found_seo_description')}
