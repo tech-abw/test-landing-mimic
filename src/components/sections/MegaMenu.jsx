@@ -93,8 +93,8 @@ const MegaMenu = ({ items, isMobileMenuOpen, toggleMenu, closeMenu, isDesktop, m
                                         <div className="w-1/3 bg-stone-200 h-[120px]  bg-opacity-90 p-6 rounded-lg border border-lime-400 relative overflow-hidden">
                                         {/* Imagen que ocupa todo el div */}
                                         <img
-                                            src="/images/BannersPromocional/banner-promocion.webp"
-                                            alt="Banner promocional"
+                                            src={t('megaMenuBannerImage')}
+                                            alt={t('promoBanner.alt')}
                                             className="absolute inset-0 w-full h-full object-fill"
                                         />                                    
                                         </div>

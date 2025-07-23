@@ -254,6 +254,7 @@
     "alt": "Banner promocional de Mimic"
   },
   "nav.promo.description": "Soluciones de IA para impulsar tu negocio.",
+  "megaMenuBannerImage": "/images/BannersPromocional/banner-promocion.webp",
   "routes": {
     "home": "",
     "about": "nosotros",

@@ -5,12 +5,12 @@ import { useTranslation } from "react-i18next";
 const NotFound = () => {
     const { t } = useTranslation();
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gray py-12 px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
             <SEO
                 title={t('not_found_seo_title')}
                 description={t('not_found_seo_description')}
             />
-            <div className="md:w-[95%] h-[80vh] w-full mx-auto bg-white rounded-2xl shadow-lg px-8 py-12 text-center flex flex-col justify-center items-center">
+            <div className="md:w-[95%] w-full mx-auto px-8 py-12 text-center flex flex-col justify-center items-center">
                 <div className="flex flex-col sm:flex-row gap-4 md:gap-10 items-center md:items-baseline justify-center mb-8 sm:mb-10 space-x-2 sm:space-x-3">
                     <h1 className="text-8xl sm:text-[167px] text-black leading-none">
                         404

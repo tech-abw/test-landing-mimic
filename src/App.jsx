@@ -87,8 +87,8 @@ function LocalizedRoutes() {
 
                     return <Route key={key} path={finalPath} element={pages[key]} />;
                 })}
+                <Route path="*" element={<NotFound />} />
             </Route>
-            <Route path="*" element={<NotFound />} />
         </Routes>
     );
 }
