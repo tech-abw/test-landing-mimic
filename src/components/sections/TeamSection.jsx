@@ -13,21 +13,26 @@ const TeamSection = () => {
             description: t("team_role_cro"),
         },
         {
-            name: "Karen Quintana",
-            image: "/images/about/dummy-team.webp",
+            name: "Analee Quintana",
+            image: "/images/about/AnaleeQuintana.webp",
             description: t("team_role_coo"),
         },
         {
-            name: "Gabriel M.",
-            image: "/images/about/dummy-team.webp",
-            description: t("team_role_fullstack"),
+            name: "Felipe Cedillo.",
+            image: "/images/about/Felipe.webp",
+            description: "Dev lead",
         },
         {
-            name: "Felipe C.",
-            image: "/images/about/dummy-team.webp",
-            description: t("team_role_fullstack"),
+            name: "Juan Pablo.",
+            image: "/images/about/JuanPablo.webp",
+            description: "Fullstack Sr",
         },
-        
+        {
+            name: "Gerardo",
+            image: "/images/about/Gerardo.webp",
+            description: "Fullstack Sr",
+        },
+
         {
             name: "Sasha Solano",
             image: "/images/about/Sasha.webp",
@@ -195,7 +200,7 @@ const TeamSection = () => {
                             <motion.img
                                 src={member.image}
                                 alt={member.name}
-                                className="w-full rounded-lg mb-2 lg:mb-4 object-cover"
+                                className="w-full rounded-lg mb-2 lg:mb-4 object-cover object-top "
                                 style={{ aspectRatio: "1/1" }}
                                 whileHover={{ scale: 1.05 }}
                                 transition={{ duration: 0.3 }}

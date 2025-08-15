@@ -259,6 +259,9 @@
     "ux-ui-designs": "ux-ui-designs",
     "website-ecommerce-solutions": "website-ecommerce-solutions",
     "tailored-solutions": "tailored-solutions",
-    "consulting": "consulting"
+    "consulting": "consulting",
+    "team_role_dev_lead": "Dev lead",
+    "team_role_fullstack_sr": "Fullstack Sr"
+
   }
 }
