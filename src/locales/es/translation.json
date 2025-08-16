@@ -89,8 +89,6 @@
   "services_seo_title": "Nuestros servicios",
   "services_seo_description": "Diseño UX/UI, soluciones de sitios web y comercio electrónico, consultoría, IA y soluciones a medida.",
   "services_hero_title": "Nos caracterizamos por ser pensantes y creadores",
-  "services_hero_description": "Transformamos ideas en experiencias digitales únicas a través de un diseño innovador y un pensamiento estratégico.",
-  "services_hero_button": "Nuestro trabajo",
   "services_ux_ui_title": "Diseño UX/UI",
   "services_ux_ui_description": "Creando interfaces fáciles de usar y visualmente impactantes.",
   "services_website_ecommerce_title": "Sitios web y E-Commerce",
@@ -201,7 +199,7 @@
       "title": "Portafolio: Nuestro trabajo",
       "description": "Descubre nuestra colección de proyectos donde las ideas se transformaron en soluciones de impacto."
     },
-    "title": "Transformamos ideas en experiencias digitales únicas.",
+    "title": "Transformamos ideas  en experiencias digitalesúnicas",
     "subtitle": "Nuestros proyectos",
     "itemAlt": "Elemento del portafolio {{id}}"
   },
