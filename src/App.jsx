@@ -21,6 +21,7 @@ import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import Consulting from './pages/Consulting';
+import PortafolioStiva from './pages/PortafolioStiva';
 
 
 // Layout de la página
@@ -50,6 +51,8 @@ const pages = {
     'cookie-policy': <CookiePolicy />,
     portfolio: <Portfolio />,
     consulting: <Consulting />,
+    'portafolio-stiva': <PortafolioStiva />,
+
     
 };
 

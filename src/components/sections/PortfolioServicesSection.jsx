@@ -119,7 +119,7 @@ const PortfolioServicesSection = () => {
                             style={{
                                 fontSize: "65px",
                                 fontWeight: 400,
-                                lineHeight: "65px",
+                                lineHeight: "1.5",
                             }}
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
@@ -129,7 +129,7 @@ const PortfolioServicesSection = () => {
                         >
                         </motion.span>
                         <motion.span 
-                            className="lg:hidden md:text-3xl text-3xl leading-none"
+                            className="lg:hidden md:text-3xl text-3xl  leading-[1.3em]"
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
                             viewport={{ margin: "-50px" }}
