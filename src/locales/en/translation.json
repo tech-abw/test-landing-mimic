@@ -204,7 +204,7 @@
   "latest_tools_Website_Ecommerce": "Some of the latest tools we use to craft your new website or E-commerce solution",
   "WebsiteEcommerceAboutSection_title": "Sites that dazzle visitors",
   "WebsiteEcommerceAboutSection_text": "We craft modern, responsive websites and powerful e-commerce platforms that drive growth and enhance user experience. Whether you need a simple landing page, a robust online store, or a custom web presence, we combine design, functionality, and performance to help you connect with your audience and convert visitors into loyal customers.",
-  "title_Tailored_Solutions": "Tailored Solutions",
+  "Tailored_solutions": "Tailored Solutions",
   "description_Tailored_Solutions": "Personalized Apps, CRMs, ERPs designed to fit your unique needs.",
   "button_Tailored_Solutions": "Start here",
   "latest_tools_Tailored": "Personalized Apps, CRMs, ERPs designed to fit your unique needs.Some of the latest tools we use to craft your desired tailored software solution",
@@ -219,8 +219,8 @@
   "ERP_description": "Integrate business processes like finance, inventory, and operations seamlessly.",
   "Apps": "Apps",
   "Apps_description": "Custom web and mobile apps designed for performance and scale.",
-  "Other tailored solutions": "Other tailored solutions",
-  "Other tailored solutions_description": "Custom web and mobile apps designed for performance and scale.", 
+  "Other_tailored_solutions": "Other tailored solutions",
+  "Other_tailored_solutions_description": "Custom web and mobile apps designed for performance and scale.", 
   "title_Consulting": "Consulting",
   "description_Consulting": "With our broad expertise, we focus in serving as your Fractional CTO.",
   "button_Consulting": "Start here",
@@ -244,6 +244,9 @@
     "title": "Special Offer!",
     "alt": "Mimic promotional banner"
   },
+  "policy": {
+      "last_updated": "Last updated"
+    },
   "nav.promo.description": "AI solutions to boost your business.",
   "megaMenuBannerImage": "/images/BannersPromocional/banner-promocion.webp",
   "routes": {

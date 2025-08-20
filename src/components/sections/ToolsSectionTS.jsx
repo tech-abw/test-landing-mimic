@@ -24,8 +24,8 @@ const ToolsSectionAI = () => {
             icon: "/images/TS/apps.png",
         },
         {
-            name: t("Other tailored solutions", "Other tailored solutions"),
-            description: t("Other tailored solutions_description", "Custom web and mobile apps designed for performance and scale."),
+            name: t("Other_tailored_solutions", "Other_tailored_solutions"),
+            description: t("Other_tailored_solutions_description", "Custom web and mobile apps designed for performance and scale."),
             icon: "/images/TS/start.png",
         },
     ];

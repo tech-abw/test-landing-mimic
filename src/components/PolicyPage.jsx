@@ -1,6 +1,9 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
+
 
 const PolicyPage = ({ title, lastUpdated, sections }) => {
+    const { t } = useTranslation();
     return (
         <div className="w-full flex justify-center py-24">
             <div className="md:w-[95%] w-full mx-4 md:mx-0 bg-white rounded-2xl shadow-lg px-8 py-12">
@@ -10,7 +13,7 @@ const PolicyPage = ({ title, lastUpdated, sections }) => {
 
                 <div className="w-full">
                     <p className="text-left text-lg lg:text-xl font-semibold text-gray-600 mb-8">
-                        Last updated: {lastUpdated}
+                    {t("policy.last_updated")}: {lastUpdated}
                     </p>
 
                     {sections.map((section, index) => (

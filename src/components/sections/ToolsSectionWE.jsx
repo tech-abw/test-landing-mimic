@@ -34,8 +34,8 @@ const ToolsSectionWE = () => {
             icon: "/images/WE/shopify_i.png",
         },
         {
-            name: t("Tailored project", "Tailored project"),
-            description: t("Tailored_project_description", ""),
+            name: t("Tailored_solutions", "Tailored_solutions"),
+            description: t("Tailored_solutions_description", ""),
             icon: "/images/WE/start.png",
         },
     

@@ -100,15 +100,23 @@ const Portfolio = () => {
                 description={t("portfolio.seo.description")}
             />
             <div className="w-[95%] mx-auto px-4 py-16">
-                <motion.h1
-                    className="text-3xl lg:text-5xl  lg:w-[35%] mt-10 lg:flex-1 leading-[1.3em]"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: false, margin: "-100px" }}
-                    transition={{ duration: 0.7 }}
-                >
-                    {t("portfolio.title")}
-                </motion.h1>
+            <motion.h1
+  className="text-3xl lg:text-5xl lg:w-[40%] mt-10 lg:flex-1 leading-[1.3em]"
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: false, margin: "-100px" }}
+  transition={{ duration: 0.7 }}
+>
+  {t("portfolio.title")
+    .split("\n")
+    .map((line, i) => (
+      <span key={i}>
+        {line}
+        <br />
+      </span>
+    ))}
+</motion.h1>
+
 
                 <motion.h1
                     className="text-2xl lg:text-4xl pb-1 border-b border-black/30 lg:flex-1 mt-16 mb-16 lg:mt-28 lg:mb-24 "
