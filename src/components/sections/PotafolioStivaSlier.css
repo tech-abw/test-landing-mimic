@@ -8,7 +8,7 @@
     to { transform: translateX(0); }
 }
 
-.marquee-container {
+.marquee-container-stiva {
     width: 100%;
     height: 500px;
     overflow: hidden;
@@ -16,7 +16,7 @@
     background-color: transparent;
 }
 
-.marquee-content {
+.marquee-content-stiva {
     display: flex;
     gap: 40px; /* más razonable para mobile */
     position: absolute;
@@ -28,13 +28,13 @@
     align-items: center;
   }
   
-  .marquee-content a {
+  .marquee-content-stiva a {
     flex-shrink: 0; /* evita que se achiquen */
     text-align: center;
     width: auto;
   }
   
-  .marquee-content img {
+  .marquee-content-stiva img {
     height: 400px;
     width: auto;
     max-width: 100%;
@@ -43,25 +43,23 @@
   
 /* 📱 Mobile override */
 @media (max-width: 640px) {
-    .marquee-content {
+    .marquee-content-stiva {
       gap: 10px; /* o el valor que prefieras para mobile */
     }
   }
   
 
-.marquee-top .marquee-content {
+.marquee-top-stiva .marquee-content-stiva {
     animation: marquee-left 250s linear infinite;
 }
   
-.marquee-reverse .marquee-content {
-    animation: marquee-right 250s linear infinite;
-}
 
-.marquee-container:hover .marquee-content {
+
+.marquee-container-stiva:hover .marquee-content-stiva {
     animation-play-state: paused;
 }
 
-.marquee-item {
+.marquee-item-stiva {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -81,7 +79,7 @@
     transform: scale(1.3);
 }*/
 
-.marquee-item img:hover {
+.marquee-item-stiva img:hover {
     transform: scale(1.4);
     opacity: 1;
     filter: none;
