@@ -84,7 +84,7 @@ const WorkflowSection = () => {
                         </span>
                     </motion.h2>
                     <motion.p 
-                        className="text-center mx-auto text-[18px] font-light leading-[18px] max-w-[350px] lg:text-[25px] lg:font-medium lg:leading-[25px] lg:max-w-[800px]"
+                        className="text-center mx-auto text-[18px] font-light leading-[18px] max-w-[350px] lg:text-[25px] lg:font-medium lg:leading-[1.5] lg:max-w-[800px] "
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: false, margin: "-100px" }}

@@ -23,7 +23,7 @@ const AboutHeroSection = () => {
                                     style={{
                                         fontSize: "65px",
                                         fontWeight: 400,
-                                        lineHeight: 1.2,
+                                        lineHeight: "65px",
                                     }}
                                     initial={{ opacity: 0, y: 40 }}
                                     whileInView={{ opacity: 1, y: 0 }}
@@ -41,7 +41,7 @@ const AboutHeroSection = () => {
                                     style={{
                                         fontSize: "18px",
                                         fontWeight: 300,
-                                        lineHeight: "20px",
+                                        lineHeight: "1.5",
                                         maxWidth: "400px",
                                     }}
                                     initial={{ opacity: 0, y: 30 }}
