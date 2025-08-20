@@ -33,8 +33,8 @@ const PotafolioStivaSlier = () => {
         <div className="relative">
           {/* Desktop marquee rows */}
           <div className="block mb-16">
-            <div className="marquee-container marquee-top">
-              <div className="marquee-content">
+            <div className="marquee-container-stiva marquee-top-stiva">
+              <div className="marquee-content-stiva">
                 {duplicatedTopClients.map((client, index) => (
                   <a
                   key={index}
