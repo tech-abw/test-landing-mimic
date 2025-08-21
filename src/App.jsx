@@ -52,6 +52,7 @@ const pages = {
     portfolio: <Portfolio />,
     consulting: <Consulting />,
     'portafolio-stiva': <PortafolioStiva />,
+    'not-found': <NotFound />,
 
     
 };
@@ -90,7 +91,7 @@ function LocalizedRoutes() {
 
                     return <Route key={key} path={finalPath} element={pages[key]} />;
                 })}
-                <Route path="*" element={<NotFound />} />
+                <Route path="*" element={<Navigate to={`/${lng}/${t('routes.not-found')}`} replace />} />
             </Route>
         </Routes>
     );

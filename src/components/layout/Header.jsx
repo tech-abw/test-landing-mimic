@@ -13,6 +13,8 @@ const Header = () => {
     const isDesktop = useMediaQuery('(min-width: 1024px)');
     const location = useLocation();
     const navigate = useNavigate();
+    
+    
 
     const handleLanguageChange = (newLang) => {
         const currentLang = i18n.language;
@@ -50,6 +52,7 @@ const Header = () => {
     const lang = i18n.language;
 
     const navItems = [
+        
         { name: t('nav.home'), path: `/${lang}` },
         { name: t('nav.about'), path: `/${lang}/${t('routes.about')}` },
         {
@@ -75,9 +78,19 @@ const Header = () => {
         },
         { name: t('nav.portfolio'), path: `/${lang}/${t('routes.portfolio')}` },
     ];
+    // Detectar si estamos en una página que requiere cabecera blanca
+    const whiteHeaderKeys = ['portfolio', 'not-found']; // claves comunes en ambos idiomas
+    const currentPathSegment = location.pathname.split('/')[2]; // después del idioma
+const currentLangRoutes = i18n.getDataByLanguage(lang)?.translation.routes || {};
+
+const routeKey = Object.keys(currentLangRoutes).find(
+  key => currentLangRoutes[key] === currentPathSegment
+);
+const notFoundPath = `/${lang}/${currentLangRoutes['not-found']}`;
+const isWhiteHeader = whiteHeaderKeys.includes(routeKey) || location.pathname === notFoundPath;
 
     return (
-        <header className="fixed w-full flex justify-center items-center  py-3 z-50 bg-gray">
+        <header className={`fixed w-full flex justify-center items-center py-3 z-50 ${isWhiteHeader ? 'bg-white' : 'bg-gray'}`}>
             <div className="flex w-full max-w-screen-2xl px-6 items-center justify-between">
                 <div className="flex-shrink-0">
                     <Logo />
