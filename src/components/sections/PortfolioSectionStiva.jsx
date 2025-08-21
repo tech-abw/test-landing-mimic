@@ -71,7 +71,7 @@ const PortfolioSection = () => {
 
     return (
         <section className="w-full bg-white py-10 md:py-24">
-            <div className="w-[95%] mx-auto">
+            <div className="w-[100%] mx-auto">
                 
                 {/* Versión Desktop - Layout personalizado */}
                 <div className="hidden lg:block mt-12">

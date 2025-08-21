@@ -50,7 +50,7 @@
   
 
 .marquee-top-stiva .marquee-content-stiva {
-    animation: marquee-left 250s linear infinite;
+    animation: marquee-left 600s linear infinite;
 }
   
 
@@ -63,7 +63,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 0 20px;
+    /*padding: 0 20px;*/
     background-color: transparent;
     min-width: 300px;
     height: 80px;

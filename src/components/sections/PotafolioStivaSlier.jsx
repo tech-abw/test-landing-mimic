@@ -29,7 +29,7 @@ const PotafolioStivaSlier = () => {
 
   return (
     <section className="w-full bg-white py-0 md:py-0">
-      <div className="w-[95%] mx-auto px-4">
+      <div className="w-[100%] mx-auto">
         <div className="relative">
           {/* Desktop marquee rows */}
           <div className="block mb-16">

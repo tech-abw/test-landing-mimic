@@ -79,7 +79,7 @@ const Header = () => {
         { name: t('nav.portfolio'), path: `/${lang}/${t('routes.portfolio')}` },
     ];
     // Detectar si estamos en una página que requiere cabecera blanca
-    const whiteHeaderKeys = ['portfolio', 'not-found']; // claves comunes en ambos idiomas
+    const whiteHeaderKeys = ['portfolio', 'not-found' ,'portafolio-stiva']; // claves comunes en ambos idiomas
     const currentPathSegment = location.pathname.split('/')[2]; // después del idioma
 const currentLangRoutes = i18n.getDataByLanguage(lang)?.translation.routes || {};
 
