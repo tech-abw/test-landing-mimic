@@ -107,15 +107,10 @@ const Portfolio = () => {
                viewport={{ once: false, margin: "-100px" }}
                transition={{ duration: 0.7 }}
 >
-               {t("portfolio.title")
-                    .split("\n")
-                    .map((line, i) => (
-                        <span key={i}>
-                            {line}
-                            <br />
-                        </span>
-                    ))}
-    </motion.h1>
+               {t("portfolio.title1")}
+               {t("portfolio.title2")}
+               {t("portfolio.title3")}
+                        </motion.h1>
 
 
                 <motion.h1

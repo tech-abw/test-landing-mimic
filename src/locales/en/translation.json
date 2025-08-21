@@ -194,7 +194,9 @@
       "title": "Portfolio: Our work",
       "description": "Meet our unique digital products we've crafted for our amazing clients."
     },
-    "title": "Transform ideas into unique digital experiences.",
+    "title1": "Transform ideas",
+    "title2": "into unique digital",
+    "title3": "experiences.",
     "subtitle": "Our work",
     "itemAlt": "Portfolio item {{id}}"
   },

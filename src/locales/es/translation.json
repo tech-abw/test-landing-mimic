@@ -201,7 +201,9 @@
       "title": "Portafolio: Nuestro trabajo",
       "description": "Descubre nuestra colección de proyectos donde las ideas se transformaron en soluciones de impacto."
     },
-    "title": "Transformamos ideas\nen experiencias digitales\núnicas",
+    "title1": "Transformamos ideas",
+    "title2": " en experiencias digitales",
+    "title3": " únicas",
     "subtitle": "Nuestros proyectos",
     "itemAlt": "Elemento del portafolio {{id}}"
   },
