@@ -242,6 +242,7 @@
   "Budget_optimization_description": "Optimize your budget for maximum impact and efficiency.",
   "team_role_coo": "COO",
   "team_role_strategic_partnerships": "Strategic Partnerships",
+  "title_Tailored_Solutions": "Tailored Solutions",
   "promoBanner": {
     "title": "Special Offer!",
     "alt": "Mimic promotional banner"
@@ -249,6 +250,57 @@
   "policy": {
       "last_updated": "Last updated"
     },
+    "home": {
+    "meta": {
+      "title": "Innovation starts with imitation",
+      "description": "At Mimic, we craft bespoke digital solutions tailored to your vision. Got an idea? Anything is possible. Let’s build!"
+    }
+  },
+  "meta": {
+    "keywords": "digital solutions, web development, UX/UI design, AI solutions, e-commerce, no-code development"
+  },
+  "services": {
+    "meta": {
+      "title": "Our services",
+      "description": "At Mimic, we craft bespoke digital solutions tailored to your vision. Got an idea? Anything is possible. Let’s build!"
+    }
+  },
+  "about": {
+    "meta": {
+      "title": "Get to know our agency",
+      "description": "Innovation starts with imitation. We use this principle to craft digital solutions that transform ideas into unique digital experiences."
+    }
+  },
+  "portfolio-seo": {
+    "meta": {
+      "title": "Portfolio: Our work",
+      "description": "Meet our unique digital products we've crafted for our amazing clients."
+    }
+  },
+  "uxui": {
+    "meta": {
+      "title": "UX/UI Designs | Mimic",
+      "description": "We craft intuitive, accessible, and visually engaging interfaces that elevate user experience across all devices."
+    }
+  },
+  "webecommerce": {
+    "meta": {
+      "title": "Website & E-commerce Solutions | Mimic",
+      "description": "We craft intuitive, accessible, and visually engaging interfaces that elevate user experience across all devices."
+    }
+  },
+  "ai": {
+    "meta": {
+      "title": "AI Solutions | Mimic",
+      "description": "Automate, optimize, and scale with AI solutions like chatbots, autonomous agents, and intelligent workflows."
+    }
+  },
+  "tailored-solutions": {
+    "meta": {
+      "title": "Tailored Solutions | Mimic",
+      "description": "We craft tailored software solutions using modern tools that adapt to your specific needs."
+    }
+  },
   "nav.promo.description": "AI solutions to boost your business.",
   "megaMenuBannerImage": "/images/BannersPromocional/banner-promocion.webp",
   "routes": {
@@ -266,7 +318,11 @@
     "tailored-solutions": "tailored-solutions",
     "not-found": "not-found",
     "consulting": "consulting",
-    "portafolio-stiva": "portafolio-stiva"
+    "portafolio-stiva": "portafolio-stiva",
+    "portafolio-agro": "portafolio-agro",
+    "portafolio-platidrum": "portafolio-platidrum",
+    "portafolio-urun": "portafolio-urun",
+    "portafolio-byMomento": "portafolio-byMomento"
 
   }
 }

@@ -266,22 +266,129 @@
     
   "title": "Grupo Stiva",
   "subtitle": "Descripción",
-  "text1": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-  "text2": "Why do we use it?",
+  "text1": "Lorem Ipsum es simplemente un texto ficticio utilizado en la industria de la impresión y la composición tipográfica. Ha sido el estándar desde el siglo XVI, cuando un impresor desconocido tomó una galera de tipos y los reorganizó para crear un libro de muestras. Ha sobrevivido más de cinco siglos, incluyendo la transición al diseño digital, manteniéndose prácticamente sin cambios.",
+  "text2": "Where does it come from?",
   "text3": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
-  "text4": "Where does it come from?",
-  "text5": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 .",
-  
-  
+  "text4": "Es un hecho ampliamente conocido que el contenido legible puede distraer al lector al evaluar el diseño de una página.",
+  "text5": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",  
   "disclaimer-title": "Aviso Legal",
   "disclaimer-text": "Lorem Ipsum es simplemente un texto ficticio utilizado en la industria de la impresión y la composición tipográfica. Ha sido el estándar desde el siglo XVI, cuando un impresor desconocido tomó una galera de tipos y los reorganizó para crear un libro de muestras. Ha sobrevivido más de cinco siglos, incluyendo la transición al diseño digital, manteniéndose prácticamente sin cambios.\n\n¿Por qué lo usamos?\nEs un hecho ampliamente conocido que el contenido legible puede distraer al lector al evaluar el diseño de una página.",
   "otros-proyectos": "Otros Proyectos"
-  
- 
+  },
+  "portfolio-agro": {
+    "seo": {
+      "title": "Portfolio: Our work",
+      "description": "Meet our unique digital products we've crafted for our amazing clients."
+    },
+    "title": "AgroMod",
+    "subtitle": "Descripción",
+    "text1": "Lorem Ipsum es simplemente un texto ficticio utilizado en la industria de la impresión y la composición tipográfica. Ha sido el estándar desde el siglo XVI, cuando un impresor desconocido tomó una galera de tipos y los reorganizó para crear un libro de muestras. Ha sobrevivido más de cinco siglos, incluyendo la transición al diseño digital, manteniéndose prácticamente sin cambios.",
+    "text2": "¿Por qué lo usamos?",
+    "text3": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+    "text4": "Where does it come from?",
+    "text5": "amet. comes from a line in section 1.10.32.The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
+    "disclaimer-title": "Aviso Legal",
+    "disclaimer-text": "Lorem Ipsum es simplemente un texto ficticio utilizado en la industria de la impresión y la composición tipográfica. Ha sido el estándar desde el siglo XVI, cuando un impresor desconocido tomó una galera de tipos y los reorganizó para crear un libro de muestras. Ha sobrevivido más de cinco siglos, incluyendo la transición al diseño digital, manteniéndose prácticamente sin cambios.",
+    "otros-proyectos": "Otros Proyectos"
+  },
+  "portfolio-platidrum": {
+    "seo": {
+      "title": "Portfolio: Our work",
+      "description": "Meet our unique digital products we've crafted for our amazing clients."
+    },
+    "title": "Platidrum",
+    "subtitle": "Descripción",
+    "text1": "Lorem Ipsum es simplemente un texto ficticio utilizado en la industria de la impresión y la composición tipográfica. Ha sido el estándar desde el siglo XVI, cuando un impresor desconocido tomó una galera de tipos y los reorganizó para crear un libro de muestras. Ha sobrevivido más de cinco siglos, incluyendo la transición al diseño digital, manteniéndose prácticamente sin cambios.",
+    "text2": "¿Por qué lo usamos?",
+    "text3": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+    "text4": "Where does it come from?",
+    "text5": "amet. comes from a line in section 1.10.32.The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
+    "disclaimer-title": "Aviso Legal",
+    "disclaimer-text": "Lorem Ipsum es simplemente un texto ficticio utilizado en la industria de la impresión y la composición tipográfica. Ha sido el estándar desde el siglo XVI, cuando un impresor desconocido tomó una galera de tipos y los reorganizó para crear un libro de muestras. Ha sobrevivido más de cinco siglos, incluyendo la transición al diseño digital, manteniéndose prácticamente sin cambios.",
+    "otros-proyectos": "Otros Proyectos"
+  },
+  "portafolio-urun": {  
+    "title": "URUN",
+    "subtitle": "Descripción",
+    "text1": "Lorem Ipsum es simplemente un texto ficticio utilizado en la industria de la impresión y la composición tipográfica. Ha sido el estándar desde el siglo XVI, cuando un impresor desconocido tomó una galera de tipos y los reorganizó para crear un libro de muestras. Ha sobrevivido más de cinco siglos, incluyendo la transición al diseño digital, manteniéndose prácticamente sin cambios.",
+    "text2": "¿Por qué lo usamos?",
+    "text3": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+    "text4": "Where does it come from?",
+    "text5": "amet. comes from a line in section 1.10.32.The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
+    "disclaimer-title": "Aviso Legal",
+    "disclaimer-text": "Lorem Ipsum es simplemente un texto ficticio utilizado en la industria de la impresión y la composición tipográfica. Ha sido el estándar desde el siglo XVI, cuando un impresor desconocido tomó una galera de tipos y los reorganizó para crear un libro de muestras. Ha sobrevivido más de cinco siglos, incluyendo la transición al diseño digital, manteniéndose prácticamente sin cambios.",
+    "otros-proyectos": "Otros Proyectos"
+  },
+  "portfolio-byMomento": {
+    "seo": {
+      "title": "Portfolio: Our work",
+      "description": "Meet our unique digital products we've crafted for our amazing clients."
+    },
+    "title": "ByMomento",
+    "subtitle": "Descripción",
+    "text1": "Lorem Ipsum es simplemente un texto ficticio utilizado en la industria de la impresión y la composición tipográfica. Ha sido el estándar desde el siglo XVI, cuando un impresor desconocido tomó una galera de tipos y los reorganizó para crear un libro de muestras. Ha sobrevivido más de cinco siglos, incluyendo la transición al diseño digital, manteniéndose prácticamente sin cambios.",
+    "text2": "¿Por qué lo usamos?",
+    "text3": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+    "text4": "Where does it come from?",
+    "text5": "amet. comes from a line in section 1.10.32.The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
+    "disclaimer-title": "Aviso Legal",
+    "disclaimer-text": "Lorem Ipsum es simplemente un texto ficticio utilizado en la industria de la impresión y la composición tipográfica. Ha sido el estándar desde el siglo XVI, cuando un impresor desconocido tomó una galera de tipos y los reorganizó para crear un libro de muestras. Ha sobrevivido más de cinco siglos, incluyendo la transición al diseño digital, manteniéndose prácticamente sin cambios.",
+    "otros-proyectos": "Otros Proyectos"
   },
   "policy": {
       "last_updated": "Última actualización"
     },
+    "home": {
+    "meta": {
+      "title": "La innovación comienza por la imitación",
+      "description": "En Mimic, creamos soluciones digitales a tu medida. ¿Tienes una idea? Todo se puede lograr. ¡A trabajar!"
+    }
+  },
+  "meta": {
+    "keywords": "soluciones digitales, desarrollo web, diseño UX/UI, inteligencia artificial, comercio electrónico, desarrollo sin código"
+  },
+  "services": {
+    "meta": {
+      "title": "Nuestros servicios",
+      "description": "En Mimic, creamos soluciones digitales a tu medida. ¿Tienes una idea? Todo se puede lograr. ¡A trabajar!"
+    }
+  },
+  "about": {
+    "meta": {
+      "title": "Conoce nuestra agencia",
+      "description": "La innovación comienza con la imitación. Usamos este principio para crear soluciones digitales que transforman ideas en experiencias digitales únicas."
+    }
+  },
+  "portfolio-seo": {
+    "meta": {
+      "title": "Portafolio: Nuestro trabajo",
+      "description": "Descubre nuestra colección de proyectos donde las ideas se transformaron en soluciones de impacto."
+    }
+  },
+  "ux-ui-designs": {
+    "meta": {
+      "title": "Diseños UX/UI | Mimic",
+      "description": "Creamos interfaces intuitivas, accesibles y visualmente atractivas que mejoran la experiencia del usuario en cada dispositivo."
+    }
+  },
+  "webecommerce": {
+    "meta": {
+      "title": "Soluciones Web y de E-commerce | Mimic",
+      "description": "Creamos sitios web y tiendas en línea que combinan diseño, funcionalidad y escalabilidad para impulsar tu presencia digital."
+    }
+  },
+  "ai": {
+    "meta": {
+      "title": "Soluciones de IA | Mimic",
+      "description": "Automatiza, optimiza y escala con soluciones de inteligencia artificial como chatbots, agentes autónomos y flujos de trabajo inteligentes."
+    }
+  },
+  "tailored-solutions": {
+    "meta": {
+      "title": "Soluciones a Medida | Mimic",
+      "description": "Creamos soluciones de software personalizadas utilizando herramientas modernas que se adaptan a tus necesidades específicas."
+    }
+  },
   "routes": {
     "home": "",
     "about": "nosotros",
@@ -297,7 +404,12 @@
     "tailored-solutions": "soluciones-a-medida",
     "not-found": "404-no-encontrado",
     "consulting": "consulting",
-    "portafolio-stiva": "portafolio-stiva"
+    "portafolio-stiva": "portafolio-stiva",
+    "portafolio-agro": "portafolio-agro",
+    "portafolio-platidrum": "portafolio-platidrum",
+    "portafolio-urun": "portafolio-urun",
+    "portafolio-byMomento": "portafolio-byMomento"
+
    
   }
 }

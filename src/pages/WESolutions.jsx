@@ -1,20 +1,31 @@
+import { useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import HeadManager from "../components/sections/HeadTags";
 import Hero from "../components/sections/Hero";
 import CalendarSection from "../components/sections/CalendarSection";
-import SEO from "../components/SEO";
+
 import SliderWEServices from "../components/sections/SliderWEServices";
 import WEAboutSection from "../components/sections/WEAboutSection";
 import ToolsSectionWE from "../components/sections/ToolsSectionWE";
 import WorkflowSection from "../components/sections/WorkflowSection";       
 
 const WebsiteEcommerceSolutions = () => {
-    const { t } = useTranslation();
+    const location = useLocation();
+    const { i18n, t } = useTranslation();
+    const langFromPath = location.pathname.startsWith("/en") ? "en" : "es";
+
+    if (i18n.language !== langFromPath) {
+        i18n.changeLanguage(langFromPath);
+    }
+
     return (
-        <div>
-            <SEO
-                title={t('title_Website_Ecommerce_Solutions')}
-                description={t('description_Website_Ecommerce_Solutions')}
-            />
+        <>
+        <HeadManager
+          lang={langFromPath}
+          title={t("webecommerce.meta.title")}
+          description={t("webecommerce.meta.description")}
+          imageUrl="https://mimic.agency/images/WebsiteEcommerceSolutions.png"
+        />  
             <Hero
                 title={t('title_Website_Ecommerce_Solutions')}
                 description={t('description_Website_Ecommerce_Solutions')}
@@ -31,7 +42,7 @@ const WebsiteEcommerceSolutions = () => {
             <ToolsSectionWE />
             <WorkflowSection />
             <CalendarSection />
-        </div>
+        </>
     );
 };
 

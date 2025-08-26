@@ -6,15 +6,26 @@ import SliderTSServices from "../components/sections/SliderTSServices";
 import TSAboutSection from "../components/sections/TSAboutSeccion";
 import ToolsSectionTS from "../components/sections/ToolsSectionTS";
 import WorkflowSection from "../components/sections/WorkflowSection";       
+import HeadManager from '../components/sections/HeadTags';
+import { useLocation } from "react-router-dom";
 
 const TailoredSolutions = () => {
-    const { t } = useTranslation();
+    const location = useLocation();
+    const { i18n, t } = useTranslation();
+    const langFromPath = location.pathname.startsWith("/en") ? "en" : "es";
+  
+    if (i18n.language !== langFromPath) {
+      i18n.changeLanguage(langFromPath);
+    }
     return (
-        <div>
-            <SEO
-                title={t('title_Tailored_Solutions')}
-                description={t('description_Tailored_Solutions')}
-            />
+        <>
+      <HeadManager
+        lang={langFromPath}
+        title={t("tailored-solutions.meta.title")}
+        description={t("tailored-solutions.meta.description")}
+        imageUrl="https://mimic.agency/images/TailoredSolutions.png"
+      />
+
             <Hero
                 title={t('title_Tailored_Solutions')}
                 description={t('description_Tailored_Solutions')}
@@ -31,7 +42,7 @@ const TailoredSolutions = () => {
             <ToolsSectionTS />
             <WorkflowSection />
             <CalendarSection />
-        </div>
+        </>
     );
 };
 

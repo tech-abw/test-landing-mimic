@@ -4,17 +4,31 @@ import PortfolioServicesSection from "../components/sections/PortfolioServicesSe
 import ServicesSection from "../components/sections/ServicesSection";
 import TechStackSection from "../components/sections/TechStackSection";
 import CalendarSection from "../components/sections/CalendarSection";
-import SEO from "../components/SEO";
+import { useLocation } from "react-router-dom";
+import HeadManager from "../components/sections/HeadTags";
+
 
 const Services = () => {
-    const { t, i18n } = useTranslation();
-    const lang = i18n.language;
+    const location = useLocation();
+    const { i18n, t } = useTranslation();
+    //const langFromPath = location.pathname.startsWith("/en") ? "en" : "es";
+    const lang = location.pathname.startsWith("/en") ? "en" : "es";
+
+  
+    if (i18n.language !== lang) {
+      i18n.changeLanguage(lang);
+    }
+  
     return (
-        <div>
-            <SEO
-                title={t('services_seo_title')}
-                description={t('services_seo_description')}
-            />
+        <>
+      <HeadManager
+        lang={lang}
+        title={t("services.meta.title")}
+        description={t("services.meta.description")}
+        imageUrl="https://mimic.agency/images/ServicesHero.png"
+      />
+
+
             <Hero
                 title={t('services_hero_title')}
                 description={t('services_hero_description')}
@@ -30,7 +44,7 @@ const Services = () => {
             <PortfolioServicesSection />
             <TechStackSection bgColor="bg-gray" textColor="text-black" image="/images/tech/techstack-black.png" />
             <CalendarSection />
-        </div>
+        </>
     );
 };
 
