@@ -6,14 +6,27 @@ import TechStackSection from "../components/sections/TechStackSection";
 import TestimonialsSection from "../components/sections/TestimonialsSection";
 import SEO from "../components/SEO";
 import { useTranslation } from "react-i18next";
+import StructuredData from "../components/sections/StructuredData";
 
 const Home = () => {
     const { t } = useTranslation();
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Mimic Agency",
+        "url": "https://mimic.agency",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://mimic.agency/buscar?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      };    
     return (
         <main>
+        <StructuredData data={jsonLd} />
             <SEO 
-                title="Mimic - Innovation starts with imitation"
-                description="We specialize in crafting bespoke digital solutions tailored to elevate your brand's online presence and engage your audience effectively. UX Ui Design, AI automations, No-Code and Low code development and Tailored solutions."
+                title={t('hero_title')}
+                description={t('hero_description')}
             />
             <Hero
                 buttonText={t('start_here_button')}
