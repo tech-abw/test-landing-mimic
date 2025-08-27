@@ -1,5 +1,4 @@
-/* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -10,9 +9,13 @@ const Portfolio = () => {
   const { i18n, t } = useTranslation();
   const langFromPath = location.pathname.startsWith("/en") ? "en" : "es";
 
-  if (i18n.language !== langFromPath) {
-    i18n.changeLanguage(langFromPath);
-  }
+  useEffect(() => {
+    if (i18n.language !== langFromPath) {
+      i18n.changeLanguage(langFromPath);
+    }
+  }, [langFromPath, i18n]);
+
+  const canonicalUrl = `https://www.mimic.agency${location.pathname}`;
 
   const portfolioItems = [
     { id: 1, image: "/images/portfolio/portfolio-1.png", width: { desktop: 70, mobile: 100 }, link: "https://stiva.com" },
@@ -37,7 +40,13 @@ const Portfolio = () => {
         lang={langFromPath}
         title={t("portfolio-seo.meta.title")}
         description={t("portfolio-seo.meta.description")}
-        imageUrl="https://mimic.agency/images/PortfolioHero.png"
+        imageUrl="https://www.mimic.agency/images/PortfolioHero.png"
+        canonicalUrl={canonicalUrl}
+        hreflangs={[
+          { lang: "es", href: "https://www.mimic.agency/es/portafolio" },
+          { lang: "en", href: "https://www.mimic.agency/en/portfolio" },
+          { lang: "x-default", href: "https://www.mimic.agency/es/portafolio" }
+        ]}
       />
 
       <div className="bg-white text-black lg:mt-16 lg:mb-24">

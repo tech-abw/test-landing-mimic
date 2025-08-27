@@ -301,6 +301,12 @@
       "description": "We craft tailored software solutions using modern tools that adapt to your specific needs."
     }
   },
+  "consulting": {
+    "meta": {
+      "title": "Consulting | Mimic",
+      "description": "We serve as your Fractional CTO to help you launch, scale, or transform your digital business with clarity, strategy, and execution."
+    }
+  },
   "nav.promo.description": "AI solutions to boost your business.",
   "megaMenuBannerImage": "/images/BannersPromocional/banner-promocion.webp",
   "routes": {

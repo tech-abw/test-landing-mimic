@@ -22,6 +22,10 @@ import Footer from './components/layout/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import Consulting from './pages/Consulting';
 import PortafolioStiva from './pages/PortafolioStiva';
+import PortafolioAgro from './pages/PortafolioAgro';
+import PortafolioPlatidrum from './pages/PortafolioPlatidrum';
+import PortafolioUrun from './pages/PortafolioUrun';
+import PortafolioByMomento from './pages/PortafolioByMomento';
 
 
 // Layout de la página
@@ -53,6 +57,10 @@ const pages = {
     consulting: <Consulting />,
     'portafolio-stiva': <PortafolioStiva />,
     'not-found': <NotFound />,
+    'portafolio-agro': <PortafolioAgro />,
+    'portafolio-platidrum': <PortafolioPlatidrum />,
+    'portafolio-urun': <PortafolioUrun />,
+    'portafolio-byMomento': <PortafolioByMomento />,
 
     
 };
@@ -100,12 +108,15 @@ function LocalizedRoutes() {
 // Componente raíz que configura el enrutador principal
 export default function AppContainer() {
     const { i18n } = useTranslation();
-
+    const lang = i18n.language.split("-")[0];
     return (
         <BrowserRouter>
             <ScrollToTop />
             <Routes>
-                <Route path="/" element={<Navigate to={`/${i18n.language.split('-')[0]}`} replace />} />
+                <Route path="/" element={<Navigate to={`/${lang}`} replace />} />
+                <Route path="/portfolio" element={<Navigate to={`/es/portafolio`} replace />} />
+                <Route path="/services" element={<Navigate to={`/es/servicios`} replace />} />
+                <Route path="/about" element={<Navigate to={`/es/nosotros`} replace />} />
                 <Route path="/:lng/*" element={<LocalizedRoutes />} />
             </Routes>
         </BrowserRouter>

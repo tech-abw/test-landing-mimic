@@ -5,16 +5,22 @@ import TeamSection from '../components/sections/TeamSection';
 import AboutHeroSection from '../components/sections/AboutHeroSection';
 import HeadManager from '../components/sections/HeadTags';
 import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
+
 
 const About = () => {
   const location = useLocation();
   const { i18n, t } = useTranslation();
+
   const lang = location.pathname.startsWith("/en") ? "en" : "es";
 
-  
+  useEffect(() => {
     if (i18n.language !== lang) {
       i18n.changeLanguage(lang);
     }
+  }, [lang, i18n]);
+
+  const canonicalUrl = `https://www.mimic.agency${location.pathname}`;
 
   return (
     <>
@@ -23,6 +29,12 @@ const About = () => {
         title={t("about.meta.title")}
         description={t("about.meta.description")}
         imageUrl="https://mimic.agency/images/AboutHero.png"
+        canonicalUrl={canonicalUrl}
+        hreflangs={[
+          { lang: "es", href: "https://www.mimic.agency/es/nosotros" },
+          { lang: "en", href: "https://www.mimic.agency/en/about" },
+          { lang: "x-default", href: "https://www.mimic.agency/es/nosotros" }
+        ]}
       />
       <Hero 
         title={t('about_hero_title')}

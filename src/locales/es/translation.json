@@ -389,6 +389,12 @@
       "description": "Creamos soluciones de software personalizadas utilizando herramientas modernas que se adaptan a tus necesidades específicas."
     }
   },
+  "consulting": {
+    "meta": {
+      "title": "Consultoría estratégica | Mimic",
+      "description": "Actuamos como tu Fractional CTO para ayudarte a lanzar, escalar o transformar tu negocio digital con claridad, estrategia y ejecución."
+    }
+  },
   "routes": {
     "home": "",
     "about": "nosotros",

@@ -244,3 +244,38 @@ export const getTailoredSolutionsSchema = (lang) => {
     }
   };
 };
+export const getConsultingSchema = (lang) => {
+  const isSpanish = lang === "es";
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": isSpanish
+      ? "Consultoría estratégica | Mimic"
+      : "Strategic Consulting | Mimic",
+    "url": isSpanish
+      ? "https://www.mimic.agency/es/consulting"
+      : "https://www.mimic.agency/en/consulting",
+    "inLanguage": lang,
+    "description": isSpanish
+      ? "Actuamos como tu Fractional CTO para ayudarte a lanzar, escalar o transformar tu negocio digital con claridad, estrategia y ejecución."
+      : "We serve as your Fractional CTO to help you launch, scale, or transform your digital business with clarity, strategy, and execution.",
+    "mainEntity": {
+      "@type": "Service",
+      "name": isSpanish ? "Consultoría estratégica digital" : "Digital Strategic Consulting",
+      "serviceType": isSpanish
+        ? "Lanzamiento de producto, UX/UI, gestión de equipos, optimización de presupuesto"
+        : "Product launch, UX/UI, team building, budget optimization",
+      "provider": {
+        "@type": "Organization",
+        "name": "Mimic Agency",
+        "url": "https://mimic.agency",
+        "logo": "https://mimic.agency/images/logo.png"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": isSpanish ? "Latinoamérica y global" : "Latin America and global"
+      }
+    }
+  };
+};

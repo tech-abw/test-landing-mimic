@@ -5,15 +5,26 @@ import SEO from "../components/SEO";
 import ConsultingAboutSection from "../components/sections/ConsultingAboutSection";
 import ToolsSectionConsulting from '../components/sections/ToolsSectionConsulting';
 import WorkflowSection from '../components/sections/WorkflowSection';
+import HeadManager from '../components/sections/HeadTags';
+import { useLocation } from "react-router-dom";
 
 const Consulting = () => {
-    const { t } = useTranslation();
+    const location = useLocation();
+  const { i18n, t } = useTranslation();
+  const langFromPath = location.pathname.startsWith("/en") ? "en" : "es";
+
+  if (i18n.language !== langFromPath) {
+    i18n.changeLanguage(langFromPath);
+  }
+
     return (
-        <div>
-            <SEO
-                title={t('title_Consulting')}
-                description={t('description_Consulting')}
-            />
+        <>
+        <HeadManager
+          lang={langFromPath}
+          title={t("consulting.meta.title")}
+          description={t("consulting.meta.description")}
+          imageUrl="https://mimic.agency/images/Consulting.png"
+        />
             <Hero
                 title={t('title_Consulting')}
                 description={t('description_Consulting')}
@@ -29,7 +40,7 @@ const Consulting = () => {
             <ToolsSectionConsulting />
             <WorkflowSection />
             <CalendarSection />
-        </div>
+        </>
     );
 };
 
