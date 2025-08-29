@@ -7,6 +7,7 @@ import SliderIAServices from "../components/sections/SliderIAServices";
 import AIAboutSeccion from "../components/sections/AIAboutSeccion";
 import ToolsSectionAI from '../components/sections/ToolsSectionAI';
 import WorkflowSection from '../components/sections/WorkflowSection';
+import { useEffect } from "react";
 
 
 
@@ -14,19 +15,31 @@ import WorkflowSection from '../components/sections/WorkflowSection';
 const AISolutions = () => {
     const location = useLocation();
     const { i18n, t } = useTranslation();
-    const langFromPath = location.pathname.startsWith("/en") ? "en" : "es";
   
-    if (i18n.language !== langFromPath) {
-      i18n.changeLanguage(langFromPath);
-    }
+    const lang = location.pathname.startsWith("/en") ? "en" : "es";
+  
+    useEffect(() => {
+      if (i18n.language !== lang) {
+        i18n.changeLanguage(lang);
+      }
+    }, [lang, i18n]);
+  
+    const canonicalUrl = `https://www.mimic.agency${location.pathname}`;
+
   
     return (
         <>
         <HeadManager
-          lang={langFromPath}
+          lang={lang}
           title={t("ai.meta.title")}
           description={t("ai.meta.description")}
           imageUrl="https://mimic.agency/images/AISolutions.png"
+          canonicalUrl={canonicalUrl}
+          hreflangs={[
+            { lang: "es", href: "https://www.mimic.agency/es/ai-solutions" },
+            { lang: "en", href: "https://www.mimic.agency/en/ai-solutions" },
+            { lang: "x-default", href: "https://www.mimic.agency/es/ai-solutions" }
+          ]}
         />
   
             <Hero

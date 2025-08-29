@@ -10,7 +10,7 @@ const PortfolioSection = () => {
     const portfolioItems = [
         {
             id: 1,
-            image: "/images/portfolio/portfolio-1.png",
+            image: "/images/portfolio/portfolio-1.webp",
             alt: t("portfolio_item_1_alt"),
             desktopSize: { width: 1119, height: 713 },
             mobileSize: { width: 358.69, height: 256 },
@@ -20,7 +20,7 @@ const PortfolioSection = () => {
         },
         {
             id: 2,
-            image: "/images/portfolio/portfolio-2.png",
+            image: "/images/portfolio/portfolio-2.webp",
             alt: t("portfolio_item_2_alt"),
             desktopSize: { width: 732, height: 713 },
             mobileSize: { width: 358.55, height: 418 },
@@ -30,7 +30,7 @@ const PortfolioSection = () => {
         },
         {
             id: 3,
-            image: "/images/portfolio/portfolio-3.png",
+            image: "/images/portfolio/portfolio-3.webp",
             alt: t("portfolio_item_3_alt"),
             desktopSize: { width: 799, height: 817 },
             mobileSize: { width: 359, height: 433 },
@@ -40,7 +40,7 @@ const PortfolioSection = () => {
         },
         {
             id: 4,
-            image: "/images/portfolio/portfolio-4.png",
+            image: "/images/portfolio/portfolio-4.webp",
             alt: t("portfolio_item_4_alt"),
             desktopSize: { width: 1050, height: 817 },
             borderRadius: { desktop: 38 },
@@ -49,7 +49,7 @@ const PortfolioSection = () => {
         },
         {
             id: 5,
-            image: "/images/portfolio/portfolio-5.png",
+            image: "/images/portfolio/portfolio-5.webp",
             alt: t("portfolio_item_5_alt"),
             desktopSize: { width: 924, height: 707 },
             borderRadius: { desktop: 38 },
@@ -58,7 +58,7 @@ const PortfolioSection = () => {
         },
         {
             id: 6,
-            image: "/images/portfolio/portfolio-6.png",
+            image: "/images/portfolio/portfolio-6.webp",
             alt: t("portfolio_item_6_alt"),
             desktopSize: { width: 924, height: 707 },
             borderRadius: { desktop: 38 },

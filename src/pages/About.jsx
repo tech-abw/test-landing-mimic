@@ -28,7 +28,7 @@ const About = () => {
         lang={lang}
         title={t("about.meta.title")}
         description={t("about.meta.description")}
-        imageUrl="https://mimic.agency/images/AboutHero.png"
+        imageUrl="https://mimic.agency/images/about-hero.webpp"
         canonicalUrl={canonicalUrl}
         hreflangs={[
           { lang: "es", href: "https://www.mimic.agency/es/nosotros" },
@@ -39,8 +39,8 @@ const About = () => {
       <Hero 
         title={t('about_hero_title')}
         description={t('about_hero_description')}
-        backgroundImage="/images/about-hero.png"
-        mobileBackgroundImage="/images/about-mobile.png"
+        backgroundImage="/images/about-hero.webp"
+        mobileBackgroundImage="/images/about-mobile.webp"
         buttonText={t('about_hero_button')}
         buttonLink={`/${lang}/${t('routes.services')}`}
         mobileTitleFontSize='39px'

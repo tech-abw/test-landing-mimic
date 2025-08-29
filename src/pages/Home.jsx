@@ -31,14 +31,14 @@ const Home = () => {
     <>
       <HeadManager
         lang={langFromPath}
-        title={t("services.meta.title")}
-        description={t("services.meta.description")}
-        imageUrl="https://www.mimic.agency/images/services-hero.png"
+        title={t("home.meta.title")}
+        description={t("home.meta.description")}
+        imageUrl="https://www.mimic.agency/images/home-hero.webp"
         canonicalUrl={canonicalUrl}
         hreflangs={[
-          { lang: "es", href: "https://www.mimic.agency/es/servicios" },
-          { lang: "en", href: "https://www.mimic.agency/en/services" },
-          { lang: "x-default", href: "https://www.mimic.agency/es/servicios" }
+          { lang: "es", href: "https://www.mimic.agency/es/" },
+          { lang: "en", href: "https://www.mimic.agency/en/" },
+          { lang: "x-default", href: "https://www.mimic.agency/es/" }
         ]}
       />
 
@@ -49,7 +49,7 @@ const Home = () => {
         mobileDescriptionFontSize="17px"
         desktopTitleFontSize="80px"
         desktopDescriptionFontSize="20px"
-        mobileBackgroundImage="/images/Mobile_Pulpo.png"
+        mobileBackgroundImage="/images/Mobile_Pulpo.webp"
       />
 
       <ClientsSection />

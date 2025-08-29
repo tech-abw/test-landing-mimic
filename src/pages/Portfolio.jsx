@@ -18,20 +18,20 @@ const Portfolio = () => {
   const canonicalUrl = `https://www.mimic.agency${location.pathname}`;
 
   const portfolioItems = [
-    { id: 1, image: "/images/portfolio/portfolio-1.png", width: { desktop: 70, mobile: 100 }, link: "https://stiva.com" },
-    { id: 2, image: "/images/portfolio/portfolio-2.png", width: { desktop: 30, mobile: 100 }, link: "https://gildre.com" },
-    { id: 3, image: "/images/portfolio/portfolio-3.png", width: { desktop: 35, mobile: 100 }, link: "https://bymomento.com" },
-    { id: 4, image: "/images/portfolio/portfolio-4.png", width: { desktop: 65, mobile: 100 }, link: "https://agromod.com.mx" },
-    { id: 5, image: "/images/portfolio/portfolio-5.png", width: { desktop: 40, mobile: 100 }, link: "https://garzaduran.com" },
-    { id: 6, image: "/images/portfolio/portfolio-6.png", width: { desktop: 60, mobile: 100 }, link: "https://thinkws.mx" },
-    { id: 7, image: "/images/portfolio/portfolio-7.png", width: { desktop: 50, mobile: 100 }, link: "https://epesos.com" },
-    { id: 8, image: "/images/portfolio/portfolio-8.png", width: { desktop: 50, mobile: 100 }, link: "https://cordeliaruiz.com" },
-    { id: 9, image: "/images/portfolio/portfolio-9.png", width: { desktop: 45, mobile: 100 }, link: "https://plastidrum.com" },
-    { id: 10, image: "/images/portfolio/portfolio-10.png", width: { desktop: 55, mobile: 100 }, link: "https://innovalaw.com.mx" },
-    { id: 11, image: "/images/portfolio/portfolio-11.png", width: { desktop: 60, mobile: 100 }, link: "https://uruchurtuartstudio.com" },
-    { id: 12, image: "/images/portfolio/portfolio-12.png", width: { desktop: 40, mobile: 100 }, link: "https://strategyprofessional.biz" },
-    { id: 13, image: "/images/portfolio/portfolio-13.png", width: { desktop: 55, mobile: 100 }, link: "#" },
-    { id: 14, image: "/images/portfolio/portfolio-14.png", width: { desktop: 45, mobile: 100 }, link: "#" },
+    { id: 1, image: "/images/portfolio/portfolio-1.webp", width: { desktop: 70, mobile: 100 }, link: "https://stiva.com" },
+    { id: 2, image: "/images/portfolio/portfolio-2.webp", width: { desktop: 30, mobile: 100 }, link: "https://gildre.com" },
+    { id: 3, image: "/images/portfolio/portfolio-3.webp", width: { desktop: 35, mobile: 100 }, link: "https://bymomento.com" },
+    { id: 4, image: "/images/portfolio/portfolio-4.webp", width: { desktop: 65, mobile: 100 }, link: "https://agromod.com.mx" },
+    { id: 5, image: "/images/portfolio/portfolio-5.webp", width: { desktop: 40, mobile: 100 }, link: "https://garzaduran.com" },
+    { id: 6, image: "/images/portfolio/portfolio-6.webp", width: { desktop: 60, mobile: 100 }, link: "https://thinkws.mx" },
+    { id: 7, image: "/images/portfolio/portfolio-7.webp", width: { desktop: 50, mobile: 100 }, link: "https://epesos.com" },
+    { id: 8, image: "/images/portfolio/portfolio-8.webp", width: { desktop: 50, mobile: 100 }, link: "https://cordeliaruiz.com" },
+    { id: 9, image: "/images/portfolio/portfolio-9.webp", width: { desktop: 45, mobile: 100 }, link: "https://plastidrum.com" },
+    { id: 10, image: "/images/portfolio/portfolio-10.webp", width: { desktop: 55, mobile: 100 }, link: "https://innovalaw.com.mx" },
+    { id: 11, image: "/images/portfolio/portfolio-11.webp", width: { desktop: 60, mobile: 100 }, link: "https://uruchurtuartstudio.com" },
+    { id: 12, image: "/images/portfolio/portfolio-12.webp", width: { desktop: 40, mobile: 100 }, link: "https://strategyprofessional.biz" },
+    { id: 13, image: "/images/portfolio/portfolio-13.webp", width: { desktop: 55, mobile: 100 }, link: "#" },
+    { id: 14, image: "/images/portfolio/portfolio-14.webp", width: { desktop: 45, mobile: 100 }, link: "#" },
   ];
 
   return (

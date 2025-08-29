@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 const Hero = ({
     title,
     description,
-    backgroundImage = "/images/Hero.png",
+    backgroundImage = "/images/Hero.webp",
     mobileBackgroundImage,
     buttonText,
     buttonLink = "/contact",

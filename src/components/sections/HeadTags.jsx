@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import {
-  getOrganizationSchema,
   getHomeSchema,
   getServicesSchema,
   getAboutSchema,
@@ -9,7 +8,8 @@ import {
   getUxUiSchema,
   getWebEcommerceSchema,
   getAiSolutionsSchema,
-  getTailoredSolutionsSchema
+  getTailoredSolutionsSchema,
+  getConsultingSchema,
 } from "./StructuredData";
 
 const HeadManager = ({ lang, title, description, imageUrl }) => {
@@ -17,14 +17,38 @@ const HeadManager = ({ lang, title, description, imageUrl }) => {
   const pathname = location.pathname;
   const canonicalUrl = `https://mimic.agency${pathname}`;
 
-  const isHomePage = pathname === "/es" || pathname === "/en";
-  const isServicesPage = pathname === "/es/servicios" || pathname === "/en/services";
-  const isAboutPage = pathname === "/es/nosotros" || pathname === "/en/about";
-  const isPortfolioPage = pathname === "/es/portafolio" || pathname === "/en/portfolio";
-  const isUxUiPage = pathname === "/es/disenos-ux-ui" || pathname === "/en/ux-ui-designs";
-  const isWebEcommercePage = pathname === "/es/soluciones-web-ecommerce" || pathname === "/en/website-ecommerce-solutions";
-  const isAiSolutionsPage = pathname === "/es/soluciones-ia" || pathname === "/en/ai-solutions";
-  const isTailoredSolutionsPage = pathname === "/es/soluciones-a-medida" || pathname === "/en/tailored-solutions";
+  // 🔁 Mapeo dinámico de rutas localizadas
+  const getHreflangs = (path) => {
+    const routeMap = {
+      "/es": { es: "/es", en: "/en" },
+      "/es/servicios": { es: "/es/servicios", en: "/en/services" },
+      "/es/nosotros": { es: "/es/nosotros", en: "/en/about" },
+      "/es/portafolio": { es: "/es/portafolio", en: "/en/portfolio" },
+      "/es/disenos-ux-ui": { es: "/es/disenos-ux-ui", en: "/en/ux-ui-designs" },
+      "/es/soluciones-web-ecommerce": { es: "/es/soluciones-web-ecommerce", en: "/en/website-ecommerce-solutions" },
+      "/es/soluciones-ia": { es: "/es/soluciones-ia", en: "/en/ai-solutions" },
+      "/es/soluciones-a-medida": { es: "/es/soluciones-a-medida", en: "/en/tailored-solutions" },
+      "/es/consultoria": { es: "/es/consultoria", en: "/en/consulting" },
+      "/en": { es: "/es", en: "/en" },
+      "/en/services": { es: "/es/servicios", en: "/en/services" },
+      "/en/about": { es: "/es/nosotros", en: "/en/about" },
+      "/en/portfolio": { es: "/es/portafolio", en: "/en/portfolio" },
+      "/en/ux-ui-designs": { es: "/es/disenos-ux-ui", en: "/en/ux-ui-designs" },
+      "/en/website-ecommerce-solutions": { es: "/es/soluciones-web-ecommerce", en: "/en/website-ecommerce-solutions" },
+      "/en/ai-solutions": { es: "/es/soluciones-ia", en: "/en/ai-solutions" },
+      "/en/tailored-solutions": { es: "/es/soluciones-a-medida", en: "/en/tailored-solutions" },
+      "/en/consulting": { es: "/es/consultoria", en: "/en/consulting" },
+    };
+
+    const localized = routeMap[path];
+    if (!localized) return [];
+
+    return [
+      { lang: "es", href: `https://www.mimic.agency${localized.es}` },
+      { lang: "en", href: `https://www.mimic.agency${localized.en}` },
+      { lang: "x-default", href: `https://www.mimic.agency${localized.es}` }
+    ];
+  };
 
   useEffect(() => {
     document.documentElement.lang = lang;
@@ -70,6 +94,7 @@ const HeadManager = ({ lang, title, description, imageUrl }) => {
     setProperty("twitter:description", description);
     setProperty("twitter:image", imageUrl);
 
+    // 🔗 Canonical
     let linkCanonical = document.querySelector("link[rel='canonical']");
     if (!linkCanonical) {
       linkCanonical = document.createElement("link");
@@ -78,70 +103,39 @@ const HeadManager = ({ lang, title, description, imageUrl }) => {
     }
     linkCanonical.href = canonicalUrl;
 
-    const hreflangs = [
-      {
-        lang: "es",
-        href: "https://mimic.agency/es/servicios"
-      },
-      {
-        lang: "en",
-        href: "https://mimic.agency/en/services"
-      },
-      {
-        lang: "x-default",
-        href: "https://mimic.agency/es/servicios"
-      }
-    ];
-
+    // 🌐 hreflangs dinámicos
+    const hreflangs = getHreflangs(pathname);
     hreflangs.forEach(({ lang, href }) => {
-      const link = document.createElement("link");
-      link.rel = "alternate";
-      link.hrefLang = lang;
-      link.href = href;
-      document.head.appendChild(link);
+      const existing = document.querySelector(`link[hreflang="${lang}"]`);
+      if (!existing) {
+        const link = document.createElement("link");
+        link.rel = "alternate";
+        link.hreflang = lang;
+        link.href = href;
+        document.head.appendChild(link);
+      } else {
+        existing.href = href;
+      }
     });
 
-    const schemas = [getOrganizationSchema(lang)];
+    // 📄 Structured Data (opcional)
+    let schema = null;
+    if (pathname === "/es" || pathname === "/en") schema = getHomeSchema(lang);
+    else if (pathname.includes("/servicios") || pathname.includes("/services")) schema = getServicesSchema(lang);
+    else if (pathname.includes("/nosotros") || pathname.includes("/about")) schema = getAboutSchema(lang);
+    else if (pathname.includes("/portafolio") || pathname.includes("/portfolio")) schema = getPortfolioSchema(lang);
+    else if (pathname.includes("/disenos-ux-ui") || pathname.includes("/ux-ui-designs")) schema = getUxUiSchema(lang);
+    else if (pathname.includes("/soluciones-web-ecommerce") || pathname.includes("/website-ecommerce-solutions")) schema = getWebEcommerceSchema(lang);
+    else if (pathname.includes("/soluciones-ia") || pathname.includes("/ai-solutions")) schema = getAiSolutionsSchema(lang);
+    else if (pathname.includes("/soluciones-a-medida") || pathname.includes("/tailored-solutions")) schema = getTailoredSolutionsSchema(lang);
+    else if (pathname.includes("/consultoria") || pathname.includes("/consulting")) schema = getConsultingSchema(lang);
 
-    if (isHomePage) {
-      schemas.push(getHomeSchema(lang));
-    }
-
-    if (isServicesPage) {
-      schemas.push(getServicesSchema(lang));
-    }
-
-    if (isAboutPage) {
-      schemas.push(getAboutSchema(lang));
-    }
-
-    if (isPortfolioPage) {
-      schemas.push(getPortfolioSchema(lang));
-    }
-    if (isUxUiPage) {
-      schemas.push(getUxUiSchema(lang));
-    }
-    if (isWebEcommercePage) {
-      schemas.push(getWebEcommerceSchema(lang));
-    }
-    if (isAiSolutionsPage) {
-      schemas.push(getAiSolutionsSchema(lang));
-    }
-    if (isTailoredSolutionsPage) {
-      schemas.push(getTailoredSolutionsSchema(lang));
-    }
-
-    schemas.forEach((schema) => {
+    if (schema) {
       const script = document.createElement("script");
       script.type = "application/ld+json";
-      script.textContent = JSON.stringify(schema);
+      script.innerHTML = JSON.stringify(schema);
       document.head.appendChild(script);
-    });
-
-    return () => {
-      document.querySelectorAll("script[type='application/ld+json']").forEach((s) => s.remove());
-      document.querySelectorAll("link[rel='alternate']").forEach((l) => l.remove());
-    };
+    }
   }, [lang, title, description, imageUrl, pathname]);
 
   return null;

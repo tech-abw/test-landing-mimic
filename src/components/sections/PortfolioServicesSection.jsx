@@ -9,7 +9,7 @@ const PortfolioServicesSection = () => {
     const portfolioItems = [
         {
             id: 1,
-            image: "/images/portfolio/portfolio-1.png",
+            image: "/images/portfolio/portfolio-1.webp",
             alt: "Portfolio item 1 - Laptop display",
             desktopSize: { width: 650, height: 545 },
             mobileSize: { width: 358.69, height: 256 },
@@ -19,7 +19,7 @@ const PortfolioServicesSection = () => {
         },
         {
             id: 2,
-            image: "/images/portfolio/portfolio-8.png",
+            image: "/images/portfolio/portfolio-8.webp",
             alt: "Portfolio item 2 - Website on laptop",
             desktopSize: { width: 580, height: 545 },
             mobileSize: { width: 358.55, height: 418 },
@@ -29,7 +29,7 @@ const PortfolioServicesSection = () => {
         },
         {
             id: 3,
-            image: "/images/portfolio/portfolio-2.png",
+            image: "/images/portfolio/portfolio-2.webp",
             alt: "Portfolio item 3 - Mobile app",
             desktopSize: { width: 620, height: 545 },
             mobileSize: { width: 359, height: 433 },
@@ -39,7 +39,7 @@ const PortfolioServicesSection = () => {
         },
         {
             id: 4,
-            image: "/images/portfolio/portfolio-3.png",
+            image: "/images/portfolio/portfolio-3.webp",
             alt: "Portfolio item 4 - Tablet website",
             desktopSize: { width: 410, height: 545 },
             mobileSize: { width: 359, height: 433 },
@@ -49,7 +49,7 @@ const PortfolioServicesSection = () => {
         },
         {
             id: 5,
-            image: "/images/portfolio/portfolio-4.png",
+            image: "/images/portfolio/portfolio-4.webp",
             alt: "Portfolio item 5 - Tablet app",
             desktopSize: { width: 720, height: 545 },
             mobileSize: { width: 359, height: 433 },
@@ -59,7 +59,7 @@ const PortfolioServicesSection = () => {
         },
         {
             id: 6,
-            image: "/images/portfolio/portfolio-10.png",
+            image: "/images/portfolio/portfolio-10.webp",
             alt: "Portfolio item 6 - Laptop display",
             desktopSize: { width: 650, height: 545 },
             mobileSize: { width: 359, height: 433 },
@@ -69,7 +69,7 @@ const PortfolioServicesSection = () => {
         },
         {
             id: 7,
-            image: "/images/portfolio/portfolio-7.png",
+            image: "/images/portfolio/portfolio-7.webp",
             alt: "Portfolio item 7 - Mobile design",
             desktopSize: { width: 750, height: 545 },
             mobileSize: { width: 359, height: 433 },
@@ -79,7 +79,7 @@ const PortfolioServicesSection = () => {
         },
         {
             id: 8,
-            image: "/images/portfolio/portfolio-5.png",
+            image: "/images/portfolio/portfolio-5.webp",
             alt: "Portfolio item 8 - Web interface",
             desktopSize: { width: 860, height: 545 },
             mobileSize: { width: 359, height: 433 },
@@ -89,7 +89,7 @@ const PortfolioServicesSection = () => {
         },
         {
             id: 9,
-            image: "/images/portfolio/portfolio-6.png",
+            image: "/images/portfolio/portfolio-6.webp",
             alt: "Portfolio item 9 - Dashboard design",
             desktopSize: { width: 690, height: 545 },
             mobileSize: { width: 359, height: 433 },
@@ -119,7 +119,7 @@ const PortfolioServicesSection = () => {
                             style={{
                                 fontSize: "65px",
                                 fontWeight: 400,
-                                lineHeight: "1.5",
+                                lineHeight: "65px",
                             }}
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
@@ -129,7 +129,7 @@ const PortfolioServicesSection = () => {
                         >
                         </motion.span>
                         <motion.span 
-                            className="lg:hidden md:text-3xl text-3xl  leading-[1.3em]"
+                            className="lg:hidden md:text-3xl text-3xl leading-none"
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
                             viewport={{ margin: "-50px" }}
