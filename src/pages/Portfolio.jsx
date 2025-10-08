@@ -30,7 +30,7 @@ const Portfolio = () => {
     { id: 10, image: "/images/portfolio/portfolio-10.webp", width: { desktop: 55, mobile: 100 }, link: "https://innovalaw.com.mx" },
     { id: 11, image: "/images/portfolio/portfolio-11.webp", width: { desktop: 60, mobile: 100 }, link: "https://uruchurtuartstudio.com" },
     { id: 12, image: "/images/portfolio/portfolio-12.webp", width: { desktop: 40, mobile: 100 }, link: "https://strategyprofessional.biz" },
-    { id: 13, image: "/images/portfolio/portfolio-13.webp", width: { desktop: 55, mobile: 100 }, link: "#" },
+    { id: 13, image: "/images/portfolio/portfolio-13.webp", width: { desktop: 55, mobile: 100 }, link: "http://app.uruchurtuartstudio.com" },
     { id: 14, image: "/images/portfolio/portfolio-14.webp", width: { desktop: 45, mobile: 100 }, link: "#" },
   ];
 

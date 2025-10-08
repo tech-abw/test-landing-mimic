@@ -39,8 +39,8 @@ const TeamSection = () => {
             description: t("team_role_frontend"),
         },
         {
-            name: "Mariana Vega",
-            image: "/images/about/Mariana.webp",
+            name: "Andrea Villa",
+            image: "/images/about/Andrea-Villa.webp",
             description: t("team_role_ux_ui"),
         },
         {

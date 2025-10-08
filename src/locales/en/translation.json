@@ -308,7 +308,7 @@
     }
   },
   "nav.promo.description": "AI solutions to boost your business.",
-  "megaMenuBannerImage": "/images/BannersPromocional/banner-promocion.webp",
+  "megaMenuBannerImage": "/images/about/dummy-team.webp",
   "routes": {
     "home": "",
     "about": "about",

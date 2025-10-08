@@ -19,7 +19,7 @@ const Hero = ({
 
     return (
         <div className="w-full bg-gray pt-16">
-            <section className="relative w-[95%] h-[calc(100vh-5rem)] mx-auto rounded-[40px] overflow-hidden">
+            <section className="relative w-[90%] sm:w-[98%] h-[calc(100vh-5rem)] mx-auto rounded-[10px] overflow-hidden">
                 {/* Background Images */}
                 <div className="absolute inset-0 w-full h-full">
                     <img

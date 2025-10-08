@@ -75,7 +75,7 @@ const MegaMenu = ({ items, isMobileMenuOpen, toggleMenu, closeMenu, isDesktop, m
                         <AnimatePresence>
                             {item.submenu && openSubmenu === index && (
                                 <motion.div 
-                                    className="fixed top-20 left-10 right-10 -translate-x-1/2  p-8 bg-black bg-opacity-80 backdrop-blur-lg rounded-lg shadow-lg"
+                                    className="fixed top-16 left-5 right-5 -translate-x-1/2  p-8 bg-black bg-opacity-80 backdrop-blur-lg rounded-lg shadow-lg"
                                     initial="hidden"
                                     animate="visible"
                                     exit="hidden"
@@ -84,18 +84,15 @@ const MegaMenu = ({ items, isMobileMenuOpen, toggleMenu, closeMenu, isDesktop, m
                                 >
                                     <div className="w-full text-white flex justify-between items-start relative">
                                         {/* Pointer */}
-                                        <div className="absolute -top-10 left-[51%] translate-x-0 w-0 h-0 
-                                            border-l-[10px] border-l-transparent
-                                            border-r-[10px] border-r-transparent
-                                            border-b-[10px] border-b-black"></div>
+                                       
 
                                         {/* Promotional Banner */}
-                                        <div className="w-1/3 bg-stone-200 h-[120px]  bg-opacity-90 p-6 rounded-lg border border-lime-400 relative overflow-hidden">
+                                        <div className="w-1/3 bg-stone-200 h-[120px]  bg-opacity-90 p-6 rounded-lg object-cover border border-lime-400 relative overflow-hidden ">
                                         {/* Imagen que ocupa todo el div */}
                                         <img
                                             src={t('megaMenuBannerImage')}
                                             alt={t('promoBanner.alt')}
-                                            className="absolute inset-0 w-full h-full object-fill"
+                                            className="absolute inset-0 w-full h-full object-cover object-[50%_10%]"
                                         />                                    
                                         </div>
                                         {/* Links */}

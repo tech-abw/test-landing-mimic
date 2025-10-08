@@ -93,7 +93,7 @@ const Footer = () => {
                         {/* Redes sociales */}
                         <div className="flex space-x-4 lg:mt-10 mt-6">
                             <a
-                                href="https://wa.me/+528181614207"
+                                href="https://wa.me/+5218120268946"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-black"
@@ -154,7 +154,7 @@ const Footer = () => {
                             </li>
                             <li>
                                 <a
-                                    href="https://wa.me/+528181614207"
+                                    href="https://wa.me/+5218120268946"
                                     className="text-gray-600 transition-colors"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -163,7 +163,7 @@ const Footer = () => {
                                         fontWeight: "200",
                                     }}
                                 >
-                                    + 52 81 8181 4207
+                                    +52 1 81 2026 8946
                                 </a>
                             </li>
                         </ul>
