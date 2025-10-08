@@ -11,22 +11,23 @@ const ClientsSection = () => {
     // Define client data
     const duplicationFactor = 30;
     const topRowClients = [
-        { name: "Astelaris", logo: "astelaris.png" },
-        { name: "Aurea", logo: "aurea.png" },
-        { name: "Cssis", logo: "cssis.png" },
-        { name: "Ecompack", logo: "ecompack.png" },
-        { name: "Gravity", logo: "gravity.png" },
-        { name: "Insights to Behavior", logo: "insights-to-behavior.png" },
-        { name: "Mita", logo: "mita.png" },
-    ];
+        { name: "Astelaris", logo: "astelaris.png", heightMobile: "h-10", heightDesktop: "sm:h-12" },
+        { name: "Aurea", logo: "aurea.png", heightMobile: "h-12", heightDesktop: "sm:h-10" },
+        { name: "Cssis", logo: "cssis.png", heightMobile: "h-9", heightDesktop: "sm:h-10" },
+        { name: "Ecompack", logo: "ecompack.png", heightMobile: "h-10", heightDesktop: "sm:h-18" },
+        { name: "Gravity", logo: "gravity.png", heightMobile: "h-12", heightDesktop: "sm:h-10" },
+        { name: "Insights to Behavior", logo: "insights-to-behavior.png", heightMobile: "h-8", heightDesktop: "sm:h-10" },
+        { name: "Mita", logo: "mita.png", heightMobile: "h-12", heightDesktop: "sm:h-14" },
+      ];
+      
     const bottomRowClients = [
-        { name: "Plancidad 100", logo: "plancidad100.png" },
-        { name: "Santa Eugenia", logo: "santa-eugenia.png" },
-        { name: "Silvesa", logo: "silvesa.png" },
-        { name: "Think", logo: "think.png" },
-        { name: "Ultima", logo: "ultima.png" },
-        { name: "Vitaflow", logo: "vitaflow.png" },
-        { name: "Zengure", logo: "zengure.png" },
+        { name: "Plancidad 100", logo: "plancidad100.png", heightMobile: "h-12", heightDesktop: "sm:h-12" },
+        { name: "Santa Eugenia", logo: "santa-eugenia.png", heightMobile: "h-12", heightDesktop: "sm:h-16" },
+        { name: "Silvesa", logo: "silvesa.png", heightMobile: "h-12", heightDesktop: "sm:h-12" },
+        { name: "Think", logo: "think.png", heightMobile: "h-12", heightDesktop: "sm:h-12" },
+        { name: "Ultima", logo: "ultima.png", heightMobile: "h-12", heightDesktop: "sm:h-12" },
+        { name: "Vitaflow", logo: "vitaflow.png", heightMobile: "h-8", heightDesktop: "sm:h-8" },
+        { name: "Zengure", logo: "zengure.png", heightMobile: "h-12", heightDesktop: "sm:h-12" },
     ];
 
     // Data for mobile view
@@ -61,19 +62,29 @@ const ClientsSection = () => {
                     {/* Desktop marquee rows */}
                     <div className="block mb-16">
                         <div className="marquee-container marquee-top">
-                            <div className="marquee-content">
-                                {duplicatedTopClients.map((client, index) => (
-                                    <img key={index} src={`${imgBasePath}${client.logo}`} alt={client.name} className="h-8 sm:h-12 mx-6" />
-                                ))}
-                            </div>
+                        <div className="marquee-content">
+                        {duplicatedTopClients.map((client, index) => (
+                            <img
+                              key={index}
+                              src={`${imgBasePath}${client.logo}`}
+                              alt={client.name}
+                              className={`${client.heightMobile} ${client.heightDesktop} mx-6`}
+                            />
+                        ))}
+                        </div>
                         </div>
                     </div>
                     <div className="block mb-16">
                         <div className="marquee-container marquee-reverse">
                             <div className="marquee-content">
-                                {duplicatedBottomClients.map((client, index) => (
-                                    <img key={index} src={`${imgBasePath}${client.logo}`} alt={client.name} className="h-8 sm:h-12 mx-6" />
-                                ))}
+                            {duplicatedBottomClients.map((client, index) => (
+                                <img
+                                    key={index}
+                                    src={`${imgBasePath}${client.logo}`}
+                                    alt={client.name}
+                                    className={`${client.heightMobile} ${client.heightDesktop} mx-6`}
+                                />
+                            ))}
                             </div>
                         </div>
                     </div>
