@@ -45,7 +45,7 @@ const UXUIDesigns = () => {
                 mobileBackgroundImage="/images/UX_UI_Design.webp"
                 buttonText={t('button_UX/UI_Designs')}
                 buttonLink="/portfolio"
-                desktopTitleFontSize="76px"
+                desktopTitleFontSize="55px"
                 mobileTitleFontSize="43px"
                 mobileDescriptionFontSize="17px"
             />

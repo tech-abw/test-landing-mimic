@@ -44,7 +44,7 @@ const WebsiteEcommerceSolutions = () => {
                 mobileBackgroundImage="/images/WebsiteEcommerceSolutions.png"
                 buttonText={t('button_Website_Ecommerce_Solutions')}
                 buttonLink="/portfolio"
-                desktopTitleFontSize="76px"
+                desktopTitleFontSize="55px"
                 mobileTitleFontSize="43px"
                 mobileDescriptionFontSize="17px"
             />

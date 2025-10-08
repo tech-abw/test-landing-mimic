@@ -21,9 +21,9 @@ const AboutHeroSection = () => {
                                 <motion.h2
                                     className="text-white mb-10"
                                     style={{
-                                        fontSize: "65px",
+                                        fontSize: "55px",
                                         fontWeight: 400,
-                                        lineHeight: "65px",
+                                        lineHeight: "55px",
                                     }}
                                     initial={{ opacity: 0, y: 40 }}
                                     whileInView={{ opacity: 1, y: 0 }}

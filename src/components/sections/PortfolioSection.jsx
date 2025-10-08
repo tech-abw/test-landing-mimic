@@ -113,9 +113,9 @@ const PortfolioSection = () => {
                         <span
                             className="hidden lg:inline"
                             style={{
-                                fontSize: "65px",
+                                fontSize: "55px",
                                 fontWeight: 400,
-                                lineHeight: "65px",
+                                lineHeight: "55px",
                             }}
                             dangerouslySetInnerHTML={{ __html: t("portfolio_title_html") }}
                         >

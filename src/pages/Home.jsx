@@ -47,7 +47,7 @@ const Home = () => {
         buttonLink="https://tally.so/r/wb6l9Z"
         mobileTitleFontSize="46px"
         mobileDescriptionFontSize="17px"
-        desktopTitleFontSize="80px"
+        desktopTitleFontSize="55px"
         desktopDescriptionFontSize="20px"
         mobileBackgroundImage="/images/Mobile_Pulpo.webp"
       />

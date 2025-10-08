@@ -33,7 +33,7 @@ const TailoredSolutions = () => {
                 mobileBackgroundImage="/images/TailoredSolutions.png"
                 buttonText={t('button_Tailored_Solutions')}
                 buttonLink="/portfolio"
-                desktopTitleFontSize="76px"
+                desktopTitleFontSize="55px"
                 mobileTitleFontSize="43px"
                 mobileDescriptionFontSize="17px"
             />

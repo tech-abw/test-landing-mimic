@@ -36,7 +36,7 @@ const Services = () => {
                 mobileBackgroundImage="/images/mobile-services.webp"
                 buttonText={t('services_hero_button')}
                 buttonLink={`/${lang}/${t('routes.services')}`}
-                desktopTitleFontSize="76px"
+                desktopTitleFontSize="55px"
                 mobileTitleFontSize="43px"
                 mobileDescriptionFontSize="17px"
             />
