@@ -23,16 +23,10 @@ const TeamSection = () => {
             description: "Dev lead",
         },
         {
-            name: "Juan Pablo S.",
-            image: "/images/about/JuanPablo.webp",
-            description: "Fullstack Sr",
+            name: "Walfret",
+            image: "/images/about/Walfret.webp",
+            description: "Fullstack",
         },
-        {
-            name: "Gerardo Durán",
-            image: "/images/about/Gerardo.webp",
-            description: "Fullstack Sr",
-        },
-
         {
             name: "Sasha Solano",
             image: "/images/about/Sasha.webp",
@@ -62,6 +56,11 @@ const TeamSection = () => {
             name: "Enrique P.",
             image: "/images/about/dummy-team.webp",
             description: t("team_role_strategic_partnerships"),
+        },
+        {
+            name: "Oscar Gamboa",
+            image: "/images/about/Oscar.webp",
+            description: "SDR",
         },
     ];
     return (
