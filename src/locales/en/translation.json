@@ -243,6 +243,9 @@
   "team_role_coo": "COO",
   "team_role_strategic_partnerships": "Strategic Partnerships",
   "title_Tailored_Solutions": "Tailored Solutions",
+  "team_role_dev_lead": "Dev lead",
+  "team_role_fullstack-f": "Fullstack Developer" ,
+  
   "promoBanner": {
     "title": "Special Offer!",
     "alt": "Mimic promotional banner"

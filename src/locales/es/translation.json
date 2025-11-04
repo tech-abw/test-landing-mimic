@@ -73,12 +73,14 @@
   "team_projects": "Proyectos",
   "team_clients": "Clientes",
   "team_role_cro": "Cofundador / CRO",
-  "team_role_frontend": "Desarrollador front-end",
+  "team_role_dev_lead": "Dev lead",
+  "team_role_frontend": "Desarrolladora front-end",
   "team_role_fullstack_ai": "Ingeniero fullstack IA",
   "team_role_fullstack": "Desarrollador fullstack",
   "team_role_ux_ui": "Diseñador UX/UI",
   "team_role_graphic_designer": "Diseñador gráfico",
   "team_role_marketing": "Especialista en marketing",
+  "team_role_fullstack-f": "Desarrolladora fullstack",
   "about_hero_section_title_part1": "¿Listo para desbloquear",
   "about_hero_section_title_part2": "el poder de",
   "about_hero_section_title_part3": "tu negocio?",
@@ -196,6 +198,7 @@
   "UI_Kit_description": "Diseño limpio, moderno y responsive que alinea con tu marca y deleita a los usuarios — desde moodboards hasta pantallas de alta fidelidad.",
   "Special_projects": "Proyectos especiales",
   "Special_projects_description": "Entregamos archivos listos para desarrolladores, especificaciones y guías de estilo, y apoyamos a tu equipo durante la entrega para asegurar una transición sin problemas desde el diseño al código.",
+  
   "portfolio": {
     "seo": {
       "title": "Portafolio: Nuestro trabajo",
@@ -415,6 +418,7 @@
     "portafolio-platidrum": "portafolio-platidrum",
     "portafolio-urun": "portafolio-urun",
     "portafolio-byMomento": "portafolio-byMomento"
+
 
    
   }

@@ -20,17 +20,17 @@ const TeamSection = () => {
         {
             name: "Felipe Cedillo",
             image: "/images/about/Felipe.webp",
-            description: "Dev lead",
+            description: t("team_role_dev_lead"),
         },
         {
             name: "Walfret Bravo",
             image: "/images/about/Walfret.webp",
-            description: "Fullstack",
+            description: t("team_role_fullstack"),
         },
         {
             name: "Yaneth Ruiz",
             image: "/images/about/Yaneth.webp",
-            description: "Fullstack",
+            description: t("team_role_fullstack-f"),
         },
         {
             name: "Sasha Solano",
