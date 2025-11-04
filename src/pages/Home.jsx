@@ -27,7 +27,22 @@ const Home = () => {
   // Construye URL canónica desde la ruta actual
   const canonicalUrl = `https://www.mimic.agency${location.pathname}`;
 
-  
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Mimic Agency",
+    url: "https://www.mimic.agency",
+    logo: "https://www.mimic.agency/images/logo.svg",
+    sameAs: [
+      "https://www.linkedin.com/company/mimic-agency",
+      "https://www.instagram.com/mimic.agency"
+    ],
+    description: t("home.meta.description"),
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "MX"
+    }
+  };
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -84,8 +99,10 @@ const Home = () => {
           { lang: "x-default", href: "https://www.mimic.agency/es/" }
         ]}
       />
-        
-  
+        {/* Datos estructurados: Organización */}
+  <script type="application/ld+json">
+    {JSON.stringify(structuredData)}
+  </script>
 
   {/* Datos estructurados: WebSite */}
   <script type="application/ld+json">

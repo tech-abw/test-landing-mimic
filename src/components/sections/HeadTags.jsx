@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import {
+/*import {
   getHomeSchema,
   getServicesSchema,
   getAboutSchema,
@@ -11,7 +11,7 @@ import {
   getTailoredSolutionsSchema,
   getConsultingSchema,
 } from "./StructuredData";
-
+*/
 const HeadManager = ({ lang, title, description, imageUrl }) => {
   const location = useLocation();
   const pathname = location.pathname;
@@ -119,7 +119,7 @@ const HeadManager = ({ lang, title, description, imageUrl }) => {
     });
 
     // 📄 Structured Data (opcional)
-    let schema = null;
+    /*let schema = null;
     if (pathname === "/es" || pathname === "/en") schema = getHomeSchema(lang);
     else if (pathname.includes("/servicios") || pathname.includes("/services")) schema = getServicesSchema(lang);
     else if (pathname.includes("/nosotros") || pathname.includes("/about")) schema = getAboutSchema(lang);
@@ -136,6 +136,7 @@ const HeadManager = ({ lang, title, description, imageUrl }) => {
       script.innerHTML = JSON.stringify(schema);
       document.head.appendChild(script);
     }
+    */
   }, [lang, title, description, imageUrl, pathname]);
 
   return null;
