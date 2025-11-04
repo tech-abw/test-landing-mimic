@@ -23,8 +23,13 @@ const TeamSection = () => {
             description: "Dev lead",
         },
         {
-            name: "Walfret",
+            name: "Walfret Bravo",
             image: "/images/about/Walfret.webp",
+            description: "Fullstack",
+        },
+        {
+            name: "Yaneth Ruiz",
+            image: "/images/about/Yaneth.webp",
             description: "Fullstack",
         },
         {
