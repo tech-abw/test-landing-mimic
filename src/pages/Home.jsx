@@ -43,6 +43,47 @@ const Home = () => {
       addressCountry: "MX"
     }
   };
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Mimic Agency",
+    url: "https://www.mimic.agency",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: "https://www.mimic.agency/?s={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  };
+  const servicesSchema = [
+    {
+      "@type": "Service",
+      name: "Diseño UX-UI",
+      serviceType: "Diseño de interfaces y experiencia de usuario",
+      provider: { "@type": "Organization", name: "Mimic Agency" },
+      areaServed: "Latinoamérica"
+    },
+    {
+      "@type": "Service",
+      name: "Sitios Web y E-commerce",
+      serviceType: "Desarrollo de sitios WordPress y tiendas online",
+      provider: { "@type": "Organization", name: "Mimic Agency" },
+      areaServed: "Latinoamérica"
+    },
+    {
+      "@type": "Service",
+      name: "Soluciones de IA",
+      serviceType: "Integración de inteligencia artificial en procesos digitales",
+      provider: { "@type": "Organization", name: "Mimic Agency" },
+      areaServed: "Latinoamérica"
+    },
+    {
+      "@type": "Service",
+      name: "Soluciones a la medida",
+      serviceType: "Desarrollo personalizado según necesidades del cliente",
+      provider: { "@type": "Organization", name: "Mimic Agency" },
+      areaServed: "Latinoamérica"
+    }
+  ];
 
   return (
     <>
@@ -61,6 +102,18 @@ const Home = () => {
       <script type="application/ld+json">
         {JSON.stringify(structuredData)}
       </script>
+      <script type="application/ld+json">
+  {JSON.stringify(structuredData)}
+</script>
+
+<script type="application/ld+json">
+  {JSON.stringify(websiteSchema)}
+</script>
+
+<script type="application/ld+json">
+  {JSON.stringify(servicesSchema)}
+</script>
+
       <Hero
         buttonText={t("start_here_button")}
         buttonLink="https://tally.so/r/wb6l9Z"
