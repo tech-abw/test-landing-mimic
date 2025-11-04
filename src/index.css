@@ -20,4 +20,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.bg-custom {
+  background-color: #5000FF;
+}
 /* Podemos añadir estilos globales adicionales aquí si es necesario */

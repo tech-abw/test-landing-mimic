@@ -54,7 +54,7 @@ const Home = () => {
 
       <ClientsSection />
       <PortfolioSection />
-      <WorkflowSection />
+      <WorkflowSection  />
       <TechStackSection />
       <TestimonialsSection />
     </>

@@ -3,6 +3,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
+
+
 const WorkflowSection = () => {
     const { t } = useTranslation();
 
@@ -11,7 +13,7 @@ const WorkflowSection = () => {
             id: "1",
             title: t("workflow_step_1_title_v2"),
             description: t("workflow_step_1_description_v2"),
-            bgColor: "bg-black",
+            bgColor: "bg-custom",
             textColor: "text-white",
             image: "/images/workflow/image1.svg",
             imageSize: { width: "150px", height: "150px" },
@@ -20,16 +22,16 @@ const WorkflowSection = () => {
             id: "2",
             title: t("workflow_step_2_title_v2"),
             description: t("workflow_step_2_description_v2"),
-            bgColor: "bg-neon-green",
-            textColor: "text-black",
-            image: "/images/workflow/setup.svg",
-            imageSize: { width: "120px", height: "120px" },
+            bgColor: "bg-black",
+            textColor: "text-white",
+            image: "/images/workflow/setup2.svg",
+            imageSize: { width: "80px", height: "80px" },
         },
         {
             id: "3",
             title: t("workflow_step_3_title_v2"),
             description: t("workflow_step_3_description_v2"),
-            bgColor: "bg-neon-green",
+            bgColor: "bg-gray",
             textColor: "text-black",
             image: "/images/workflow/meetings.svg",
             imageSize: { width: "120px", height: "120px" },
@@ -46,7 +48,7 @@ const WorkflowSection = () => {
     ];
 
     return (
-        <section className="w-full bg-gray py-10 lg:py-24 relative">
+        <section className="w-full bg-white py-10 lg:py-24 relative">
             {/* Línea vertical superior */}
             <motion.div
                 className="relative hidden lg:block"
@@ -152,7 +154,7 @@ const WorkflowSection = () => {
                 </div>
 
                 {/* Versión móvil - 1 columna */}
-                <div className="lg:hidden grid grid-cols-1 gap-8">
+                <div className="lg:hidden grid grid-cols-1 gap-8 px-5">
                     {workflowSteps.map((step, index) => (
                         <motion.div
                             key={step.id}
