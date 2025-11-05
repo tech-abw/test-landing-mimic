@@ -28,6 +28,11 @@ const TeamSection = () => {
             description: t("team_role_fullstack"),
         },
         {
+            name: "Ruben Aguillon",
+            image: "/images/about/Ruben.webp",
+            description: t("team_role_fullstack"),
+        },
+        {
             name: "Yaneth Ruiz",
             image: "/images/about/Yaneth.webp",
             description: t("team_role_fullstack-f"),

@@ -30,6 +30,7 @@ const ServicesSection = () => {
             title: t("services_ai_solutions_title"),
             description: t("services_ai_solutions_description"),
             bgColor: "bg-white",
+            hoverBgColor: "hover:bg-[#D3D3D3]",
             textColor: "text-black",
             hasImage: false,
             url: `/${lang}/${t("routes.ai-solutions")}`,
@@ -39,6 +40,8 @@ const ServicesSection = () => {
             description: t("services_tailored_solutions_description"),
             bgColor: "bg-black",
             textColor: "text-white",
+            hoverBgColor: "hover:bg-[#D3D3D3]",
+            hoverTextColor: "hover:text-black",
             hasImage: false,
             url: `/${lang}/${t("routes.tailored-solutions")}`,
         },
@@ -47,6 +50,7 @@ const ServicesSection = () => {
             description: t("services_consulting_description"),
             bgColor: "bg-neon-green",
             textColor: "text-black",
+            hoverBgColor: "hover:bg-[#5000FF]",
             hasImage: false,
             url: `/${lang}/${t("routes.consulting")}`,
         },
@@ -99,7 +103,7 @@ const ServicesSection = () => {
                         {/* Card 1 */}
                         <Link to={services[0].url} className="block">
                             <motion.div
-                                className={`${services[0].bgColor} ${services[0].textColor} rounded-2xl p-12 flex flex-col`}
+                                className={`${services[0].bgColor} hover:shadow-xl hover:bg-[#5000FF]   ${services[0].textColor} rounded-2xl p-12 flex flex-col`}
                                 style={{ height: "600px" }}
                                 initial={{ opacity: 0, x: -30 }}
                                 whileInView={{ opacity: 1, x: 0 }}
@@ -154,7 +158,7 @@ const ServicesSection = () => {
                         {/* Card 2 */}
                         <Link to={services[1].url} className="block">
                             <motion.div
-                                className={`${services[1].bgColor} ${services[1].textColor} p-12 rounded-2xl flex flex-col`}
+                                className={`${services[1].bgColor} hover:shadow-xl hover:bg-white ${services[1].textColor} p-12 rounded-2xl flex flex-col`}
                                 style={{ height: "600px" }}
                                 initial={{ opacity: 0, x: 30 }}
                                 whileInView={{ opacity: 1, x: 0 }}
@@ -199,7 +203,7 @@ const ServicesSection = () => {
                         {services.slice(2).map((service, index) => (
                             <Link to={service.url} key={index} className="block">
                                 <motion.div
-                                    className={`${service.bgColor} ${service.textColor} p-12 rounded-2xl flex flex-col`}
+                                    className={`${service.bgColor} ${service.textColor} hover:shadow-xl ${service.hoverBgColor} ${service.hoverTextColor} p-12 rounded-2xl flex flex-col`}
                                     style={{ height: "550px" }}
                                     initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}

@@ -15,7 +15,7 @@ const ReusableToolsSection = ({ tools }) => {
               viewport={{ once: true, amount: 0.5 }}
               transition={{ duration: 0.5, delay: index * 0.15 }}
             >
-              <div className="w-24 h-24 rounded-full bg-[#C4F031] mb-6 flex items-center justify-center overflow-hidden">
+              <div className="w-24 h-24 rounded-full bg-[#C4F031] hover:bg-[#5000FF] hover:shadow-xl mb-6 flex items-center justify-center overflow-hidden">
                 <img src={tool.icon} alt={tool.name} className="w-12 h-12 object-contain" />
               </div>
               <h3 className="text-[23px] sm:text-xl font-bold text-gray-900 mb-3">{tool.name}</h3>

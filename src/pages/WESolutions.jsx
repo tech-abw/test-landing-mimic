@@ -40,8 +40,8 @@ const WebsiteEcommerceSolutions = () => {
             <Hero
                 title={t('title_Website_Ecommerce_Solutions')}
                 description={t('description_Website_Ecommerce_Solutions')}
-                backgroundImage="/images/WebsiteEcommerceSolutions.png"
-                mobileBackgroundImage="/images/WebsiteEcommerceSolutions.png"
+                backgroundImage="/images/UX_UI_Design.webp"
+                mobileBackgroundImage="/images/UX_UI_Design.webp"
                 buttonText={t('button_Website_Ecommerce_Solutions')}
                 buttonLink="/portfolio"
                 desktopTitleFontSize="55px"

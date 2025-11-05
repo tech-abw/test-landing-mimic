@@ -33,7 +33,22 @@ const Portfolio = () => {
     { id: 13, image: "/images/portfolio/portfolio-13.webp", width: { desktop: 55, mobile: 100 }, link: "http://app.uruchurtuartstudio.com" },
     { id: 14, image: "/images/portfolio/portfolio-14.webp", width: { desktop: 45, mobile: 100 }, link: "#" },
   ];
-
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Mimic Agency",
+    url: "https://www.mimic.agency",
+    logo: "https://www.mimic.agency/images/logo.svg",
+    sameAs: [
+      "https://www.linkedin.com/company/mimic-agency",
+      "https://www.instagram.com/mimic.agency"
+    ],
+    description: t("home.meta.description"),
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "MX"
+    }
+  };
   return (
     <>
       <HeadManager
@@ -48,7 +63,10 @@ const Portfolio = () => {
           { lang: "x-default", href: "https://www.mimic.agency/es/portafolio" }
         ]}
       />
-
+      {/* Datos estructurados: Organización */}
+      <script type="application/ld+json">
+        {JSON.stringify(structuredData)}
+      </script> 
       <div className="bg-white text-black lg:mt-16 lg:mb-24">
         <div className="w-[95%] mx-auto px-4 py-16">
           <motion.h1

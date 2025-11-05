@@ -9,6 +9,7 @@ import WorkflowSection from "../components/sections/WorkflowSection";
 import TechStackSection from "../components/sections/TechStackSection";
 import TestimonialsSection from "../components/sections/TestimonialsSection";
 import HeadManager from "../components/sections/HeadTags";
+import ServicesSection from "../components/sections/ServicesSection";
 
 const Home = () => {
   const location = useLocation();
@@ -126,6 +127,7 @@ const Home = () => {
       />
 
       <ClientsSection />
+      <ServicesSection />
       <PortfolioSection />
       <WorkflowSection  />
       <TechStackSection />

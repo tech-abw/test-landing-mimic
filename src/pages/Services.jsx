@@ -13,12 +13,27 @@ const Services = () => {
     const { i18n, t } = useTranslation();
     //const langFromPath = location.pathname.startsWith("/en") ? "en" : "es";
     const lang = location.pathname.startsWith("/en") ? "en" : "es";
-
+   
   
     if (i18n.language !== lang) {
       i18n.changeLanguage(lang);
     }
-  
+    const structuredData = {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "Mimic Agency",
+      url: "https://www.mimic.agency",
+      logo: "https://www.mimic.agency/images/logo.svg",
+      sameAs: [
+        "https://www.linkedin.com/company/mimic-agency",
+        "https://www.instagram.com/mimic.agency"
+      ],
+      description: t("home.meta.description"),
+      address: {
+        "@type": "PostalAddress",
+        addressCountry: "MX"
+      }
+    };
     return (
         <>
       <HeadManager
@@ -44,6 +59,10 @@ const Services = () => {
             <PortfolioServicesSection />
             <TechStackSection bgColor="bg-gray" textColor="text-black" image="/images/tech/techstack-black.png" />
             <CalendarSection />
+            {/* Datos estructurados: Organización */}
+            <script type="application/ld+json">
+              {JSON.stringify(structuredData)}
+            </script>
         </>
     );
 };
