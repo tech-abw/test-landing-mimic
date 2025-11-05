@@ -28,7 +28,7 @@ const TeamSection = () => {
             description: t("team_role_fullstack"),
         },
         {
-            name: "Ruben Aguillon",
+            name: "Rubén Galván",
             image: "/images/about/Ruben.webp",
             description: t("team_role_fullstack"),
         },
