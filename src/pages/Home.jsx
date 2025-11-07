@@ -92,7 +92,7 @@ const Home = () => {
         lang={langFromPath}
         title={t("home.meta.title")}
         description={t("home.meta.description")}
-        imageUrl="https://www.mimic.agency/images/home-hero.webp"
+        imageUrl="https://www.mimic.agency/images/HERO-BANNER2.webp"
         canonicalUrl={canonicalUrl}
         hreflangs={[
           { lang: "es", href: "https://www.mimic.agency/es/" },
@@ -123,7 +123,7 @@ const Home = () => {
         mobileDescriptionFontSize="17px"
         desktopTitleFontSize="55px"
         desktopDescriptionFontSize="20px"
-        mobileBackgroundImage="/images/Mobile_Pulpo.webp"
+        mobileBackgroundImage="/images/banner-home-mobile.webp"
       />
 
       <ClientsSection />
