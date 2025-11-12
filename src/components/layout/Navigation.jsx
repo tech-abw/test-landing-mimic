@@ -4,7 +4,7 @@ const Navigation = ({ isMobile = false }) => {
     const navItems = [
         { name: "Home", path: "/" },
         { name: "About Us", path: "/about" },
-        { name: "Services", path: "/services" },
+        { name: "Solutions", path: "/services" },
         { name: "Blog", path: "/blog" },
     ];
 
