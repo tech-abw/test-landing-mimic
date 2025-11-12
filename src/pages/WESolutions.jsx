@@ -43,7 +43,7 @@ const WebsiteEcommerceSolutions = () => {
                 backgroundImage="/images/UX_UI_Design.webp"
                 mobileBackgroundImage="/images/UX_UI_Design.webp"
                 buttonText={t('button_Website_Ecommerce_Solutions')}
-                buttonLink="/portfolio"
+                buttonLink={t("tally_link")}
                 desktopTitleFontSize="55px"
                 mobileTitleFontSize="43px"
                 mobileDescriptionFontSize="17px"

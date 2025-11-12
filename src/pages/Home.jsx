@@ -118,7 +118,7 @@ const Home = () => {
   ))}
       <Hero
         buttonText={t("start_here_button")}
-        buttonLink="https://tally.so/r/wb6l9Z"
+        buttonLink={t("tally_link")}
         mobileTitleFontSize="46px"
         mobileDescriptionFontSize="17px"
         desktopTitleFontSize="55px"

@@ -31,7 +31,7 @@ const Consulting = () => {
                 backgroundImage="/images/Consulting.png"
                 mobileBackgroundImage="/images/Consulting.png"
                 buttonText={t('button_Consulting')}
-                buttonLink="/portfolio"
+                buttonLink={t("tally_link")}
                 desktopTitleFontSize="55px"
                 mobileTitleFontSize="43px"
                 mobileDescriptionFontSize="17px"

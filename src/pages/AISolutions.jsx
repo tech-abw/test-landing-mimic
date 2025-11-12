@@ -48,7 +48,7 @@ const AISolutions = () => {
                 backgroundImage="/images/AISolutions.png"
                 mobileBackgroundImage="/images/AISolutions.png"
                 buttonText={t('button_AI_Solutions')}
-                buttonLink="/portfolio"
+                buttonLink={t("tally_link")}
                 desktopTitleFontSize="55px"
                 mobileTitleFontSize="43px"
                 mobileDescriptionFontSize="17px"

@@ -128,7 +128,7 @@ const TechStackSection = ({
                             transition={{ duration: 0.5, delay: 0.2 }}
                         >
                             <Link
-                                to="https://tally.so/r/wb6l9Z"
+                                to={t("tally_link")}
                                 className="flex items-center justify-center bg-neon-green text-black hover:bg-opacity-90 transition-all px-5 py-2.5 rounded-lg text-sm font-medium"
                             >
                                 {t("techStack_button_start")}

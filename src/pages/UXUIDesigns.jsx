@@ -44,7 +44,7 @@ const UXUIDesigns = () => {
                 backgroundImage="/images/UX_UI_Design.webp"
                 mobileBackgroundImage="/images/UX_UI_Design.webp"
                 buttonText={t('button_UX/UI_Designs')}
-                buttonLink="/portfolio"
+                buttonLink={t("tally_link")}
                 desktopTitleFontSize="55px"
                 mobileTitleFontSize="43px"
                 mobileDescriptionFontSize="17px"

@@ -59,7 +59,7 @@ const AboutHeroSection = () => {
                                 transition={{ duration: 0.7, delay: 0.2 }}
                             >
                                 <Link
-                                    to="https://tally.so/r/wb6l9Z"
+                                    to={t("tally_link")}
                                     className="flex items-center justify-center bg-neon-green text-black hover:bg-opacity-90 transition-all"
                                     style={{
                                         width: "170px",
@@ -128,7 +128,7 @@ const AboutHeroSection = () => {
                         transition={{ duration: 0.7, delay: 0.2 }}
                     >
                         <Link
-                            to="https://tally.so/r/wb6l9Z"
+                            to={t("tally_link")}
                             className="flex items-center justify-center bg-neon-green text-black hover:bg-opacity-90 transition-all"
                             style={{
                                 width: "170px",
