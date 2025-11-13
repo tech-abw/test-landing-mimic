@@ -54,7 +54,7 @@ const About = () => {
       <Hero 
         title={t('about_hero_title')}
         description={t('about_hero_description')}
-        backgroundImage="/images/about-hero.webp"
+        backgroundImage="/images/banner-about.webp"
         mobileBackgroundImage="/images/about-mobile.webp"
         buttonText={t('about_hero_button')}
         buttonLink={`/${lang}/${t('routes.services')}`}

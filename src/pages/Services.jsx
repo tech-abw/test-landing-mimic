@@ -40,15 +40,15 @@ const Services = () => {
         lang={lang}
         title={t("services.meta.title")}
         description={t("services.meta.description")}
-        imageUrl="https://mimic.agency/images/services-hero.webp"
+        imageUrl="https://mimic.agency/images/banner-servicios.webp"
       />
 
 
             <Hero
                 title={t('services_hero_title')}
                 description={t('services_hero_description')}
-                backgroundImage="/images/services-hero.webp"
-                mobileBackgroundImage="/images/mobile-services.webp"
+                backgroundImage="/images/banner-servicios.webp"
+                mobileBackgroundImage="/images/mobile-servicios.webp"
                 buttonText={t('services_hero_button')}
                 buttonLink={`/${lang}/${t('routes.services')}`}
                 desktopTitleFontSize="55px"
