@@ -55,11 +55,11 @@ const About = () => {
         title={t('about_hero_title')}
         description={t('about_hero_description')}
         backgroundImage="/images/banner-about.webp"
-        mobileBackgroundImage="/images/about-mobile.webp"
+        mobileBackgroundImage="/images/about-mobile-mimic.webp"
         buttonText={t('about_hero_button')}
         buttonLink={`/${lang}/${t('routes.services')}`}
-        mobileTitleFontSize='39px'
-        mobileDescriptionFontSize='17px'
+        mobileTitleFontSize='35px'
+        mobileDescriptionFontSize='15px'
       />
       <TeamSection />
       <AboutHeroSection />
