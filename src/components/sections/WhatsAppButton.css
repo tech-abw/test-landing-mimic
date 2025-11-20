@@ -6,7 +6,7 @@
     width: 106px;
     height: 106px;
    
-    background-image: url('/public/whatsapp.png'); /* reemplaza con la ruta real */
+    background-image: url('/images/Whatsapp.png'); /* reemplaza con la ruta real */
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
