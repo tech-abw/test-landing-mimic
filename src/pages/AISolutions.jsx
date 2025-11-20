@@ -2,7 +2,7 @@ import { useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import HeadManager from "../components/sections/HeadTags";
 import Hero from "../components/sections/Hero";
-import CalendarSection from "../components/sections/CalendarSection";
+{/*import CalendarSection from "../components/sections/CalendarSection";*/}
 import SliderIAServices from "../components/sections/SliderIAServices";
 import AIAboutSeccion from "../components/sections/AIAboutSeccion";
 import ToolsSectionAI from '../components/sections/ToolsSectionAI';
@@ -57,7 +57,7 @@ const AISolutions = () => {
             <AIAboutSeccion />
             <ToolsSectionAI />
             <WorkflowSection />
-            <CalendarSection />
+            {/*<CalendarSection />*/}
         </>
     );
 };

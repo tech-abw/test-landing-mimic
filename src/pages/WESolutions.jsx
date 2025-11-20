@@ -2,7 +2,7 @@ import { useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import HeadManager from "../components/sections/HeadTags";
 import Hero from "../components/sections/Hero";
-import CalendarSection from "../components/sections/CalendarSection";
+{/*import CalendarSection from "../components/sections/CalendarSection";*/}
 import { useEffect } from "react";
 
 import SliderWEServices from "../components/sections/SliderWEServices";
@@ -52,7 +52,7 @@ const WebsiteEcommerceSolutions = () => {
             <WEAboutSection />
             <ToolsSectionWE />
             <WorkflowSection />
-            <CalendarSection />
+            {/*<CalendarSection />*/}
         </>
     );
 };

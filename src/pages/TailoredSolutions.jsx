@@ -1,7 +1,6 @@
 import { useTranslation } from "react-i18next";
 import Hero from "../components/sections/Hero";
-import CalendarSection from "../components/sections/CalendarSection";
-import SEO from "../components/SEO";
+{/*import CalendarSection from "../components/sections/CalendarSection";*/}
 import SliderTSServices from "../components/sections/SliderTSServices";
 import TSAboutSection from "../components/sections/TSAboutSeccion";
 import ToolsSectionTS from "../components/sections/ToolsSectionTS";
@@ -41,7 +40,7 @@ const TailoredSolutions = () => {
             <TSAboutSection />
             <ToolsSectionTS />
             <WorkflowSection />
-            <CalendarSection />
+            {/*<CalendarSection />*/}
         </>
     );
 };

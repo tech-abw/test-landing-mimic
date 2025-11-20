@@ -3,7 +3,7 @@ import Hero from "../components/sections/Hero";
 import PortfolioServicesSection from "../components/sections/PortfolioServicesSection";
 import ServicesSection from "../components/sections/ServicesSection";
 import TechStackSection from "../components/sections/TechStackSection";
-import CalendarSection from "../components/sections/CalendarSection";
+{/*import CalendarSection from "../components/sections/CalendarSection";*/}
 import { useLocation } from "react-router-dom";
 import HeadManager from "../components/sections/HeadTags";
 
@@ -58,7 +58,7 @@ const Services = () => {
             <ServicesSection />
             <PortfolioServicesSection />
             <TechStackSection bgColor="bg-gray" textColor="text-black" image="/images/tech/techstack-black.png" />
-            <CalendarSection />
+            {/*<CalendarSection />*/}
             {/* Datos estructurados: Organización */}
             <script type="application/ld+json">
               {JSON.stringify(structuredData)}

@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import Hero from "../components/sections/Hero";
-import CalendarSection from "../components/sections/CalendarSection";
+{/*import CalendarSection from "../components/sections/CalendarSection";*/}
 import { useLocation } from "react-router-dom";
 import HeadManager from "../components/sections/HeadTags";
 
@@ -53,7 +53,7 @@ const UXUIDesigns = () => {
             <UXUIAboutSection />
             <ToolsSectionUxUi />
             <WorkflowSection />
-            <CalendarSection />
+            {/*<CalendarSection />*/}
         </>
     );
 };
