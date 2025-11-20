@@ -1,0 +1,21 @@
+/* src/components/WhatsAppButton.css */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 106px;
+    height: 106px;
+   
+    background-image: url('/public/whatsapp.png'); /* reemplaza con la ruta real */
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    text-decoration: none;
+    transition: transform 0.2s;
+    z-index: 999;
+  }
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+  }
+  

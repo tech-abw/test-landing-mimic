@@ -26,6 +26,17 @@ import PortafolioAgro from './pages/PortafolioAgro';
 import PortafolioPlatidrum from './pages/PortafolioPlatidrum';
 import PortafolioUrun from './pages/PortafolioUrun';
 import PortafolioByMomento from './pages/PortafolioByMomento';
+import WhatsAppButton from "./components/sections/WhatsAppButton";
+function LayoutWithConditionalWhatsApp({ showWhatsApp }) {
+    return (
+      <>
+        <Layout />
+        {showWhatsApp && <WhatsAppButton />}
+      </>
+    );
+  }
+  
+
 
 
 // Layout de la página
@@ -36,6 +47,7 @@ const Layout = () => (
             <Outlet />
         </main>
         <Footer />
+        {/*<WhatsAppButton />*/}
     </div>
 );
 
@@ -82,10 +94,10 @@ function LocalizedRoutes() {
     if (i18n.language !== lng) {
         return null; // Muestra una página en blanco momentáneamente en lugar de un 404
     }
-
+    const showWhatsApp = lng === "es";
     return (
         <Routes>
-            <Route element={<Layout />}>
+            <Route element={<LayoutWithConditionalWhatsApp showWhatsApp={showWhatsApp} />}>
                 <Route index element={pages.home} />
                 {Object.keys(pages).map((key) => {
                     if (key === 'home') return null;

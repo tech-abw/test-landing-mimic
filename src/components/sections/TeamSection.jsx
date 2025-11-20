@@ -94,7 +94,7 @@ const TeamSection = () => {
                             <br />
                             {t('team_title_part2')}
                         </motion.h2>
-                        <motion.span
+                        {/*<motion.span
                             className={`
                                     text-[100px] 
                                     lg:text-[200px] 
@@ -108,7 +108,7 @@ const TeamSection = () => {
                             transition={{ duration: 0.8 }}
                         >
                             +5
-                        </motion.span>
+                        </motion.span>*/}
                     </div>
                     <div className="flex justify-between items-center lg:items-center">
                         <motion.p
@@ -125,7 +125,7 @@ const TeamSection = () => {
                         >
 {t('team_description')}
                         </motion.p>
-                        <motion.span
+                        {/*<motion.span
                             style={{
                                 fontSize: "20px",
                                 fontWeight: 200,
@@ -138,7 +138,7 @@ const TeamSection = () => {
                             transition={{ duration: 0.7, delay: 0.1 }}
                         >
                             {t('team_years')}
-                        </motion.span>
+                        </motion.span>*/}
                     </div>
                 </div>
 
@@ -155,7 +155,7 @@ const TeamSection = () => {
                         <br />
                         {t('team_title_part2')}
                     </motion.h2>
-                    <motion.p 
+                <motion.p 
                         className="text-gray-600 mb-6 md:text-xl text-base"
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -164,7 +164,7 @@ const TeamSection = () => {
                     >
 {t('team_description')}
                     </motion.p>
-                    <motion.div 
+                    {/*<motion.div 
                         className="flex flex-col items-center mb-6"
                         initial={{ opacity: 0, scale: 0.95 }}
                         whileInView={{ opacity: 1, scale: 1 }}
@@ -189,7 +189,7 @@ const TeamSection = () => {
                         >
                             {t('team_years')}
                         </span>
-                    </motion.div>
+                    </motion.div>*/}
                 </div>
 
                 {/* Grid de miembros del equipo */}
@@ -244,7 +244,33 @@ const TeamSection = () => {
 
                 {/* Sección de estadísticas */}
                 <div className="w-full mb-8 flex flex-col lg:flex-row justify-between gap-4 lg:gap-8 lg:mt-12">
-                    {/* Proyectos */}
+                    {/* experiencia */}
+                    <motion.div 
+                        className="flex flex-col items-center mb-6"
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: false, margin: "-50px" }}
+                        transition={{ duration: 0.7, delay: 0.2 }}
+                    >
+                        <span
+                            className={`
+                                    text-[80px] 
+                                    lg:text-[200px] 
+                                    text-gray-700
+                                    font-medium
+                                `}
+                        >
+                            +5
+                        </span>
+                        <span
+                            style={{
+                                fontSize: "15px",
+                                fontWeight: 200,
+                            }}
+                        >
+                            {t('team_years')}
+                        </span>
+                    </motion.div>
                     <motion.div 
                         className="flex flex-col items-center lg:items-start"
                         initial={{ opacity: 0, y: 40 }}
