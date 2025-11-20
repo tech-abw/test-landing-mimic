@@ -110,7 +110,7 @@ const isWhiteHeader = whiteHeaderKeys.includes(routeKey) || location.pathname ==
                     />
                 </div>
                 <div className="hidden lg:flex items-center space-x-4 flex-shrink-0">
-                    <Link to={t('tally_link')}>
+                    <Link to={t('tally_link')} target="_blank" rel="noopener noreferrer">
                     <button className="bg-black text-lime-400  py-2 px-6 rounded-md hover:bg-gray-800 transition-all duration-300 w-[150px]">
                         {t('nav.start_here')}
                     </button>

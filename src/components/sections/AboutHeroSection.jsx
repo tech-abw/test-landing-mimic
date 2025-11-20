@@ -60,6 +60,8 @@ const AboutHeroSection = () => {
                             >
                                 <Link
                                     to={t("tally_link")}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="flex items-center justify-center bg-neon-green text-black hover:bg-opacity-90 transition-all"
                                     style={{
                                         width: "170px",
@@ -128,7 +130,9 @@ const AboutHeroSection = () => {
                         transition={{ duration: 0.7, delay: 0.2 }}
                     >
                         <Link
-                            to={t("tally_link")}
+                            to={t("tally_link") }
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="flex items-center justify-center bg-neon-green text-black hover:bg-opacity-90 transition-all"
                             style={{
                                 width: "170px",
