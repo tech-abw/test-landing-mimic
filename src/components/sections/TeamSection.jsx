@@ -243,10 +243,10 @@ const TeamSection = () => {
                 </div>
 
                 {/* Sección de estadísticas */}
-                <div className="w-full mb-8 flex flex-row lg:flex-row justify-between gap-4 lg:gap-8 lg:mt-12">
+                <div className="w-full py-12 mb-8 flex flex-row lg:flex-row justify-between gap-4 lg:gap-8 lg:mt-12">
                     {/* experiencia */}
                     <motion.div 
-                        className="flex flex-col items-center py-12 "
+                        className="flex flex-col items-center"
                         initial={{ opacity: 0, scale: 0.95 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: false, margin: "-50px" }}
@@ -265,14 +265,15 @@ const TeamSection = () => {
                         <span
                             style={{
                                 fontSize: "20px",
-                                fontWeight: 200,
+                                fontWeight: 300,
+                                lineHeight: "20px",
                             }}
                         >
                             {t('team_years')}
                         </span>
                     </motion.div>
                     <motion.div 
-                        className="flex flex-col items-center lg:items-start py-12"
+                        className="flex flex-col items-center lg:items-start"
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: false, margin: "-50px" }}
@@ -317,7 +318,7 @@ const TeamSection = () => {
 
                     {/* Clientes */}
                     <motion.div 
-                        className="flex flex-col items-center lg:items-end py-12"
+                        className="flex flex-col items-center lg:items-end "
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: false, margin: "-50px" }}
