@@ -159,44 +159,65 @@ const MegaMenu = ({ items, isMobileMenuOpen, toggleMenu, closeMenu, isDesktop, m
 
                         {/* Scrollable Menu List */}
                         <ul className="space-y-6">
-                            {items.map((item, index) => (
-                                <li key={index} className="w-full">
-                                    {item.submenu ? (
-                                        <div>
-                                            <button onClick={() => handleSubmenuClick(index)} className="text-black text-xl font-light w-full text-left">
-                                                {t(item.name)}
-                                            </button>
-                                            {openSubmenu === index && (
-                                                <div className="mt-4 pl-4 space-y-4">
-                                                    {item.submenu.map((submenu, subIndex) => (
-                                                        <div key={subIndex}>
-                                                            <h3 className="font-semibold text-lg text-black mb-2">{t(submenu.heading)}</h3>
-                                                            <ul className="space-y-3">
-                                                                {submenu.links.map((link, linkIndex) => (
-                                                                    <li key={linkIndex}>
-                                                                        <Link 
-                                                                            to={link.path} 
-                                                                            onClick={closeMenu}
-                                                                            className="text-black hover:text-gray-600 transition-colors duration-300 font-light"
-                                                                        >
-                                                                            {t(link.name)}
-                                                                        </Link>
-                                                                    </li>
-                                                                ))}
-                                                            </ul>
-                                                        </div>
-                                                    ))}
-                                                </div>
-                                            )}
-                                        </div>
-                                    ) : (
-                                        <Link to={item.path} onClick={closeMenu} className="text-black text-xl font-light">
-                                            {t(item.name)}
-                                        </Link>
-                                    )}
-                                </li>
-                            ))}
-                        </ul>
+  {items.map((item, index) => (
+    <li key={index} className="w-full">
+      {item.submenu ? (
+        <div>
+          <button
+  onClick={() => handleSubmenuClick(index)}
+  className="flex items-center text-black text-xl font-light w-full text-left"
+>
+  {t(item.name)}
+  <svg
+    className={`ml-2 w-4 h-4 transition-transform duration-300 ${
+      openSubmenu === index ? "rotate-180" : "rotate-0"
+    }`}
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+  </svg>
+</button>
+
+          {openSubmenu === index && (
+            <div className="mt-4 pl-4 space-y-4">
+              {item.submenu.map((submenu, subIndex) => (
+                <div key={subIndex}>
+                  <h3 className="font-semibold text-lg text-black mb-2">
+                    {t(submenu.heading)}
+                  </h3>
+                  <ul className="space-y-3">
+                    {submenu.links.map((link, linkIndex) => (
+                      <li key={linkIndex}>
+                        <Link
+                          to={link.path}
+                          onClick={closeMenu}
+                          className="text-black hover:text-gray-600 transition-colors duration-300 font-light"
+                        >
+                          {t(link.name)}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      ) : (
+        <Link
+          to={item.path}
+          onClick={closeMenu}
+          className="text-black text-xl font-light"
+        >
+          {t(item.name)}
+        </Link>
+      )}
+    </li>
+  ))}
+</ul>
 
                         {/* Pinned Footer with Language Switcher */}
                         <div className="mt-auto pt-6 flex-shrink-0">
